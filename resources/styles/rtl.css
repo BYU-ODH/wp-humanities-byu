@@ -1,0 +1,606 @@
+/*
+ * RTL CSS
+ *
+ * @package Septera
+ */
+
+/*--------------------------------------------------------------
+	# THEME SPECIFIC DEFAULTS
+--------------------------------------------------------------*/
+
+.main li li {
+	margin-right: 1em;
+	margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+	# LAYOUT
+--------------------------------------------------------------*/
+
+body {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+	# HEADER
+--------------------------------------------------------------*/
+
+.cryout #branding {
+	float: right;
+	margin-right: 0;
+	margin-left: 3em;
+}
+
+#branding .identity {
+	float: right;
+}
+
+#site-title {
+	float: right;
+}
+
+#branding .identity + #site-text {
+	margin-left: 0;
+	margin-right: 1em;
+}
+
+#site-title span a span:first-child {
+	margin-left: .1em;
+}
+
+#site-description {
+	clear: right;
+	float: right;
+}
+
+/* Header widget area */
+#header-widget-area {
+	float: left;
+}
+
+/*--------------------------------------------------------------
+	## MAIN MENU
+--------------------------------------------------------------*/
+
+#access {
+	float: left;
+}
+
+.septera-menu-left #access {
+	float: right;
+	margin-left: 0;
+	margin-right: 2em;
+}
+
+#access::after {
+	left: auto;
+	right: 0;
+}
+
+#access > div > ul li > a:not(:only-child) span {
+	padding-right: 0;
+	padding-left: .5em;
+}
+
+#access > div > ul li > a:not(:only-child) > span::after {
+	left: 1em;
+	right: auto;
+}
+
+#access > div > ul ul > li a:not(:only-child) > span::after {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	right: auto;
+	left: 1em;
+}
+
+#access > div > ul ul > li:hover > a:not(:only-child) > span::after {
+	left: -0.5em;
+	right: auto;
+}
+
+#access ul li {
+	float: right;
+}
+
+#access ul ul {
+	margin-right: 0;
+}
+
+#access ul ul li { /* level 2 */
+	float: right;
+}
+
+#access ul ul ul {
+	left: auto;
+	right: 100%;
+}
+
+#mobile-menu .mobile-arrow::after {
+	right: auto;
+	left: 0;
+}
+
+.dropdown-toggle {
+	margin-right: 0;
+	margin-left: -1em;
+	float: left;
+}
+
+/*--------------------------------------------------------------
+	## MOBILE MENU
+--------------------------------------------------------------*/
+
+#nav-toggle { /* Mobile nav toggle will only be visible on mobile */
+	float: left;
+	left: 0;
+	right: auto;
+}
+
+nav#mobile-menu #nav-cancel {
+	left: 0;
+	right: auto;
+}
+
+/*--------------------------------------------------------------
+	# FOOTER
+--------------------------------------------------------------*/
+
+#site-copyright {
+	float: right;
+	clear: right;
+}
+
+#site-copyright + div {
+	float: left !important;
+	clear: left !important;
+}
+
+/*--------------------------------------------------------------
+	## FOOTER MENU
+--------------------------------------------------------------*/
+.footermenu {
+	float: right;
+}
+
+.footermenu ul li {
+	float: right;
+}
+
+/*--------------------------------------------------------------
+	## FOOTER WIDGET AREA
+--------------------------------------------------------------*/
+
+#colophon .widget-container {
+	float: right;
+}
+
+#colophon .widget-container:after {
+	left: 0;
+	right: auto;
+}
+
+/*--------------------------------------------------------------
+	# CONTENT
+--------------------------------------------------------------*/
+
+.entry-content blockquote.left {
+	float: right;
+	margin-right: 0;
+	margin-left: 2em;
+	text-align: left;
+}
+.entry-content blockquote.right {
+	float: left;
+	margin-right: 2em;
+	margin-left: 0;
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+	## POST METAS
+--------------------------------------------------------------*/
+
+.entry-meta > span {
+	margin-right: 0;
+	margin-left: 1em;
+}
+
+.entry-meta span a,
+.entry-meta span time {
+	padding-left: 0;
+	padding-right: .2em;
+}
+
+.main .entry-title {
+    margin: 0 0 0 1.5em;
+}
+
+.entry-meta span.comments-link {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+	border-left: 0;
+    right: auto;
+	left: 0;
+    padding: 0 0.7em 0 0;
+}
+
+.comments-link strong {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+.tag-links {
+	margin-right: 2em;
+}
+
+span.edit-link {
+	left: .5em;
+	right: auto;
+}
+
+.icon-angle-right::before {
+	text-align: right;
+    vertical-align: middle;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+i.icon-angle-right:before,
+i.icon-angle-left:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/*--------------------------------------------------------------
+	## AUTHOR INFO
+--------------------------------------------------------------*/
+
+#author-info #author-avatar {
+	float: left;
+	margin: 0 -100px 0 0;
+
+}
+#author-info #author-description {
+	float: right;
+	margin-left: 100px;
+	margin-right: 0;
+}
+
+#entry-author-info #author-avatar {
+	float: left;
+	margin: 0 -100px 0 0;
+}
+
+#entry-author-info #author-description {
+	float: right;
+	margin: 0 0 0 110px;
+}
+
+#author-link .meta-nav {
+	position: relative;
+	display: inline-block;
+	top: 2px;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/*--------------------------------------------------------------
+	## ARTICLES
+--------------------------------------------------------------*/
+
+article.sticky:after {
+	right: 0;
+	left: auto;
+}
+
+
+.septera-magazine-two #content-masonry article.hentry {
+	float: right;
+}
+
+.septera-magazine-three #content-masonry article.hentry {
+	float: right;
+}
+
+/*--------------------------------------------------------------
+	## PAGE NAVIGATION
+--------------------------------------------------------------*/
+
+#nav-below .nav-previous,
+#nav-below .nav-next {
+	float: right;
+}
+
+#nav-below .nav-next {
+	text-align: left;
+}
+
+.icon-bread-home::before {
+	margin-right: 0;
+	margin-left: .3em;
+}
+
+#breadcrumbs-nav .icon-bread-arrow {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/*--------------------------------------------------------------
+	# POST FORMATS
+--------------------------------------------------------------*/
+
+span.entry-format {
+	left: .5em;
+	right: auto;
+}
+
+.format-status .avatar {
+	float: right;
+}
+/*--------------------------------------------------------------
+	# COMMENTS
+--------------------------------------------------------------*/
+
+#nav-comments .nav-next,
+#nav-comments .nav-previous {
+	float: right;
+	margin-left: 1em;
+	margin-right: 0;
+}
+
+.main .commentlist img.avatar {
+	float: right;
+}
+
+.comment-author {
+	float: right;
+}
+
+.comment-meta {
+	float: right;
+}
+
+.comment-await {
+	margin-right: 2em;
+	margin-left: 0;
+}
+
+.comment .reply a {
+	float: left;
+}
+
+.commentlist .children {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+
+/*--------------------------------------------------------------
+	## COMMENTS FORM
+--------------------------------------------------------------*/
+
+#respond .form-submit {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+	# WIDGET AREAS
+--------------------------------------------------------------*/
+
+.widget-container ul ul {
+	margin-left: 0;
+	margin-right: 1em;
+}
+
+.widget-title {
+	text-align: right;
+}
+
+
+/* ## LEFT SIDEBAR MENU */
+nav.sidebarmenu {
+	margin: 0.5em -2em 2em 0;
+}
+
+nav.sidebarmenu li a:hover {
+	padding-right: 2.3em;
+	padding-left: 0;
+}
+#wp-calendar caption,
+#wp-calendar th,
+#wp-calendar td {
+		text-align: right;
+}
+
+#wp-calendar tfoot #next {
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+	# SEARCHFORM
+--------------------------------------------------------------*/
+
+/* ## SIDEBAR SEARCH */
+.searchform input[type="search"]  {
+	float: right;
+	padding: 0 .5em 0 3.5em;
+}
+
+.searchform::after {
+    right: auto;
+	left: 0;
+}
+
+.searchform .searchsubmit {
+	right: auto;
+	left: 0;
+}
+
+
+#access .menu-search-animated .searchform {
+	right: auto;
+	left: 0;
+}
+
+#access > .menu > ul ul > li a:not(:only-child) span::after {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/*--------------------------------------------------------------
+	# SOCIALS
+--------------------------------------------------------------*/
+
+.socials a {
+	float: right;
+}
+
+#sheader {
+	float: left;
+	margin-right: .5em;
+}
+
+#sfooter {
+	display: block;
+	float: left;
+	clear: left;
+}
+
+/*--------------------------------------------------------------
+	# LANDING PAGE
+--------------------------------------------------------------*/
+
+.lp-staticslider .staticslider-caption,
+.seriousslider.seriousslider-theme .seriousslider-caption {
+	text-align: right;
+}
+
+.lp-boxes .lp-box .lp-box-readmore > i:before {
+	left: auto;
+	right: -5px;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.lp-boxes .lp-box:hover .lp-box-readmore > i:before {
+	right: auto;
+	right: 0;
+}
+
+.lp-boxes-static .lp-box-link i::before {
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.lp-boxes-static .lp-box-image:hover .lp-box-link i::before {
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+
+#cryout_ajax_more_trigger > span::before {
+	margin: auto auto auto 1em;
+}
+
+/*--------------------------------------------------------------
+	# MISCELLANEOUS
+--------------------------------------------------------------*/
+
+/* ## BACK TO TOP */
+
+#toTop {
+	right: auto;
+	left: -100px;
+}
+
+#toTop.toTop-show {
+	right: auto;
+	left: 1em;
+}
+
+.pagination span,
+.pagination a {
+	float: right;
+	margin-left: 1px;
+	margin-right: 0;
+}
+
+a.continue-reading-link {
+	float: right;
+}
+
+.continue-reading-link span {
+	right: auto;
+	left: 0;
+}
+
+.continue-reading-link:hover span {
+	right: auto;
+	left: .25em;
+}
+
+a.continue-reading-link i.icon-continue-reading {
+	display: inline-block;
+	right: 0;
+	left: auto;
+	margin-left: 0;
+	margin-right: .35em;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+a.continue-reading-link:hover i.icon-continue-reading {
+	left: auto;
+	right: .25em;
+}
+
+#content-masonry article.hentry .post-thumbnail-container a::before {
+	left: 3em;
+	right: auto;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+#content-masonry article.hentry .post-thumbnail-container:hover a::before {
+	left: 1.5em;
+	right: auto;
+}
+
+.entry-content blockquote:before {
+	left: auto;
+	right: 0;
+}
+
+.entry-content blockquote:after {
+	right: auto;
+	left: 0;
+}
+
+/* lP RESPONSIVENESS */
+
+@media (max-width: 720px) {
+	.lp-staticslider .lp-staticslider-image {
+		left: auto;
+		right: 50%;
+		-webkit-transform: translateX(50%);
+		transform: translateX(50%);
+	}
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 800px) {
+	.rtl #sheader {
+		margin-right: 0;
+		margin-left: 2em;
+	}
+}
+
+/* FIN! */

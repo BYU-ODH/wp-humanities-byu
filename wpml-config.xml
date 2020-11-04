@@ -1,0 +1,26 @@
+<wpml-config>
+    <admin-texts>
+        <key name="septera_settings">
+			<key name="septera_lpposts_more" />
+			<key name="septera_lpslidershortcode" />
+			<key name="septera_lpslidertitle" />
+			<key name="septera_lpslidertext" />
+			<key name="septera_lpslidercta1text" />
+			<key name="septera_lpslidercta1link" />
+			<key name="septera_lpslidercta2text" />
+			<key name="septera_lpslidercta2link" />
+			<key name="septera_lpblockmaintitle1" />
+			<key name="septera_lpblockmaindesc1" />
+			<key name="septera_lpblocksreadmore1" />
+			<key name="septera_lpboxmaintitle1" />
+			<key name="septera_lpboxmaintitle2" />
+			<key name="septera_lpboxmaindesc1" />
+			<key name="septera_lpboxmaindesc2" />
+			<key name="septera_lpboxreadmore1" />
+			<key name="septera_lpboxreadmore2" />
+			<key name="septera_copyright" />
+			<key name="septera_excerptdots" />
+			<key name="septera_excerptcont" />
+        </key>
+    </admin-texts>
+</wpml-config>

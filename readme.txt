@@ -3,7 +3,7 @@ Septera WordPress Theme
 Copyright 2017-2018 Cryout Creations
 https://www.cryoutcreations.eu/
 
-Author: Cryout Creations
+Author: BYU ODH
 Requires at least: 4.5
 Tested up to: 5.2
 Stable tag: 1.5.0

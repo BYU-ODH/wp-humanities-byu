@@ -34,7 +34,7 @@ require_once( get_template_directory() . "/includes/landing-page.php" );	// Land
 function byuh_scripts_styles() {
     global $wp_styles; 
 
-    wp_enqueue_script('byuh-byulightbox', get_template_directory_uri() . '/js/byu-lightbox.js', array('jquery'));
+    wp_enqueue_script('byuh-byulightbox', get_template_directory_uri() . '/resources/js/byu-lightbox.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'byuh_scripts_styles');
 

@@ -2587,6 +2587,7 @@ a[class^="staticslider-button"],
 	-webkit-animation: .75s 1.2s animation-slider-buttons ease-out forwards;
 	animation: .75s 1.2s animation-slider-buttons ease-out forwards;
 	color: #0062B8;
+	background-color: #FFF;
 }
 
 @-webkit-keyframes animation-slider-buttons {

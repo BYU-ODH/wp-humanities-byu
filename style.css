@@ -2579,7 +2579,7 @@ a[class^="staticslider-button"],
 	border: 2px solid transparent;
 	font-size: 1em;
 	font-weight: bold;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	letter-spacing: 1px;
 	-webkit-transition: .2s ease-out all;
 	transition: .2s ease-out all;

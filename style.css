@@ -2579,13 +2579,15 @@ a[class^="staticslider-button"],
 	border: 2px solid transparent;
 	font-size: 1em;
 	font-weight: bold;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	letter-spacing: 1px;
 	-webkit-transition: .2s ease-out all;
 	transition: .2s ease-out all;
 	opacity: 0;
 	-webkit-animation: .75s 1.2s animation-slider-buttons ease-out forwards;
 	animation: .75s 1.2s animation-slider-buttons ease-out forwards;
+	color: #0062B8;
+	background-color: #FFF;
 }
 
 @-webkit-keyframes animation-slider-buttons {

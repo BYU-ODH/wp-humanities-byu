@@ -30,4 +30,12 @@ require_once( get_template_directory() . "/includes/hooks.php" );       	// Hook
 require_once( get_template_directory() . "/includes/meta.php" );        	// Custom Post Metas
 require_once( get_template_directory() . "/includes/landing-page.php" );	// Landing Page outputs
 
+//Script for Directory Plugin
+function byuh_scripts_styles() {
+    global $wp_styles; 
+
+    wp_enqueue_script('byuh-byulightbox', get_template_directory_uri() . '/resources/js/byu-lightbox.js', array('jquery'));
+}
+add_action('wp_enqueue_scripts', 'byuh_scripts_styles');
+
 // FIN

@@ -38,5 +38,4 @@ function byuh_scripts_styles() {
 }
 add_action('wp_enqueue_scripts', 'byuh_scripts_styles');
 
-
 // FIN

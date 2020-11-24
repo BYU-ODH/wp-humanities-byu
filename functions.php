@@ -38,5 +38,9 @@ function byuh_scripts_styles() {
 }
 add_action('wp_enqueue_scripts', 'byuh_scripts_styles');
 
+public function register_my_menu() {
+    register_nav_menu( 'additional-menu',__('Additional Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 
 // FIN

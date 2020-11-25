@@ -246,10 +246,6 @@ function septera_master_footer() {
 	cryout_footer_hook();
 	echo '<div id="footer-separator"></div>';
 	echo '<div id="site-copyright">' . do_shortcode( wp_kses_post( cryout_get_option( 'septera_copyright' ) ) ) . '</div>';
-	echo '<div style="display:block;float:right;clear: right;font-size: .85em;font-weight: bold; text-transform: uppercase;">' . __( "Powered by", "septera" ) .
-		'<a target="_blank" href="' . esc_html( $the_theme->get( 'ThemeURI' ) ) . '" title="';
-	echo 'Septera WordPress Theme by ' . 'Cryout Creations"> ' . 'Septera' .'</a> &amp; <a target="_blank" href="' . "http://wordpress.org/";
-	echo '" title="' . esc_attr__( "Semantic Personal Publishing Platform", "septera") . '"> ' . sprintf( " %s.", "WordPress" ) . '</a></div>';
     	cryout_after_footer_hook();
 }
 

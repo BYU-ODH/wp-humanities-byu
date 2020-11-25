@@ -1,16 +1,15 @@
 /*
-Theme Name: Septera
-Theme URI: http://www.cryoutcreations.eu/wordpress-themes/septera
-Description: A free, responsive theme for business and personal websites, with premium features and amazing customization options? Septera is a multipurpose theme, with a clean and elegant design, stylish typography and a great set of powerful yet easy to use customizer settings. SEO, Woocommerce, Google Fonts, wide and boxed layouts, masonry, social icons, translatable, RTL and an editable landing page with slider, featured icon blocks, image boxes and text areas.  Now with full Gutenberg support. * DEMO: http://demos.cryoutcreations.eu/wp/septera/ *
-Author: Cryout Creations
-Author URI: http://www.cryoutcreations.eu
-Version: 1.5.0
+Theme Name: BYU Humanities (Septera)
+Theme URI: https://github.com/BYU-ODH/wp-humanities-byu
+Description: BYU Humanities theme built off Septera, using the BYU official theme specification https://brand.byu.edu/web-toolkit/web/
+Author: Office of Digital Humanities
+Author URI: https://odh.byu.edu
+Version: 0.0.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, grid-layout, custom-background, custom-colors, custom-header, flexible-header, custom-menu, featured-image-header, featured-images, front-page-post-form, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, news, photography, portfolio
-Text Domain: septera
+Text Domain: ODH
 
-Septera WordPress Theme - Copyright 2017-18, Cryout Creations - http://www.cryoutcreations.eu
 This theme, like WordPress, is licensed under the GPL.
 */
 
@@ -220,6 +219,14 @@ h5,
 h6 {
 	clear: both;
 	font-weight: normal;
+	font-family: Signika; 
+	font-size: 24px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 700; 
+	line-height: 26.4px;
+
+
 }
 
 

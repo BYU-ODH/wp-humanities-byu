@@ -6563,5 +6563,24 @@ body.mobile .main {min-height:0;}
 
 }
 
+div#humanities-menu {
+    display: block;
+	height: 1rem;
+	margin-top: 79px;
+}
+
+div#humanities-menu li {
+    display: inline-block;
+}
+
+div#humanities-menu .menu {
+    display: block;
+    height: 1rem;
+    background-color: white;
+}
+
+div#humanities-menu .menu a {
+	color: black;
+}
 
 /* FIN! */

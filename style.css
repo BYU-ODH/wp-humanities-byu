@@ -721,7 +721,8 @@ a#logo > img {
 
 #site-title a {
 	display: block;
-	text-transform: uppercase;
+	/*commenting out because we don't really need the site title to be uppercase*/
+	/*text-transform: uppercase;*/
 	text-decoration: none;
 }
 

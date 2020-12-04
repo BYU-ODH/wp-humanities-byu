@@ -1599,7 +1599,7 @@ img#wpstats {
 	padding-bottom: .3em;
 	font-size: 1em;
 	font-weight: bold;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .main .page-title:only-child {

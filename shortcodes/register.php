@@ -183,7 +183,7 @@ IN ('email','phone','department','address','status','affiliated_faculty','affili
       return end($nameparts) < end($potential) ? -1 : 1;
   });
   //return make_list($faclist,$attrs['dept']);
-  $r="Faculty should have these people";
+  $r="<h1>Faculty should have these people</h1>";
   $r = $r . print_r($faclist, true);
   return $r;
 }

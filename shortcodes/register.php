@@ -182,11 +182,13 @@ IN ('email','phone','department','address','status','affiliated_faculty','affili
       $potential = explode(" ", trim($b['post_title']));
       return end($nameparts) < end($potential) ? -1 : 1;
   });
-  return make_list($faclist,$attrs['dept']);
+  //return make_list($faclist,$attrs['dept']);
+  $r="Faculty should have these people";
+  $r = $r . print_r($faclist, true);
+  return $r;
 }
 
-add_shortcode('directory','directory_list');
-
+add_shortcode('directory','directory_list'); 
 
 function create_imported_posts() {
  $results=array();

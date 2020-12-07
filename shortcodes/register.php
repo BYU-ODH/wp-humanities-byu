@@ -183,10 +183,10 @@ IN ('email','phone','department','address','status','affiliated_faculty','affili
       return end($nameparts) < end($potential) ? -1 : 1;
   });
   return make_list($faclist,$attrs['dept']);
+  
 }
 
-add_shortcode('directory','directory_list');
-
+add_shortcode('directory','directory_list'); 
 
 function create_imported_posts() {
  $results=array();

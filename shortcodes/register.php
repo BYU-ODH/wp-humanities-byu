@@ -182,10 +182,8 @@ IN ('email','phone','department','address','status','affiliated_faculty','affili
       $potential = explode(" ", trim($b['post_title']));
       return end($nameparts) < end($potential) ? -1 : 1;
   });
-  //return make_list($faclist,$attrs['dept']);
-  $r="<h1>Faculty should have these people</h1>";
-  $r = $r . make_list($faclist,$attrs['dept']);
-  return $r;
+  return make_list($faclist,$attrs['dept']);
+  
 }
 
 add_shortcode('directory','directory_list'); 

@@ -184,7 +184,7 @@ IN ('email','phone','department','address','status','affiliated_faculty','affili
   });
   //return make_list($faclist,$attrs['dept']);
   $r="<h1>Faculty should have these people</h1>";
-  $r = $r . print_r($faclist, true);
+  $r = $r . make_list($faclist,$attrs['dept']);
   return $r;
 }
 

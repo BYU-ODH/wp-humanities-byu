@@ -591,7 +591,7 @@ a:visited {
 #breadcrumbs-container-inside,
 #colophon-inside,
 #footer-inside,
-.lp-staticslider .staticslider-caption,
+/* .lp-staticslider .staticslider-caption, */
 .seriousslider.seriousslider-theme .seriousslider-caption,
 .septera-landing-page .lp-blocks-inside,
 .septera-landing-page .lp-boxes-inside,
@@ -697,7 +697,7 @@ a#logo > img {
 #site-title a::before,
 .lp-box-title::before,
 .widget-title::before {
-    content: "";
+    /* content: ""; */
 	position: relative;
     display: block;
     width: 1.5em;
@@ -854,7 +854,7 @@ a#logo > img {
 }
 
 .septera-menu-left #access {
-	float: left;
+	float: right;
 	margin-left: 2em;
 }
 
@@ -2594,7 +2594,7 @@ a[class^="staticslider-button"],
 	-webkit-animation: .75s 1.2s animation-slider-buttons ease-out forwards;
 	animation: .75s 1.2s animation-slider-buttons ease-out forwards;
 	color: #0062B8;
-	background-color: #FFF;
+	background-color: #0062B8;
 }
 
 @-webkit-keyframes animation-slider-buttons {
@@ -2628,7 +2628,7 @@ a.staticslider-button + a.staticslider-button,
 .staticslider-button:nth-child(2n+1):hover,
 .seriousslider-caption-buttons a:nth-child(2n+1):hover,
 .seriousslider.seriousslider-theme .seriousslider-caption-buttons a:nth-child(2n+1):hover {
-	background: transparent;
+	transform: scale(1.1);
 }
 
 .seriousslider .seriousslider-inner > .item {
@@ -6563,5 +6563,41 @@ body.mobile .main {min-height:0;}
 
 }
 
+div#humanities-menu {
+    display: block;
+	margin-top: 79px;
+}
+
+ul#menu-studentmain {
+	padding-left: 140px;
+}
+
+div#humanities-menu li {
+	display: inline-block;
+	padding: 10px;
+}
+
+div#humanities-menu .menu {
+    display: block;
+    background-color: white;
+}
+
+div#humanities-menu .menu a {
+	color: #002E5D;
+}
+
+.staticslider-caption {
+	padding-top: 10px;
+}
+
+.lp-staticslider .staticslider-caption {
+	padding-left: 150px;
+}
+
+.seriousslider-theme .seriousslider-caption-buttons a:nth-child(2n+1), a.staticslider-button:nth-child(2n+1) {
+	color: white;
+	border-color: #0062B8;
+	background-color: #0062B8;
+}
 
 /* FIN! */

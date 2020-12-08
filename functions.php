@@ -48,10 +48,10 @@ function byuh_scripts_styles() {
 }
 add_action('wp_enqueue_scripts', 'byuh_scripts_styles');
 
-function register_my_menu() {
-    register_nav_menu( 'additional-menu',__('Additional Menu' ));
+function humanities_menu() {
+    register_nav_menu( 'humanities-menu',__('Humanities Menu' ));
 }
-add_action( 'init', 'register_my_menu' );
+add_action( 'init', 'humanities_menu' );
 
 function byuh_setup() {
 

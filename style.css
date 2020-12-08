@@ -122,6 +122,7 @@ time, mark, audio, video {
 	/*font-size: 100%;*/
 	font: inherit;
 	/*vertical-align: baseline;*/
+
 }
 
 html {
@@ -189,7 +190,7 @@ blockquote cite {
 	font-weight: 400;
 	font-style: normal;
 	font-family: 'Public Sans', sans-serif;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 0.7em;
 }
@@ -289,6 +290,9 @@ li > ol {
 
 ul {
 	list-style-type: disc;
+	font-family: 'Open Sans';
+    font-size: 17px;
+    font-weight: 600;
 }
 
 ul ul {
@@ -724,6 +728,10 @@ a#logo > img {
 	/*commenting out because we don't really need the site title to be uppercase*/
 	/*text-transform: uppercase;*/
 	text-decoration: none;
+	font-family: 'Open Sans', PT Sans Narrow;
+    font-size: 24px;
+    font-weight: 600;
+}
 }
 
 #site-title a span {

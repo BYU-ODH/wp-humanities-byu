@@ -2625,6 +2625,10 @@ a[class^="staticslider-button"],
 	to {
 		opacity: 1;
 		bottom: 0;
+		background-color: #0062B8;
+		border-color: #0062B8;
+		color: white;
+		border-radius: 4px;
 	}
 }
 
@@ -5001,12 +5005,13 @@ ul.cryout-wposts li:last-child {
 
 #access i.icon-search {
 	cursor: pointer;
+	font-size: 1.3rem;
+	margin-top: -20px;
 }
 
 #access i.icon-search::before {
 	display: block;
 	font-style:	normal;
-	font-size: .9em;
 }
 
 #access li.menu-main-search {
@@ -6583,6 +6588,7 @@ ul#menu-studentmain {
 div#humanities-menu li {
 	display: inline-block;
 	padding: 10px;
+	/* padding-right: 40px; */
 }
 
 div#humanities-menu .menu {
@@ -6595,7 +6601,7 @@ div#humanities-menu .menu a {
 }
 
 .staticslider-caption {
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .lp-staticslider .staticslider-caption {
@@ -6606,6 +6612,19 @@ div#humanities-menu .menu a {
 	color: white;
 	border-color: #0062B8;
 	background-color: #0062B8;
+}
+
+li.menu-main-search.menu-search-animated {
+	background-color: white;
+	width: 9rem;
+	height: 2.3rem;
+	margin-top: 18px;
+	border-radius: 25px;
+}
+
+i.icon-search {
+	color: #002E5D;
+	float: right;
 }
 
 /* FIN! */

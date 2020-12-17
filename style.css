@@ -2490,12 +2490,12 @@ body .main .wp-caption > a {
 .lp-staticslider .staticslider-caption-title,
 .seriousslider.seriousslider-theme .seriousslider-caption-title {
 	position: relative;
-	display: inline-block;
+	/* display: inline-block; */
 	margin: 0;
 	font-size: 3.4em;
 	line-height: 1.3;
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
 	/* letter-spacing: 2px; */
 	opacity: 0;
 	-webkit-animation: .75s 0.75s animation-slider-title ease-out forwards;
@@ -2900,6 +2900,8 @@ a.staticslider-button + a.staticslider-button,
 .lp-boxes .lp-boxes-margins {
 	padding-top: 3em;
 	padding-bottom: 3em;
+	padding-left: 20rem;
+	padding-right: 20rem;
 }
 
 .lp-box {
@@ -2977,7 +2979,7 @@ a.staticslider-button + a.staticslider-button,
 }
 
 .lp-box-image::before {
-	content: "\e90f";
+	/* content: "\e90f"; */
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -3015,7 +3017,7 @@ a.staticslider-button + a.staticslider-button,
 	clear: both;
 	float: none;
 	margin: .5em auto 1px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-weight: bold;
 	letter-spacing: 0;
 	-webkit-transition: .3s all ease-out;
@@ -3182,6 +3184,7 @@ a.staticslider-button + a.staticslider-button,
 /* Static boxes */
 .lp-boxes-static .lp-box-content {
 	overflow: hidden;
+	text-align: center;
 	padding: 1em 0 1em;
 	-webkit-transition: .5s border ease-in-out;
 	transition: .5s border ease-in-out;
@@ -3205,6 +3208,7 @@ a.staticslider-button + a.staticslider-button,
 
 .lp-boxes-static .lp-box-image > img {
 	-webkit-transform: scale(1);
+	object-fit: contain;
 	-ms-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .75s all ease;
@@ -6580,7 +6584,7 @@ div#humanities-menu {
 }
 
 ul#menu-studentmain {
-	padding-left: 140px;
+	padding-left: 10.5rem;
 }
 
 div#humanities-menu li {
@@ -6600,10 +6604,11 @@ div#humanities-menu .menu a {
 
 .staticslider-caption {
 	padding-top: 20px;
+	width: 50%;
 }
 
 .lp-staticslider .staticslider-caption {
-	padding-left: 150px;
+	/* padding-left: 150px; */
 }
 
 .seriousslider-theme .seriousslider-caption-buttons a:nth-child(2n+1), a.staticslider-button:nth-child(2n+1) {
@@ -6630,7 +6635,26 @@ div#content a {
     text-decoration: underline;
 }
 
+.staticslider-caption-buttons {
+	justify-content: center;
+	display: flex;
+}
+
 div#content a:hover {
     color: #002E5D;    
 }
+
+a.lp-box-readmore {
+	background-color: #0062B8;
+	display: flex;
+	justify-content: center;
+	border-radius: 3px;
+	width: 17%;
+	height: 2rem;
+}
+
+div#humanities-menu li:hover {
+	background-color: #F3F4F5;
+}
+
 /* FIN! */

@@ -725,8 +725,6 @@ a#logo > img {
 
 #site-title a {
 	display: block;
-	/*commenting out because we don't really need the site title to be uppercase*/
-	/*text-transform: uppercase;*/
 	text-decoration: none;
 	font-family: 'Open Sans', PT Sans Narrow;
     font-size: 24px;
@@ -6627,4 +6625,12 @@ i.icon-search {
 	float: right;
 }
 
+div#content a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+div#content a:hover {
+    color: #002E5D;    
+}
 /* FIN! */

@@ -6657,4 +6657,7 @@ div#humanities-menu li:hover {
 	background-color: #F3F4F5;
 }
 
+.home .entry-title {
+	display: none;
+}
 /* FIN! */

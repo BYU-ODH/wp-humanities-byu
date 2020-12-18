@@ -17,7 +17,6 @@ get_header();?>
 				<div class="schema-image">
 					<?php cryout_featured_hook(); ?>
 				</div>
-
 				<div class="article-inner">
 					<header>
 						<div class="entry-meta beforetitle-meta">
@@ -34,7 +33,8 @@ get_header();?>
 					<?php cryout_singular_before_inner_hook();  ?>
 
 					<div class="entry-content" <?php cryout_schema_microdata('entry-content'); ?>>
-						<?php the_content(); ?>
+					    <?php the_content(); 
+					    get_template_part('template-parts/flexible-content'); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'septera' ), 'after' => '</span></div>' ) ); ?>
 					</div><!-- .entry-content -->
 

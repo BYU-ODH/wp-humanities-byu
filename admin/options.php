@@ -94,55 +94,6 @@ function septera_conditionals( $control ) {
 $septera_big = array(
 
 /************* general info ***************/
-
-'info_sections' => array(
-	'cryoutspecial-about-theme' => array(
-		'title' => __( 'About', 'cryout' ) . ' ' . cryout_sanitize_tnl(_CRYOUT_THEME_NAME),
-		'desc' => '<img src=" ' . get_template_directory_uri() . '/admin/images/logo-about-header.png" ><br>',
-		'button' => TRUE,
-		'button_label' => __( 'Get Plus', 'cryout' ),
-	),
-), // info_sections
-
-'info_settings' => array(
-	'plus_link' => array(
-		'label' => '',
-		'default' => sprintf( '<a class="customizer-plus-link" href="https://www.cryoutcreations.eu/wordpress-themes/' . cryout_sanitize_tn( _CRYOUT_THEME_NAME ) . '" target="_blank">%s</a>', __( 'Upgrade to PLUS', 'cryout' ) ),
-		'desc' =>  sprintf( __('Find out what features you\'re missing out on and how the Plus version of %1$s can improve your site.', 'cryout'), cryout_sanitize_tnl(_CRYOUT_THEME_NAME) ),
-		'section' => 'cryoutspecial-about-theme',
-	),
-	'support_link_faqs' => array(
-		'label' => '',
-		'default' => sprintf( '<a href="https://www.cryoutcreations.eu/wordpress-themes/' . cryout_sanitize_tn( _CRYOUT_THEME_NAME ) . '" target="_blank">%s</a>', __( 'Read the Docs', 'cryout' ) ),
-		'desc' =>  '',
-		'section' => 'cryoutspecial-about-theme',
-	),
-	'support_link_forum' => array(
-		'label' => '',
-		'default' => sprintf( '<a href="https://www.cryoutcreations.eu/forums/f/wordpress/' . cryout_sanitize_tn( _CRYOUT_THEME_NAME ) . '" target="_blank">%s</a>', __( 'Browse the Forum', 'cryout' ) ),
-		'desc' => '',
-		'section' => 'cryoutspecial-about-theme',
-	),
-	'premium_support_link' => array(
-		'label' => '',
-		'default' => sprintf( '<a href="https://www.cryoutcreations.eu/priority-support" target="_blank">%s</a>', __( 'Priority Support', 'cryout' ) ),
-		'desc' => '',
-		'section' => 'cryoutspecial-about-theme',
-	),
-	'rating_url' => array(
-		'label' => '&nbsp;',
-		'default' => sprintf( '<a href="https://wordpress.org/support/view/theme-reviews/'. cryout_sanitize_tn( _CRYOUT_THEME_NAME ).'#postform" target="_blank">%s</a>', sprintf( __( 'Rate %s on WordPress.org', 'cryout' ) , cryout_sanitize_tnl(_CRYOUT_THEME_NAME) ) ),
-		'desc' => '',
-		'section' => 'cryoutspecial-about-theme',
-	),
-	'management' => array(
-		'label' => '&nbsp;',
-		'default' => sprintf( '<a href="themes.php?page=about-' . cryout_sanitize_tn( _CRYOUT_THEME_NAME ) . '-theme">%s</a>', __('Manage Theme Settings', 'cryout') ),
-		'desc' => '',
-		'section' => 'cryoutspecial-about-theme',
-	),
-), // info_settings
-
 'panel_overrides' => array(
 	'background' => array(
         'title' => __( 'Background', 'cryout' ),

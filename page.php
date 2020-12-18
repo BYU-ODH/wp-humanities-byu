@@ -14,7 +14,8 @@ get_header(); ?>
 
 	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
 
-		<main id="main" role="main" class="main">
+	    <main id="main" role="main" class="main">
+		
 			<?php cryout_before_content_hook(); ?>
 			
 			<?php get_template_part( 'content/content', 'page' ); ?>

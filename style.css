@@ -1293,7 +1293,6 @@ nav#mobile-menu #smobile {
 
 #site-copyright {
 	display: block;
-	float: left;
 	clear: left;
 	font-style: italic;
 	font-size: .9em;
@@ -6660,4 +6659,15 @@ div#humanities-menu li:hover {
 .home .entry-title {
 	display: none;
 }
+
+#colophon, #footer {
+	background-color: #002e5d;
+	color: #ffffff;
+	text-align: center;
+}
+
+aside#colophon a:hover, #footer a:hover {
+    color: #0062B8;
+}
+
 /* FIN! */

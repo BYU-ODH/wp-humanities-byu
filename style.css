@@ -6670,4 +6670,9 @@ aside#colophon a:hover, #footer a:hover {
     color: #0062B8;
 }
 
+.statusfilter:hover {
+	color: #D8D3D3;
+	text-decoration: underline;
+}
+
 /* FIN! */

@@ -6675,4 +6675,18 @@ aside#colophon a:hover, #footer a:hover {
 	text-decoration: underline;
 }
 
+.image-container img {
+	display: block;
+	height: 198%;
+	width: 100%;
+	object-fit: cover;
+}
+
+strong {
+	font-weight: bold;
+	display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.3rem;
+    border-radius: 0.75em;
+}
 /* FIN! */

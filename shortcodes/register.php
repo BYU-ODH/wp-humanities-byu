@@ -102,11 +102,14 @@ function make_list($people,$dept) {
     if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))
     {
       if (in_array($post['status'],array("full","part","emeritus","staff","visiting"))) {
-	$imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'full');
+        $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'medium');
+        $image_alt = get_post_meta(get_post_thumbnail_id($post['ID']), '_wp_attachment_image_alt', TRUE);
+        if (empty($image_alt)) {
+          $image_alt = get_the_title($post['ID']);
+        }
         $image = $imageArr[0];
         $permalink=get_permalink($post['ID']);
         $color=$colormap[$deptID];
-
         //print_r($post, false);
         $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
         if ($post['affiliated_faculty']) {
@@ -116,7 +119,10 @@ function make_list($people,$dept) {
 
         $block.="<li class='$classes'>";
         //$block.="<li class='filterable-item department-".$post['department']." status-".$post['status']."'>";
-        if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
+        //if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
+        if($image) { $block.="<div style='border-color: $color;' class='image-container'>
+          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'/>
+          </div>"; }
         $block.="<div class=\"content\">";
 	$block.="<h4 class=\"byuLightbox\" data-ajax-url=\"$permalink\">".$post['post_title']."</h4>";
 	$block.="<h5>";

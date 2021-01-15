@@ -6703,6 +6703,8 @@ figcaption {
 
 figure img {
 	border-radius: 20px;
+}
+
 .image-container img {
 	display: block;
 	height: 198%;

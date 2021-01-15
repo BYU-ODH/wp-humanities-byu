@@ -121,7 +121,7 @@ function make_list($people,$dept) {
         //$block.="<li class='filterable-item department-".$post['department']." status-".$post['status']."'>";
         //if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
         if($image) { $block.="<div style='border-color: $color;' class='image-container'>
-          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'/>
+          <img src='$image' class='directory-portrait byuLightbox' alt='$image_alt' title='$image_alt' data-ajax-url=\"$permalink\"/>
           </div>"; }
         $block.="<div class=\"content\">";
 	$block.="<h4 class=\"byuLightbox\" data-ajax-url=\"$permalink\">".$post['post_title']."</h4>";

@@ -1,0 +1,30 @@
+
+/* Custom Theme Icons */
+#toplevel_page_acf-options .wp-menu-image:before {
+  content: '\f116' !important;
+}
+
+#toplevel_page_acf-options .wp-menu-name:before {
+  content: 'BYUH ';
+}
+
+/* Custom Shortcodes */
+[class^="mce-i-byuh_button"]:before,
+[class*="mce-i-byuh_button"]:before {
+  font-family: 'dashicons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  color: #777;
+  vertical-align: top;
+  line-height: 22px;
+}
+  [class^="mce-i-byuh_button"]:hover:before,
+  [class*=" mce-i-byuh_button"]:hover:before {
+    color: #222;
+  }
+.mce-ico.mce-i-byuh_button_cta:before {
+  content: '\f344';
+}

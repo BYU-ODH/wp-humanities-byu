@@ -1,0 +1,303 @@
+/*Cardo Italic*/
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('cardoi99-webfont.eot');
+    src: url('cardoi99-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cardoi99-webfont.woff') format('woff'),
+         url('cardoi99-webfont.ttf') format('truetype'),
+         url('cardoi99-webfont.svg#cardoitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+/*Cardo Bold*/
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('cardob101-webfont.eot');
+    src: url('cardob101-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cardob101-webfont.woff') format('woff'),
+         url('cardob101-webfont.ttf') format('truetype'),
+         url('cardob101-webfont.svg#cardobold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+/*Cardo Regular*/
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('cardo104s-webfont.eot');
+    src: url('cardo104s-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cardo104s-webfont.woff') format('woff'),
+         url('cardo104s-webfont.ttf') format('truetype'),
+         url('cardo104s-webfont.svg#cardoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*Jos Sans Regular*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-regular-webfont.eot');
+    src: url('josefinsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-regular-webfont.woff') format('woff'),
+         url('josefinsans-regular-webfont.ttf') format('truetype'),
+         url('josefinsans-regular-webfont.svg#josefin_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*Jos Sans Italic*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-italic-webfont.eot');
+    src: url('josefinsans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-italic-webfont.woff') format('woff'),
+         url('josefinsans-italic-webfont.ttf') format('truetype'),
+         url('josefinsans-italic-webfont.svg#josefin_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/*Jos Sans Bold Italic*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-bolditalic-webfont.eot');
+    src: url('josefinsans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-bolditalic-webfont.woff') format('woff'),
+         url('josefinsans-bolditalic-webfont.ttf') format('truetype'),
+         url('josefinsans-bolditalic-webfont.svg#josefin_sansbold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+/*Jos Sans Bold*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-bold-webfont.eot');
+    src: url('josefinsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-bold-webfont.woff') format('woff'),
+         url('josefinsans-bold-webfont.ttf') format('truetype'),
+         url('josefinsans-bold-webfont.svg#josefin_sansbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+/*Jos Sans Semibold*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-semibold-webfont.eot');
+    src: url('josefinsans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-semibold-webfont.woff') format('woff'),
+         url('josefinsans-semibold-webfont.ttf') format('truetype'),
+         url('josefinsans-semibold-webfont.svg#josefin_sanssemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+/*Jos Sans SemiBold italic*/
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans-semibolditalic-webfont.eot');
+    src: url('josefinsans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('josefinsans-semibolditalic-webfont.woff') format('woff'),
+         url('josefinsans-semibolditalic-webfont.ttf') format('truetype'),
+         url('josefinsans-semibolditalic-webfont.svg#josefin_sanssemibold_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+@font-face{
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Light'),
+         local('Source Sans Pro'),
+         url('SourceSansPro-Light.eot') format('embedded-opentype'),
+         url('OTF/SourceSansPro-Light.otf.woff') format('woff'),
+         url('SourceSansPro-Light.otf') format('opentype'),
+         url('SourceSansPro-Light.ttf') format('truetype');
+}
+
+
+/*BYU Icon Font*/
+@font-face {
+    font-family: 'byu-icons';
+    src:url('byu-icons.eot?-2pndh2');
+    src:url('byu-icons.eot?#iefix-2pndh2') format('embedded-opentype'),
+        url('byu-icons.woff?-2pndh2') format('woff'),
+        url('byu-icons.ttf?-2pndh2') format('truetype'),
+        url('byu-icons.svg?-2pndh2#byu-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'byu-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: auto; /* For Android display bug */
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.byu-icon-search:before {
+    content: "\f002";
+}
+.byu-icon-play:before {
+    content: "\f04b";
+}
+.byu-icon-pause:before {
+    content: "\f04c";
+}
+.byu-icon-reply:before {
+    content: "\f064";
+}
+.byu-icon-twitter-square:before {
+    content: "\f081";
+}
+.byu-icon-facebook-square:before {
+    content: "\f082";
+}
+.byu-icon-linkedin-square:before {
+    content: "\f08c";
+}
+.byu-icon-twitter:before {
+    content: "\f099";
+}
+.byu-icon-facebook:before {
+    content: "\f09a";
+}
+.byu-icon-google-plus:before {
+    content: "\f0d5";
+}
+.byu-icon-caret-down:before {
+    content: "\f0d7";
+}
+.byu-icon-caret-up:before {
+    content: "\f0d8";
+}
+.byu-icon-caret-left:before {
+    content: "\f0d9";
+}
+.byu-icon-caret-right:before {
+    content: "\f0da";
+}
+.byu-icon-linkedin:before {
+    content: "\f0e1";
+}
+.byu-icon-angle-left:before {
+    content: "\f104";
+}
+.byu-icon-angle-right:before {
+    content: "\f105";
+}
+.byu-icon-angle-up:before {
+    content: "\f106";
+}
+.byu-icon-angle-down:before {
+    content: "\f107";
+}
+.byu-icon-youtube-square:before {
+    content: "\f166";
+}
+.byu-icon-youtube:before {
+    content: "\f167";
+}
+.byu-icon-instagram:before {
+    content: "\f16d";
+}
+.byu-icon-time:before {
+    content: "\e60f";
+}
+.byu-icon-graduation-cap:before {
+    content: "\e60a";
+}
+.byu-icon-events:before {
+    content: "\e60e";
+}
+.byu-icon-close:before {
+    content: "\e600";
+}
+.byu-icon-image:before {
+    content: "\e601";
+}
+.byu-icon-arrow-thin-long:before {
+    content: "\e603";
+}
+.byu-icon-arrow-thin:before {
+    content: "\e604";
+}
+.byu-icon-arrow-long:before {
+    content: "\e605";
+}
+.byu-icon-arrow:before {
+    content: "\e606";
+}
+.byu-icon-thin-angle-left:before {
+    content: "\e607";
+}
+.byu-icon-thin-angle-right:before {
+    content: "\e608";
+}
+.byu-icon-audio:before {
+    content: "\e609";
+}
+.byu-icon-date:before {
+    content: "\e60b";
+}
+.byu-icon-directory:before {
+    content: "\e60c";
+}
+.byu-icon-download:before {
+    content: "\e60d";
+}
+.byu-icon-highlight:before {
+    content: "\e610";
+}
+.byu-icon-location:before {
+    content: "\e611";
+}
+.byu-icon-mail:before {
+    content: "\e612";
+}
+.byu-icon-menu-close:before {
+    content: "\e613";
+}
+.byu-icon-menu:before {
+    content: "\e614";
+}
+.byu-icon-news:before {
+    content: "\e615";
+}
+.byu-icon-programs:before {
+    content: "\e616";
+}
+.byu-icon-quote:before {
+    content: "\e617";
+}
+.byu-icon-research:before {
+    content: "\e618";
+}
+.byu-icon-share:before {
+    content: "\e619";
+}
+.byu-icon-telephone:before {
+    content: "\e61a";
+}

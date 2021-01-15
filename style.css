@@ -6683,6 +6683,26 @@ strong {
     border-radius: 0.75em;
 }
 
+strong:hover {
+	color:rgb(182, 182, 182);
+}
+
+.menu-studentmain-container {
+	box-shadow: 3px 1px 5px;
+}
+
+a.lp-box-readmore {
+	display: none;
+}
+
+figcaption {
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	/* background: linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.7) 70%,transparent) */
+}
+
+figure img {
+	border-radius: 20px;
 .image-container img {
 	display: block;
 	height: 198%;

@@ -6675,13 +6675,6 @@ aside#colophon a:hover, #footer a:hover {
 	text-decoration: underline;
 }
 
-.image-container img {
-	display: block;
-	height: 198%;
-	width: 100%;
-	object-fit: cover;
-}
-
 strong {
 	font-weight: bold;
 	display: inline-block;
@@ -6710,6 +6703,11 @@ figcaption {
 
 figure img {
 	border-radius: 20px;
+.image-container img {
+	display: block;
+	height: 198%;
+	width: 100%;
+	object-fit: cover;
 }
 
 /* FIN! */

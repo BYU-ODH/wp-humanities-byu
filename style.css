@@ -6695,14 +6695,14 @@ strong {
     display: none;
 }
 
-.single .image-container, .byuLightboxContent .image-container {
+.single .image-container {
     width: 33%;
     display: inline-block;
     padding-left: 1rem;
     padding-right: 1rem;    
 }
 
-.single .profile-content img, .byuLightboxContent .profile-content img {
+.single .profile-content img {
 	border-style: solid;
 	border-radius: 0.75em;
 }
@@ -6711,7 +6711,7 @@ strong {
     margin-top: 10rem;
 }
 
-.single .content, .byuLightboxContent .content {
+.single .content {
     display: inline-block;
     vertical-align: top;
 }

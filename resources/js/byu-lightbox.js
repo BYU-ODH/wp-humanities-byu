@@ -15,8 +15,11 @@ jQuery(document).ready(function($) {
 
     //display ajax content
     if (ajaxUrl) {  
-      $.get(ajaxUrl, function (data) {
-        $lightboxContent.append($(data).find('.profile-content'));
+	$.get(ajaxUrl, function (data) {
+	    console.log("Here in ajax grab");
+	    console.log($(data).find('.profile-content'));
+          $lightboxContent.append($(data).find('.profile-content'));
+	  
       });
     }
 

@@ -6683,11 +6683,25 @@ strong {
     border-radius: 0.75em;
 }
 
-.image-container img {
+.image-container img.directory-portrait {
 	display: block;
 	height: 198%;
 	width: 100%;
 	object-fit: cover;
+}
+
+/* The theme sticks featured images here, but sometimes or always we don't want them */
+.single #header-image-main {
+    display: none;
+}
+
+.single .image-container {
+    width: 33%;
+    display: inline-block;
+}
+
+.single .content {
+    display: inline-block;
 }
 
 /* FIN! */

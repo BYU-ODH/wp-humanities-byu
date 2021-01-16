@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="text profile module">
-		<?php get_template_part('template-parts/page-header'); ?>
+		<?php /*get_template_part('template-parts/page-header');*/ ?>
 
 		<div class="profile-content">
 			<div class="text-content group wrapper">

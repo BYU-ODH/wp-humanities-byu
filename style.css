@@ -6579,7 +6579,7 @@ body.mobile .main {min-height:0;}
 
 div#humanities-menu {
     display: block;
-	margin-top: 79px;
+    margin-top: 79px;
 }
 
 ul#menu-studentmain {
@@ -6707,7 +6707,7 @@ strong {
 	border-radius: 0.75em;
 }
 
-#content {
+.single #content {
     margin-top: 10rem;
 }
 
@@ -6715,16 +6715,5 @@ strong {
     display: inline-block;
     vertical-align: top;
 }
-
-/* .profile-content .image-container { */
-/* 	width: 100%; */
-/* 	max-width: 386px; */
-/* 	float: left; */
-/* 	margin-right: 32px; */
-/* 	margin-bottom: 32px; */
-/* 	background-size: cover; */
-/* 	background-position: center center; */
-/* } */
-
 
 /* FIN! */

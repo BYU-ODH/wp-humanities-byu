@@ -6695,13 +6695,36 @@ strong {
     display: none;
 }
 
-.single .image-container {
+.single .image-container, .byuLightboxContent .image-container {
     width: 33%;
     display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;    
 }
 
-.single .content {
-    display: inline-block;
+.single .profile-content img, .byuLightboxContent .profile-content img {
+	border-style: solid;
+	border-radius: 0.75em;
 }
+
+#content {
+    margin-top: 10rem;
+}
+
+.single .content, .byuLightboxContent .content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* .profile-content .image-container { */
+/* 	width: 100%; */
+/* 	max-width: 386px; */
+/* 	float: left; */
+/* 	margin-right: 32px; */
+/* 	margin-bottom: 32px; */
+/* 	background-size: cover; */
+/* 	background-position: center center; */
+/* } */
+
 
 /* FIN! */

@@ -57,6 +57,7 @@
   font-weight: bold;
   color: white;
   cursor: pointer;
+  max-width: 18em;
 }
 
 .filter-container .filter-label .icon {

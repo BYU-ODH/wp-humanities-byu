@@ -24,7 +24,9 @@
     width: 100%;
   }
   .filter-container ul {
-    width: 100%;
+      width: 100%;
+      position: absolute;
+      max-height: 80vh;
   }
     .statusfilter-container {
         float: none;
@@ -61,7 +63,7 @@
   position: absolute;
   right: 15px;
   font-size: 16px;
-  top: 14px;
+  top: 1.25em;
 }
 .filter-container ul {
   background: #b3b1a9;

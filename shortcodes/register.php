@@ -82,7 +82,7 @@ function make_list($people,$dept) {
   $block.="<div class='statusfilter-container'>";
   $block.="<div class='statusfilter' data-class='status-full'> Full-time </div> | ";
   $block.="<div class='statusfilter' data-class='status-visiting'> Visiting </div> | ";  
-  $block.="<div class='statusfilter' data-class='status-part'> Part-time </div> | ";
+  $block.="<div class='statusfilter' data-class='status-part'> Adjunct </div> | ";
   $block.="<div class='statusfilter' data-class='status-affiliated'> Affiliated </div> | ";
   $block.="<div class='statusfilter' data-class='status-retired'> Emeriti </div> | ";
   $block.="<div class='statusfilter' data-class='status-staff'> Staff/Administration</div>";

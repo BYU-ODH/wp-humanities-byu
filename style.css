@@ -6675,7 +6675,7 @@ aside#colophon a:hover, #footer a:hover {
 	text-decoration: underline;
 }
 
-strong {
+figcaption strong {
 	font-weight: bold;
 	display: inline-block;
     background: rgba(0, 0, 0, 0.5);

@@ -6716,4 +6716,8 @@ figcaption strong {
     vertical-align: top;
 }
 
+.text-content p {
+	font-size: large;
+}
+
 /* FIN! */

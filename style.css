@@ -6683,6 +6683,10 @@ figcaption strong {
     border-radius: 0.75em;
 }
 
+strong:hover {
+	color:lightgray;
+}
+
 .image-container img.directory-portrait {
 	display: block;
 	height: 198%;
@@ -6714,6 +6718,14 @@ figcaption strong {
 .single .content {
     display: inline-block;
     vertical-align: top;
+}
+
+h4.byuLightbox:hover {
+	color: gray;
+}
+
+img.directory-portrait.byuLightbox:hover {
+	opacity: 0.7;
 }
 
 /* FIN! */

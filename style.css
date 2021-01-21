@@ -6584,6 +6584,7 @@ div#humanities-menu {
 
 ul#menu-studentmain {
 	padding-left: 10.5rem;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }
 
 div#humanities-menu li {

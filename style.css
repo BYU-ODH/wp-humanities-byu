@@ -6734,4 +6734,12 @@ figcaption {
 	border-bottom-right-radius: 28px;
 }
 
+h4.byuLightbox:hover {
+	color: gray;
+}
+
+img.directory-portrait.byuLightbox:hover {
+	opacity: 0.7;
+}
+
 /* FIN! */

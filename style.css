@@ -6725,4 +6725,12 @@ figcaption strong, .wp-block-cover strong:hover {
 	font-size: large;
 }
 
+h4.byuLightbox:hover {
+	color: gray;
+}
+
+img.directory-portrait.byuLightbox:hover {
+	opacity: 0.7;
+}
+
 /* FIN! */

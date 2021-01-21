@@ -6676,7 +6676,7 @@ aside#colophon a:hover, #footer a:hover {
 	text-decoration: underline;
 }
 
-figcaption strong {
+figcaption strong, .wp-block-cover strong {
 	font-weight: bold;
 	display: inline-block;
     background: rgba(0, 0, 0, 0.5);
@@ -6684,8 +6684,8 @@ figcaption strong {
     border-radius: 0.75em;
 }
 
-strong:hover {
-	color:lightgray;
+figcaption strong, .wp-block-cover strong:hover {
+	color: lightgray;
 }
 
 .image-container img.directory-portrait {

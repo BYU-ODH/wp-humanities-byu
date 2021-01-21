@@ -6725,6 +6725,15 @@ figcaption strong, .wp-block-cover strong:hover {
 	font-size: large;
 }
 
+figure img {
+	border-radius: 25px;
+}
+
+figcaption {
+	border-bottom-left-radius: 28px;
+	border-bottom-right-radius: 28px;
+}
+
 h4.byuLightbox:hover {
 	color: gray;
 }

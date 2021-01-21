@@ -6720,6 +6720,10 @@ strong:hover {
     vertical-align: top;
 }
 
+.text-content p {
+	font-size: large;
+}
+
 h4.byuLightbox:hover {
 	color: gray;
 }

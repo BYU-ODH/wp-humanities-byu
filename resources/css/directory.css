@@ -190,7 +190,7 @@
   }
 }
 .directory ul.directory-list li .image-container {
-  width: 7em;
+  width: 10em;
   height: 7em;
   display: table-cell;
   list-style: none;
@@ -206,10 +206,10 @@
     padding-bottom: 66%;
   }
 }
-.directory ul.directory-list li .image-container {
+/* .directory ul.directory-list li .image-container {
   border-width: 4px;
   border-style: solid;
-}
+} */
 .directory ul.directory-list li .content {
   display: table-cell;
   padding: 32px;

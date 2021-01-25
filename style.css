@@ -3551,12 +3551,11 @@ a.staticslider-button + a.staticslider-button,
 }
 
 /* LP Posts */
-#lp-posts,
-#lp-page {
+#lp-posts, #lp-page {
 	display: block;
 	float:none;
 	clear: both;
-	padding: 5em 0;
+	/* padding-top: 5em; */
 }
 
 #lp-page #comments {
@@ -6752,7 +6751,7 @@ aside#colophon a:hover {
 }
 
 .home section#lp-page {
-	margin: 15vh;
+	margin-top: 15vh;
 }
 
 /* FIN! */

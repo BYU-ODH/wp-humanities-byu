@@ -6751,4 +6751,8 @@ aside#colophon a:hover {
 	color: lightgray;
 }
 
+.home section#lp-page {
+	margin: 15vh;
+}
+
 /* FIN! */

@@ -71,7 +71,7 @@ get_header(); ?>
 			$all_terms .= get_the_term_list( $post->ID, 'personresearch', '', ', ', ', ' );
 			if ( $all_terms ) {
 			?>
-			    <p class="info research_areas"><span>Research Areas: </span><span class='research_areas_list'>
+			    <p class="info research_areas"><i class="icon byu-icon-research"></i><span>Research Areas: </span><span class='research_areas_list'>
 				<?php
 				echo rtrim( $all_terms, ', ' );
 				} // endif $all_terms

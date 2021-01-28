@@ -83,10 +83,10 @@ get_header(); ?>
 				foreach($person_details as $field => $label) {
 				    $f = get_field($field);
 				    if ($f) {
-					echo "<h3 class='label $field'>$label</h3>";
+					echo "<div class='personal-info-box'><h3 class='label $field'>$label</h3>";
 					echo "<p class='$field_content'>"
 					   . get_field($field)
-					   . "</p>";
+					   . "</p></div>";
 				    }
 				}
 				

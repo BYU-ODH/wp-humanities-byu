@@ -6687,39 +6687,6 @@ figcaption strong, .wp-block-cover strong:hover {
 	color: lightgray;
 }
 
-.image-container img.directory-portrait {
-	display: block;
-	height: 198%;
-	width: 100%;
-	object-fit: cover;
-}
-
-/* The theme sticks featured images here, but sometimes or always we don't want them */
-.single #header-image-main {
-    display: none;
-}
-
-.single .image-container {
-    width: 33%;
-    display: inline-block;
-    padding-left: 1rem;
-    padding-right: 1rem;    
-}
-
-.single .profile-content img {
-	border-style: solid;
-	border-radius: 0.75em;
-}
-
-.single #content {
-    margin-top: 10rem;
-}
-
-.single .content {
-    display: inline-block;
-    vertical-align: top;
-}
-
 .text-content p {
 	font-size: large;
 }

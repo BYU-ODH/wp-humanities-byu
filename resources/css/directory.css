@@ -279,3 +279,41 @@
     color: #002e5d;    
     /* TODO */
 }
+
+.image-container img.directory-portrait {
+	display: block;
+	height: 198%;
+	width: 100%;
+	object-fit: cover;
+}
+
+/* The theme sticks featured images here, but sometimes or always we don't want them */
+.single #header-image-main {
+    display: none;
+}
+
+.single .image-container {
+    max-width: 25%;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;    
+}
+
+.single .profile-content img {
+	border-style: solid;
+	border-radius: 0.75em;
+}
+
+.single #content {
+    margin-top: 10rem;
+}
+
+.single .content {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 70%;
+}
+
+.personal-info-box {
+    margin-top: 2rem;
+}

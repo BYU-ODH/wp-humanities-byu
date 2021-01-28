@@ -44,7 +44,7 @@ function make_list($people,$dept) {
 		<input id='directory-filter' class='search' placeholder='search directory' value='' type='text' />
 	</div>";
   $block.="<div class='statusfilter-container'>";
-  $block.="<div class='statusfilter' data-class='status-all'> All </div> | ";
+  $block.="<div class='statusfilter current'> All </div> | ";
   $block.="<div class='statusfilter' data-class='status-full'> Full-time </div> | ";
   $block.="<div class='statusfilter' data-class='status-visiting'> Visiting </div> | ";  
   $block.="<div class='statusfilter' data-class='status-part'> Adjunct </div> | ";

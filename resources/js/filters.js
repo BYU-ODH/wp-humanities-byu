@@ -12,7 +12,6 @@ function valid_item(i) {
             return false;}
 
     // Check if the department is right
-    // // TODO get data-dept equivalent for affiliated
     var $dept = jQuery("div.directory div.filter-container div.filter-label span.current").attr("data-dept");
     var $dept_class = "department-" + $dept;
     var $affil_class = "affiliated-" + $dept;

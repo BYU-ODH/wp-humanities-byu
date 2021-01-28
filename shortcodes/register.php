@@ -122,7 +122,7 @@ function make_list($people,$dept) {
         //if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
         if($image) { $block.="<div style='border-color: $color;' class='image-container'>
 <a href=\"$permalink\">
-          <img src='$image' class='directory-portrait byuLightbox' alt='$image_alt' title='$image_alt'>
+          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
 </a>
           </div>"; }
         $block.="<div class=\"content\">";

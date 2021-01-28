@@ -85,7 +85,7 @@ function make_list($people,$dept) {
   $block.="<div class='statusfilter' data-class='status-part'> Adjunct </div> | ";
   $block.="<div class='statusfilter' data-class='status-affiliated'> Affiliated </div> | ";
   $block.="<div class='statusfilter' data-class='status-retired'> Emeriti </div> | ";
-  $block.="<div class='statusfilter' data-class='status-staff'> Staff/Administration</div>";
+  $block.="<div class='statusfilter' data-class='status-staff'> Staff/Admin</div>";
   $block.="</div>";
   $block.="<ul class='directory-list filterable'>";
 

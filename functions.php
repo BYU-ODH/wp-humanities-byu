@@ -180,7 +180,7 @@ function byuh_populate_research_taxonomy ( $tax ) {
 	'Sociolinguistics' => array(),
 	'South America' => array(),
 	'Sports and games' => array(),
-	'TESOL' => ARRAY(),
+	'TESOL' => array(),
 	'Theater' => array(),
 	'Theory' => array(),
 	'Translation' => array(),
@@ -188,7 +188,7 @@ function byuh_populate_research_taxonomy ( $tax ) {
 	'Twenty-first century' => array(),
 	'Victorian' => array(),
 	'Women’s studies' => array(),
-	'Young adult ' => array())};
+	'Young adult ' => array());
     //echo "<script>console.log('in byuh_populate_depts_taxonomy, getting terms from $tax');</script>";
 
     foreach ( $terms as $parent => $children ) {

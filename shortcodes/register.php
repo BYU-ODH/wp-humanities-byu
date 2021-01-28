@@ -25,9 +25,9 @@ function make_list($people,$dept) {
   $departments = get_posts($departmentArgs);
   if ($dept=="all") {
     $block.="<div class='filter-container'>";
-    $block.="<div class='filter-label'><span class='current' data-dept='all'>All</span><i class='icon byu-icon-caret-down'></i></div>";
+    $block.="<div class='filter-label'><span class='current' data-dept='all'>A-Z</span><i class='icon byu-icon-caret-down'></i></div>";
     $block.="<ul>";
-    $block.='<li class="filter" data-class="all">All</li>';
+    $block.='<li class="filter" data-class="all">A-Z</li>';
   }
   foreach ($departments as $department) {
     if ($dept=="all") {

@@ -1,41 +1,5 @@
 <?php
 
-//////////////////////////////////////////////////////
-/* CTA */
-//////////////////////////////////////////////////////
-function cta_button_init() {
-  //don't do if user isn't going to see tinymce
-  if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') && get_user_option('rich_editing') == 'true') {
-    return;
-  }
-
-  add_filter("mce_external_plugins", "cta_register_plugin");
-  add_filter('mce_buttons', 'cta_add_button');
-}
-add_action('init', 'cta_button_init');
-//
-//register tinymce plugin
-function cta_register_plugin($plugin_array) {
-    $plugin_array['byuh_button_cta'] = get_template_directory_uri() . '/shortcodes/cta.js';
-    return $plugin_array;
-}
-
-//add button to toolbar
-function cta_add_button($buttons) {
-    //Add the button ID to the $button array
-    $buttons[] = "byuh_button_cta";
-    return $buttons;
-}
-
-//generate our shortcode html
-function shortcode_cta($atts, $content = null ) {
-  extract(shortcode_atts(array(
-    'href' => '',
-  ), $atts));
-  return '<a href="' . $href . '" class="cta"><span class="italic underline">' . do_shortcode($content) . '</span><i class="icon byu-icon-arrow-thin-long"></i></a>';
-}
-add_shortcode('cta', 'shortcode_cta');
-
 function qualified_post($terms, $dept) {
   // Take the department taxonomy terms of a post and see if $dept is among them
   foreach ($terms as $t) {
@@ -61,9 +25,9 @@ function make_list($people,$dept) {
   $departments = get_posts($departmentArgs);
   if ($dept=="all") {
     $block.="<div class='filter-container'>";
-    $block.="<div class='filter-label'><span class='current' data-dept='all'>All</span><i class='icon byu-icon-caret-down'></i></div>";
+    $block.="<div class='filter-label'><span class='current' data-dept='all'>A-Z</span><i class='icon byu-icon-caret-down'></i></div>";
     $block.="<ul>";
-    $block.='<li class="filter" data-class="all">All</li>';
+    $block.='<li class="filter" data-class="all">A-Z</li>';
   }
   foreach ($departments as $department) {
     if ($dept=="all") {
@@ -80,12 +44,13 @@ function make_list($people,$dept) {
 		<input id='directory-filter' class='search' placeholder='search directory' value='' type='text' />
 	</div>";
   $block.="<div class='statusfilter-container'>";
+  $block.="<div class='statusfilter current'> All </div> | ";
   $block.="<div class='statusfilter' data-class='status-full'> Full-time </div> | ";
   $block.="<div class='statusfilter' data-class='status-visiting'> Visiting </div> | ";  
   $block.="<div class='statusfilter' data-class='status-part'> Adjunct </div> | ";
   $block.="<div class='statusfilter' data-class='status-affiliated'> Affiliated </div> | ";
   $block.="<div class='statusfilter' data-class='status-retired'> Emeriti </div> | ";
-  $block.="<div class='statusfilter' data-class='status-staff'> Staff/Administration</div>";
+  $block.="<div class='statusfilter' data-class='status-staff'> Staff/Admin</div>";
   $block.="</div>";
   $block.="<ul class='directory-list filterable'>";
 
@@ -110,7 +75,7 @@ function make_list($people,$dept) {
         $image = $imageArr[0];
         $permalink=get_permalink($post['ID']);
         $color=$colormap[$deptID];
-        //print_r($post, false);
+
         $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
         if ($post['affiliated_faculty']) {
           array_push($directory_entry_classes, "affiliated-".$post['affiliated_department'], "status-affiliated"); 
@@ -118,9 +83,8 @@ function make_list($people,$dept) {
 	$classes=implode(" ", $directory_entry_classes);
 
         $block.="<li class='$classes'>";
-        //$block.="<li class='filterable-item department-".$post['department']." status-".$post['status']."'>";
-        //if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
-        if($image) { $block.="<div style='border-color: $color;' class='image-container'>
+
+          if($image) { $block.="<div style='border-color: $color;' class='image-container'>
 <a href=\"$permalink\">
           <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
 </a>

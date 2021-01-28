@@ -198,7 +198,7 @@ function byuh_init () {
     //byuh_clear_taxonomy ( 'personresearch' );
     activate_personresearch_tax();
     register_activation_hook( __FILE__, 'activate_personresearch_tax' );
-    byuh_populate_research_taxonomy ('personresearch');
+    //byuh_populate_research_taxonomy ('personresearch');
   //byuh_clear_taxonomy ( 'persondepartments' );
   //byuh_populate_depts_taxonomy ( 'persondepartments' );
 }

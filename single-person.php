@@ -63,8 +63,6 @@ get_header(); ?>
 		    <?php 
 		    } 
 		    ?>
-		    <p class="info" ><i class="icon byu-icon-download"></i><span>Permalink: </span><span><a href="<?php echo $page_link ?>"><?php echo $page_link ?></a>
-
 			<!-- to be taxonomies -->
 			<?php
 			$all_terms = '';

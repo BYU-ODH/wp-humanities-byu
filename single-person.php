@@ -63,7 +63,6 @@ get_header(); ?>
 		    <?php 
 		    } 
 		    ?>
-			<!-- to be taxonomies -->
 			<?php
 			$all_terms = '';
 			$all_terms .= get_the_term_list( $post->ID, 'personresearch', '', ', ', ', ' );
@@ -74,7 +73,27 @@ get_header(); ?>
 				echo rtrim( $all_terms, ', ' );
 				} // endif $all_terms
 			?>
-			
+<!-- Directory Details -->
+				<?php
+				$person_details = array(
+				    "teaching"=>"Teaching Experience", 
+				    "research"=>"Research", 
+				    "publications"=>"Publications", 
+				    "service"=>"Service", 
+				    "citizenship_assignments"=>"Citizenship assignments", 
+				    "professional_website"=>"Professional Website");
+				foreach($person_details as $field => $label) {
+				    $f = get_field($field);
+				    if ($f) {
+					echo "<h3 class='label $field'>$label</h3>";
+					echo "<p class='$field_content'>"
+					   . get_field($field)
+					   . "</p>";
+				    }
+				}
+				
+				?>
+				<!-- End Directory Details -->
 
 			<?php if (get_field('schedule')) { ?>
 			    <div class="row">
@@ -89,7 +108,12 @@ get_header(); ?>
 			<?php } ?>
 		</div>
 	    </div>
-	    <?php get_template_part('template-parts/flexible-content'); ?>
+	    
+	    <?php
+	    // Not allowing exceptions in the data
+	    // get_template_part('template-parts/flexible-content'); */
+
+	    ?>
 	</div>
     </div>
 <?php endwhile; // end of the loop. ?>

@@ -274,3 +274,8 @@
 .profile-content .text-content {
 	padding-left: 2em;
 }
+
+.person h1 a:hover, .person h2 a:hover, .person h3 a:hover, .person h4 a:hover {
+    color: #002e5d;    
+    /* TODO */
+}

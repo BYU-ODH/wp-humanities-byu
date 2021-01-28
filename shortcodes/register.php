@@ -121,10 +121,12 @@ function make_list($people,$dept) {
         //$block.="<li class='filterable-item department-".$post['department']." status-".$post['status']."'>";
         //if($image) { $block.="<div style='background-image: url($image); border-color: $color;' class='image-container'></div>"; }
         if($image) { $block.="<div style='border-color: $color;' class='image-container'>
-          <img src='$image' class='directory-portrait byuLightbox' alt='$image_alt' title='$image_alt' data-ajax-url=\"$permalink\"/>
+<a href=\"$permalink\">
+          <img src='$image' class='directory-portrait byuLightbox' alt='$image_alt' title='$image_alt'>
+</a>
           </div>"; }
         $block.="<div class=\"content\">";
-	$block.="<h4 class=\"byuLightbox\" data-ajax-url=\"$permalink\">".$post['post_title']."</h4>";
+	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
 	$block.="<h5>";
         $block.=$status_map[$post['status']].", ";
 	$block.=$deptmap[$post['department']]."</h5>";

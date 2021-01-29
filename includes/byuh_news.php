@@ -3,40 +3,35 @@ require_once( get_template_directory() . "/includes/simplehtmldom/HtmlWeb.php" )
 use simplehtmldom\HtmlWeb;
 
 /* News feed for the front page */
-function get_item_value ($domit, $tagname) {
-    $domit->getElementsByTagName($tagname)->item(0)->nodeValue;
-    }
 
 function byuh_news () {
     $xml=("https://news.humanities.byu.edu/recent-news.rss");
     $xmlDoc = new DOMDocument();
     $xmlDoc->load($xml);
     $channel=$xmlDoc->getElementsByTagName('channel')->item(0);
-    //print_r($channel, false);
-
     $feed_date = $channel->getElementsByTagName('lastBuildDate')->item(0)->nodeValue;
-    //echo "<h1>Feed date: $feed_date</h1>";
-    //print_r($feed_date, false);
     $items = $channel->getElementsByTagName('item');
-    echo "<div class='recent-news'>";
+    echo "<section class='recent-news'>";
     for ($x = 0; $x < 1; $x++) {
 	$title = $items->item($x)->getElementsByTagName('title')->item(0)->nodeValue;
 	$link = $items->item($x)->getElementsByTagName('link')->item(0)->nodeValue;
 	$description = $items->item($x)->getElementsByTagName('description')->item(0)->nodeValue;
+	$dd = "<div class='news-description'>$description</div>";
 	$pubdate = $items->item($x)->getElementsByTagName('pubDate')->item(0)->nodeValue;
-	$tlink = "<a class='news-title' href='$link'>$title</a>";
+	$pubdate = preg_replace('/(.* \d{4}).*/', '$1', $pubdate);
+	$publine = "<h6 class='details'>$pubdate</h6>";
+	$tlink = "<h5 class='title lp-box-title'><a class='news-title' href='$link'>$title</a></h5>";
+	$news_content = "<div class='news-content'>" . $tlink . $publine . $dd . "</div>";
 
 	$client = new HtmlWeb();
 	$html = $client->load($link);
 	$image_src = $html->find('figure img')[0]->src . PHP_EOL;
-	$image = "<div class='image-container'><a href='$link'><img src='$image_src'></a></div> "; 
-	echo "<div class='recent-news-box'>" . $image . $tlink . "</div>";
+	$image = "<div class='image-container'><a href='$link'><img src='$image_src'></a></div> ";
+
+	echo "<div class='recent-news-box'>" . $image . $news_content . "</div>";
 	}
-    echo "</div>"; // end recent-news
+    echo "</section>"; // end recent-news
     ?>
-
-
- 
 
     <?php
     } // end byuh_news

@@ -6721,4 +6721,39 @@ aside#colophon a:hover {
 	margin-top: 15vh;
 }
 
+/* homepage recent news */
+section.recent-news {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 1.5rem;
+}
+
+.recent-news-box {
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.recent-news-box img {
+    max-height: 80vh;
+}
+
+.recent-news-box img:hover {
+    opacity: 0.3;
+}
+
+.news-description {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(102, 102, 102);
+    font-weight: 300;
+}
+
+
 /* FIN! */

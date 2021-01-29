@@ -29,6 +29,7 @@ require_once( get_template_directory() . "/includes/comments.php" );    	// Comm
 require_once( get_template_directory() . "/includes/core.php" );        	// Core functions
 require_once( get_template_directory() . "/includes/hooks.php" );       	// Hooks
 require_once( get_template_directory() . "/includes/meta.php" );        	// Custom Post Metas
+require_once( get_template_directory() . "/includes/byuh_news.php" );	// Landing Page News
 require_once( get_template_directory() . "/includes/landing-page.php" );	// Landing Page outputs
 
 ///////////////////////////////////////

@@ -730,7 +730,6 @@ a#logo > img {
     font-size: 24px;
     font-weight: 600;
 }
-}
 
 #site-title a span {
 	display: inline-block;
@@ -6719,6 +6718,55 @@ aside#colophon a:hover {
 
 .home section#lp-page {
 	margin-top: 15vh;
+}
+
+/* homepage recent news */
+section.recent-news {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 1.5rem;
+}
+
+.recent-news-box {
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.recent-news-box img {
+    max-height: 80vh;
+}
+
+.recent-news-box img:hover {
+    opacity: 0.3;
+}
+
+.news-description {
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(102, 102, 102);
+    font-weight: 300;
+}
+
+div#content .news-title {
+    text-decoration: none;
+}
+
+.recent-news .elementor-button-wrapper {
+    margin-top: 1rem;
+    margin-bottom: -6rem;
+}
+
+.recent-news .elementor-button {
+    background-color: #0062B8;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
 }
 
 /* FIN! */

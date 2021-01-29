@@ -730,7 +730,6 @@ a#logo > img {
     font-size: 24px;
     font-weight: 600;
 }
-}
 
 #site-title a span {
 	display: inline-block;
@@ -6755,5 +6754,19 @@ section.recent-news {
     font-weight: 300;
 }
 
+div#content .news-title {
+    text-decoration: none;
+}
+
+.recent-news .elementor-button-wrapper {
+    margin-top: 1rem;
+    margin-bottom: -6rem;
+}
+
+.recent-news .elementor-button {
+    background-color: #0062B8;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+}
 
 /* FIN! */

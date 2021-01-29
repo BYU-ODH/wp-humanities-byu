@@ -27,8 +27,15 @@ function byuh_news () {
 	$html = $client->load($link);
 	$image_src = $html->find('figure img')[0]->src . PHP_EOL;
 	$image = "<div class='image-container'><a href='$link'><img src='$image_src'></a></div> ";
+    $more_news = "<div class='elementor-button-wrapper'>
+      <a href='https://news.humanities.byu.edu' class='not-really-elementor elementor-button-link elementor-button elementor-size-xl elementor-animation-grow' role='button'>
+	<span class='elementor-button-content-wrapper'>
+	  <span class='elementor-button-text'>More News</span>
+	</span>
+      </a>
+    </div>";
 
-	echo "<div class='recent-news-box'>" . $image . $news_content . "</div>";
+	echo "<div class='recent-news-box'>" . $image . $news_content . $more_news . "</div>";
 	}
     echo "</section>"; // end recent-news
     ?>

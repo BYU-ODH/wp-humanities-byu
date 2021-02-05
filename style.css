@@ -6771,4 +6771,12 @@ div#content .news-title {
     font-weight: 700;
 }
 
+.article-inner header h1, .directory-list .filterable-item .content h4 {
+	color : black;
+}
+
+.directory-list .filterable-item .content h5 {
+	color: #666666;
+}
+
 /* FIN! */

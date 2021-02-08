@@ -6703,13 +6703,19 @@ h4.byuLightbox:hover {
 	color: gray;
 }
 
+/* doing a demo */
+
 img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
-div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
+div#content a.lp-box-readmore, div#content a.staticslider-button, aside#colophon a {
 	color: white;
 	text-decoration: none;
+}
+
+div#content a.elementor-button-link {
+	display: none;
 }
 
 aside#colophon a:hover {
@@ -6767,6 +6773,14 @@ div#content .news-title {
     background-color: #0062B8;
     font-family: "Roboto", Sans-serif;
     font-weight: 700;
+}
+
+.article-inner header h1, .directory-list .filterable-item .content h4 {
+	color : black;
+}
+
+.directory-list .filterable-item .content h5 {
+	color: black;
 }
 
 /* FIN! */

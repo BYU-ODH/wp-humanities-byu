@@ -86,7 +86,7 @@
     padding: 15px 20px;
 }
 .filter-container ul li:hover {
-    background-color: #002f5d;
+    background-color: #002f5d; /* byu nav blue */
 }
 .input-container {
     display: inline-block;

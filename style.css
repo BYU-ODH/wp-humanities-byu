@@ -6744,7 +6744,8 @@ section.recent-news {
 }
 
 .recent-news-box img {
-    max-height: 80vh;
+    max-height: 195px;
+	max-width: 260px;
 }
 
 .news-description {

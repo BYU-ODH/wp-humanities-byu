@@ -6747,10 +6747,6 @@ section.recent-news {
     max-height: 80vh;
 }
 
-.recent-news-box img:hover {
-    opacity: 0.3;
-}
-
 .news-description {
     text-align: left;
     width: 50%;

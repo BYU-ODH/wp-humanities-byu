@@ -960,10 +960,6 @@ a#logo > img {
 	filter: alpha(opacity=0);
 }
 
-#access > div > ul li > a:not(:only-child) > span {
-	/*padding-right: 1.5em;*/
-}
-
 #access ul li {
 	display: block;
 	float: left;
@@ -3072,7 +3068,7 @@ a.staticslider-button + a.staticslider-button,
 	right: 0;
 	left: 0;
 	padding: 4% 6%;
-	color: #DDD;
+	color: #fff;
 	opacity: 1;
 	-webkit-transition: 1s max-height ease-out, .4s .1s bottom ease-out;
 	transition: 1s max-height ease-out, .4s .1s bottom ease-out;
@@ -3255,7 +3251,7 @@ a.staticslider-button + a.staticslider-button,
 	margin: auto;
 	font-size: 1em;
 	line-height: 40px;
-	color: #EEE;
+	color: #FFF;
 	/* background: rgba(255,255,255,0.15); */
 	-webkit-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
@@ -3728,10 +3724,6 @@ span.entry-format i::before {
 }
 
 /* ## STATUS */
-.format-status .entry-title {
-	/*display:none;*/
-}
-
 .format-status .avatar {
 	display: block;
 	float: left;
@@ -3815,8 +3807,6 @@ span.entry-sticky {
 .commentlist .pingback .url {
 	font-style: italic;
 }
-
-.commentlist li:last-child {}
 
 #comments .comment-body p:last-child {
 	margin-bottom: 0;
@@ -4034,8 +4024,6 @@ a.comment-edit-link:hover {}
 	display: block;
 	float: none;
 }
-
-#respond input:hover, #respond textarea:hover {}
 
 #respond .form-allowed-tags {
 	display: block;
@@ -4255,9 +4243,6 @@ nav.sidebarmenu li a:hover {
 	margin-bottom: 0;
 	padding-bottom: 0;
 	border-bottom: 0;
-}
-
-.widget-area .cryout-wtabs-nav {
 }
 
 .cryout-wtabs-nav.tab-count-1 li {
@@ -4517,7 +4502,7 @@ ul.cryout-wposts li:last-child {
 .cryout-wtab li:hover .thumb-icon,
 .cryout-wposts li:hover .thumb-icon {
 	background: #fff;
-	color: #222;
+	color: #141414;
 }
 
 .cryout-wtab .tab-item-category a,
@@ -4709,10 +4694,6 @@ ul.cryout-wposts li:last-child {
 .widget_cryout_contact address > span:hover i {
 	background: rgba(255,255,255,.1);
 }
-
-
-/* ## Cryout Socials */
-.widget-socials {}
 
 /* ## Cryout Portfolio */
 .widget-portfolio {
@@ -4976,7 +4957,7 @@ ul.cryout-wposts li:last-child {
 	border: 0;
 	font-size: 1em;
 	font-weight: bold;
-	color: #AAA;
+	color: #E6E6E6;
 }
 
 #access .menu-search-animated .searchform input[type="search"] {
@@ -4984,7 +4965,7 @@ ul.cryout-wposts li:last-child {
 	border: 0;
 	font-size: 1em;
 	font-weight: bold;
-	color: #AAA;
+	color: #E6E6E6;
 }
 
 #access .menu-main-search .searchform input[type="search"]:focus {
@@ -6164,10 +6145,6 @@ body.mobile .main {min-height:0;}
 
 @media (max-width: 640px) {
 
-	body {
-		/*font-size: .85em;*/
-	}
-
 	.cryout #container[class*="three-"] #primary,
 	.cryout #container[class*="three-"] #secondary,
 	.cryout #container[class*="three-"] .sidey .widget-container,
@@ -6480,7 +6457,7 @@ body.mobile .main {min-height:0;}
 	body {
 		font-size: 11pt;
 		line-height: 1.5;
-		color: #000;
+		color: #141414;
 	}
 
 	#masthead.cryout #site-header-main {
@@ -6570,7 +6547,7 @@ body.mobile .main {min-height:0;}
 
 	.lp-text {
 		background: #FFF;
-		color: #000;
+		color: #141414;
 	}
 
 }
@@ -6652,7 +6629,7 @@ a.lp-box-readmore {
 }
 
 div#humanities-menu li:hover {
-	background-color: #F3F4F5;
+	background-color: #E6E6E6;
 }
 
 .home .entry-title {
@@ -6709,17 +6686,13 @@ img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
-div#content a.lp-box-readmore, div#content a.staticslider-button, aside#colophon a {
+div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
 	color: white;
 	text-decoration: none;
 }
 
-div#content a.elementor-button-link {
-	display: none;
-}
-
 aside#colophon a:hover {
-	color: lightgray;
+	color: #C5C5C5;
 }
 
 .home section#lp-page {
@@ -6764,6 +6737,7 @@ div#content .news-title {
 .recent-news .elementor-button-wrapper {
     margin-top: 1rem;
     margin-bottom: -6rem;
+	display: none;
 }
 
 .recent-news .elementor-button {
@@ -6773,11 +6747,11 @@ div#content .news-title {
 }
 
 .article-inner header h1, .directory-list .filterable-item .content h4 {
-	color : black;
+	color : #141414;
 }
 
 .directory-list .filterable-item .content h5 {
-	color: black;
+	color: #141414;
 }
 
 /* FIN! */

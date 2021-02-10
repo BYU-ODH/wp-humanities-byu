@@ -6660,7 +6660,7 @@ figcaption strong, .wp-block-cover strong {
 }
 
 figcaption strong, .wp-block-cover strong:hover {
-	color: lightgray;
+	color: #C5C5C5;
 }
 
 .text-content p {
@@ -6677,7 +6677,7 @@ figcaption {
 }
 
 h4.byuLightbox:hover {
-	color: gray;
+	color: #8F8F8F;
 }
 
 /* doing a demo */

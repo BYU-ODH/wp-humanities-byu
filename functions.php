@@ -41,7 +41,8 @@ function byuh_scripts_styles() {
     // Fonts
     wp_enqueue_style('byuh-fonts', get_template_directory_uri() . '/resources/css/fonts/fonts.css');
     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-
+    wp_enqueue_style('byuRingSide', 'https://cdn.byu.edu/theme-fonts/1.x.x/ringside/fonts.css');
+    wp_enqueue_style('byuPublicSans', 'https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css');
 
     //style for directory
     //wp_enqueue_style('byuh-byulightbox', get_template_directory_uri() . '/resources/css/byu-lightbox.css');

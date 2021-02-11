@@ -174,6 +174,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: grayscale;
 	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Public Sans', Arial, sans-serif;
 }
 
 blockquote {
@@ -189,7 +190,7 @@ blockquote::after {
 blockquote cite {
 	font-weight: 400;
 	font-style: normal;
-	font-family: 'Public Sans', sans-serif;
+	font-family: 'Public Sans', Arial, sans-serif;
 	/*text-transform: uppercase;*/
 	letter-spacing: 2px;
 	font-size: 0.7em;
@@ -211,6 +212,7 @@ html {
 
 body {
 	font-size: 1em;
+	font-family: 'Public Sans', Arial, sans-serif;
 }
 
 h1,
@@ -221,7 +223,7 @@ h5,
 h6 {
 	clear: both;
 	font-weight: normal;
-	font-family: Signika; 
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 24px; 
 	font-style: normal; 
 	font-variant: normal; 
@@ -236,7 +238,6 @@ pre {
 	padding: 1em;
 	max-width: 100%;
 	overflow: auto;
-	font-family: 'Public Sans', sans-serif;
 	border: 1px solid transparent;
 }
 
@@ -247,13 +248,11 @@ code {
 	padding: 0 5px;
 	overflow: auto;
 	vertical-align: middle;
-	text-indent: 0;
-	font-family: 'Public Sans', sans-serif;}
+	text-indent: 0;}
 
 q,
 blockquote {
-	font-size: 1.1em;
-	font-family: 'Public Sans', sans-serif;}
+	font-size: 1.1em;}
 
 address {
 	padding-left: 1em;
@@ -290,7 +289,6 @@ li > ol {
 
 ul {
 	list-style-type: disc;
-	font-family: 'Open Sans';
     font-size: 17px;
     font-weight: 600;
 }
@@ -391,7 +389,6 @@ input[type="week"] {
 	border: 3px solid transparent;
 	background: transparent;
 	font-size: inherit;
-	font-family: 'Public Sans', sans-serif;
 	font-weight: bold;
 	-webkit-transition: background .3s ease-out;
 	transition: background .3s ease-out;
@@ -410,7 +407,6 @@ input[type="reset"] {
 	font-size: .9em;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-family: 'Public Sans', sans-serif;
 	-webkit-transition: background-color .3s ease-out;
 	transition: background-color .3s ease-out;
 }
@@ -726,7 +722,6 @@ a#logo > img {
 #site-title a {
 	display: block;
 	text-decoration: none;
-	font-family: 'Open Sans', PT Sans Narrow;
     font-size: 24px;
     font-weight: 600;
 }
@@ -6742,7 +6737,6 @@ div#content .news-title {
 
 .recent-news .elementor-button {
     background-color: #0062B8;
-    font-family: "Roboto", Sans-serif;
     font-weight: 700;
 }
 

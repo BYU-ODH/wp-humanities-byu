@@ -99,7 +99,7 @@ function make_list($people,$dept) {
         }
 
         if (!empty($post['address'])) {
-          $block.="<div class=\"link\"><i class=\"icon byu-icon-location\"></i><span>".$post['address']."</span></div>";	
+          $block.="<div class=\"link address\"><i class=\"icon byu-icon-location\"></i><span>".$post['address']."</span></div>";	
   }
   if (!empty($post['phone'])) {
     $phone = $post['phone'];
@@ -107,19 +107,18 @@ function make_list($people,$dept) {
     if (strlen($phone) == 10) 
     {
       $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
-      $block.="<div class=\"link\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
+      $block.="<div class=\"link phone\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
     }
     else if (strlen($phone) == 7)
     {
       $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
-      $block.="<div class=\"link\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
+      $block.="<div class=\"link phone\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
     }
   }
         if (!empty($post['email'])) {
-          $block.="<div class=\"link\"><i class=\"icon byu-icon-mail\"></i><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</span></div>";
+          $block.="<div class=\"link email\"><i class=\"icon byu-icon-mail\"></i><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</span></div>";
 	}
-        $block.="<a href=\"mailto:".$post['email']."\"><div class=\"cta\"><span class=\"underline\">Send a Message</span><i class=\"icon byu-icon-arrow-thin-long\"></i>";
-        $block.="</div></a></div>"; 
+        $block.="</div>"; 
 	$block.="</li>";
       }
     }

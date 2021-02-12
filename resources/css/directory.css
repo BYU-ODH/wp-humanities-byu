@@ -47,7 +47,7 @@
     margin-right: 10px;
 }
 .filter-container .filter-label {
-    background: #b3b1a9;
+    background: #8f8f8f;
     width: auto;
     min-width: 100px;
     display: inline-block;
@@ -92,7 +92,7 @@
     display: inline-block;
     position: relative;
     padding: 12px 12px 11px 40px;
-    background: #b3b1a9;
+    background: #8f8f8f;
 }
 .input-container:before {
     font-family: 'byu-icons';
@@ -107,7 +107,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     height: 21px;
-    background: #b3b1a9;
+    background: #8f8f8f;
     color: white;
     margin: 0;
     border: none;
@@ -179,7 +179,7 @@
 }
 .directory ul.directory-list li {
     background: #f6f6f8;
-    color: #86847d;
+    color: #8f8f8f;
     width: 100%;
     margin-bottom: 10px;
     display: table;
@@ -221,8 +221,9 @@
     }
 }
 .directory ul.directory-list li .content h4 {
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: bold;
+    font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 @media all and (max-width: 699px) {
     .directory ul.directory-list li .content h4 {

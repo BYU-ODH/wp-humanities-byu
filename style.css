@@ -1556,8 +1556,9 @@ img#wpstats {
 
 .entry-content h5,
 .entry-content h6 {
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: bold;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .entry-content fieldset {
@@ -6641,9 +6642,17 @@ aside#colophon a:hover, #footer a:hover {
     color: #0062B8;
 }
 
+.statusfilter {
+	color: #8F8F8F;
+}
+
 .statusfilter:hover {
-	color: #D8D3D3;
+	color: #666666;
 	text-decoration: underline;
+}
+
+div#content .content div span a:hover { 
+	color: #0062B8;
 }
 
 figcaption strong, .wp-block-cover strong {
@@ -6741,7 +6750,7 @@ div#content .news-title {
 }
 
 .article-inner header h1, .directory-list .filterable-item .content h4 {
-	color : #141414;
+	color : black;
 }
 
 .directory-list .filterable-item .content h5 {

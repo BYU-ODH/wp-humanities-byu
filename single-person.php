@@ -28,15 +28,15 @@ get_header(); ?>
 			</h3>
 
 		    <?php if (get_field('address')) { ?>
-			<p class="info"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
+			<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
 		    <?php } ?>
 
 		    <?php if (get_field('phone')) { ?>
-			<p class="info"><i class="icon byu-icon-telephone"></i><span><?php the_field('phone'); ?></span></p>
+			<p class="info phone"><i class="icon byu-icon-telephone"></i><span><?php the_field('phone'); ?></span></p>
 		    <?php } ?>
  
  		    <?php if (get_field('email')) { ?>
-			<p class="info"><i class="icon byu-icon-mail"></i><span><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></span></p>
+			<p class="info email"><i class="icon byu-icon-mail"></i><span><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></span></p>
 		    <?php } ?>
 
 		    <!-- Curriculum Vitae -->

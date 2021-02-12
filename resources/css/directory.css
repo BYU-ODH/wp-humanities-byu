@@ -315,6 +315,10 @@
     max-width: 70%;
 }
 
+.single .content ul {
+    margin-left: 1em;
+}
+
 .personal-info-box {
     margin-top: 2rem;
 }

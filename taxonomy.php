@@ -17,7 +17,16 @@
 
 get_header(); ?>
 
-<h1> Research Catagories Here:</h1>
+<h1>Category Content Here</h1>
+<!--style to fix alignment of people-->
+<style>
+article{
+	position: relative;
+	width: 445px;
+	height: 606px;
+	padding: 10px;
+}
+</style>
 
 	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
 		<main id="main" role="main" class="main">

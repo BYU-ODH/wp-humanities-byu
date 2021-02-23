@@ -64,6 +64,41 @@ add_action( 'init', 'humanities_menu' );
 
 function byuh_setup() {
 
+    // Department
+    $department_labels = array(
+        'name' 								=> __('Department', 'byuh'),
+        'singular_name' 			=> __('Department', 'byuh'),
+        'add_new' 						=> __('Add New', 'byuh'),
+        'add_new_item' 				=> __('Add New', 'byuh'),
+        'edit_item' 					=> __('Edit', 'byuh'),
+        'new_item' 						=> __('New', 'byuh'),
+        'all_items' 					=> __('All', 'byuh'),
+        'view_item' 					=> __('View', 'byuh'),
+        'search_items' 				=> __('Search', 'byuh'),
+        'not_found' 					=> __('Nothing found', 'byuh'),
+        'not_found_in_trash' 	=> __('Nothing found in Trash', 'byuh'), 
+        'parent_item_colon' 	=> '',
+        'menu_name' 					=> __('Departments', 'byuh'),
+    );
+
+    $department_args = array(
+        'labels' 							=> $department_labels,
+        'public' 							=> true,
+        'publicly_queryable' 	=> true,
+        'show_ui' 						=> true, 
+        'show_in_menu' 				=> true, 
+        'query_var' 					=> true,
+        'rewrite' 						=> array( 'slug' => __('department', 'byuh') ),
+        'capability_type' 		=> 'page',
+        'has_archive' 				=> false, 
+        'hierarchical' 				=> true,
+        'menu_position' 			=> 20,
+        'supports' 						=> array('title', 'thumbnail', 'excerpt'),
+        'menu_icon'           => 'dashicons-feedback'
+    ); 
+    register_post_type('department', $department_args);
+
+
     // Person
     $person_labels = array(
         'name'                => __('Person', 'byuh'),

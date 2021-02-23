@@ -6769,7 +6769,10 @@ div#content .news-title {
 	color: #141414;
 }
 
-.elementor-button span, h4.elementor-heading-title.elementor-size-xl, .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title, h3.widget-title {
+.elementor-button span, h4.elementor-heading-title.elementor-size-xl,
+.elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
+h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
+.statusfilter.current {
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 

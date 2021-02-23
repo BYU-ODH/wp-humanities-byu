@@ -723,7 +723,8 @@ a#logo > img {
 	display: block;
 	text-decoration: none;
     font-size: 24px;
-    font-weight: 600;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
 }
 
 #site-title a span {
@@ -1284,9 +1285,8 @@ nav#mobile-menu #smobile {
 #site-copyright {
 	display: block;
 	clear: left;
-	font-style: italic;
 	font-size: .9em;
-	/*line-height: 1.5;*/
+	font-family: 'Public Sans', Arial, sans-serif;
 }
 
 #footer-separator {
@@ -1451,6 +1451,11 @@ img#wpstats {
 .main h5,
 .main h6 {
 	margin: 1em 0 .5em;
+}
+
+.staticslider-caption-title {
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: lighter;
 }
 
 .entry-content h1:first-child,
@@ -2996,6 +3001,7 @@ a.staticslider-button + a.staticslider-button,
 .lp-box-title a,
 .lp-box-title a:hover {
 	color: inherit;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .lp-box-text-inside {
@@ -3180,7 +3186,7 @@ a.staticslider-button + a.staticslider-button,
 	transition: .5s border ease-in-out;
 }
 
-.lp-boxes-static .lp-box-overlay {
+/* .lp-boxes-static .lp-box-overlay {
 	position: absolute;
 	z-index: 10;
 	top: 0;
@@ -3190,6 +3196,10 @@ a.staticslider-button + a.staticslider-button,
 	opacity: 0;
 	-webkit-transition: .4s all ease;
 	transition: .4s all ease;
+} */
+
+.lp-box-link i {
+	display: none;
 }
 
 .lp-boxes-static .lp-box-image:hover .lp-box-overlay {
@@ -6561,7 +6571,8 @@ ul#menu-studentmain {
 div#humanities-menu li {
 	display: inline-block;
 	padding: 10px;
-	/* padding-right: 40px; */
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: lighter;
 }
 
 div#humanities-menu .menu {
@@ -6693,6 +6704,7 @@ img.directory-portrait.byuLightbox:hover {
 div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
 	color: white;
 	text-decoration: none;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 aside#colophon a:hover {
@@ -6755,6 +6767,16 @@ div#content .news-title {
 
 .directory-list .filterable-item .content h5 {
 	color: #141414;
+}
+
+.elementor-button span, h4.elementor-heading-title.elementor-size-xl, .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title, h3.widget-title {
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.elementor-element.elementor-element-425b329.elementor-widget.elementor-widget-text-editor p, .textwidget p, .textwidget li {
+	font-family: 'Public Sans', Arial, sans-serif;
+	text-align: left;
+	font-weight: lighter;
 }
 
 /* FIN! */

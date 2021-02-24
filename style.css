@@ -6793,4 +6793,12 @@ header.entry-header h2 {
 	font-weight: lighter;
 }
 
+header.page-header.pad-container h1 {
+	font-size: larger;
+}
+
+footer.post-continue-container .continue-reading-link {
+	display: none;
+}
+
 /* FIN! */

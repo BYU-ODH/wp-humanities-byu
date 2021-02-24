@@ -6301,10 +6301,10 @@ body.mobile .main {min-height:0;}
 
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1020px) {
 
 	.lp-staticslider {
-		max-height: 70vmax;
+		max-height: 40vmax;
 	}
 
 	.lp-staticslider .lp-staticslider-image {
@@ -6563,10 +6563,9 @@ div#humanities-menu {
     margin-top: 79px;
 }
 
-ul#menu-studentmain {
-	padding-left: 10.5rem;
+/* ul#menu-studentmain {
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
-}
+} */
 
 div#humanities-menu li {
 	display: inline-block;
@@ -6799,6 +6798,12 @@ header.page-header.pad-container h1 {
 
 footer.post-continue-container .continue-reading-link {
 	display: none;
+}
+
+.menu-studentmain-container {
+	padding-left: 10.2rem;
+	background-color: white;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }
 
 /* FIN! */

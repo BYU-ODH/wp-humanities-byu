@@ -62,10 +62,10 @@ function humanities_menu() {
 }
 add_action( 'init', 'humanities_menu' );
 
-// function mobile_humanities_menu() {
-//     register_nav_menu( 'mobile-humanities-menu',__('Mobile Humanities Menu' ));
-// }
-// add_action( 'init', 'mobile-humanities_menu' );
+function mobile_menu() {
+    register_nav_menu( 'mobile-menu',__('Mobile Menu' ));
+}
+add_action( 'init', 'mobile_menu');
 
 function byuh_setup() {
 

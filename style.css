@@ -6082,6 +6082,10 @@ body.mobile .main {min-height:0;}
 		font-size: .90em;
 	}
 
+	.menu-studentmain-container {
+		display: none;
+	}
+
 	.septera-magazine-three .cryout #content-masonry article.hentry,
 	.septera-magazine-two .cryout #content-masonry article.hentry {
 		width: 92%;

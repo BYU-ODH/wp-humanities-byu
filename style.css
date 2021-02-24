@@ -6772,13 +6772,24 @@ div#content .news-title {
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
 h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
-.statusfilter.current {
+.statusfilter.current, .elementor-text-editor.elementor-clearfix h3, .text-content.group.wrapper .content h2,
+.text-content.group.wrapper .content h3 {
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+header.entry-header h2 {
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	color: black;
 }
 
 .elementor-element.elementor-element-425b329.elementor-widget.elementor-widget-text-editor p, .textwidget p, .textwidget li {
 	font-family: 'Public Sans', Arial, sans-serif;
 	text-align: left;
+	font-weight: lighter;
+}
+
+.wp-block-cover__inner-container p, .textStyle a, .text-content.group.wrapper p, .text-content.group.wrapper li {
+	font-family: 'Public Sans', Arial, sans-serif;
 	font-weight: lighter;
 }
 

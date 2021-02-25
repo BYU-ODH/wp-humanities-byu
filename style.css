@@ -6777,14 +6777,19 @@ div#content .news-title {
 	padding-right: .5em;
 }
 
+.menu-item-has-children a{
+    padding-right:0.5em;
+}
+
+.menu-item-has-children::after,
 #humanities-menu > div > ul li > a:not(:only-child) > span::after {
 	position: absolute;
 	z-index: 251;
-	right: 1em;
+	right: 0;
 	content: '\f0a3';
 	font-family: "iconmeta";
 	opacity: .5;
-	top: 0;
+	top: 0.6em;
 	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
 }
@@ -6813,12 +6818,11 @@ div#content .news-title {
 	filter: alpha(opacity=0);
 }
 
-/* #humanities-menu ul li { */
-/* 	display: block; */
-/* 	float: left; */
-/* 	position: relative; */
-/* 	white-space: nowrap; */
-/* } */
+#humanities-menu ul li {
+	display: inline-block;
+	position: relative;
+	white-space: nowrap;
+}
 
 #humanities-menu .sub-menu,
 #humanities-menu .children {

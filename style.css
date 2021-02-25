@@ -6548,7 +6548,7 @@ body.mobile .main {min-height:0;}
 
 }
 
-div#humanities-menu {
+nav#humanities-menu {
     display: block;
     margin-top: 79px;
 }
@@ -6558,18 +6558,18 @@ ul#menu-studentmain {
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }
 
-div#humanities-menu li {
+nav#humanities-menu li {
 	display: inline-block;
 	padding: 10px;
 	/* padding-right: 40px; */
 }
 
-div#humanities-menu .menu {
+nav#humanities-menu .menu {
     display: block;
     background-color: white;
 }
 
-div#humanities-menu .menu a {
+nav#humanities-menu .menu a {
 	color: #002E5D;
 }
 
@@ -6624,7 +6624,7 @@ a.lp-box-readmore {
 	height: 2rem;
 }
 
-div#humanities-menu li:hover {
+nav#humanities-menu li:hover {
 	background-color: #E6E6E6;
 }
 
@@ -6756,5 +6756,13 @@ div#content .news-title {
 .directory-list .filterable-item .content h5 {
 	color: #141414;
 }
+
+/*************/
+/* SUB-MENUS */
+/*************/
+li ul.sub-menu {
+    
+}
+
 
 /* FIN! */

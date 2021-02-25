@@ -45,9 +45,9 @@
 
 			</div><!-- #site-header-main-inside -->
 
-			<div id="humanities-menu">
+			<nav id="humanities-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'humanities-menu' ) ); ?>
-			</div>
+			</nav>
 		</div><!-- #site-header-main -->
 
 		<div id="header-image-main">

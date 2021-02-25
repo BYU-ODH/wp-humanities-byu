@@ -45,7 +45,7 @@
 
 			</div><!-- #site-header-main-inside -->
 
-			<nav id="access"> <!-- humanities menu -->
+			<nav id="humanities-menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'humanities-menu' ) ); ?>
 			</nav>
 		</div><!-- #site-header-main -->

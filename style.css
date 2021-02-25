@@ -1100,9 +1100,13 @@ nav#mobile-menu { /* Actual mobile menu */
     width: 80%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 450px) {
 	#mobile-menu > div {
 	    width: 90%;
+	}
+
+	a#logo > img {
+		display: none;
 	}
 }
 

@@ -1100,9 +1100,13 @@ nav#mobile-menu { /* Actual mobile menu */
     width: 80%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 450px) {
 	#mobile-menu > div {
 	    width: 90%;
+	}
+
+	a#logo > img {
+		display: none;
 	}
 }
 
@@ -6082,6 +6086,10 @@ body.mobile .main {min-height:0;}
 		font-size: .90em;
 	}
 
+	.menu-studentmain-container {
+		display: none;
+	}
+
 	.septera-magazine-three .cryout #content-masonry article.hentry,
 	.septera-magazine-two .cryout #content-masonry article.hentry {
 		width: 92%;
@@ -6301,10 +6309,10 @@ body.mobile .main {min-height:0;}
 
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1020px) {
 
 	.lp-staticslider {
-		max-height: 70vmax;
+		max-height: 40vmax;
 	}
 
 	.lp-staticslider .lp-staticslider-image {
@@ -6563,11 +6571,6 @@ nav#humanities-menu {
     margin-top: 79px;
 }
 
-ul#menu-studentmain {
-	padding-left: 10.5rem;
-	box-shadow: 0 0 8px rgba(0,0,0,.2);
-}
-
 nav#humanities-menu li {
 	display: inline-block;
 	padding: 10px;
@@ -6799,6 +6802,16 @@ header.page-header.pad-container h1 {
 
 footer.post-continue-container .continue-reading-link {
 	display: none;
+}
+
+.menu-studentmain-container {
+	padding-left: 10.2rem;
+	background-color: white;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+
+form.searchform:hover {
+	color: black;
 }
 
 /*************/

@@ -773,6 +773,7 @@ a#logo > img {
 	position: relative;
 	display: block; /*table*/
 	width: 100%;
+	margin: 0;
 }
 
 .header-fixed#site-header-main,
@@ -6816,6 +6817,11 @@ header.page-header.pad-container h1 {
 
 form.searchform:hover {
 	color: black;
+}
+
+div#site-header-main div {
+	margin: 0;
+	max-width: 100%;
 }
 
 /*************/

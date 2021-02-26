@@ -6571,16 +6571,7 @@ nav#humanities-menu {
     margin-top: 79px;
 }
 
-<<<<<<< HEAD
-div#humanities-menu li {
-=======
-ul#menu-studentmain {
-	padding-left: 10.5rem;
-	box-shadow: 0 0 8px rgba(0,0,0,.2);
-}
-
 nav#humanities-menu li {
->>>>>>> master
 	display: inline-block;
 	padding: 10px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
@@ -6813,7 +6804,6 @@ footer.post-continue-container .continue-reading-link {
 	display: none;
 }
 
-<<<<<<< HEAD
 .menu-studentmain-container {
 	padding-left: 10.2rem;
 	background-color: white;
@@ -6824,7 +6814,6 @@ form.searchform:hover {
 	color: black;
 }
 
-=======
 /*************/
 /* SUB-MENUS */
 /*************/
@@ -6988,5 +6977,4 @@ form.searchform:hover {
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
 
->>>>>>> master
 /* FIN! */

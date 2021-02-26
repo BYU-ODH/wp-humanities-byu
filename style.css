@@ -3210,20 +3210,24 @@ a.staticslider-button + a.staticslider-button,
 	opacity: 1;
 }
 
-.lp-boxes-static .lp-box-image > img {
-	-webkit-transform: scale(1);
-	object-fit: contain;
-	-ms-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .75s all ease;
-	transition: .75s all ease;
+.lp-box-image.lpbox-rnd8 {
+	background-color: transparent;
 }
 
-.lp-boxes-static .lp-box-image:hover > img {
+.lp-boxes-static .lp-box-image > img {
+	/* -webkit-transform: scale(1); */
+	object-fit: contain;
+	/* -ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .75s all ease;
+	transition: .75s all ease; */
+}
+
+/* .lp-boxes-static .lp-box-image:hover > img {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
-}
+} */
 
 .lp-boxes-static .lp-box-link {
 	display: block;

@@ -30,9 +30,9 @@
 				<nav id="mobile-menu">
 					<span id="nav-cancel"><i class="icon-cancel"></i></span>
 					<?php cryout_mobilemenu_hook(); ?>
-					<div id="humanities-menu">
+					<nav id="humanities-menu">
 					<?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
-					</div>
+					</nav>
 				</nav> <!-- #mobile-menu -->
 
 				<div id="branding">

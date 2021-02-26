@@ -2949,7 +2949,7 @@ a.staticslider-button + a.staticslider-button,
 
 .lp-boxes.lp-boxes-rows-1 .lp-boxes-margins .lp-box {
 	margin-top: 1em;
-	margin-bottom: -4em;
+	margin-bottom: 1em;
 }
 
 .lp-boxes.lp-boxes-rows-4 .lp-box:nth-child(4n),
@@ -2974,7 +2974,7 @@ a.staticslider-button + a.staticslider-button,
 	z-index: 10;
 	display: block;
 	width: 100%;
-	height: 88%;
+	height: 100%;
 }
 
 .lp-box-image::before {
@@ -3211,22 +3211,18 @@ a.staticslider-button + a.staticslider-button,
 }
 
 .lp-boxes-static .lp-box-image > img {
-	/* -webkit-transform: scale(1); */
+	-webkit-transform: scale(1);
 	object-fit: contain;
-	/* -ms-transform: scale(1);
+	-ms-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .75s all ease;
-	transition: .75s all ease; */
+	transition: .75s all ease;
 }
 
-/* .lp-boxes-static .lp-box-image:hover > img {
+.lp-boxes-static .lp-box-image:hover > img {
 	-webkit-transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
-} */
-
-#lp-boxes-1 .lpbox-rnd8 {
-	background-color: white;
 }
 
 .lp-boxes-static .lp-box-link {
@@ -6708,6 +6704,10 @@ img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
+div#content a.lp-box-readmore {
+	display: none;
+}
+
 div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
 	color: white;
 	text-decoration: none;
@@ -6802,10 +6802,6 @@ header.entry-header h2 {
 
 header.page-header.pad-container h1 {
 	font-size: larger;
-}
-
-footer.post-continue-container .continue-reading-link {
-	display: none;
 }
 
 .menu-studentmain-container {

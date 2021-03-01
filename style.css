@@ -6583,10 +6583,10 @@ nav#humanities-menu li {
 	font-weight: lighter;
 }
 
-nav#humanities-menu .menu {
+/* nav#humanities-menu .menu {
     display: block;
     background-color: white;
-}
+} */
 
 nav#humanities-menu .menu a {
 	color: #002E5D;
@@ -6822,6 +6822,24 @@ form.searchform:hover {
 div#site-header-main div {
 	margin: 0;
 	max-width: 100%;
+}
+
+.menu-mobile-humanities-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+}
+
+ul#menu-mobile-humanities.menu > li > a {
+	color: white;
+}
+
+ul#menu-mobile-humanities.menu > li > a:hover {
+	color: #8F8F8F;
+}
+
+a.continue-reading-link {
+	display: none;
 }
 
 /*************/

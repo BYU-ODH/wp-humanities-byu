@@ -6838,6 +6838,10 @@ ul#menu-mobile-humanities.menu > li > a:hover {
 	color: #8F8F8F;
 }
 
+a.continue-reading-link {
+	display: none;
+}
+
 /*************/
 /* SUB-MENUS */
 /*************/

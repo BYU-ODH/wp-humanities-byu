@@ -6709,10 +6709,17 @@ img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
-div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
+div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link {
 	color: white;
 	text-decoration: none;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+aside#colophon a {
+	color: white;
+	font-family: 'Public Sans', Arial, sans-serif;
+	font-weight: lighter;
+	text-decoration: none;
 }
 
 aside#colophon a:hover {
@@ -6836,6 +6843,10 @@ ul#menu-mobile-humanities.menu > li > a:hover {
 
 a.continue-reading-link {
 	display: none;
+}
+
+aside#colophon a.fa {
+	font-family: 'FontAwesome';
 }
 
 /*************/

@@ -2899,7 +2899,7 @@ a.staticslider-button + a.staticslider-button,
 .lp-boxes .lp-boxes-inside,
 .lp-boxes .lp-boxes-margins {
 	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-bottom: 0em;
 	padding-left: 20rem;
 	padding-right: 20rem;
 }
@@ -6719,9 +6719,9 @@ aside#colophon a:hover {
 	color: #C5C5C5;
 }
 
-.home section#lp-page {
+/* .home section#lp-page {
 	margin-top: 15vh;
-}
+} */
 
 /* homepage recent news */
 section.recent-news {

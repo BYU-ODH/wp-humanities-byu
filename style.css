@@ -6709,10 +6709,6 @@ img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
-div#content a.lp-box-readmore {
-	display: none;
-}
-
 div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
 	color: white;
 	text-decoration: none;

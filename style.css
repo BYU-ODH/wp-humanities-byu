@@ -6721,7 +6721,6 @@ div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.
 aside#colophon a {
 	color: #141414;
 	font-family: 'Public Sans', Arial, sans-serif;
-	font-weight: lighter;
 	text-decoration: none;
 }
 
@@ -6851,6 +6850,38 @@ a.continue-reading-link {
 aside#colophon a.fa {
 	font-family: 'FontAwesome';
 	margin: 0.2em;
+}
+
+/***********************/
+/*  ABOUT THE COLLEGE  */
+/***********************/
+
+img.alignnone.wp-image-627.size-full {
+	float: right;
+	width: 35%;
+	margin: 0.5em;
+}
+
+h6.caps {
+	display: inline;
+	font-size: 1.7em;
+}
+
+div#content .main p {
+	margin-top: 0.7em;
+}
+
+i.icon.byu-icon-arrow-long, i.icon.byu-icon-news {
+	display: none;
+}
+
+.wrapper h2.break, .entry-content h2 {
+	font-size: x-large;
+	margin-top: 2.7em;
+}
+
+.quick-links.full.group {
+	font-size: smaller;
 }
 
 /***********************/

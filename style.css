@@ -1269,9 +1269,10 @@ nav#mobile-menu #smobile {
 #footer-inside {
 	display: block;
 	float: none;
+	text-align: center;
 	position: relative;
 	overflow: hidden;
-	padding-top: 2em;
+	/* padding-top: 2em; */
 	padding-bottom: 2em;
 }
 
@@ -1290,15 +1291,16 @@ nav#mobile-menu #smobile {
 #site-copyright {
 	display: block;
 	clear: left;
-	font-size: .9em;
-	font-family: 'Public Sans', Arial, sans-serif;
+	font-size: 0.93em;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: lighter;
 }
 
 #footer-separator {
 	display: block;
 	float: left;
 	clear: both;
-	height: 2px;
+	/* height: 2px; */
 	width: 100%;
 	margin: 1em 0;
 }
@@ -1371,6 +1373,7 @@ img#wpstats {
 	min-height: 100%;
 	margin: 0 auto;
 	padding-top: 4em;
+	padding-bottom: 4rem;
 	max-width: 100%;
 }
 
@@ -6651,9 +6654,9 @@ nav#humanities-menu li:hover {
 	display: none;
 }
 
-#colophon, #footer {
-	background-color: #002e5d;
-	color: #ffffff;
+div#content #colophon, div#content #footer {
+	background-color: #f9f9f9;
+	color: #141414;
 	text-align: center;
 }
 
@@ -6716,7 +6719,7 @@ div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.
 }
 
 aside#colophon a {
-	color: white;
+	color: #141414;
 	font-family: 'Public Sans', Arial, sans-serif;
 	font-weight: lighter;
 	text-decoration: none;
@@ -6847,6 +6850,27 @@ a.continue-reading-link {
 
 aside#colophon a.fa {
 	font-family: 'FontAwesome';
+	margin: 0.2em;
+}
+
+/***********************/
+/* FOOTER SOCIAL ICONS */
+/***********************/
+
+aside#colophon .fa-instagram {
+	color: #c32aa3;
+}
+
+aside#colophon .fa-facebook {
+	color: #3b5998;
+}
+
+aside#colophon .fa-twitter {
+	color: #1da1f2;
+}
+
+aside#colophon .fa-youtube {
+	color: #c4302b;
 }
 
 /*************/

@@ -178,7 +178,7 @@ function septera_logo_helper( $septera_logo ) {
 		// older WP
 		if ( ! empty( $septera_logo ) ) :
 			$img = wp_get_attachment_image_src( $septera_logo, 'full' );
-			return '<div class="identity"><a id="logo" href="' . esc_url( home_url( '/' ) ) . '" ><img title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" src="' . esc_url( $img[0] ) . '" /></a></div>';
+			return '<div class="identity"><a id="logo" href="' . esc_url( home_url( '/' ) ) . '" ><img title="BYU Home Page" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" src="' . esc_url( $img[0] ) . '" /></a></div>';
 		endif;
 	}
 	return '';

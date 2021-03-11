@@ -6875,13 +6875,13 @@ i.icon.byu-icon-arrow-long, i.icon.byu-icon-news {
 	display: none;
 }
 
-.wrapper h2.break, .entry-content h2 {
+.entry-content h2 {
 	font-size: x-large;
 	margin-top: 2.7em;
 }
 
-.quick-links.full.group {
-	font-size: smaller;
+.quick-links.full.group, .wrapper h2.break  {
+	display: none;
 }
 
 /***********************/

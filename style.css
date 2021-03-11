@@ -6719,9 +6719,9 @@ div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.
 }
 
 div#content a.lp-box-readmore {
-	padding-top: 20px;
-	padding-bottom: 62px;
-	font-size: x-large;
+	padding-top: 13px;
+	padding-bottom: 50px;
+	font-size: 20px;
 }
 
 aside#colophon a {

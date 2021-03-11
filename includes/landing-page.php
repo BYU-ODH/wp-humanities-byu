@@ -263,14 +263,14 @@ function septera_lpbox_output( $data ) {
 						<div class="lp-box-overlay"></div>
 					</div>
 					<div class="lp-box-content">
-						<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title">
+						<!-- <?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title">
 							<?php if ( !empty( $readmore ) && !empty( $link ) ) { ?> <a href="<?php echo esc_url( $link ); ?>" <?php echo esc_attr( $target ); ?>><?php } ?>
 								<?php echo do_shortcode( $title ); ?>
 							<?php if ( !empty( $readmore ) && !empty( $link ) ) { ?> </a> <?php } ?>
-						</h5><?php } ?>
+						</h5><?php } ?> -->
 						<div class="lp-box-text">
 							<?php if ( ! empty( $content ) ) { ?>
-								<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title"></h5><?php } ?>
+								<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title"><?php echo do_shortcode( $title ); ?></h5><?php } ?>
 								<div class="lp-box-text-inside"> <?php echo do_shortcode( $content ) ?> </div>
 							<?php } ?>
 							<?php if( ! empty( $readmore ) ) { ?>

@@ -6852,6 +6852,11 @@ aside#colophon a.fa {
 	margin: 0.2em;
 }
 
+.college-news-heading h2 {
+	text-align: center;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
 /***********************/
 /*  ABOUT THE COLLEGE  */
 /***********************/

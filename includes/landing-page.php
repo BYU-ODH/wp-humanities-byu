@@ -256,6 +256,7 @@ if ( ! function_exists( 'septera_lpbox_output' ) ):
 function septera_lpbox_output( $data ) {
 	$randomness = array ( 6, 8, 1, 5, 2, 7, 3, 4 );
 	extract($data); ?>
+		<div class = "college-news-heading"><h2>College News</h2></div>
 			<div class="lp-box box<?php echo absint( $colno ); ?> ">
 					<div class="lp-box-image lpbox-rnd<?php echo $randomness[$colno%8]; ?>">
 						<?php if( ! empty( $image ) ) { ?><img alt="<?php echo esc_attr( $title ) ?>" src="<?php echo esc_url( $image ) ?>" /> <?php } ?>

@@ -273,7 +273,7 @@ function septera_lpbox_output( $data ) {
 								<div class="lp-box-text-inside"> <?php echo do_shortcode( $content ) ?> </div>
 							<?php } ?>
 							<?php if( ! empty( $readmore ) ) { ?>
-								<a class="lp-box-readmore" href="<?php if( ! empty( $link ) ) { echo esc_url( $link ); } ?>" <?php echo esc_attr( $target ); ?>> <?php echo do_shortcode( wp_kses_post( $readmore ) ) ?> <em class="screen-reader-text">"<?php echo esc_attr( $title ) ?>"</em> <i class="icon-continue-reading"></i></a>
+								<a class="lp-box-readmore" href="https://news.humanities.byu.edu/" <?php echo esc_attr( $target ); ?>> <?php echo do_shortcode( wp_kses_post( $readmore ) ) ?> <em class="screen-reader-text">"<?php echo esc_attr( $title ) ?>"</em> <i class="icon-continue-reading"></i></a>
 							<?php } ?>
 						</div>
 					</div>

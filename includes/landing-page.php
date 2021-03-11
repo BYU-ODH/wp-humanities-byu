@@ -259,8 +259,9 @@ function septera_lpbox_output( $data ) {
 		<div class = "college-news-heading"><h2>College News</h2></div>
 			<div class="lp-box box<?php echo absint( $colno ); ?> ">
 					<div class="lp-box-image lpbox-rnd<?php echo $randomness[$colno%8]; ?>">
+					<a class="lp-box-image" <?php if ( !empty( $link ) ) { ?> href="<?php echo esc_url( $link ); ?>" aria-label="<?php echo esc_attr( $title ); ?>" <?php echo esc_attr( $target ); ?><?php } ?>>
 						<?php if( ! empty( $image ) ) { ?><img alt="<?php echo esc_attr( $title ) ?>" src="<?php echo esc_url( $image ) ?>" /> <?php } ?>
-						<a class="lp-box-link" <?php if ( !empty( $link ) ) { ?> href="<?php echo esc_url( $link ); ?>" aria-label="<?php echo esc_attr( $title ); ?>" <?php echo esc_attr( $target ); ?><?php } ?>> <i class="icon-arrow-right2"></i> </a>
+						</a>
 						<div class="lp-box-overlay"></div>
 					</div>
 					<div class="lp-box-content">

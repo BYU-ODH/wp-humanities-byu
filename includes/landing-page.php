@@ -256,6 +256,7 @@ if ( ! function_exists( 'septera_lpbox_output' ) ):
 function septera_lpbox_output( $data ) {
 	$randomness = array ( 6, 8, 1, 5, 2, 7, 3, 4 );
 	extract($data); ?>
+		<div class = "college-news-heading"><h2>College News</h2></div>
 			<div class="lp-box box<?php echo absint( $colno ); ?> ">
 					<div class="lp-box-image lpbox-rnd<?php echo $randomness[$colno%8]; ?>">
 						<?php if( ! empty( $image ) ) { ?><img alt="<?php echo esc_attr( $title ) ?>" src="<?php echo esc_url( $image ) ?>" /> <?php } ?>
@@ -263,17 +264,18 @@ function septera_lpbox_output( $data ) {
 						<div class="lp-box-overlay"></div>
 					</div>
 					<div class="lp-box-content">
-						<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title">
+						<!-- <?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title">
 							<?php if ( !empty( $readmore ) && !empty( $link ) ) { ?> <a href="<?php echo esc_url( $link ); ?>" <?php echo esc_attr( $target ); ?>><?php } ?>
 								<?php echo do_shortcode( $title ); ?>
 							<?php if ( !empty( $readmore ) && !empty( $link ) ) { ?> </a> <?php } ?>
-						</h5><?php } ?>
+						</h5><?php } ?> -->
 						<div class="lp-box-text">
 							<?php if ( ! empty( $content ) ) { ?>
+								<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title"><?php echo do_shortcode( $title ); ?></h5><?php } ?>
 								<div class="lp-box-text-inside"> <?php echo do_shortcode( $content ) ?> </div>
 							<?php } ?>
 							<?php if( ! empty( $readmore ) ) { ?>
-								<a class="lp-box-readmore" href="<?php if( ! empty( $link ) ) { echo esc_url( $link ); } ?>" <?php echo esc_attr( $target ); ?>> <?php echo do_shortcode( wp_kses_post( $readmore ) ) ?> <em class="screen-reader-text">"<?php echo esc_attr( $title ) ?>"</em> <i class="icon-continue-reading"></i></a>
+								<a class="lp-box-readmore" href="https://news.humanities.byu.edu/" <?php echo esc_attr( $target ); ?>> <?php echo do_shortcode( wp_kses_post( $readmore ) ) ?> <em class="screen-reader-text">"<?php echo esc_attr( $title ) ?>"</em> <i class="icon-continue-reading"></i></a>
 							<?php } ?>
 						</div>
 					</div>

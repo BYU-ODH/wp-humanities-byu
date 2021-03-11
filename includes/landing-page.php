@@ -270,6 +270,7 @@ function septera_lpbox_output( $data ) {
 						</h5><?php } ?>
 						<div class="lp-box-text">
 							<?php if ( ! empty( $content ) ) { ?>
+								<?php if ( ! empty( $title ) ) { ?><h5 class="lp-box-title"></h5><?php } ?>
 								<div class="lp-box-text-inside"> <?php echo do_shortcode( $content ) ?> </div>
 							<?php } ?>
 							<?php if( ! empty( $readmore ) ) { ?>

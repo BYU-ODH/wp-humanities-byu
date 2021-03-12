@@ -6088,13 +6088,13 @@ body.mobile .main {min-height:0;}
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
 
 	body {
 		font-size: .90em;
 	}
 
-	.menu-studentmain-container {
+	.menu-main-navigation-container {
 		display: none;
 	}
 
@@ -6814,7 +6814,7 @@ header.page-header.pad-container h1 {
 	font-size: larger;
 }
 
-.menu-studentmain-container {
+.menu-main-navigation-container {
 	padding-left: 10.2rem;
 	background-color: white;
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
@@ -6829,13 +6829,13 @@ div#site-header-main div {
 	max-width: 100%;
 }
 
-.menu-mobile-humanities-container {
+.menu-mobile-odh-container {
 	display: flex;
 	justify-content: center;
 	padding-top: 1rem;
 }
 
-ul#menu-mobile-humanities.menu > li > a {
+ul#menu-mobile-odh.menu > li > a {
 	color: white;
 }
 
@@ -6856,6 +6856,8 @@ aside#colophon a.fa {
 	text-align: center;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+
 
 /***********************/
 /*  ABOUT THE COLLEGE  */

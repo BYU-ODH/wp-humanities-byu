@@ -6641,8 +6641,8 @@ a.lp-box-readmore {
 	background-color: #0062B8;
 	display: flex;
 	justify-content: center;
-	border-radius: 3px;
-	width: 17%;
+	border-radius: 6px;
+	width: 19%;
 	height: 2rem;
 }
 
@@ -6716,6 +6716,14 @@ div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.
 	color: white;
 	text-decoration: none;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	background-color: #0062B8;
+	font-weight: 700;
+}
+
+div#content a.lp-box-readmore {
+	padding-top: 13px;
+	padding-bottom: 50px;
+	font-size: 20px;
 }
 
 aside#colophon a {

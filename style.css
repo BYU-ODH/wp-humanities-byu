@@ -4956,9 +4956,8 @@ ul.cryout-wposts li:last-child {
 .searchform {
     width: 9rem;
     height: 2.3rem;
-    line-height: 79px;
-    border-radius: 25px;
-    margin-top: 18px; /* Fixme to be reactive */
+    border-radius: 2rem;
+    margin-top: 1.5rem;
 }
 .menu-main-search .icon-search::before {}
 

@@ -4903,6 +4903,7 @@ ul.cryout-wposts li:last-child {
 	background: transparent;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
+	padding-bottom: 1em;
 }
 
 .searchform:hover input[type="search"],
@@ -4918,7 +4919,7 @@ ul.cryout-wposts li:last-child {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
 	width: 3.5em;

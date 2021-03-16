@@ -4903,6 +4903,7 @@ ul.cryout-wposts li:last-child {
 	background: transparent;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
+	padding-bottom: 1em;
 }
 
 .searchform:hover input[type="search"],
@@ -4918,7 +4919,7 @@ ul.cryout-wposts li:last-child {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
 	width: 3.5em;
@@ -4942,81 +4943,22 @@ ul.cryout-wposts li:last-child {
 }
 
 /* ## HEADER SEARCHFORM */
-#access > div > ul > li.menu-search-animated {
+#access {
 	text-align: center;
 }
 
-#access .menu-search-animated {
-	padding: 0 .3em;
-}
-
-#access .menu-search-animated .searchform {
-	display: none;
-	position: absolute;
-	z-index: 1000;
-	top: 100%;
-	right: 0;
-	left: 0;
-	width: 100%;
-	max-width: calc(100% - 2em);
-	height: 4em;
-	line-height: 4em;
-	margin: 0 auto;
-	border: 0;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
-}
-
-#access .menu-search-animated .searchsubmit {
-	display: none;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-main-search .searchform input[type="search"]:focus {
-	background: transparent;
-}
-
-#access .menu-main-search i.icon-search {
-	display: inline-block;
-	padding-right: .5em;
-	padding-left: .5em;
-}
-
-#access .menu-main-search > a {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 #access i.icon-search {
-	cursor: pointer;
-	font-size: 1.3rem;
-	margin-top: -20px;
+    display: inline-block;
+    padding-right: .5em;
+    padding-left: .5em;
 }
 
-#access i.icon-search::before {
-	display: block;
-	font-style:	normal;
+.searchform {
+    width: 9rem;
+    height: 2.3rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
 }
-
-#access li.menu-main-search {
-	position: static;
-	padding: 0 .4em;
-}
-
 .menu-main-search .icon-search::before {}
 
 /* ## FOOTER MENU SEARCHFORM */

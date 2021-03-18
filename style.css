@@ -6931,7 +6931,8 @@ aside#colophon .fa-youtube {
 	position: absolute;
 	z-index: 1000;
 	clear: both;
-	margin-left: 0;
+	margin-left: -0.55em;
+	margin-top: 10px;
 	min-width: 15em;
 	box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .05);
 	opacity: 0;

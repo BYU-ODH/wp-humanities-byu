@@ -178,11 +178,12 @@
     }
 }
 .directory ul.directory-list li {
-    background: #f6f6f8;
     color: #8f8f8f;
-    width: 100%;
-    margin-bottom: 10px;
+    /* width: 100%;
+    margin-bottom: 10px; */
     display: table;
+    display: grid;
+    grid-template-columns: 95px 155px;
 }
 @media all and (max-width: 699px) {
     .directory ul.directory-list li {
@@ -190,11 +191,11 @@
     }
 }
 .directory ul.directory-list li .image-container {
-  width: 10em;
+  width: 5em;
   height: 7em;
   display: table-cell;
   list-style: none;
-  vertical-align: middle;
+  vertical-align: top;
   
  
 }
@@ -210,9 +211,13 @@
   border-width: 4px;
   border-style: solid;
 } */
+.link.phone {
+    color: #0062B8;
+}
+
 .directory ul.directory-list li .content {
     display: table-cell;
-    padding: 32px;
+    padding: 0;
     position: relative;
 }
 @media all and (max-width: 699px) {
@@ -223,6 +228,7 @@
 .directory ul.directory-list li .content h4 {
     text-transform: none;
     font-weight: bold;
+    margin: 0;
     font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 @media all and (max-width: 699px) {
@@ -234,9 +240,7 @@
 .directory ul.directory-list li .content .link {
     font-size: 16px;
     display: inline-block;
-    padding: 0 10px;
-    border-right: 1px solid #86847d;
-    margin-top: 15px;
+    padding: 0;
     position: relative;
 }
 .directory ul.directory-list li .content .link:first-of-type {
@@ -253,13 +257,8 @@
 	margin-top: 15px;
     }
 }
-.directory ul.directory-list li .content .link span {
-    padding-left: 25px;
-}
 .directory ul.directory-list li .content .link .icon {
-    font-size: 18px;
-    position: absolute;
-    top: -2px;
+    display: none;
 }
 .directory ul.directory-list li .content .cta {
     position: absolute;
@@ -283,7 +282,7 @@
 
 .image-container img.directory-portrait {
 	display: block;
-	height: 198%;
+	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }

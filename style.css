@@ -6567,7 +6567,6 @@ i.icon-search {
 
 div#content a {
     color: inherit;
-    text-decoration: underline;
 }
 
 .staticslider-caption-buttons {
@@ -6734,6 +6733,9 @@ div#content .news-title {
 
 .directory-list .filterable-item .content h5 {
 	color: #141414;
+	font-size: 17px;
+	margin: 0;
+	font-weight: 500;
 }
 
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
@@ -6805,6 +6807,18 @@ aside#colophon a.fa {
 .college-news-heading h2 {
 	text-align: center;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/***********************/
+/*      DIRECTORY      */
+/***********************/
+
+ul.directory-list.filterable {
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(3,minmax(1px,1fr));
+	grid-gap: 40px 20px;
+	padding: 50px;
 }
 
 /***********************/

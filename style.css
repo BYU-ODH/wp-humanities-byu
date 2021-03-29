@@ -491,7 +491,9 @@ a:visited {
 .entry-content .wp-block-latest-posts {
     padding: 0;
     list-style: none;
+	display: none;
 }
+
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
 	padding: 1.5em;

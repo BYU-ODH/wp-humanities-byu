@@ -32,6 +32,7 @@ require_once( get_template_directory() . "/includes/meta.php" );        	// Cust
 require_once( get_template_directory() . "/includes/byuh_news.php" );	// Landing Page News
 require_once( get_template_directory() . "/includes/landing-page.php" );	// Landing Page outputs
 
+
 ///////////////////////////////////////
 // SCRIPTS & STYLES for directory
 ///////////////////////////////////////
@@ -313,6 +314,5 @@ function byu_logo() {
         );
     return $html;   
 }
-
 
 // FIN

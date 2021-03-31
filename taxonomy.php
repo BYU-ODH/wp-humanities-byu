@@ -27,12 +27,11 @@ article{
 	height: 606px;
 	padding: 10px;
 }
-
 </style>
-
+	
 	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
 		<main id="main" role="main" class="main">
-			<?php cryout_before_content_hook(); ?> 
+			<?php cryout_before_content_hook(); ?>
 
 			<?php if ( have_posts() ) : ?>
 

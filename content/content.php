@@ -50,7 +50,6 @@ $septeras = cryout_get_option( array( 'septera_excerptarchive', 'septera_excerpt
 			case 'excerpt':
 			default: ?>
 
-				
 				<div class="entry-meta entry-utility">
 					<?php cryout_meta_format_hook(); ?>
 					<?php cryout_post_utility_hook(); ?>

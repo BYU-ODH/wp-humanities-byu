@@ -27,21 +27,8 @@ article{
 	height: 606px;
 	padding: 10px;
 }
-
-.entry-summary{
-	display:none;
-}
 </style>
 
-<? if ( is_tax( 'personresearch', 'cultural-studies' ) ) {
-        echo "True!!!";
-		echo '<style>
-        body.tax-personresearch .entry-summary {
-            display:none;
-        }
-  </style>';
-    }
-	?>
 	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
 		<main id="main" role="main" class="main">
 			<?php cryout_before_content_hook(); ?>

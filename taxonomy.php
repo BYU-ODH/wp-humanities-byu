@@ -56,13 +56,16 @@ article{
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
+					
 					get_template_part( 'content/content', get_post_format() );
 					endwhile;
 					?>
+					
 				</div><!--content-masonry-->
 				<!--not really nessessary-->
 				<?php septera_pagination();
-
+				
+					
 			// If no content, include the "No posts found" template.
 			else :
 				get_template_part( 'content/content', 'notfound' );

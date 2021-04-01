@@ -7034,4 +7034,12 @@ aside#colophon .fa-youtube {
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
 
+
+/* END OF SUBMENUS */
+
+/* change link colors on faculty & staff commons */
+div#content .elementor-text-editor a {
+	color: #0062B8;
+}
+
 /* FIN! */

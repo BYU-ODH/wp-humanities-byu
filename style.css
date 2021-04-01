@@ -6983,4 +6983,8 @@ form.searchform:hover {
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
 
+.defaultIMG{
+	background-image: url("../../uploads/default_logo-hum.png");
+}
+
 /* FIN! */

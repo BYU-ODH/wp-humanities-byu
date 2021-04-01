@@ -28,10 +28,25 @@ article{
 	padding: 10px;
 }
 </style>
-	
+
 	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
 		<main id="main" role="main" class="main">
 			<?php cryout_before_content_hook(); ?>
+
+			<?php 
+				if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+					<a href=\"$permalink\">
+					<img src='$image' class=\"responsive-featured-image\" alt='$image_alt' title='$image_alt'>
+					</a>
+					</div>"; }
+				else{   /*else statement to add default image to faculty department page*/ 
+					$block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+					<a href=\"$permalink\">
+					<img src='$image' class=\"responsive-featured-image\" alt='$image_alt' title='$image_alt'>
+					</a>
+					</div>";
+				}
+		  	?>
 
 			<?php if ( have_posts() ) : ?>
 

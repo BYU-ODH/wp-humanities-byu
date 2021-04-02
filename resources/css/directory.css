@@ -12,13 +12,20 @@
 }
 @media(max-width: 1260px){
     .statusfilter-container {
-        display: none;
+        float: none;
     }
 }
 .statusfilter-container .statusfilter {
     font-size: 125%;
     cursor: pointer;
     display: inline-block;
+}
+ul.directory-list.filterable {
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(3,minmax(1px,1fr));
+	grid-gap: 35px 10px;
+	padding: 50px;
 }
 .statusfilter-container .current {
     text-decoration: underline;

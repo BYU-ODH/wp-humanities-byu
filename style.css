@@ -7039,6 +7039,7 @@ div#content .elementor-text-editor a {
 
 .defaultIMG{
 	background-image: url("../../uploads/default_logo-hum.png");
+	background-size: 100% 100%;
 }
 
 

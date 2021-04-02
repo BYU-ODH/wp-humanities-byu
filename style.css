@@ -6733,13 +6733,6 @@ div#content .news-title {
 	color : black;
 }
 
-.directory-list .filterable-item .content h5 {
-	color: #141414;
-	font-size: 17px;
-	margin: 0;
-	font-weight: 500;
-}
-
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
 h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
@@ -7043,8 +7036,10 @@ div#content .elementor-text-editor a {
 	color: #0062B8;
 }
 
+
 .defaultIMG{
-	background-image: url("../../uploads/default_logo-hum.png");
+	background-image: url("resources/images/default_logo-hum.png");
+	background-size: 100% 100%;
 }
 
 

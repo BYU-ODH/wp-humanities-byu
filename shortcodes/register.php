@@ -84,11 +84,18 @@ function make_list($people,$dept) {
 
         $block.="<li class='$classes'>";
 
-          if($image) { $block.="<div style='border-color: $color;' class='image-container'>
+          if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
 <a href=\"$permalink\">
           <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
 </a>
           </div>"; }
+          else{   /*else statement to add default image to faculty department page*/ 
+            $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+<a href=\"$permalink\">
+          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
+</a>
+          </div>";
+          }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
 	$block.="<h5>";

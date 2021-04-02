@@ -6985,6 +6985,11 @@ form.searchform:hover {
 
 /*Here to set the default image for profiles*/
 
-.defaultIMG {background-image: url("../../uploads/default_logo-hum.png");}
+.defaultIMG {
+	background-image: url("../../uploads/default_logo-hum.png");
+	background-repeat:no-repeat;
+    background-size: 100% 100%;
+
+}
 
 /* FIN! */

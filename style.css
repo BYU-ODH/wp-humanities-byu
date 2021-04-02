@@ -6805,18 +6805,6 @@ aside#colophon a.fa {
 }
 
 /***********************/
-/*      DIRECTORY      */
-/***********************/
-
-ul.directory-list.filterable {
-	display: grid;
-	position: relative;
-	grid-template-columns: repeat(3,minmax(1px,1fr));
-	grid-gap: 40px 20px;
-	padding: 50px;
-}
-
-/***********************/
 /*  ABOUT THE COLLEGE  */
 /***********************/
 

@@ -92,7 +92,7 @@ function make_list($people,$dept) {
           else{   /*else statement to add default image to faculty department page*/ 
             $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
 <a href=\"$permalink\">
-          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
+          
 </a>
           </div>";
           }

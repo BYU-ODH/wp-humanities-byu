@@ -10,6 +10,11 @@
 .statusfilter-container {
     float: right;
 }
+@media(max-width: 1260px){
+    .statusfilter-container {
+        display: none;
+    }
+}
 .statusfilter-container .statusfilter {
     font-size: 125%;
     cursor: pointer;

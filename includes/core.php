@@ -172,13 +172,13 @@ add_action ( 'cryout_branding_hook', 'septera_title_and_description' );
 function septera_logo_helper( $septera_logo ) {
 	if ( function_exists( 'the_custom_logo' ) ) {
 		// WP 4.5+
-		$wp_logo = str_replace( 'class="custom-logo-link"', 'id="logo" class="custom-logo-link" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'"', get_custom_logo() );
+		$wp_logo = str_replace( 'class="custom-logo-link"', 'id="logo" class="custom-logo-link" title="BYU Home page"', get_custom_logo() );
 		if ( ! empty( $wp_logo ) ) return '<div class="identity">' . $wp_logo . '</div>';
 	} else {
 		// older WP
 		if ( ! empty( $septera_logo ) ) :
 			$img = wp_get_attachment_image_src( $septera_logo, 'full' );
-			return '<div class="identity"><a id="logo" href="' . esc_url( home_url( '/' ) ) . '" ><img title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" src="' . esc_url( $img[0] ) . '" /></a></div>';
+			return '<div class="identity"><a id="logo" href="' . esc_url( home_url( '/' ) ) . '" ><img title="BYU Home Page" alt="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" src="' . esc_url( $img[0] ) . '" /></a></div>';
 		endif;
 	}
 	return '';

@@ -745,6 +745,8 @@ if ($flex_content) {
 
 						$imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 						$image = $imageArr[0];
+						if(!file_exists($image))
+							$image = "resources/images/Default image/default.jpg";
 						$departmentID = get_field('department')->ID;
 						?>
 

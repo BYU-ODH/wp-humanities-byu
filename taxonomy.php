@@ -70,6 +70,8 @@ article{
 
 			cryout_after_content_hook(); ?>
 
+			<!--add image resize here-->
+
 			
 		</main><!-- #main -->
 

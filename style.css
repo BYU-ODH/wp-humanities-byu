@@ -1953,6 +1953,7 @@ article.hentry .post-thumbnail-container > a.responsive-featured-image {
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
+	height: 100%;
 }
 
 .septera-cropped-featured .main .post-thumbnail-container .responsive-featured-image {

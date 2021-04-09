@@ -7030,5 +7030,13 @@ div#content .elementor-text-editor a {
 	background-size: 100% 100%;
 }
 
+/* style links on research areas page */
+ul#research {
+	text-decoration: underline; 
+	column-count: 2;
+	list-style-type: none;
+	color: #0062B8
+}
+
 
 /* FIN! */

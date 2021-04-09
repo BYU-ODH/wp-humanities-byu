@@ -216,7 +216,7 @@ function research_areas_page( $atts )
     }
 
     // Start list
-    $output .= '<ul>';
+    $output .= '<ul id="research">';
 
     // Add terms
     foreach($terms as $term) {

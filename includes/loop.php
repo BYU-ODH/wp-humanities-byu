@@ -293,7 +293,9 @@ function septera_set_featured_srcset_picture() {
 			<meta itemprop="width" content="<?php echo $featured_image[1]; // width ?>">
 			<meta itemprop="height" content="<?php echo $featured_image[2]; // height ?>">
 		</div>
-	<?php }
+		
+	<?php}
+	
 } // septera_set_featured_srcset_picture()
 endif;
 if ( cryout_get_option( 'septera_fpost' ) ) add_action( 'cryout_featured_hook', 'septera_set_featured_srcset_picture' );

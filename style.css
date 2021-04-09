@@ -775,6 +775,7 @@ a#logo > img {
 	position: relative;
 	display: block; /*table*/
 	width: 100%;
+	margin: 0;
 }
 
 .header-fixed#site-header-main,
@@ -1270,9 +1271,10 @@ nav#mobile-menu #smobile {
 #footer-inside {
 	display: block;
 	float: none;
+	text-align: center;
 	position: relative;
 	overflow: hidden;
-	padding-top: 2em;
+	/* padding-top: 2em; */
 	padding-bottom: 2em;
 }
 
@@ -1291,15 +1293,16 @@ nav#mobile-menu #smobile {
 #site-copyright {
 	display: block;
 	clear: left;
-	font-size: .9em;
-	font-family: 'Public Sans', Arial, sans-serif;
+	font-size: 0.93em;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	font-weight: lighter;
 }
 
 #footer-separator {
 	display: block;
 	float: left;
 	clear: both;
-	height: 2px;
+	/* height: 2px; */
 	width: 100%;
 	margin: 1em 0;
 }
@@ -1372,6 +1375,7 @@ img#wpstats {
 	min-height: 100%;
 	margin: 0 auto;
 	padding-top: 4em;
+	padding-bottom: 4rem;
 	max-width: 100%;
 }
 
@@ -2901,7 +2905,7 @@ a.staticslider-button + a.staticslider-button,
 .lp-boxes .lp-boxes-inside,
 .lp-boxes .lp-boxes-margins {
 	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-bottom: 0em;
 	padding-left: 20rem;
 	padding-right: 20rem;
 }
@@ -4902,6 +4906,7 @@ ul.cryout-wposts li:last-child {
 	background: transparent;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
+	padding-bottom: 1em;
 }
 
 .searchform:hover input[type="search"],
@@ -4917,7 +4922,7 @@ ul.cryout-wposts li:last-child {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
 	width: 3.5em;
@@ -4941,81 +4946,22 @@ ul.cryout-wposts li:last-child {
 }
 
 /* ## HEADER SEARCHFORM */
-#access > div > ul > li.menu-search-animated {
+#access {
 	text-align: center;
 }
 
-#access .menu-search-animated {
-	padding: 0 .3em;
-}
-
-#access .menu-search-animated .searchform {
-	display: none;
-	position: absolute;
-	z-index: 1000;
-	top: 100%;
-	right: 0;
-	left: 0;
-	width: 100%;
-	max-width: calc(100% - 2em);
-	height: 4em;
-	line-height: 4em;
-	margin: 0 auto;
-	border: 0;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
-}
-
-#access .menu-search-animated .searchsubmit {
-	display: none;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-main-search .searchform input[type="search"]:focus {
-	background: transparent;
-}
-
-#access .menu-main-search i.icon-search {
-	display: inline-block;
-	padding-right: .5em;
-	padding-left: .5em;
-}
-
-#access .menu-main-search > a {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 #access i.icon-search {
-	cursor: pointer;
-	font-size: 1.3rem;
-	margin-top: -20px;
+    display: inline-block;
+    padding-right: .5em;
+    padding-left: .5em;
 }
 
-#access i.icon-search::before {
-	display: block;
-	font-style:	normal;
+.searchform {
+    width: 9rem;
+    height: 2.3rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
 }
-
-#access li.menu-main-search {
-	position: static;
-	padding: 0 .4em;
-}
-
 .menu-main-search .icon-search::before {}
 
 /* ## FOOTER MENU SEARCHFORM */
@@ -6585,10 +6531,10 @@ nav#humanities-menu li {
 	font-weight: lighter;
 }
 
-nav#humanities-menu .menu {
+/* nav#humanities-menu .menu {
     display: block;
     background-color: white;
-}
+} */
 
 nav#humanities-menu .menu a {
 	color: #002E5D;
@@ -6624,7 +6570,6 @@ i.icon-search {
 
 div#content a {
     color: inherit;
-    text-decoration: underline;
 }
 
 .staticslider-caption-buttons {
@@ -6640,22 +6585,22 @@ a.lp-box-readmore {
 	background-color: #0062B8;
 	display: flex;
 	justify-content: center;
-	border-radius: 3px;
-	width: 17%;
+	border-radius: 6px;
+	width: 19%;
 	height: 2rem;
 }
 
 nav#humanities-menu li:hover {
-	background-color: #E6E6E6;
+	background-color: #fafafa;
 }
 
 .home .entry-title {
 	display: none;
 }
 
-#colophon, #footer {
-	background-color: #002e5d;
-	color: #ffffff;
+div#content #colophon, div#content #footer {
+	background-color: #f9f9f9;
+	color: #141414;
 	text-align: center;
 }
 
@@ -6711,23 +6656,33 @@ img.directory-portrait.byuLightbox:hover {
 	opacity: 0.7;
 }
 
-div#content a.lp-box-readmore {
-	display: none;
-}
-
-div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link, aside#colophon a {
+div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.elementor-button-link {
 	color: white;
 	text-decoration: none;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	background-color: #0062B8;
+	font-weight: 700;
+}
+
+div#content a.lp-box-readmore {
+	padding-top: 13px;
+	padding-bottom: 50px;
+	font-size: 20px;
+}
+
+aside#colophon a {
+	color: #141414;
+	font-family: 'Public Sans', Arial, sans-serif;
+	text-decoration: none;
 }
 
 aside#colophon a:hover {
 	color: #C5C5C5;
 }
 
-.home section#lp-page {
+/* .home section#lp-page {
 	margin-top: 15vh;
-}
+} */
 
 /* homepage recent news */
 section.recent-news {
@@ -6779,10 +6734,6 @@ div#content .news-title {
 	color : black;
 }
 
-.directory-list .filterable-item .content h5 {
-	color: #141414;
-}
-
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
 h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
@@ -6819,6 +6770,88 @@ header.page-header.pad-container h1 {
 
 form.searchform:hover {
 	color: black;
+}
+
+div#site-header-main div {
+	margin: 0;
+	max-width: 100%;
+}
+
+.menu-mobile-humanities-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+}
+
+ul#menu-mobile-humanities.menu > li > a {
+	color: white;
+}
+
+ul#menu-mobile-humanities.menu > li > a:hover {
+	color: #8F8F8F;
+}
+
+a.continue-reading-link {
+	display: none;
+}
+
+aside#colophon a.fa {
+	font-family: 'FontAwesome';
+	margin: 0.2em;
+}
+
+.college-news-heading h2 {
+	text-align: center;
+	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/***********************/
+/*  ABOUT THE COLLEGE  */
+/***********************/
+
+img.alignnone.wp-image-627.size-full {
+	float: right;
+	width: 35%;
+	margin: 0.5em;
+}
+
+h6.caps {
+	display: inline;
+	font-size: 1.7em;
+}
+
+div#content .main p {
+	margin-top: 0.7em;
+	font-family: 'Public Sans', Arial, sans-serif;
+}
+
+i.icon.byu-icon-arrow-long, i.icon.byu-icon-news {
+	display: none;
+}
+
+.entry-content h2 {
+	font-size: x-large;
+	margin-top: 2.7em;
+}
+
+/***********************/
+/* FOOTER SOCIAL ICONS */
+/***********************/
+
+aside#colophon .fa-instagram {
+	color: #c32aa3;
+}
+
+aside#colophon .fa-facebook {
+	color: #3b5998;
+}
+
+aside#colophon .fa-twitter {
+	color: #1da1f2;
+}
+
+aside#colophon .fa-youtube {
+	color: #c4302b;
 }
 
 /*************/
@@ -6896,7 +6929,8 @@ form.searchform:hover {
 	position: absolute;
 	z-index: 1000;
 	clear: both;
-	margin-left: 0;
+	margin-left: -0.55em;
+	margin-top: 10px;
 	min-width: 15em;
 	box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .05);
 	opacity: 0;
@@ -6983,14 +7017,18 @@ form.searchform:hover {
 #humanities-menu ul li.current-menu-item a,
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
+/* END OF SUBMENUS */
+
+/* change link colors on faculty & staff commons */
+div#content .elementor-text-editor a {
+	color: #0062B8;
+}
 
 /*Here to set the default image for profiles*/
-
-.defaultIMG {
-	background-image: url("../../uploads/default_logo-hum.png");
-	background-repeat:no-repeat;
-    background-size: 100% 100%;
-
+.defaultIMG{
+	background-image: url("resources/images/default_logo-hum.png");
+  background-repeat:no-repeat;
+	background-size: 100% 100%;
 }
 
 /* FIN! */

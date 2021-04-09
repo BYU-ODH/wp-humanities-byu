@@ -30,9 +30,9 @@
 				<nav id="mobile-menu">
 					<span id="nav-cancel"><i class="icon-cancel"></i></span>
 					<?php cryout_mobilemenu_hook(); ?>
-					<div id="humanities-menu">
+					<nav id="humanities-menu">
 					<?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
-					</div>
+					</nav>
 				</nav> <!-- #mobile-menu -->
 
 				<div id="branding">
@@ -43,7 +43,7 @@
 
 				<a id="nav-toggle"><i class="icon-menu"></i></a>
 				<nav id="access" role="navigation"  aria-label="<?php esc_attr_e('Primary Menu', 'septera') ?>" <?php cryout_schema_microdata( 'menu' ); ?>>
-					<?php cryout_access_hook();?>
+				    <?php get_search_form() ?>
 				</nav><!-- #access -->
 
 			</div><!-- #site-header-main-inside -->

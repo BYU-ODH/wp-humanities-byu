@@ -70,9 +70,6 @@ article{
 
 			cryout_after_content_hook(); ?>
 
-			<!--add image resize here-->
-
-			
 		</main><!-- #main -->
 
 		<?php septera_get_sidebar(); ?>

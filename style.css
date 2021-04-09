@@ -1957,6 +1957,7 @@ article.hentry .post-thumbnail-container > a.responsive-featured-image {
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
+	height: 100%;
 }
 
 .septera-cropped-featured .main .post-thumbnail-container .responsive-featured-image {
@@ -7016,7 +7017,6 @@ aside#colophon .fa-youtube {
 #humanities-menu ul li.current-menu-item a,
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
-
 /* END OF SUBMENUS */
 
 /* change link colors on faculty & staff commons */
@@ -7024,11 +7024,11 @@ div#content .elementor-text-editor a {
 	color: #0062B8;
 }
 
-
+/*Here to set the default image for profiles*/
 .defaultIMG{
 	background-image: url("resources/images/default_logo-hum.png");
+  background-repeat:no-repeat;
 	background-size: 100% 100%;
 }
-
 
 /* FIN! */

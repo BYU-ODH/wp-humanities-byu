@@ -48,7 +48,7 @@ article{
 					?>
 				</header><!-- .page-header -->
 
-				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php
 					while ( have_posts() ) : the_post();
 					/*

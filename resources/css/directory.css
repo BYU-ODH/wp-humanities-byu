@@ -40,9 +40,9 @@ ul.directory-list.filterable {
     ul.directory-list.filterable {
         display: grid;
 	position: relative;
-	grid-template-columns: repeat(1,minmax(1px,1fr));
-	grid-gap: 35px 10px;
-	padding: 50px 120px;
+	grid-template-columns: repeat(1,minmax(1px,.35fr));
+	grid-gap: 5px 5px;
+	padding: 50px 20px;
     }
 }
 .statusfilter-container .current {
@@ -213,9 +213,9 @@ ul.directory-list.filterable {
     display: grid;
     grid-template-columns: 100px 165px;
 }
-@media all and (max-width: 699px) {
+@media all and (max-width: 975px) {
     .directory ul.directory-list li {
-	display: block;
+	display: grid;
     }
 }
 .directory ul.directory-list li .image-container {
@@ -227,13 +227,15 @@ ul.directory-list.filterable {
   
  
 }
-@media all and (max-width: 699px) {
+@media all and (max-width: 975px) {
     .directory ul.directory-list li .image-container {
 	display: inline-block;
-	height: 0;
+	height: 150px;
 	width: 100%;
-	padding-bottom: 66%;
     }
+    /* .image-container img.directory-portrait {
+        height: 230%;
+    } */
 }
 /* .directory ul.directory-list li .image-container {
   border-width: 4px;

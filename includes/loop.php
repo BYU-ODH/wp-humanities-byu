@@ -278,7 +278,7 @@ function septera_set_featured_srcset_picture() {
 
 		$featured_width = septera_featured_width();
 		?>
-		<div class="post-thumbnail-container"  <?php cryout_schema_microdata( 'image' ); ?>>
+		<div class="post-thumbnail-container defaultIMG" style="width: 140px; height: 148px;" <?php cryout_schema_microdata( 'image' ); ?>>
 
 			<a class="post-featured-image" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>" title="<?php echo esc_attr( get_post_field( 'post_title', $post->ID ) ) ?>" <?php cryout_echo_bgimage( $featured_image[0] ) ?>> </a>
 			<a class="responsive-featured-image" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>" title="<?php echo esc_attr( get_post_field( 'post_title', $post->ID ) ) ?>">
@@ -293,7 +293,9 @@ function septera_set_featured_srcset_picture() {
 			<meta itemprop="width" content="<?php echo $featured_image[1]; // width ?>">
 			<meta itemprop="height" content="<?php echo $featured_image[2]; // height ?>">
 		</div>
-	<?php }
+		
+	<?php}
+	
 } // septera_set_featured_srcset_picture()
 endif;
 if ( cryout_get_option( 'septera_fpost' ) ) add_action( 'cryout_featured_hook', 'septera_set_featured_srcset_picture' );

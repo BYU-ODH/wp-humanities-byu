@@ -33,21 +33,6 @@ article{
 		<main id="main" role="main" class="main">
 			<?php cryout_before_content_hook(); ?>
 
-			<?php 
-				if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-					<a href=\"$permalink\">
-					<img src='$image' class=\"responsive-featured-image\" alt='$image_alt' title='$image_alt'>
-					</a>
-					</div>"; }
-				else{   /*else statement to add default image to faculty department page*/ 
-					$block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-					<a href=\"$permalink\">
-					<img src='$image' class=\"responsive-featured-image\" alt='$image_alt' title='$image_alt'>
-					</a>
-					</div>";
-				}
-		  	?>
-
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header pad-container" <?php cryout_schema_microdata( 'element' ); ?>>
@@ -63,7 +48,7 @@ article{
 					?>
 				</header><!-- .page-header -->
 
-				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php
 					while ( have_posts() ) : the_post();
 					/*
@@ -85,7 +70,6 @@ article{
 
 			cryout_after_content_hook(); ?>
 
-			
 		</main><!-- #main -->
 
 		<?php septera_get_sidebar(); ?>

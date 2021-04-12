@@ -186,4 +186,46 @@ function create_imported_posts() {
 
 add_shortcode('new_posts','create_imported_posts');
 
+
+
+// display all the reserach areas from the taxonomy on a page 
+
+add_shortcode('research','research_areas_page');
+
+function research_areas_page( $atts )
+{
+    $atts = shortcode_atts( array(
+        'orderby' => 'name',
+    ), $atts );
+
+    $args = array(
+        'taxonomy' => 'personresearch',
+        'orderby' => $atts['orderby'],
+    );
+
+    $terms = get_categories($args);
+
+    $output = '';
+
+    // Exit if there are no terms
+    if (! $terms) {
+        return $output;
+    }
+
+    // Start list
+    $output .= '<ul id="research">';
+
+    // Add terms
+    foreach($terms as $term) {
+        $output .= '<li><a href="'. get_term_link($term) .'">'. esc_html($term->cat_name) .'</a></li>';
+    }
+
+    // End list
+    $output .= '</ul>';
+
+    return $output;
+}
+
+add_shortcode('research', 'research_areas_page');
+
 ?>

@@ -7031,12 +7031,13 @@ div#content .elementor-text-editor a {
 }
 
 /* style links on research areas page */
-ul#research {
-	text-decoration: underline; 
+ul#research{
 	column-count: 2;
 	list-style-type: none;
-	color: #0062B8
 }
 
-
+ul#research a{
+	text-decoration: underline; 
+	color: #0062B8
+}
 /* FIN! */

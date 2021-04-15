@@ -220,13 +220,14 @@ function research_areas_page( $atts )
 
     // Add terms
     foreach($terms as $term) {
-        $output .= '<li><a href="'. get_term_link($term) .'">'. esc_html($term->cat_name) .'</a></li>';
+      $output .= '<li><a href="'. get_term_link($term) .'">'. esc_html($term->cat_name) .'</a>'.' ' .'(' .$term->count .')' .'</li>';
     }
 
     // End list
     $output .= '</ul>';
 
-    return $output;
+    return ($output);
+
 }
 
 add_shortcode('research', 'research_areas_page');

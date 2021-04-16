@@ -363,3 +363,7 @@ ul.directory-list.filterable {
 .personal-info-box {
     margin-top: 2rem;
 }
+/*adding underline to research areas list on profiles*/
+.research_areas_list{
+	text-decoration:underline;
+}

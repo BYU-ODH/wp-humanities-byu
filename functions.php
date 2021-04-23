@@ -322,13 +322,10 @@ function set_posts_per_page( $query ) {
 
   global $wp_the_query;
 
-  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_search() ) ) {
+  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) 
+  && ( $query->is_search() || $query->is_archive()) ) {
     $query->set( 'posts_per_page', 40 );
   }
-  elseif ( ( ! is_admin() ) && ( $query === $wp_the_query ) && ( $query->is_archive() ) ) {
-    $query->set( 'posts_per_page', 50 );
-  }
-  // Etc..
 
   return $query;
 }

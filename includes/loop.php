@@ -278,24 +278,27 @@ function septera_set_featured_srcset_picture() {
 
 		$featured_width = septera_featured_width();
 		?>
-		<div class="post-thumbnail-container"  <?php cryout_schema_microdata( 'image' ); ?>>
+		<div class="post-thumbnail-container defaultIMG" style="width: 140px; height: 148px;" <?php cryout_schema_microdata( 'image' ); ?>>
 
 			<a class="post-featured-image" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>" title="<?php echo esc_attr( get_post_field( 'post_title', $post->ID ) ) ?>" <?php cryout_echo_bgimage( $featured_image[0] ) ?>> </a>
-			<a class="responsive-featured-image" href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>" title="<?php echo esc_attr( get_post_field( 'post_title', $post->ID ) ) ?>">
+			<a class="responsive-featured-image"  href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>" title="<?php echo esc_attr( get_post_field( 'post_title', $post->ID ) ) ?>">
 				<picture>
-	 				<source media="(max-width: 1152px)" sizes="<?php echo cryout_gen_featured_sizes( $featured_width, $options['septera_magazinelayout'], $options['septera_landingpage'] ) ?>" srcset="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured-third' ); ?> 512w">
+				<source media="(max-width: 1152px)" sizes="<?php echo cryout_gen_featured_sizes( $featured_width, $options['septera_magazinelayout'], $options['septera_landingpage'] ) ?>" srcset="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured-third' ); ?> 512w">
 	 				<source media="(max-width: 800px)" sizes="<?php echo cryout_gen_featured_sizes( $featured_width, $options['septera_magazinelayout'], $options['septera_landingpage'] ) ?>" srcset="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured-half' ); ?> 800w">
 	 				<?php if ( cryout_on_landingpage() ) { ?><source sizes="<?php echo cryout_gen_featured_sizes( $featured_width, $options['septera_magazinelayout'], $options['septera_landingpage'] ) ?>" srcset="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured-lp' ); ?> <?php printf( '%sw', $featured_width ) ?>">
 					<?php } ?>
-					<img alt="<?php the_title_attribute();?>" <?php cryout_schema_microdata( 'url' ); ?> src="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured' ); ?>" />
+					<img alt="<?php the_title_attribute();?>" <?php cryout_schema_microdata( 'url' ); ?> src="<?php echo cryout_get_picture_src( $fimage_id, 'septera-featured' ); ?>"/>
 				</picture>
 			</a>
 			<meta itemprop="width" content="<?php echo $featured_image[1]; // width ?>">
 			<meta itemprop="height" content="<?php echo $featured_image[2]; // height ?>">
 		</div>
+		
 	<?php }
+	
 } // septera_set_featured_srcset_picture()
 endif;
-if ( cryout_get_option( 'septera_fpost' ) ) add_action( 'cryout_featured_hook', 'septera_set_featured_srcset_picture' );
+	if ( cryout_get_option( 'septera_fpost' ) )
+	{ add_action( 'cryout_featured_hook', 'septera_set_featured_srcset_picture' ); }
 
 /* FIN */

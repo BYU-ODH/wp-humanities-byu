@@ -17,8 +17,6 @@
 
 get_header(); ?>
 
-
-<h1>Category Content Here</h1>
 <!--style to fix alignment of people-->
 <style>
 article{

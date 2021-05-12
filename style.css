@@ -1889,41 +1889,10 @@ article.hentry .post-thumbnail-container {
 	position: relative;
 	display: block;
 	overflow: hidden;
-	width: 23%;
+	width: 100%;
 	margin-bottom: 1em;
 }
 
-/*added media responsiveness to get rid of gray underlay for diff sizes behind responsive img*/
-@media (max-width: 2560px){
-	article.hentry .post-thumbnail-container{
-		width: 18%;
-	}
-}
-@media (max-width: 1440px){
-	article.hentry .post-thumbnail-container{
-		width: 24%;
-	}
-}
-@media (max-width: 780px){
-	article.hentry .post-thumbnail-container{
-		width: 12.5%;
-	}
-}
-@media (max-width: 430px){
-	article.hentry .post-thumbnail-container{
-		width: 23%;
-	}
-}
-@media (max-width: 380px){
-	article.hentry .post-thumbnail-container{
-		width: 27%;
-	}
-}
-@media (max-width: 330px){
-	article.hentry .post-thumbnail-container{
-		width: 32.5%;
-	}
-}
 
 body:not(.single) article.hentry .post-thumbnail-container a::after {
 	content: "";

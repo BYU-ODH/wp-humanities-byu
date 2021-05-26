@@ -4903,6 +4903,7 @@ ul.cryout-wposts li:last-child {
 	background: transparent;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
+	padding-bottom: 1em;
 }
 
 .searchform:hover input[type="search"],
@@ -4918,7 +4919,7 @@ ul.cryout-wposts li:last-child {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 0;
+	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
 	width: 3.5em;
@@ -4942,81 +4943,22 @@ ul.cryout-wposts li:last-child {
 }
 
 /* ## HEADER SEARCHFORM */
-#access > div > ul > li.menu-search-animated {
+#access {
 	text-align: center;
 }
 
-#access .menu-search-animated {
-	padding: 0 .3em;
-}
-
-#access .menu-search-animated .searchform {
-	display: none;
-	position: absolute;
-	z-index: 1000;
-	top: 100%;
-	right: 0;
-	left: 0;
-	width: 100%;
-	max-width: calc(100% - 2em);
-	height: 4em;
-	line-height: 4em;
-	margin: 0 auto;
-	border: 0;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
-}
-
-#access .menu-search-animated .searchsubmit {
-	display: none;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-search-animated .searchform input[type="search"] {
-	height: 4em;
-	border: 0;
-	font-size: 1em;
-	font-weight: bold;
-	color: #E6E6E6;
-}
-
-#access .menu-main-search .searchform input[type="search"]:focus {
-	background: transparent;
-}
-
-#access .menu-main-search i.icon-search {
-	display: inline-block;
-	padding-right: .5em;
-	padding-left: .5em;
-}
-
-#access .menu-main-search > a {
-	padding-left: 0;
-	padding-right: 0;
-}
-
 #access i.icon-search {
-	cursor: pointer;
-	font-size: 1.3rem;
-	margin-top: -20px;
+    display: inline-block;
+    padding-right: .5em;
+    padding-left: .5em;
 }
 
-#access i.icon-search::before {
-	display: block;
-	font-style:	normal;
+.searchform {
+    width: 9rem;
+    height: 2.3rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
 }
-
-#access li.menu-main-search {
-	position: static;
-	padding: 0 .4em;
-}
-
 .menu-main-search .icon-search::before {}
 
 /* ## FOOTER MENU SEARCHFORM */
@@ -6088,13 +6030,13 @@ body.mobile .main {min-height:0;}
 
 }
 
-@media (max-width: 820px) {
+@media (max-width: 800px) {
 
 	body {
 		font-size: .90em;
 	}
 
-	.menu-main-navigation-container {
+	.menu-studentmain-container {
 		display: none;
 	}
 
@@ -6625,7 +6567,8 @@ i.icon-search {
 
 div#content a {
     color: inherit;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+	/*removed text decoration to get rid of underline but might put it back if we need later*/
 }
 
 .staticslider-caption-buttons {
@@ -6641,13 +6584,13 @@ a.lp-box-readmore {
 	background-color: #0062B8;
 	display: flex;
 	justify-content: center;
-	border-radius: 3px;
-	width: 17%;
+	border-radius: 6px;
+	width: 19%;
 	height: 2rem;
 }
 
 nav#humanities-menu li:hover {
-	background-color: #E6E6E6;
+	background-color: #fafafa;
 }
 
 .home .entry-title {
@@ -6716,6 +6659,14 @@ div#content a.lp-box-readmore, div#content a.staticslider-button, div#content a.
 	color: white;
 	text-decoration: none;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+	background-color: #0062B8;
+	font-weight: 700;
+}
+
+div#content a.lp-box-readmore {
+	padding-top: 13px;
+	padding-bottom: 50px;
+	font-size: 20px;
 }
 
 aside#colophon a {
@@ -6782,10 +6733,6 @@ div#content .news-title {
 	color : black;
 }
 
-.directory-list .filterable-item .content h5 {
-	color: #141414;
-}
-
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
 h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
@@ -6814,7 +6761,7 @@ header.page-header.pad-container h1 {
 	font-size: larger;
 }
 
-.menu-main-navigation-container {
+.menu-studentmain-container {
 	padding-left: 10.2rem;
 	background-color: white;
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
@@ -6829,13 +6776,13 @@ div#site-header-main div {
 	max-width: 100%;
 }
 
-.menu-mobile-odh-container {
+.menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
 	padding-top: 1rem;
 }
 
-ul#menu-mobile-odh.menu > li > a {
+ul#menu-mobile-humanities.menu > li > a {
 	color: white;
 }
 
@@ -6856,8 +6803,6 @@ aside#colophon a.fa {
 	text-align: center;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
-
-
 
 /***********************/
 /*  ABOUT THE COLLEGE  */
@@ -6983,7 +6928,8 @@ aside#colophon .fa-youtube {
 	position: absolute;
 	z-index: 1000;
 	clear: both;
-	margin-left: 0;
+	margin-left: -0.55em;
+	margin-top: 10px;
 	min-width: 15em;
 	box-shadow: 0 0 .5em .1em rgba(0, 0, 0, .05);
 	opacity: 0;
@@ -7071,4 +7017,192 @@ aside#colophon .fa-youtube {
 #humanities-menu ul li.current-menu-parent a,
 #humanities-menu ul li a:hover {}
 
+/*End of SUB MENUES*/
+
+/*Home page odh box styles*/
+.odhBoxTextBoxes{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	
+}
+.odhM0{
+	left: -2%;
+}
+.odhM1{
+	left: 32%;
+}
+.odhM2{
+	left: 66%;
+}
+.odhM3{
+	top: 45%;
+	left: 15%;
+}
+.odhM4{
+	top: 45%;
+	left: 49%;
+}
+.odhBoxContent{
+	position: absolute;
+	width: 345px; 
+	height: 150px;
+	background-color: white;
+	box-shadow: 8px 12px 18px #969595c2;
+	margin: 20px;
+}
+.odhBoxInner {
+	text-align: center;
+	padding: 20px;
+
+}
+.odhBoxInner a{
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+.odhBoxInner a:hover{
+	background-color:rgba(0, 0, 0, .05)
+}
+h3.odhBoxTitles{
+	color: #141414;
+	font-size: 19px;
+}
+#odhFirstTitle{
+	color: red;
+}
+.odhBoxText{
+	font-size: 14px;
+	position: relative;
+	width: 315px;
+	left: -2%;
+
+}
+/*large screen*/
+@media (max-width: 1025px){
+	.odhBoxTextBoxes{
+		height: 600px;
+	}
+	.odhM0{
+		left: 7%;
+	}
+	.odhM1{
+		left: 52%;
+	}
+	.odhM2{
+		top: 33%;
+		left: 7%;
+	}
+	.odhM3{
+		top: 33%;
+		left: 52%;
+	}
+	.odhM4{
+		top: 65%;
+		left: 29%;
+	}
+}
+
+/*half-screen*/
+@media (max-width: 768px){
+	.odhBoxTextBoxes{
+		height: 600px;
+	}
+	.odhM0{
+		left: -7%;
+	}
+	.odhM1{
+		left: 48%;
+	}
+	.odhM2{
+		top: 33%;
+		left: -7%;
+	}
+	.odhM3{
+		top: 33%;
+		left: 48%;
+	}
+	.odhM4{
+		top: 65%;
+		left: 19%;
+		
+	}
+}
+
+/*smaller screens*/
+@media (max-width: 426px){
+	.odhBoxTextBoxes{
+		height: 750px;
+	}
+	.odhBoxContent{
+		width: 295px; 
+		height: 120px;
+	}
+	h3.odhBoxTitles{
+		font-size: 16px;
+	}
+	.odhBoxText{
+		font-size: 11px;
+		width: 265px;
+	}
+	.odhM0{
+		left: 3%;
+	}
+	.odhM1{
+		top: 19%;
+		left: 3%;
+	}
+	.odhM2{
+		top: 38%;
+		left: 3%;
+	}
+	.odhM3{
+		top: 57%;
+		left: 3%;
+	}
+	.odhM4{
+		top: 76%;
+		left: 3%;
+	}
+}
+
+@media (max-width: 376px){
+	.odhM0{
+		left: -5%;
+	}
+	.odhM1{
+		left: -5%;
+	}
+	.odhM2{
+		left: -5%;
+	}
+	.odhM3{
+		left: -5%;
+	}
+	.odhM4{
+		left: -5%;
+	}
+}
+
+@media (max-width: 321px){
+	.odhBoxContent{
+		width: 285px;
+	}
+	.odhM0{
+		left: -12%;
+	}
+	.odhM1{
+		left: -12%;
+	}
+	.odhM2{
+		left: -12%;
+	}
+	.odhM3{
+		left: -12%;
+	}
+	.odhM4{
+		left: -12%;
+	}
+}
+/*End of custom home page css*/
 /* FIN! */

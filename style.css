@@ -6036,8 +6036,12 @@ body.mobile .main {min-height:0;}
 		font-size: .90em;
 	}
 
-	.menu-studentmain-container {
+	/* .menu-studentmain-container {
 		display: none;
+	} */
+	/* for new nav menu */
+	.menu-odhmain-container {
+		display: none:
 	}
 
 	.septera-magazine-three .cryout #content-masonry article.hentry,
@@ -6764,11 +6768,11 @@ header.page-header.pad-container h1 {
 	font-size: larger;
 }
 
-.menu-studentmain-container {
+/* .menu-studentmain-container {
 	padding-left: 10.2rem;
 	background-color: white;
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
-}
+} */
 /* for new nav menu */
 .menu-odhmain-container {
 	padding-left: 8rem;

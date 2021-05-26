@@ -6523,7 +6523,10 @@ nav#humanities-menu {
 
 nav#humanities-menu li {
 	display: inline-block;
-	padding: 10px;
+	padding-top: 10px;
+	padding-left: 35px;
+	padding-bottom: 10px;
+	padding-right: 35px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: lighter;
 }
@@ -6763,6 +6766,12 @@ header.page-header.pad-container h1 {
 
 .menu-studentmain-container {
 	padding-left: 10.2rem;
+	background-color: white;
+	box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+/* for new nav menu */
+.menu-odhmain-container {
+	padding-left: 8rem;
 	background-color: white;
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }

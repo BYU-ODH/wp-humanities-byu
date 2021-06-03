@@ -84,11 +84,15 @@ function make_list($people,$dept) {
 
         $block.="<li class='$classes'>";
 
-          if($image) { $block.="<div style='border-color: $color;' class='image-container'>
+          if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
 <a href=\"$permalink\">
           <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
 </a>
           </div>"; }
+          else{   /*else statement to add default image to faculty department page*/ 
+            $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+          </div>";
+          }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
 	$block.="<h5>";
@@ -97,26 +101,26 @@ function make_list($people,$dept) {
         if ($post['affiliated_faculty']) {
           $block.="<h5>Affiliated Faculty, " . $deptmap[$post['affiliated_department']] . "</h5>";
         }
+        if (!empty($post['phone'])) {
+          $phone = $post['phone'];
+          $phone = preg_replace('/[^0-9]/', '', $phone);
+          if (strlen($phone) == 10) 
+          {
+            $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
+            $block.="<div class=\"link phone\"><span>".$phone."</span></div>";
+          }
+          else if (strlen($phone) == 7)
+          {
+            $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
+            $block.="<div class=\"link phone\"><span>".$phone."</span></div>";
+          }
+        }
 
         if (!empty($post['address'])) {
-          $block.="<div class=\"link address\"><i class=\"icon byu-icon-location\"></i><span>".$post['address']."</span></div>";	
-  }
-  if (!empty($post['phone'])) {
-    $phone = $post['phone'];
-    $phone = preg_replace('/[^0-9]/', '', $phone);
-    if (strlen($phone) == 10) 
-    {
-      $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
-      $block.="<div class=\"link phone\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
-    }
-    else if (strlen($phone) == 7)
-    {
-      $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
-      $block.="<div class=\"link phone\"><i class=\"icon byu-icon-telephone\"></i><span>".$phone."</span></div>";
-    }
+          $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
   }
         if (!empty($post['email'])) {
-          $block.="<div class=\"link email\"><i class=\"icon byu-icon-mail\"></i><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</span></div>";
+          $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</span></div>";
 	}
         $block.="</div>"; 
 	$block.="</li>";
@@ -181,5 +185,48 @@ function create_imported_posts() {
 }
 
 add_shortcode('new_posts','create_imported_posts');
+
+
+
+// display all the reserach areas from the taxonomy on a page 
+
+add_shortcode('research','research_areas_page');
+
+function research_areas_page( $atts )
+{
+    $atts = shortcode_atts( array(
+        'orderby' => 'name',
+    ), $atts );
+
+    $args = array(
+        'taxonomy' => 'personresearch',
+        'orderby' => $atts['orderby'],
+    );
+
+    $terms = get_categories($args);
+
+    $output = '';
+
+    // Exit if there are no terms
+    if (! $terms) {
+        return $output;
+    }
+
+    // Start list
+    $output .= '<ul id="research">';
+
+    // Add terms
+    foreach($terms as $term) {
+      $output .= '<li><a href="'. get_term_link($term) .'">'. esc_html($term->cat_name) .'</a>'.' ' .'(' .$term->count .')' .'</li>';
+    }
+
+    // End list
+    $output .= '</ul>';
+
+    return ($output);
+
+}
+
+add_shortcode('research', 'research_areas_page');
 
 ?>

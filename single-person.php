@@ -76,7 +76,7 @@ get_header(); ?>
 				$person_details = array(
 				    "teaching"=>"Teaching Experience", 
 				    "research"=>"Research", 
-				    "publications"=>"Publications", 
+				    "publications"=>"Selected Publications", 
 				    "service"=>"Service", 
 				    "citizenship_assignments"=>"Citizenship assignments", 
 				    "professional_website"=>"Professional Website");

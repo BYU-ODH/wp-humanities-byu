@@ -17,7 +17,6 @@
 
 get_header(); ?>
 
-<h1>Category Content Here</h1>
 <!--style to fix alignment of people-->
 <style>
 article{
@@ -35,7 +34,7 @@ article{
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header pad-container" <?php cryout_schema_microdata( 'element' ); ?>>
-					<?php
+				<?php
 						// Load custom header if author
 						if (is_author()) {
 							get_template_part( 'content/author-bio' );
@@ -47,7 +46,7 @@ article{
 					?>
 				</header><!-- .page-header -->
 
-				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php
 					while ( have_posts() ) : the_post();
 					/*
@@ -59,6 +58,7 @@ article{
 					endwhile;
 					?>
 				</div><!--content-masonry-->
+				<!--not really nessessary-->
 				<?php septera_pagination();
 
 			// If no content, include the "No posts found" template.
@@ -67,6 +67,7 @@ article{
 			endif;
 
 			cryout_after_content_hook(); ?>
+
 		</main><!-- #main -->
 
 		<?php septera_get_sidebar(); ?>

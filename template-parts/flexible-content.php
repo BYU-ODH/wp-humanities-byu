@@ -288,25 +288,25 @@ if ($flex_content) {
 									<div class="content">
 										<ul>
 											<?php if (get_field('office')) { ?>
-												<li><i class="icon byu-icon-location"></i> <?php the_field('office'); ?></a></li>
+												<li><?php the_field('office'); ?></a></li>
 											<?php } ?>
 											<?php if (get_field('phone')) { ?>
-												<li><i class="icon byu-icon-telephone"></i> <?php the_field('phone'); ?></a></li>
+												<li><?php the_field('phone'); ?></a></li>
 											<?php } ?>
 											<?php if (get_field('facebook')) { ?>
-												<li><a href="<?php the_field('facebook'); ?>"><i class="icon byu-icon-facebook"></i> Facebook</a></li>
+												<li><a href="<?php the_field('facebook'); ?>">Facebook</a></li>
 											<?php } ?>
 											<?php if (get_field('twitter')) { ?>
-												<li><a href="<?php the_field('twitter'); ?>"><i class="icon byu-icon-twitter"></i> Twitter</a></li>
+												<li><a href="<?php the_field('twitter'); ?>">Twitter</a></li>
 											<?php } ?>
 											<?php if (get_field('youtube')) { ?>
-												<li><a href="<?php the_field('youtube'); ?>"><i class="icon byu-icon-youtube"></i> YouTube</a></li>
+												<li><a href="<?php the_field('youtube'); ?>">YouTube</a></li>
 											<?php } ?>
 											<?php if (get_field('instagram')) { ?>
-												<li><a href="<?php the_field('instagram'); ?>"><i class="icon byu-icon-instagram"></i> Instagram</a></li>
+												<li><a href="<?php the_field('instagram'); ?>"></i> Instagram</a></li>
 											<?php } ?>
 											<?php if (get_field('home_page_link')) { ?>
-												<li><a href="<?php the_field('home_page_link'); ?>" target="_blank"><i class="icon byu-icon-programs"></i> Home Page</a></li>
+												<li><a href="<?php the_field('home_page_link'); ?>" target="_blank"></i> Home Page</a></li>
 											<?php } ?>
 										</ul>
 									</div>
@@ -745,6 +745,8 @@ if ($flex_content) {
 
 						$imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 						$image = $imageArr[0];
+						if(!file_exists($image))
+							$image = "resources/images/Default image/default.jpg";
 						$departmentID = get_field('department')->ID;
 						?>
 

@@ -43,8 +43,9 @@
 
 				<a id="nav-toggle"><i class="icon-menu"></i></a>
 				<nav id="access" role="navigation"  aria-label="<?php esc_attr_e('Primary Menu', 'septera') ?>" <?php cryout_schema_microdata( 'menu' ); ?>>
-				    <?php get_search_form() ?>
-				</nav><!-- #access -->
+				<?php get_search_form() ?>
+
+        </nav><!-- #access -->
 
 			</div><!-- #site-header-main-inside -->
 

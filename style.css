@@ -491,7 +491,9 @@ a:visited {
 .entry-content .wp-block-latest-posts {
     padding: 0;
     list-style: none;
+	display: none;
 }
+
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
 	padding: 1.5em;
@@ -1726,16 +1728,6 @@ img#wpstats {
 	position: relative;
 }
 
-/*.post-thumbnail-container + .article-inner .entry-header {
-	position: static;
-}
-
-.post-thumbnail-container + .article-inner .entry-meta span.comments-link {
-	top: 1.5em;
-	padding: 0.3em 1.2em;
-	background: rgba(255, 255, 255, 0.1);
-}*/
-
 .entry-meta abbr,
 .entry-utility abbr {
 	border: none;
@@ -1905,6 +1897,7 @@ article.hentry .post-thumbnail-container {
 	margin-bottom: 1em;
 }
 
+
 body:not(.single) article.hentry .post-thumbnail-container a::after {
 	content: "";
 	position: absolute;
@@ -1953,12 +1946,16 @@ article.hentry .post-thumbnail-container > a {
 article.hentry .post-thumbnail-container > a.responsive-featured-image {
 	display: inline-block;
 	margin: 0 auto;
-	width: 100%;
+	/*width: 100%;*/
 	text-align: center;
+	width: 6.5em;
+  	height: 9em;
 }
 
 .septera-cropped-featured .main .post-thumbnail-container .responsive-featured-image {
 	display: none;
+	height: 170px;
+	width: 100%;
 }
 
 .septera-responsive-featured .main .post-thumbnail-container a.post-featured-image {
@@ -6575,8 +6572,6 @@ i.icon-search {
 
 div#content a {
     color: inherit;
-    /*text-decoration: underline;*/
-	/*removed text decoration to get rid of underline but might put it back if we need later*/
 }
 
 .staticslider-caption-buttons {
@@ -6856,7 +6851,7 @@ aside#colophon .fa-twitter {
 aside#colophon .fa-youtube {
 	color: #c4302b;
 }
-/***********************/
+
 /*Home page odh box styles*/
 /***********************/
 .odhBoxTextBoxes{
@@ -6896,7 +6891,6 @@ aside#colophon .fa-youtube {
 .odhBoxInner {
 	text-align: center;
 	padding: 20px;
-
 }
 .odhBoxInner a{
 	width: 100%;
@@ -6916,8 +6910,8 @@ h3.odhBoxTitles{
 	position: relative;
 	width: 315px;
 	left: -2%;
-
 }
+
 /*large screen*/
 @media (max-width: 1025px){
 	.odhBoxTextBoxes{
@@ -6964,8 +6958,7 @@ h3.odhBoxTitles{
 	}
 	.odhM4{
 		top: 65%;
-		left: 19%;
-		
+		left: 19%;		
 	}
 }
 
@@ -7047,4 +7040,42 @@ h3.odhBoxTitles{
 /***********************/
 /*End of custom home page css*/
 /***********************/
+
+#humanities-menu ul li.current_page_item > a,
+#humanities-menu ul li.current-menu-item > a{}
+
+#humanities-menu ul ul li.current_page_item ,
+#humanities-menu ul ul li.current-menu-ancestor,
+#humanities-menu ul ul li.current-menu-item ,
+#humanities-menu ul ul li.current-menu-parent {}
+
+#humanities-menu ul li.current_page_item a,
+#humanities-menu ul li.current-menu-ancestor a,
+#humanities-menu ul li.current-menu-item a,
+#humanities-menu ul li.current-menu-parent a,
+#humanities-menu ul li a:hover {}
+/* END OF SUBMENUS */
+
+/* change link colors on faculty & staff commons */
+div#content .elementor-text-editor a {
+	color: #0062B8;
+}
+
+/*Here to set the default image for profiles*/
+.defaultIMG{
+	background-image: url("resources/images/default_logo-hum.png");
+  background-repeat:no-repeat;
+	background-size: 100% 100%;
+}
+
+/* style links on research areas page */
+ul#research{
+	column-count: 2;
+	list-style-type: none;
+}
+
+ul#research a{
+	text-decoration: underline; 
+	color: #0062B8
+}
 /* FIN! */

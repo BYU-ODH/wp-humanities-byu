@@ -32,6 +32,7 @@ require_once( get_template_directory() . "/includes/meta.php" );        	// Cust
 require_once( get_template_directory() . "/includes/byuh_news.php" );	// Landing Page News
 require_once( get_template_directory() . "/includes/landing-page.php" );	// Landing Page outputs
 
+
 ///////////////////////////////////////
 // SCRIPTS & STYLES for directory
 ///////////////////////////////////////
@@ -314,5 +315,19 @@ function byu_logo() {
     return $html;   
 }
 
+//code to set the default number of posts per page
+
+add_action( 'pre_get_posts',  'set_posts_per_page'  );
+function set_posts_per_page( $query ) {
+
+  global $wp_the_query;
+
+  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) 
+  && ( $query->is_search() || $query->is_archive()) ) {
+    $query->set( 'posts_per_page', 40 );
+  }
+
+  return $query;
+}
 
 // FIN

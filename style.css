@@ -6592,10 +6592,6 @@ a.lp-box-readmore {
 	height: 2rem;
 }
 
-nav#humanities-menu li:hover {
-	background-color: #fafafa;
-}
-
 .home .entry-title {
 	display: none;
 }
@@ -6857,6 +6853,7 @@ aside#colophon .fa-youtube {
 }
 
 /*Home page odh box styles*/
+/***********************/
 .odhBoxTextBoxes{
 	position: relative;
 	width: 100%;
@@ -6888,6 +6885,9 @@ aside#colophon .fa-youtube {
 	box-shadow: 8px 12px 18px #969595c2;
 	margin: 20px;
 }
+.odhBoxContent:hover{
+	background-color:rgba(0, 0, 0, .05);
+}
 .odhBoxInner {
 	text-align: center;
 	padding: 20px;
@@ -6897,15 +6897,13 @@ aside#colophon .fa-youtube {
 	height: 100%;
 	text-decoration: none;
 }
-.odhBoxInner a:hover{
-	background-color:rgba(0, 0, 0, .05)
-}
+
 h3.odhBoxTitles{
 	color: #141414;
 	font-size: 19px;
 }
 #odhFirstTitle{
-	color: red;
+	color:#141414;
 }
 .odhBoxText{
 	font-size: 14px;
@@ -6913,6 +6911,7 @@ h3.odhBoxTitles{
 	width: 315px;
 	left: -2%;
 }
+
 /*large screen*/
 @media (max-width: 1025px){
 	.odhBoxTextBoxes{
@@ -7038,7 +7037,9 @@ h3.odhBoxTitles{
 		left: -12%;
 	}
 }
+/***********************/
 /*End of custom home page css*/
+/***********************/
 
 #humanities-menu ul li.current_page_item > a,
 #humanities-menu ul li.current-menu-item > a{}
@@ -7077,5 +7078,4 @@ ul#research a{
 	text-decoration: underline; 
 	color: #0062B8
 }
-
 /* FIN! */

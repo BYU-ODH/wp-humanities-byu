@@ -112,7 +112,7 @@ function make_list($people,$dept) {
           else if (strlen($phone) == 7)
           {
             $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
-            $block.="<div class=\"link phone\"><a href=\"tel:+3852078454\"><span>".$phone."</span></a></div>";
+            $block.="<div class=\"link phone\"><a href='tel:+".$phone."'><span>".$phone."</span></a></div>";
           }
         }
 

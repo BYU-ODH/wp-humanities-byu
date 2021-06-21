@@ -6731,6 +6731,10 @@ div#content .news-title {
 .article-inner header h1, .directory-list .filterable-item .content h4 {
 	color : black;
 }
+/*Sytle to add hover color text headings on ODH faculty directory*/
+.article-inner header:hover h1, .directory-list:hover .filterable-item:hover .content:hover h4:hover{
+	color: #666667;
+}
 
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,

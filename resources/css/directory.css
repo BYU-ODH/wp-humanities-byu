@@ -224,8 +224,6 @@ ul.directory-list.filterable {
   display: table-cell;
   list-style: none;
   vertical-align: top;
-  
- 
 }
 @media all and (max-width: 975px) {
     .directory ul.directory-list li .image-container {
@@ -233,14 +231,8 @@ ul.directory-list.filterable {
 	height: 150px;
 	width: 100%;
     }
-    /* .image-container img.directory-portrait {
-        height: 230%;
-    } */
 }
-/* .directory ul.directory-list li .image-container {
-  border-width: 4px;
-  border-style: solid;
-} */
+
 .directory ul.directory-list li .content .link.phone {
     color: #0062B8;
 }

@@ -74,6 +74,7 @@ get_header(); ?>
 <!-- Directory Details -->
 				<?php
 				$person_details = array(
+					"why_to_call"=>"Why to call",
 				    "teaching"=>"Teaching Experience", 
 				    "research"=>"Research", 
 				    "publications"=>"Selected Publications", 

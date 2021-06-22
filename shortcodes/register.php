@@ -103,17 +103,7 @@ function make_list($people,$dept) {
         }
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
-          $phone = preg_replace('/[^0-9]/', '', $phone);
-          if (strlen($phone) == 10) 
-          {
-            $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
-            $block.="<div class=\"link phone\"><span>".$phone."</span></div>";
-          }
-          else if (strlen($phone) == 7)
-          {
-            $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
-            $block.="<div class=\"link phone\"><a href='tel:+".$phone."'><span>".$phone."</span></a></div>";
-          }
+          $block.= format_phone_num($phone);
         }
 
         if (!empty($post['address'])) {

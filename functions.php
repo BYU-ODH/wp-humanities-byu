@@ -330,4 +330,20 @@ function set_posts_per_page( $query ) {
   return $query;
 }
 
+function format_phone_num ($phone) {
+
+$phone = preg_replace('/[^0-9]/', '', $phone);
+    $block = '';
+    if (strlen($phone) == 10) 
+    {
+    $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
+    $block.="<div class=\"link phone\"><a href='tel:+".$phone."'><span>".$phone."</span></a></div>";
+    }
+    else if (strlen($phone) == 7)
+    {
+    $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3); 
+    $block.="<div class=\"link phone\"><a href='tel:+".$phone."'><span>".$phone."</span></a></div>";
+    }
+    return $block;
+}
 // FIN

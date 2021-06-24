@@ -95,8 +95,6 @@ function make_list($people,$dept) {
           }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-	$block.="<h5>";
-        $block.=$status_map[$post['status']].", ";
 	$block.=$deptmap[$post['department']]."</h5>";
         if ($post['affiliated_faculty']) {
           $block.="<h5>Affiliated Faculty, " . $deptmap[$post['affiliated_department']] . "</h5>";
@@ -139,7 +137,7 @@ function directory_list($atts) {
   ), $atts );
   $querystr = "SELECT $wpdb->posts.ID, $wpdb->posts.post_title, $wpdb->postmeta.meta_key, $wpdb->postmeta.meta_value FROM $wpdb->posts, 
 $wpdb->postmeta WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id AND $wpdb->postmeta.meta_key 
-IN ('email','phone','department','address','status','affiliated_faculty','affiliated_department') AND $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_type = 'person'";
+IN ('email','phone','address','status','affiliated_faculty','affiliated_department') AND $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_type = 'person'";
   $personposts = $wpdb->get_results($querystr, OBJECT);
   $faclist=array();
   $faculty=array();

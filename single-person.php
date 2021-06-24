@@ -20,19 +20,14 @@ get_header(); ?>
 		<div class="content">
                     <?php $page_link = get_page_link(); ?>
 			<h2><?php the_title(); ?></h2>
-			<h3 class="caps">
-			    <?php if (get_field('position')) { ?>
-				<?php the_field('position'); ?>,
-			    <?php } ?>
-			    <?php  $d=get_field_object('department'); echo $d['value']->post_title;  ?> 
-			</h3>
 
 		    <?php if (get_field('address')) { ?>
 			<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
 		    <?php } ?>
 
-		    <?php if (get_field('phone')) { ?>
-			<p class="info phone"><i class="icon byu-icon-telephone"></i><span><?php the_field('phone'); ?></span></p>
+		    <?php if (get_field('phone')) { $f_phone = format_phone_num(get_field('phone')); ?>
+			
+			<p class="info phone"><i class="icon byu-icon-telephone"></i><span><a href="tel:+1<?php echo $f_phone;?>"><?php echo $f_phone; ?></a></span></p>
 		    <?php } ?>
  
  		    <?php if (get_field('email')) { ?>
@@ -74,7 +69,6 @@ get_header(); ?>
 <!-- Directory Details -->
 				<?php
 				$person_details = array(
-					"why_to_call"=>"Why to call",
 				    "teaching"=>"Teaching Experience", 
 				    "research"=>"Research", 
 				    "publications"=>"Selected Publications", 

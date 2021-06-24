@@ -103,7 +103,7 @@ function make_list($people,$dept) {
         }
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
-          $block.= format_phone_num($phone);
+          $block.= format_phone_block($phone);
         }
 
         if (!empty($post['address'])) {

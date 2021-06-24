@@ -20,12 +20,6 @@ get_header(); ?>
 		<div class="content">
                     <?php $page_link = get_page_link(); ?>
 			<h2><?php the_title(); ?></h2>
-			<h3 class="caps">
-			    <?php if (get_field('position')) { ?>
-				<?php the_field('position'); ?>,
-			    <?php } ?>
-			    <?php  $d=get_field_object('department'); echo $d['value']->post_title;  ?> 
-			</h3>
 
 		    <?php if (get_field('address')) { ?>
 			<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>

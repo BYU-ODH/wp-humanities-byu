@@ -357,6 +357,6 @@ ul.directory-list.filterable {
 }
 
 /*adding underline to research areas list on profiles*/
-.research_areas_list{
+.research_areas_list a{
 	text-decoration:underline;
 }

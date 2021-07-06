@@ -25,8 +25,9 @@ get_header(); ?>
 			<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
 		    <?php } ?>
 
-		    <?php if (get_field('phone')) { ?>
-			<p class="info phone"><i class="icon byu-icon-telephone"></i><span><?php the_field('phone'); ?></span></p>
+		    <?php if (get_field('phone')) { $f_phone = format_phone_num(get_field('phone')); ?>
+			
+			<p class="info phone"><i class="icon byu-icon-telephone"></i><span><a href="tel:+1<?php echo $f_phone;?>"><?php echo $f_phone; ?></a></span></p>
 		    <?php } ?>
  
  		    <?php if (get_field('email')) { ?>

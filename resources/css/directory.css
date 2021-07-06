@@ -236,6 +236,9 @@ ul.directory-list.filterable {
 .directory ul.directory-list li .content .link.phone {
     color: #0062B8;
 }
+.directory ul.directory-list li .content .link.email{
+    color: #0062B8;
+}
 
 .directory-list .filterable-item .content h5 {
 	color: #333;
@@ -307,6 +310,7 @@ ul.directory-list.filterable {
 }
 .profile-content .text-content {
 	padding-left: 2em;
+    padding-top: 1em;
 }
 
 .person h1 a:hover, .person h2 a:hover, .person h3 a:hover, .person h4 a:hover {
@@ -346,6 +350,8 @@ ul.directory-list.filterable {
     display: inline-block;
     vertical-align: top;
     max-width: 70%;
+    padding-bottom: 30px;
+
 }
 
 .single .content ul {

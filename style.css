@@ -6867,6 +6867,7 @@ aside#colophon .fa-youtube {
 	top: 45%;
 	left: 49%;
 }
+
 .odhBoxContent{
 	position: absolute;
 	width: 345px; 
@@ -6902,6 +6903,65 @@ h3.odhBoxTitles{
 	left: -2%;
 }
 
+
+/*Testing Lab page odh box styles*/
+/***********************/
+
+.odhBoxTextBoxesTL{
+        position: relative;
+        width: 100%;
+        height: 400px;
+
+}
+.odhTL0{
+        left: -2%;
+}
+.odhTL1{
+        left: 32%;
+}
+.odhTL2{
+        left: 66%;
+}
+
+
+.odhBoxContentTL{
+        position: absolute;
+        width: 345px;
+        height: 270px;
+        background-color: white;
+        box-shadow: 8px 12px 18px #969595c2;
+        margin: 20px;
+}
+.odhBoxContentTL:hover{
+        background-color:rgba(0, 0, 0, .05);
+}
+.odhBoxInnerTL {
+        text-align: center;
+        padding: 20px;
+}
+.odhBoxInnerTL a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+}
+
+h3.odhBoxTitlesTL{
+        color: #141414;
+        font-size: 19px;
+}
+#odhFirstTitle{
+        color:#141414;
+}
+.odhBoxTextTL{
+        font-size: 14px;
+        position: relative;
+        width: 315px;
+        left: -2%;
+}
+
+
+
+
 /*large screen*/
 @media (max-width: 1025px){
 	.odhBoxTextBoxes{
@@ -6927,6 +6987,25 @@ h3.odhBoxTitles{
 	}
 }
 
+
+/*large screen for testing lab page*/
+@media screen and (max-width: min-width:500px){
+        .odhBoxTextBoxesTL{
+                height: 600px;
+        }
+        .odhTL0{
+                left: 7%;
+        }
+        .odhTL1{
+                left: 52%;
+        }
+        .odhTL2{
+                top: 33%;
+                left: 7%;
+        }
+}
+
+
 /*half-screen*/
 @media (max-width: 768px){
 	.odhBoxTextBoxes{
@@ -6951,6 +7030,26 @@ h3.odhBoxTitles{
 		left: 19%;		
 	}
 }
+
+
+/*half-screen for testing page*/
+@media (max-width: 768px){
+        .odhBoxTextBoxesTL{
+                height: 600px;
+        }
+        .odhTL0{
+                left: -7%;
+        }
+        .odhTL1{
+                left: 48%;
+        }
+        .odhTL2{
+                top: 50%;
+                left: -7%;
+        }
+}
+
+
 
 /*smaller screens*/
 @media (max-width: 426px){
@@ -6989,6 +7088,41 @@ h3.odhBoxTitles{
 	}
 }
 
+
+/*smaller screens for testing lab page*/
+@media (max-width: 426px){
+        .odhBoxTextBoxesTL{
+                height: 750px;
+        }
+        .odhBoxContentTL{
+                width: 295px;
+                height: 200px;
+        }
+        h3.odhBoxTitlesTL{
+                font-size: 16px;
+        }
+        .odhBoxTextTL{
+                font-size: 11px;
+                width: 265px;
+        }
+        .odhTL0{
+                left: 3%;
+        }
+        .odhTL1{
+                top: 30%;
+                left: 3%;
+        }
+        .odhTL2{
+                top: 60%;
+                left: 3%;
+        }
+}
+
+
+
+
+
+
 @media (max-width: 376px){
 	.odhM0{
 		left: -5%;
@@ -7006,6 +7140,25 @@ h3.odhBoxTitles{
 		left: -5%;
 	}
 }
+
+
+/* for testing lab page*/
+
+
+@media (max-width: 376px){
+
+        .odhTL0{
+                left: -5%;
+        }
+        .odhTL1{
+                left: -5%;
+        }
+        .odhTL2{
+                left: -5%;
+        }
+}
+
+
 
 @media (max-width: 321px){
 	.odhBoxContent{
@@ -7027,6 +7180,29 @@ h3.odhBoxTitles{
 		left: -12%;
 	}
 }
+
+/* for testing lab page*/
+
+@media (max-width: 321px){
+        .odhBoxContentTL{
+                width: 285px;
+        }
+        .odhTL0{
+                left: -12%;
+        }
+        .odhTL1{
+                left: -12%;
+        }
+        .odhTL2{
+                left: -12%;
+        }
+}
+
+
+
+
+
+
 /***********************/
 /*End of custom home page css*/
 /***********************/

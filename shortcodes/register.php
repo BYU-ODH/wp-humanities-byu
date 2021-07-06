@@ -95,10 +95,6 @@ function make_list($people,$dept) {
           }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-	$block.=$deptmap[$post['department']]."</h5>";
-        if ($post['affiliated_faculty']) {
-          $block.="<h5>Affiliated Faculty, " . $deptmap[$post['affiliated_department']] . "</h5>";
-        }
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
           $block.= format_phone_block($phone);

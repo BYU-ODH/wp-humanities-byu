@@ -95,7 +95,6 @@ function make_list($people,$dept) {
           }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-	$block.=$deptmap[$post['department']];
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
           $phone = preg_replace('/[^0-9]/', '', $phone);

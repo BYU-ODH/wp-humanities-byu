@@ -7045,13 +7045,18 @@ margin:2rem;
 .odhBoxContentTL{
         position: relative;
         width: 345px;
-        height: 300px;
+        height: 320px;
         background-color: white;
         box-shadow: 8px 12px 18px #969595c2;
 }
+
+/**
 .odhBoxContentTL:hover{
         background-color:rgba(0, 0, 0, .05);
 }
+
+**/
+
 .odhBoxInnerTL {
         text-align: center;
         padding: 20px;
@@ -7077,6 +7082,28 @@ h3.odhBoxTitlesTL{
 }
 
 
+.button {
+	background-color: white; 
+        border: 2px solid #0057b8;
+        color: black;
+        padding: 10px 20px;
+	border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+	transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+.button:hover {
+	background-color: #0057b8;
+	color: white !important;
+}
+
+
+
 
 /*************************************************/
 /* Style for testing lab page on tablet and phone*/
@@ -7096,7 +7123,6 @@ h3.odhBoxTitlesTL{
 
                         }
                 }
-
 
 
 /***********************/

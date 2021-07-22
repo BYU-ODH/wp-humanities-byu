@@ -1,10 +1,10 @@
 .filter-container {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
     position: relative;
     text-transform: uppercase;
     display: inline-block;
     min-width: 300px;
-    font-size: 16px;
+    font-size: 1.0625rem;
     vertical-align: top;
 }
 .statusfilter-container {
@@ -24,16 +24,14 @@ ul.directory-list.filterable {
 	display: grid;
 	position: relative;
 	grid-template-columns: repeat(3,minmax(1px,1fr));
-	grid-gap: 35px 10px;
-	padding: 50px 120px;
+	grid-gap: 2.3rem 1rem;
+	padding: 3.5rem 8rem;
 }
 @media(max-width:1250px) {
     ul.directory-list.filterable {
         display: grid;
 	position: relative;
 	grid-template-columns: repeat(2,minmax(1px,1fr));
-	grid-gap: 35px 10px;
-	padding: 50px 120px;
     }
 }
 @media(max-width:975px) {
@@ -41,8 +39,8 @@ ul.directory-list.filterable {
         display: grid;
 	position: relative;
 	grid-template-columns: repeat(1,minmax(1px,.35fr));
-	grid-gap: 5px 5px;
-	padding: 50px 20px;
+	grid-gap: 0.3rem 0.3rem;
+	padding:  3.5rem 1.5rem;
     }
 }
 .statusfilter-container .current {
@@ -60,7 +58,7 @@ ul.directory-list.filterable {
     }
     .statusfilter-container {
         float: none;
-        padding-bottom: 25px;
+        padding-bottom: 15.625rem;
     }
 }
 @media all and (max-width: 499px) {
@@ -73,16 +71,16 @@ ul.directory-list.filterable {
 }
 .filter-container > span {
     color: #86847d;
-    font-size: 16px;
-    margin-right: 10px;
+    font-size: 1.0625rem;
+    margin-right: 0.5rem;
 }
 .filter-container .filter-label {
     background: #8f8f8f;
     width: auto;
-    min-width: 100px;
+    min-width: 6.625rem;
     display: inline-block;
     vertical-align: middle;
-    padding: 14px 40px 14px 10px;
+    padding: 0.925rem 2.625rem 0.875rem 0.75rem;
     position: relative;
     font-weight: bold;
     color: white;
@@ -92,28 +90,28 @@ ul.directory-list.filterable {
 
 .filter-container .filter-label .icon {
     position: absolute;
-    right: 15px;
-    font-size: 16px;
+    right: 1rem;
+    font-size: 1.0625rem;
     top: 1.25em;
 }
 .filter-container ul {
     background: #8f8f8f;
-    max-width: 320px;
+    max-width: 20rem;
     color: white;
     font-weight: bold;
     position: absolute;
-    top: 53px;
+    top: 3.5rem;
     left: 0;
     z-index: 2;
     display: none;
 }
 .directory .filter-container ul {
-    height: 500px;
+    height: 32rem;
     overflow: auto;
     cursor: pointer;
 }
 .filter-container ul li {
-    padding: 15px 20px;
+    padding: 1rem 1.325rem;
 }
 .filter-container ul li:hover {
     background-color: #002f5d; /* byu nav blue */
@@ -121,7 +119,7 @@ ul.directory-list.filterable {
 .input-container {
     display: inline-block;
     position: relative;
-    padding: 12px 12px 11px 40px;
+    padding: 0.8rem  0.8rem 0.7rem 2.625rem;
     background: #8f8f8f;
 }
 .input-container:before {
@@ -136,7 +134,7 @@ ul.directory-list.filterable {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    height: 21px;
+    height: 1.5rem;
     background: #8f8f8f;
     color: white;
     margin: 0;
@@ -144,7 +142,7 @@ ul.directory-list.filterable {
     outline: none;
     font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 1.0625rem;
     display: inline-block;
 }
 .input-container input.search[type="text"]::-webkit-input-placeholder {
@@ -167,18 +165,18 @@ ul.directory-list.filterable {
 }
 
 .directory .input-container {
-    margin-right: 7px;
+    margin-right: 0.5rem;
 }
 @media all and (max-width: 599px) {
     .directory .input-container {
 	display: block;
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 2%;
     }
 }
 @media all and (max-width: 499px) {
     .directory .input-container {
-	margin: 0 auto 10px;
+	margin: 0 auto 3%;
 	width: 95%;
     }
 }
@@ -211,7 +209,7 @@ ul.directory-list.filterable {
     color: #8f8f8f;
     display: table;
     display: grid;
-    grid-template-columns: 100px 165px;
+    grid-template-columns: 6.5rem 11rem;
 }
 @media all and (max-width: 975px) {
     .directory ul.directory-list li {
@@ -228,8 +226,8 @@ ul.directory-list.filterable {
 @media all and (max-width: 975px) {
     .directory ul.directory-list li .image-container {
 	display: inline-block;
-	height: 150px;
-	width: 100%;
+	height: 10rem;
+    width: 100%;
     }
 }
 
@@ -243,11 +241,10 @@ ul.directory-list.filterable {
 
 .directory-list .filterable-item .content h5 {
 	color: #333;
-	font-size: 17px;
+	font-size: 1rem;
     line-height: 1.23529412;
-    font-weight: 405;
-	margin: 0;
-	font-weight: 500;
+    font-weight: 500;
+    margin: 0;
 }
 
 .directory ul.directory-list li .content {
@@ -257,24 +254,24 @@ ul.directory-list.filterable {
 }
 @media all and (max-width: 699px) {
     .directory ul.directory-list li .content {
-	padding: 20px;
+	padding: 1.25rem;
     }
 }
 .directory ul.directory-list li .content h4 {
     text-transform: none;
-    font-size: 24px;
+    font-size: 1.625rem;
     font-weight: bold;
     margin: 0;
     font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
 @media all and (max-width: 699px) {
     .directory ul.directory-list li .content h4 {
-	padding-bottom: 15px;
+	padding-bottom: 1rem;
 	border-bottom: 1px solid #b3b1a9;
     }
 }
 .directory ul.directory-list li .content .link {
-    font-size: 16px;
+    font-size: 1.0625rem;
     color: #666;
     display: inline-block;
     padding: 0;
@@ -292,7 +289,7 @@ ul.directory-list.filterable {
 	border: none;
 	padding: 0;
 	display: block;
-	margin-top: 15px;
+	margin-top: 1rem;
     }
 }
 .directory ul.directory-list li .content .link .icon {
@@ -300,13 +297,13 @@ ul.directory-list.filterable {
 }
 .directory ul.directory-list li .content .cta {
     position: absolute;
-    right: 32px;
-    top: 20px;
+    right: 2rem;
+    top: 1.25rem;
 }
 @media all and (max-width: 699px) {
     .directory ul.directory-list li .content .cta {
 	position: static;
-	margin-top: 20px;
+	margin-top: 1.25rem;
     }
 }
 .profile-content .text-content {
@@ -351,7 +348,7 @@ ul.directory-list.filterable {
     display: inline-block;
     vertical-align: top;
     max-width: 70%;
-    padding-bottom: 30px;
+    padding-bottom: 2rem;
 
 }
 

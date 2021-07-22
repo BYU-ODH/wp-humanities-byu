@@ -95,23 +95,9 @@ function make_list($people,$dept) {
           }
         $block.="<div class=\"content\">";
 	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-	$block.=$deptmap[$post['department']]."</h5>";
-        if ($post['affiliated_faculty']) {
-          $block.="<h5>Affiliated Faculty, " . $deptmap[$post['affiliated_department']] . "</h5>";
-        }
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
-          $phone = preg_replace('/[^0-9]/', '', $phone);
-          if (strlen($phone) == 10) 
-          {
-            $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
-            $block.="<div class=\"link phone\"><span>".$phone."</span></div>";
-          }
-          else if (strlen($phone) == 7)
-          {
-            $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3);
-            $block.="<div class=\"link phone\"><span>".$phone."</span></div>";
-          }
+          $block.= format_phone_block($phone);
         }
 
         if (!empty($post['address'])) {

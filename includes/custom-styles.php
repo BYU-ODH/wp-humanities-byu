@@ -140,7 +140,7 @@ $sidebarS = absint( $septera_secondarysidebar );
 		overflow: hidden;
 		position: absolute !important;
 		width: 1px;
-		word-wrap: normal !important;
+		/*wordwrap used to be here*/
 	}
 <?php }
 

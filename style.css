@@ -479,7 +479,6 @@ a:visited {
 	overflow: hidden;
 	position: absolute !important;
 	width: 1px;
-	word-wrap: normal !important;
 }
 
 /*--------------------------------------------------------------
@@ -1537,7 +1536,6 @@ img#wpstats {
 	clear: both;
 	padding-top: 1em;
 	padding-bottom: 1em;
-	word-wrap: break-word;
 }
 
 .entry-content::after,
@@ -1625,13 +1623,10 @@ h1.entry-title {
 	margin: -3vh -50vw;
 	font-weight: 400;
 	line-height: 1.3;
-	word-wrap: break-word;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: .4rem;
-	padding: 15vh 0vw;
-	background-color: #f5f5f7;
+}
+
+.entry-title.singular-title {
+	padding-top: .5em;
 }
 
 .entry-title a {
@@ -3488,7 +3483,6 @@ a.staticslider-button + a.staticslider-button,
 	line-height: 1.3;
 	text-align: center;
 	text-transform: uppercase;
-	word-wrap: break-word;
 	color: #FFF;
 	opacity: 0;
 	-webkit-transform: translateY(-50%);
@@ -4109,7 +4103,6 @@ a.comment-edit-link:hover {}
 	display: block;
 	float: none;
 	margin-bottom: 0.5em;
-	word-wrap: break-word;
 }
 
 .widget-title {
@@ -4126,7 +4119,6 @@ a.comment-edit-link:hover {}
 .widget-area a:link,
 .widget-area a:visited {
 	text-decoration: none;
-	word-wrap: break-word;
 }
 
 .widget-area a:active,
@@ -4486,7 +4478,6 @@ ul.cryout-wposts li:last-child {
 .cryout-wtab .tab-item-comment,
 .cryout-wposts .post-item-title {
 	margin: 5px 0;
-	word-wrap: break-word;
 }
 
 .cryout-wposts .post-item-title {
@@ -5525,7 +5516,6 @@ body .jetpack-portfolio-shortcode,
 	line-height: 1.3;
 	text-align: center;
 	text-transform: uppercase;
-	word-wrap: break-word;
 	color: #FFF;
 	opacity: 0;
 	-webkit-transform: translateY(-50%);
@@ -6495,7 +6485,6 @@ body.mobile .main {min-height:0;}
 	.cryout p a::after {
 		content: " (" attr(href) ")";
 		font-size: 80%;
-		word-wrap: break-word;
 	}
 
 	.cryout .entry-title,
@@ -6728,6 +6717,10 @@ div#content .news-title {
 .article-inner header h1, .directory-list .filterable-item .content h4 {
 	color : black;
 }
+/*Sytle to add hover color text headings on ODH faculty directory*/
+.article-inner header:hover h1, .directory-list:hover .filterable-item:hover .content:hover h4:hover{
+	color: #666667;
+}
 
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
@@ -6874,6 +6867,7 @@ aside#colophon .fa-youtube {
 	top: 45%;
 	left: 49%;
 }
+
 .odhBoxContent{
 	position: absolute;
 	width: 345px; 
@@ -6909,6 +6903,8 @@ h3.odhBoxTitles{
 	left: -2%;
 }
 
+
+
 /*large screen*/
 @media (max-width: 1025px){
 	.odhBoxTextBoxes{
@@ -6934,6 +6930,8 @@ h3.odhBoxTitles{
 	}
 }
 
+
+
 /*half-screen*/
 @media (max-width: 768px){
 	.odhBoxTextBoxes{
@@ -6958,6 +6956,7 @@ h3.odhBoxTitles{
 		left: 19%;		
 	}
 }
+
 
 /*smaller screens*/
 @media (max-width: 426px){
@@ -6996,6 +6995,7 @@ h3.odhBoxTitles{
 	}
 }
 
+
 @media (max-width: 376px){
 	.odhM0{
 		left: -5%;
@@ -7013,6 +7013,7 @@ h3.odhBoxTitles{
 		left: -5%;
 	}
 }
+
 
 @media (max-width: 321px){
 	.odhBoxContent{
@@ -7034,6 +7035,101 @@ h3.odhBoxTitles{
 		left: -12%;
 	}
 }
+
+
+/******************************/
+/* Style for testing lab page */
+/******************************/
+
+.odhBoxTextBoxesTL{
+display:grid;
+grid-template-columns: 1fr;
+justify-content:center;
+grid-gap:2rem;
+margin:2rem;
+}
+
+.odhBoxContentTL{
+        position: relative;
+        width: 345px;
+        height: 320px;
+        background-color: white;
+        box-shadow: 8px 12px 18px #969595c2;
+}
+
+/**
+.odhBoxContentTL:hover{
+        background-color:rgba(0, 0, 0, .05);
+}
+
+**/
+
+.odhBoxInnerTL {
+        text-align: center;
+        padding: 20px;
+}
+.odhBoxInnerTL a{
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+}
+
+h3.odhBoxTitlesTL{
+        color: #141414;
+        font-size: 19px;
+}
+#odhFirstTitleTL{
+        color:#141414;
+}
+.odhBoxTextTL{
+        font-size: 14px;
+        position: relative;
+        width: 315px;
+        left: -2%;
+}
+
+
+.button {
+        background-color: white;
+        border: 2px solid #0057b8;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+.button:hover {
+        background-color: #0057b8;
+        color: white !important;
+}
+
+
+/*************************************************/
+/* Style for testing lab page on tablet and phone*/
+/*************************************************/
+
+@media screen and (min-width:600px){
+        .odhBoxTextBoxesTL{
+                grid-template-columns: repeat(2, 1fr);
+
+                }
+        }
+
+
+@media screen and (min-width:780px){
+        .odhBoxTextBoxesTL{
+                grid-template-columns: repeat(3, 1fr);
+
+                        }
+                }
+
+
 /***********************/
 /*End of custom home page css*/
 /***********************/

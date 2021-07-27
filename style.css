@@ -103,6 +103,12 @@ To safely make customizations to the theme:
 	# RESET CSS
 --------------------------------------------------------------*/
 
+/*variables*/
+
+:root {
+	--header-nav-height: 4.5rem;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -289,7 +295,7 @@ li > ol {
 
 ul {
 	list-style-type: disc;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -759,6 +765,7 @@ a#logo > img {
 	vertical-align: top;
 	-webkit-transition: all .2s linear;
 	transition: all .2s linear;
+	height: var(--header-nav-height) !important;
 }
 
 .septera-over-menu #site-header-main {
@@ -4942,7 +4949,7 @@ ul.cryout-wposts li:last-child {
     width: 9rem;
     height: 2.3rem;
     border-radius: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 .menu-main-search .icon-search::before {}
 
@@ -6501,7 +6508,7 @@ body.mobile .main {min-height:0;}
 
 nav#humanities-menu {
     display: block;
-    margin-top: 79px;
+    margin-top: var(--header-nav-height);
 }
 
 nav#humanities-menu li {

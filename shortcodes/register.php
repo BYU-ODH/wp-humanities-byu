@@ -80,21 +80,21 @@ function make_list($people,$dept) {
         if ($post['affiliated_faculty']) {
           array_push($directory_entry_classes, "affiliated-".$post['affiliated_department'], "status-affiliated"); 
         }
-	$classes=implode(" ", $directory_entry_classes);
+	      $classes=implode(" ", $directory_entry_classes);
 
         $block.="<li class='$classes'>";
 
-          if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-<a href=\"$permalink\">
+        if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+        <a href=\"$permalink\">
           <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
-</a>
-          </div>"; }
+        </a>
+        </div>"; }
           else{   /*else statement to add default image to faculty department page*/ 
             $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-          </div>";
+        </div>";
           }
         $block.="<div class=\"content\">";
-	$block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
+	      $block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
         if (!empty($post['phone'])) {
           $phone = $post['phone'];
           $block.= format_phone_block($phone);
@@ -102,12 +102,13 @@ function make_list($people,$dept) {
 
         if (!empty($post['address'])) {
           $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
-  }
+        }
         if (!empty($post['email'])) {
-          $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</span></div>";
-	}
+          $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
+        }
+        
         $block.="</div>"; 
-	$block.="</li>";
+	      $block.="</li>";
       }
     }
   } //end foreach

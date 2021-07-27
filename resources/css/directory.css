@@ -58,7 +58,7 @@ ul.directory-list.filterable {
     }
     .statusfilter-container {
         float: none;
-        padding-bottom: 15.625rem;
+        padding-bottom: 1.5rem;
     }
 }
 @media all and (max-width: 499px) {

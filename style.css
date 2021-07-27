@@ -4942,7 +4942,7 @@ ul.cryout-wposts li:last-child {
     width: 9rem;
     height: 2.3rem;
     border-radius: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 .menu-main-search .icon-search::before {}
 
@@ -6501,7 +6501,7 @@ body.mobile .main {min-height:0;}
 
 nav#humanities-menu {
     display: block;
-    margin-top: 79px;
+    margin-top: 65px;
 }
 
 nav#humanities-menu li {

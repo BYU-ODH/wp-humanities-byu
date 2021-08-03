@@ -6876,7 +6876,7 @@ aside#colophon .fa-youtube {
 }
 
 .odhBoxContent{
-	position: absolute;
+	position: relative;
 	width: 345px; 
 	height: 150px;
 	background-color: white;

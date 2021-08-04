@@ -7141,6 +7141,99 @@ h3.odhBoxTitlesTL{
 /*End of custom home page css*/
 /***********************/
 
+/**********/
+/*Styles for grid content*/
+/**********/ 
+.odhBoxContentGrid{  
+	position: relative;
+	display: grid;
+	/*set column and rows here*/
+	grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+	grid-gap: 40px;
+	padding: 60px 0;
+}
+.odhBoxCards{
+	/*column and row width/height to be set here*/
+	grid-column: 2 / span 12;
+	display: grid;
+	grid-template-columns: repeat(12, minmax(auto, 60px));
+	grid-gap: 40px;	
+}
+.odhBoxSingleCard{
+	/*single card content here*/
+	grid-column-end: span 5;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	box-shadow: 8px 12px 18px #969595c2;
+	cursor: pointer;
+}
+.odhBoxSingleCard:hover{
+	background-color:rgba(0, 0, 0, .05);
+}
+/*.odhCardImgContainer{ styles for cards with images
+	width: 100%;
+	padding-top: 56.25%; aspect ratio of 16x9
+	overflow: hidden;
+	position: relative;
+}
+.odhCardImgContainer img{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%; this helps position images with diff ratio size
+	transform: translate(-50%, -50%);
+}
+*/
+.odhBoxInner1{
+	/*inner text content here removing the 1 later*/
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+}
+.odhFristTitle{
+	margin-bottom: 20px;
+	font-size: 19px;
+}
+/*.odhBoxTitles{}*/
+.odhBoxInfo{
+	display: flex;
+	align-self: flex-end;
+	align-items: center;
+	font-size: 14px;
+}
+@media only screen  and (max-width: 100px){
+	.odhBoxSingleCard{
+		grid-column-end: span 5;
+	}
+}
+@media only screen  and (max-width: 700px){
+	.odhBoxContentGrid{
+		grid-gap: 20px;
+	}
+	.odhBoxSingleCard{
+		grid-column-end: span 12;
+	}
+}
+@media only screen  and (max-width: 500px){
+	.odhBoxContentGrid{
+		grid-template-columns: 10px repeat(6, 1fr) 10px;
+		grid-gap: 10px;
+	}
+	.odhBoxCards{
+		grid-column: 2 / span 5;
+		grid-template-columns: repeat(6, 1fr);
+		grid-gap: 20px;
+	}
+	.odhBoxSingleCard{
+		grid-column-end: span 5;
+	}
+}
+
+/*********/
+/*End of grid styles*/
+/********/
+
 #humanities-menu ul li.current_page_item > a,
 #humanities-menu ul li.current-menu-item > a{}
 

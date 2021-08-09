@@ -699,6 +699,9 @@ a#logo > img {
 
 #site-title {
 	float: left;
+	border-left: .15rem solid;
+	border-color: white;
+	padding-left: .5rem;
 }
 
 #site-title a::before,

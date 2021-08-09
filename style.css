@@ -699,6 +699,9 @@ a#logo > img {
 
 #site-title {
 	float: left;
+	border-left: .15rem solid;
+	border-color: white;
+	padding-left: .5rem;
 }
 
 #site-title a::before,
@@ -6849,199 +6852,6 @@ aside#colophon .fa-youtube {
 	color: #c4302b;
 }
 
-/*Home page odh box styles*/
-/***********************/
-.odhBoxTextBoxes{
-	position: relative;
-	width: 100%;
-	height: 400px;
-	
-}
-.odhM0{
-	left: -2%;
-}
-.odhM1{
-	left: 32%;
-}
-.odhM2{
-	left: 66%;
-}
-.odhM3{
-	top: 45%;
-	left: 15%;
-}
-.odhM4{
-	top: 45%;
-	left: 49%;
-}
-
-.odhBoxContent{
-	position: absolute;
-	width: 345px; 
-	height: 150px;
-	background-color: white;
-	box-shadow: 8px 12px 18px #969595c2;
-	margin: 20px;
-}
-.odhBoxContent:hover{
-	background-color:rgba(0, 0, 0, .05);
-}
-.odhBoxInner {
-	text-align: center;
-	padding: 20px;
-}
-.odhBoxInner a{
-	width: 100%;
-	height: 100%;
-	text-decoration: none;
-}
-
-h3.odhBoxTitles{
-	color: #141414;
-	font-size: 19px;
-}
-#odhFirstTitle{
-	color:#141414;
-}
-.odhBoxText{
-	font-size: 14px;
-	position: relative;
-	width: 315px;
-	left: -2%;
-}
-
-
-
-/*large screen*/
-@media (max-width: 1025px){
-	.odhBoxTextBoxes{
-		height: 600px;
-	}
-	.odhM0{
-		left: 7%;
-	}
-	.odhM1{
-		left: 52%;
-	}
-	.odhM2{
-		top: 33%;
-		left: 7%;
-	}
-	.odhM3{
-		top: 33%;
-		left: 52%;
-	}
-	.odhM4{
-		top: 65%;
-		left: 29%;
-	}
-}
-
-
-
-/*half-screen*/
-@media (max-width: 768px){
-	.odhBoxTextBoxes{
-		height: 600px;
-	}
-	.odhM0{
-		left: -7%;
-	}
-	.odhM1{
-		left: 48%;
-	}
-	.odhM2{
-		top: 33%;
-		left: -7%;
-	}
-	.odhM3{
-		top: 33%;
-		left: 48%;
-	}
-	.odhM4{
-		top: 65%;
-		left: 19%;		
-	}
-}
-
-
-/*smaller screens*/
-@media (max-width: 426px){
-	.odhBoxTextBoxes{
-		height: 750px;
-	}
-	.odhBoxContent{
-		width: 295px; 
-		height: 120px;
-	}
-	h3.odhBoxTitles{
-		font-size: 16px;
-	}
-	.odhBoxText{
-		font-size: 11px;
-		width: 265px;
-	}
-	.odhM0{
-		left: 3%;
-	}
-	.odhM1{
-		top: 19%;
-		left: 3%;
-	}
-	.odhM2{
-		top: 38%;
-		left: 3%;
-	}
-	.odhM3{
-		top: 57%;
-		left: 3%;
-	}
-	.odhM4{
-		top: 76%;
-		left: 3%;
-	}
-}
-
-
-@media (max-width: 376px){
-	.odhM0{
-		left: -5%;
-	}
-	.odhM1{
-		left: -5%;
-	}
-	.odhM2{
-		left: -5%;
-	}
-	.odhM3{
-		left: -5%;
-	}
-	.odhM4{
-		left: -5%;
-	}
-}
-
-
-@media (max-width: 321px){
-	.odhBoxContent{
-		width: 285px;
-	}
-	.odhM0{
-		left: -12%;
-	}
-	.odhM1{
-		left: -12%;
-	}
-	.odhM2{
-		left: -12%;
-	}
-	.odhM3{
-		left: -12%;
-	}
-	.odhM4{
-		left: -12%;
-	}
-}
 
 
 /******************************/
@@ -7140,6 +6950,97 @@ h3.odhBoxTitlesTL{
 /***********************/
 /*End of custom home page css*/
 /***********************/
+
+/**********/
+/*Styles for grid content*/
+/**********/ 
+.odhBoxContentGrid{  
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+    grid-gap: 40px;
+    padding: 60px 0;
+}
+.odhBoxCards{
+    /*column and row width/height to be set here*/
+    grid-column: 2 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 60px));
+    grid-gap: 40px; 
+}
+.odhBoxSingleCard{
+    /*single card content here*/
+    grid-column-end: span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 8px 12px 18px #969595c2;
+    cursor: pointer;
+}
+.odhBoxSingleCard:hover{
+    background-color:rgba(0, 0, 0, .05);
+}
+.odhCardImgContainer{ /*styles for cards with images*/
+    width: 100%;
+    padding-top: 56.25%; /*aspect ratio of 16x9*/
+    overflow: hidden;
+    position: relative;
+}
+.odhCardImgContainer img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%; /*helps position images with diff ratio size*/
+    transform: translate(-50%, -50%);
+}
+.odhBoxInner{
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+h3.odhFirstTitle{
+    margin-bottom: 20px;
+}
+#odhBoxTitle{
+    color: #141414;
+    font-size: 19px;
+}
+.odhBoxInfo{
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+}
+@media only screen  and (max-width: 100px){
+    .odhBoxSingleCard{
+        grid-column-end: span 6;
+    }
+}
+@media only screen  and (max-width: 700px){
+    .odhBoxContentGrid{
+        grid-gap: 20px;
+    }
+    .odhBoxSingleCard{
+        grid-column-end: span 12;
+    }
+}
+@media only screen  and (max-width: 500px){
+    .odhBoxContentGrid{
+        grid-template-columns: 10px repeat(6, 1fr) 10px;
+        grid-gap: 10px;
+    }
+    .odhBoxCards{
+        grid-column: 2 / span 6;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+    }
+    .odhBoxSingleCard{
+        grid-column-end: span 6;
+    }
+}
+/*********/
+/*End of grid styles*/
+/********/
 
 #humanities-menu ul li.current_page_item > a,
 #humanities-menu ul li.current-menu-item > a{}

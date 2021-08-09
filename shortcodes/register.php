@@ -184,7 +184,7 @@ function research_areas_page( $atts )
     ), $atts );
 
     $args = array(
-        'taxonomy' => 'personresearch',
+        'directory' => 'personresearch',
         'orderby' => $atts['orderby'],
     );
 

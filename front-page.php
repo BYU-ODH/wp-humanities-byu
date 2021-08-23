@@ -23,15 +23,12 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
     <div id="container" class="septera-landing-page one-column">
 		<main id="main" role="main" class="main">
 		<?php
-		//cryout_before_content_hook();
 
 		if ( $septera_landingpage ) {
 			get_template_part( apply_filters('septera_landingpage_main_template', 'content/landing-page' ) );
 		} else {
 			septera_lpindex();
 		}
-
-		//cryout_after_content_hook();
 		?>
 		</main><!-- #main -->
 		<?php if ( ! $septera_landingpage ) { septera_get_sidebar(); } ?>

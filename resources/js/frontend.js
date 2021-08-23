@@ -175,8 +175,6 @@ function cryoutInitNav(selector) {
 				_this.next( '.children, .sub-menu' ).find( '.children, .sub-menu' ).hide(0);
 			},600)
 		}
-
-		/* _this.parent().find( 'a' ).toggleClass( 'toggled-on' ); */
 		_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 	} );
 
@@ -353,12 +351,6 @@ function cryoutMasonry() {
 /* Jetpack Portfolio Masonry */
 function cryoutPortfolioMasonry() {
 	if ( ( cryout_theme_settings.masonry == 1 ) && ( typeof jQuery.fn.masonry !== 'undefined' ) ) {
-		/* jQuery('#portfolio-masonry').masonry({
-			itemSelector: '.portfolio-entry',
-		 	columnWidth: '.portfolio-entry:not(.hidey)',
-		 	percentPosition: true,
-		 	isRTL: cryout_theme_settings.rtl,
-		 });*/
 		jQuery('.jetpack-portfolio-shortcode').masonry({
 			itemSelector: '.portfolio-entry',
 			columnWidth: '.portfolio-entry:not(.hidey)',
@@ -387,7 +379,6 @@ function cryoutPortfolioFilter() {
 			}
 		}).promise().done( function() {
 			cryoutPortfolioMasonry();
-			/*jQuery('.jetpack-portfolio-shortcode').masonry();*/
 		});
 		return false;
 	});

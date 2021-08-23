@@ -80,19 +80,8 @@ add_action ( 'wp_head', 'septera_author_link' );
 // Adds HTML5 tags for IEs
 function septera_header_scripts() {
 ?>
-<!--[if lt IE 9]>
-<script>
-document.createElement('header');
-document.createElement('nav');
-document.createElement('section');
-document.createElement('article');
-document.createElement('aside');
-document.createElement('footer');
-</script>
-<![endif]-->
 <?php
 } // septera_header_scripts()
-//add_action('wp_head','septera_header_scripts',100);
 
 /**
  * Main theme scripts

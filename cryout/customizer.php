@@ -115,20 +115,6 @@ class Cryout_Customizer {
 				'panel'  		 => ( !empty($section['sid']) ? 'cryout-' . $section['sid'] : '' ),
 			) );
 
-			/*$wp_customize->add_setting( 'placeholder_'.$section_priority, array(
-				'default'        => '',
-				'capability'     => 'edit_theme_options',
-				'sanitize_callback' => 'cryout_customizer_sanitize_blank',
-				'section' 		 => 'cryout-' . $section['id'],
-			) );*/
-
-			// override section id to make it uniquely identifiable
-			/*$wp_customize->add_control( new Cryout_Customize_Blank_Control( $wp_customize, 'placeholder_'.$section_priority, array(
-				'section' => 'cryout-' . $section['id'],
-				'settings'   => 'placeholder_'.$section_priority,
-				'priority'   => 10,
-			) ) );*/
-
 		endforeach;
 		////////// end option panels/sections
 
@@ -543,7 +529,6 @@ class Cryout_Customizer {
 				endswitch;
 
 			// increase priority for each option (including clones)
-			//$priority += 10;
 
 			} // end cloning for cycle
 

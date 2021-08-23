@@ -20,16 +20,13 @@ function byuh_populate_depts_taxonomy ( $tax ) {
         'Center for Language Studies' => array(),		 
         'Humanities Administration' => array()		 
     );
-    //echo "<script>console.log('in byuh_populate_depts_taxonomy, getting terms from $tax');</script>";
 
     foreach ( $terms as $parent => $children ) {
-        //echo "<script>console.log('\tAdding term: $parent');</script>";
         $inserted_parent = wp_insert_term(
             $parent,
             $tax
         );
         foreach ($children as $child) {
-            //echo "<script>console.log('\t\tAdding term: $child (p: ${inserted_parent['term_id']})');</script>";
             wp_insert_term(
                 $child,
                 $tax,
@@ -133,13 +130,11 @@ function byuh_populate_research_taxonomy ( $tax ) {
     echo "<script>console.log('in byuh_populate_research_taxonomy, getting terms from $tax');</script>";
 
     foreach ( $terms as $parent => $children ) {
-        //echo "<script>console.log('\tAdding term: $parent');</script>";
         $inserted_parent = wp_insert_term(
             $parent,
             $tax
         );
         foreach ($children as $child) {
-            //echo "<script>console.log('\t\tAdding term: $child (p: ${inserted_parent['term_id']})');</script>";
             wp_insert_term(
                 $child,
                 $tax,
@@ -181,7 +176,6 @@ function create_personresearch_tax() {
                 'manage_terms' => 'manage_presearch',
                 'edit_terms' => 'edit_presearch',
                 'assign_terms' => 'assign_presearch'
-                /* 'edit_terms' => 'edit_presearch' */
             ),
             'hierarchical' => true,
             'show_admin_column' => true,
@@ -193,16 +187,11 @@ function create_personresearch_tax() {
 }
 
 function byuh_init () {
-    //byuh_do_caps( 'add_cap' );
     /* Disable for production reboot */
-    //byuh_clear_taxonomy ( 'personresearch' );
     activate_personresearch_tax();
     register_activation_hook( __FILE__, 'activate_personresearch_tax' );
-    //byuh_populate_research_taxonomy ('personresearch');
-  //byuh_clear_taxonomy ( 'persondepartments' );
-  //byuh_populate_depts_taxonomy ( 'persondepartments' );
+   
 }
-//add_action('after_switch_theme', 'byuh_init');
 add_action('init', 'byuh_init');
 
 /* Person ACF settings */

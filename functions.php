@@ -46,10 +46,8 @@ function byuh_scripts_styles() {
     wp_enqueue_style('byuPublicSans', 'https://cdn.byu.edu/theme-fonts/1.x.x/public-sans/fonts.css');
 
     //style for directory
-    //wp_enqueue_style('byuh-byulightbox', get_template_directory_uri() . '/resources/css/byu-lightbox.css');
     wp_enqueue_style('byuh-directory', get_template_directory_uri() . '/resources/css/directory.css');
     //scripts for directory
-    //wp_enqueue_script('byuh-byulightbox', get_template_directory_uri() . '/resources/js/byu-lightbox.js', array('jquery'));
     wp_enqueue_script('byuh-script', get_template_directory_uri() . '/resources/js/script.js', array('jquery'));
     wp_enqueue_script('byuh-filters', get_template_directory_uri() . '/resources/js/filters.js', array('jquery'));
     //jQuery
@@ -130,7 +128,6 @@ function byuh_setup() {
         'show_in_menu'        => true, 
         'query_var'           => true,
         'rewrite'             => array( 'slug' => __('person', 'byuh') ),
-        //			       'capability_type'     => 'page',
         // Customized by TSA 2015.09.22
         'capability_type'     => array('person','people'),
         'capabilities' => array(
@@ -257,7 +254,6 @@ function create_persondepartments_tax() {
                 'manage_terms' => 'manage_pdepts',
                 'edit_terms' => 'edit_pdepts',
                 'assign_terms' => 'assign_pdepts'
-                /* 'edit_terms' => 'edit_pdepts' */
             ),
             'hierarchical' => true,
             'show_admin_column' => true,
@@ -295,10 +291,7 @@ function get_person_by_netid ($nid) {
 	$people = get_posts( $args );
 	foreach ($people as $person) {
 		$personid = $person->ID;
-		//print_r($person);
 		$netid = get_field('netid', $personid);
-		//echo "<p>found: <a href='" . get_permalink($personid) . "'>" . $netid . "</a></p>";
-		//echo "<p>found: <a href='" . get_edit_post_link($personid) . "'>" . $netid . "</a></p>";
 	}
 }
 

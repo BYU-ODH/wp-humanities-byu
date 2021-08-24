@@ -129,7 +129,6 @@ function septera_setup() {
 	) );
 	
 	// Gutenberg
-	// add_theme_support( 'wp-block-styles' ); // apply default block styles
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'editor-color-palette', array(
 		array(

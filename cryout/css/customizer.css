@@ -77,9 +77,6 @@
 #customize-theme-controls [id*="cryout-"] .customize-control-numberslider .ui-slider { max-width: 62%; margin-top: 11px; }
 #customize-theme-controls [id*="cryout-"] .customize-control-numberslider + .customize-control-numberslider { margin-top: -0.7em; }
 
-#customize-theme-controls [id*="cryout-"].control-panel .control-section .accordion-section-title:after,
-#customize-theme-controls [id*="cryoutspecial-"].control-panel .control-section .accordion-section-title:after {
-	/*transform: rotate(90deg);*/ }
 
 #customize-theme-controls [id*="cryout-"].control-panel .control-section .accordion-section-content,
 #customize-theme-controls [id*="cryoutspecial-"].control-panel .control-section .accordion-section-content  {
@@ -88,11 +85,7 @@
 	border-bottom: 1px solid #ddd;
 }
 
-#customize-theme-controls [id*="cryout-"].control-panel .control-section .accordion-section-content .customize-section-title,
-#customize-theme-controls [id*="cryoutspecial-"].control-panel .control-section .accordion-section-content .customize-section-title {
-	/*display: none;
-	margin: 0;*/
-}
+
 
 /* Animation workaround for conditional controls */
 /*#customize-theme-controls [id^="accordion-panel-cryout-"] li[id^="accordion-section-cryout-"] > ul {
@@ -107,11 +100,7 @@
 
 #customize-theme-controls [id*="cryout-"] .customize-control input[type="range"] { width: 98%; }
 
-#customize-theme-controls [id*="cryout-"] .customize-control input[type="text"],
-#customize-theme-controls [id*="cryout-"] .customize-control input[type="password"],
-#customize-theme-controls [id*="cryout-"] .customize-control input[type="email"],
-#customize-theme-controls [id*="cryout-"] .customize-control input[type="search"],
-#customize-theme-controls [id*="cryout-"] .customize-control input[type="url"] { }
+
 
 #customize-theme-controls [id*="cryout-"] .customize-control input[type="number"] { max-width: 100px; }
 #customize-theme-controls [id*="cryout-"] .customize-control-numberslider .inputcontainer { width: 32%; float: right; position: relative; }
@@ -141,42 +130,7 @@
     padding-left: 40px;
 }
 
-/* #customize-theme-controls [id*="cryout-fluida"] h3.accordion-section-title::before {
-	content: "FL";
-    border: 1px solid #0085B2;
-    color: #0085B2;
-}
 
-#customize-theme-controls [id*="cryout-septera"] h3.accordion-section-title::before {
-	content: "SE";
-    border: 1px solid #24a7cf;
-    color: #24a7cf;
-}
-
-#customize-theme-controls [id*="cryout-verbosa"] h3.accordion-section-title::before {
-	content: "VE";
-    border: 1px solid #F26E3F;
-    color: #F26E3F;
-}
-
-#customize-theme-controls [id*="cryout-anima"] h3.accordion-section-title::before {
-	content: "AN";
-    border: 1px solid #d0422c;
-    color: #d0422c;
-}
-
-#customize-theme-controls [id*="cryout-kahuna"] h3.accordion-section-title::before {
-	content: "KA";
-    border: 1px solid #8cb65f;
-    color: #8cb65f;
-}
-
-#customize-theme-controls [id*="cryout-roseta"] h3.accordion-section-title::before {
-	content: "RO";
-    border: 1px solid #22aaa1;
-    color: #22aaa1;
-}
-*/
 
 /* about section */
 #customize-theme-controls [id*="site_icon"] img,
@@ -185,7 +139,7 @@
 }
 
 #customize-theme-controls [id*="accordion-section-about"] .accordion-section-content,
-#customize-theme-controls [id*="accordion-section-cryoutspecial-about-theme"] .accordion-section-content, {
+#customize-theme-controls [id*="accordion-section-cryoutspecial-about-theme"] .accordion-section-content {
 	display: block;
 }
 

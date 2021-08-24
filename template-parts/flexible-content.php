@@ -51,8 +51,8 @@ if ($flex_content) {
 						<?php } ?>
 					</ul>
 				</section>
-			<?php } // if $links
-		} // if $contentType
+			<?php } // end if $links
+		} // end if $contentType
 		?>
 
 
@@ -435,7 +435,7 @@ if ($flex_content) {
 					</div>
 				<?php } ?>
 			</section>
-		<?php } // if $contentType ?>
+		<?php } // end if $contentType ?>
 
 
 		<!-- MEDIA LIST -->
@@ -620,7 +620,7 @@ if ($flex_content) {
 				<?php } // end foreach $list_sections
 			} // end if $list_sections ?>
 			</section><!-- end .media -->
-		<?php } // if $contentType ?>
+		<?php } // end if $contentType ?>
 
 		<!-- EXPANDED LINKS GRID -->
 		<?php
@@ -782,5 +782,5 @@ if ($flex_content) {
 		?>
 
 	<?php } //foreach flex_content
-} // if flex_content
+} // end if flex_content
 ?>

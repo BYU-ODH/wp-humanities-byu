@@ -6,7 +6,6 @@
  */
 
 septera_lpslider();
-//byuh_news();
 septera_lpblocks();
 septera_lptext('one');
 septera_lpboxes(1);

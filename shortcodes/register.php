@@ -22,10 +22,6 @@ function make_list($people,$dept) {
   $colormap=array();
   $block="<div class='directory'>";
   
-  $block.="<div class='searchfilter-container input-container'>
-		<input id='directory-filter' class='search' placeholder='search directory' value='' type='text' />
-	</div>";
-  
   $block.="<ul class='directory-list filterable'>";
 
   foreach($people as $post) {

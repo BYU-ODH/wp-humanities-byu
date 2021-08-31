@@ -362,7 +362,6 @@ function septera_lpindex() {
 				<?php septera_pagination();
 				wp_reset_postdata();
 			else :
-				//get_template_part( 'content/content', 'notfound' );
 			endif;
 
 		break;

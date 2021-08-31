@@ -150,7 +150,6 @@ $septera_big = array(
 	array('id'=>'septera_generallayout', 'title'=>__('General Layout', 'septera'), 'callback'=>'', 'sid'=>'septera_layout_section', 'priority'=>50 ),
 	array('id'=>'septera_otherlayout', 'title'=>__('Other Layouts', 'septera'), 'callback'=>'', 'sid'=>'septera_layout_section', 'priority'=>60 ),
 	// header
-	//array('id'=>'septera_siteheader', 'title'=>__('Header','septera'), 'callback'=>'', 'sid'=> '', 'priority'=>52 ),
 	array('id'=>'septera_headermenu', 'title'=>__('Menu','septera'), 'callback'=>'', 'sid'=> 'septera_header_section', 'priority'=>10 ),
 	array('id'=>'septera_headercontent', 'title'=>__('Content','septera'), 'callback'=>'', 'sid'=> 'septera_header_section', 'priority'=>12 ),
 	// landing page
@@ -187,7 +186,6 @@ $septera_big = array(
 	array('id'=>'septera_misc', 'title'=>__('Miscellaneous','septera'), 'callback'=>'', 'sid'=>'', 'priority' => 92 ),
 
 	/*** developer options ***/
-	//array('id'=>'septera_developer', 'title'=>__('[ Developer Options ]','septera'), 'callback'=>'', 'sid'=>'', 'priority'=>101 ),
 
 ), // sections
 
@@ -406,7 +404,6 @@ $septera_big = array(
 		'label' => '',
 		'input_attrs' => array( 'class' => 'warning' ),
 		'desc' => __("Changing this value may require to recreate your thumbnails.","septera"),
-		//'active_callback' => 'septera_conditionals',
 	'section' => 'septera_headercontent' ),
 	array(
 	'id' => 'septera_headerresponsive',
@@ -1519,7 +1516,6 @@ $septera_big = array(
 		'label' => '',
 		'input_attrs' => array( 'class' => 'warning' ),
 		'desc' => __("Changing this value may require to recreate your thumbnails.","septera"),
-		//'active_callback' => 'septera_conditionals',
 	'section' => 'septera_featured' ),
 	array(
 	'id' => 'septera_fresponsive',
@@ -1544,7 +1540,6 @@ $septera_big = array(
 		'label' => '',
 		'input_attrs' => array( 'class' => 'warning' ),
 		'desc' => __("Changing this value may require to recreate your thumbnails.","septera"),
-		//'active_callback' => 'septera_conditionals',
 	'section' => 'septera_featured' ),
 
 	array(
@@ -1639,31 +1634,6 @@ $septera_big = array(
 
 ), // options
 
-/* option=array(
-	type: checkbox, select, textarea, input, function
-	id: field_name or custom_function_name
-	values: value_0, value_1, value_2 | true/false | number
-	labels: __('Label 0','context'), ... | __('Enabled','context')/... |  number/__('Once','context')/...
-	desc: html to be displayed at the question mark
-	section: section_id
-
-	array(
-	'id' => '',
-		'type' => '',
-		'label' => '',
-		'values' => array(  ),
-		'labels' => array(  ),
-		'desc' => '',
-		'input_attrs' => array(  ),
-		// conditionals
-		'disable_if' => 'function_name',
-		'require_fn' => 'function_name',
-		// extra
-		'addon' => TRUE, // option gets added to core sections
-		'display_width' => '?????',
-	'section' => '' ),
-
-*/
 
 /*** fonts ***/
 'fonts' => array(
@@ -2287,7 +2257,6 @@ $septera_big = array(
 
 'migration' => array(
 	'1.31' => array(
-		//'septera_old_key' => 'septera_new_key',
 		'septera_lpblockmaintitle'	=> 'septera_lpblockmaintitle1', // icon blocks
 		'septera_lpblockmaindesc'		=> 'septera_lpblockmaindesc1',
 		'septera_lpblockscontent' 	=> 'septera_lpblockscontent1',

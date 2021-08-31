@@ -33,7 +33,6 @@
 			    <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'septera' ), 'after' => '</div>' ) ); ?>
 			</div><!-- .entry-content -->
 
-			<?php /*cryout_singular_after_inner_hook(); */ ?>
 		</div><!-- .article-inner -->
 	</article><!-- #post-## -->
 	<?php comments_template( '/comments.php', true ); ?>

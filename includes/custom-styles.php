@@ -540,9 +540,6 @@ body.woocommerce.woocommerce-page #breadcrumbs-nav,
 <?php if ( esc_html( $septera_menustyle ) ) { ?>
 	#masthead #site-header-main 			{ position: fixed; }
 <?php }; ?>
-<?php /* if ( ! esc_html( $septera_menuposition ) ) { ?>
-	#header-image-main						{ margin-top: <?php echo esc_html( $septera_menuheight ) ?>px; }
-<?php }; */ ?>
 <?php if ( esc_html( $septera_menuposition ) == 0 ) { ?>
 	.septera-fixed-menu #header-image-main    {  margin-top: <?php echo intval( $septera_menuheight ) ?>px; }
 <?php };?>
@@ -550,10 +547,6 @@ body.woocommerce.woocommerce-page #breadcrumbs-nav,
 $header_image = septera_header_image_url();
 if ( empty( $header_image ) ) { ?>
 @media (min-width: 1152px) {
-	<?php /* if ( esc_html( $septera_menuposition ) ) { ?>
-	body:not(.septera-landing-page)	#site-wrapper
-											{ margin-top: <?php echo esc_html( $septera_menuheight ) ?>px; }
-	<?php } */ ?>
 	body:not(.septera-landing-page) #masthead
 											{ border-bottom: 1px solid <?php echo esc_html( cryout_hexdiff( $septera_menubackground, 17 ) ); ?>; }
 }

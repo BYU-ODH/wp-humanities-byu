@@ -214,7 +214,6 @@ function septera_pagination( $pages = '', $range = 2, $prefix ='' ) {
 			'mid_size' => $range
 		) );
 	else:
-		//posts_nav_link();
 		septera_content_nav( 'nav-old-below' );
 	endif;
 

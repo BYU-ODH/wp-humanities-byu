@@ -31,7 +31,6 @@ function make_list($people,$dept) {
   }
   foreach ($departments as $department) {
     if ($dept=="all") {
-      // $block.="<li class='filter' data-class='department-".$department->ID."'>".$department->post_title."</li>";
       $block.="<li class='filter' data-class='".$department->ID."'>".$department->post_title."</li>";
     }
     $deptmap[$department->ID]=$department->post_title;
@@ -159,13 +158,11 @@ function create_imported_posts() {
   		'post_status'    => "publish",
   		'post_date'      => $oldpost->fields->publish_date,
   		'post_category'  => $oldpost->fields->organization // Default empty.
-  		//'tags_input'     => [ '<tag>, <tag>, ...' | array ] // Default empty.
  		); 
 		array_push($results,$post);
 	}
  }
 
-  //return wp_insert_post($post);
   return json_encode($results);
 }
 

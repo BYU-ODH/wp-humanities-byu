@@ -364,3 +364,8 @@ ul.directory-list.filterable {
 .research_areas_list a{
 	text-decoration:underline;
 }
+
+/*Sytle to add hover color text headings on ODH faculty directory*/
+a.article-inner, .directory-list:hover .filterable-item:hover h4:hover{
+	color: #666667;
+}

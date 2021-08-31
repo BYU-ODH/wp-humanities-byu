@@ -1582,8 +1582,8 @@ img#wpstats {
 }
 
 h1.entry-title {
-	margin: -3vh -50vw;
-	font-weight: 400;
+	text-align:center;
+	font-weight: 700;
 	line-height: 1.3;
 }
 
@@ -6566,12 +6566,9 @@ div#content .news-title {
 }
 
 .article-inner header h1, .directory-list .filterable-item .content h4 {
-	color : black;
+	color: 002e5d;
 }
-/*Sytle to add hover color text headings on ODH faculty directory*/
-.article-inner header:hover h1, .directory-list:hover .filterable-item:hover .content:hover h4:hover{
-	color: #666667;
-}
+
 
 .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
@@ -6699,6 +6696,8 @@ aside#colophon .fa-youtube {
 /* Style for testing lab page */
 /******************************/
 
+<<<<<<< HEAD
+=======
 .odhBoxTextBoxesTL{
 display:grid;
 grid-template-columns: 1fr;
@@ -6741,49 +6740,28 @@ h3.odhBoxTitlesTL{
 }
 
 
+>>>>>>> 0f430caff35917b1a0f1257b7161d3f35e95eced
 .button {
         background-color: white;
         border: 2px solid #0057b8;
         color: black;
-        padding: 10px 20px;
+        padding: 10px 30px;
         border-radius: 4px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 14px;
-        margin: 4px 2px;
         transition-duration: 0.4s;
         cursor: pointer;
       }
-
 .button:hover {
         background-color: #0057b8;
         color: white !important;
 }
 
 
-/*************************************************/
-/* Style for testing lab page on tablet and phone*/
-/*************************************************/
-
-@media screen and (min-width:600px){
-        .odhBoxTextBoxesTL{
-                grid-template-columns: repeat(2, 1fr);
-
-                }
-        }
-
-
-@media screen and (min-width:780px){
-        .odhBoxTextBoxesTL{
-                grid-template-columns: repeat(3, 1fr);
-
-                        }
-                }
-
-
 /***********************/
-/*End of custom home page css*/
+/*End of custom testing page css*/
 /***********************/
 
 /**********/

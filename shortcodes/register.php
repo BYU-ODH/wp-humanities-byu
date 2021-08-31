@@ -21,46 +21,12 @@ function make_list($people,$dept) {
   $deptmap=array();
   $colormap=array();
   $block="<div class='directory'>";
-  $departmentArgs = array('orderby'=>'ID', 'order'=>'ASC', 'posts_per_page' => -1, 'post_type' => array('department'), 'post_status' => 'publish');
-  $departments = get_posts($departmentArgs);
-  if ($dept=="all") {
-    $block.="<div class='filter-container'>";
-    $block.="<div class='filter-label'><span class='current' data-dept='all'>A-Z</span><i class='icon byu-icon-caret-down'></i></div>";
-    $block.="<ul>";
-    $block.='<li class="filter" data-class="all">A-Z</li>';
-  }
-  foreach ($departments as $department) {
-    if ($dept=="all") {
-      $block.="<li class='filter' data-class='".$department->ID."'>".$department->post_title."</li>";
-    }
-    $deptmap[$department->ID]=$department->post_title;
-    $colormap[$department->ID]=get_field('color',$department->ID);
-  }
-  if ($dept=="all") {
-    $block.="</ul></div>";
-  }
+  
   $block.="<div class='searchfilter-container input-container'>
 		<input id='directory-filter' class='search' placeholder='search directory' value='' type='text' />
 	</div>";
-  $block.="<div class='statusfilter-container'>";
-  $block.="<div class='statusfilter current'> All </div> | ";
-  $block.="<div class='statusfilter' data-class='status-full'> Full-time </div> | ";
-  $block.="<div class='statusfilter' data-class='status-visiting'> Visiting </div> | ";  
-  $block.="<div class='statusfilter' data-class='status-part'> Adjunct </div> | ";
-  $block.="<div class='statusfilter' data-class='status-affiliated'> Affiliated </div> | ";
-  $block.="<div class='statusfilter' data-class='status-retired'> Emeriti </div> | ";
-  $block.="<div class='statusfilter' data-class='status-staff'> Staff/Admin</div>";
-  $block.="</div>";
+  
   $block.="<ul class='directory-list filterable'>";
-
-  $status_map = [
-    "full" => "Full-time Faculty",
-    "part" => "Part-time/Adjunct Faculty",
-    "visiting" => "Visiting Faculty",
-    "retired" => "Emeritus Faculty",
-    "staff" => "Staff/Administration",
-    "stinst" => "Student Instructor",
-    "student" => "Student Employee"];
 
   foreach($people as $post) {
     if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))

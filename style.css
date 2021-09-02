@@ -6819,6 +6819,10 @@ h3.odhFirstTitle{
     color: #141414;
     font-size: 19px;
 }
+
+#odhBoxDescription{
+	color: #141414;
+}
 .odhBoxInfo{
     display: flex;
     align-self: flex-end;

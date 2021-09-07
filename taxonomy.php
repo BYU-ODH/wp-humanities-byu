@@ -21,8 +21,10 @@ function fill_bucket() {
     $bucket = array();
     while (have_posts() ) {
 	the_post();
-	$bucket[]=get_post_meta(get_post_meta(get_the_ID()));
-    }
+	$bucket[]=get_post_meta(get_the_ID());
+	// echo 'Hello!';
+	// $bucket[]= the_meta();
+	}
     return $bucket;
 }
 
@@ -61,6 +63,7 @@ article{
 				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php
 					$faclist = fill_bucket();
+					// print_r($faclist, false);
 					?>
 				</div><!--content-masonry-->
 				<!--not really nessessary-->

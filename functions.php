@@ -70,38 +70,37 @@ function byuh_setup() {
 
     // Department
     $department_labels = array(
-        'name' 								=> __('Department', 'byuh'),
+        'name' 						=> __('Department', 'byuh'),
         'singular_name' 			=> __('Department', 'byuh'),
-        'add_new' 						=> __('Add New', 'byuh'),
+        'add_new' 					=> __('Add New', 'byuh'),
         'add_new_item' 				=> __('Add New', 'byuh'),
-        'edit_item' 					=> __('Edit', 'byuh'),
-        'new_item' 						=> __('New', 'byuh'),
-        'all_items' 					=> __('All', 'byuh'),
-        'view_item' 					=> __('View', 'byuh'),
+        'edit_item' 			    => __('Edit', 'byuh'),
+        'new_item' 					=> __('New', 'byuh'),
+        'all_items' 				=> __('All', 'byuh'),
+        'view_item' 				=> __('View', 'byuh'),
         'search_items' 				=> __('Search', 'byuh'),
-        'not_found' 					=> __('Nothing found', 'byuh'),
-        'not_found_in_trash' 	=> __('Nothing found in Trash', 'byuh'), 
-        'parent_item_colon' 	=> '',
-        'menu_name' 					=> __('Departments', 'byuh'),
+        'not_found' 				=> __('Nothing found', 'byuh'),
+        'not_found_in_trash' 	    => __('Nothing found in Trash', 'byuh'), 
+        'parent_item_colon' 	    => '',
+        'menu_name' 				=> __('Departments', 'byuh'),
     );
 
     $department_args = array(
-        'labels' 							=> $department_labels,
-        'public' 							=> true,
+        'labels' 				=> $department_labels,
+        'public' 				=> true,
         'publicly_queryable' 	=> true,
-        'show_ui' 						=> true, 
-        'show_in_menu' 				=> true, 
-        'query_var' 					=> true,
-        'rewrite' 						=> array( 'slug' => __('department', 'byuh') ),
+        'show_ui' 				=> true, 
+        'show_in_menu' 			=> true, 
+        'query_var' 			=> true,
+        'rewrite' 				=> array( 'slug' => __('department', 'byuh') ),
         'capability_type' 		=> 'page',
-        'has_archive' 				=> false, 
-        'hierarchical' 				=> true,
-        'menu_position' 			=> 20,
-        'supports' 						=> array('title', 'thumbnail', 'excerpt'),
-        'menu_icon'           => 'dashicons-feedback'
+        'has_archive' 			=> false, 
+        'hierarchical' 			=> true,
+        'menu_position' 		=> 20,
+        'supports' 				=> array('title', 'thumbnail', 'excerpt'),
+        'menu_icon'             => 'dashicons-feedback'
     ); 
     register_post_type('department', $department_args);
-
 
     // Person
     $person_labels = array(
@@ -117,7 +116,7 @@ function byuh_setup() {
         'not_found'           => __('Nothing found', 'byuh'),
         'not_found_in_trash'  => __('Nothing found in Trash', 'byuh'), 
         'parent_item_colon'   => '',
-        'menu_name'           => __('People', 'byuh')
+        'menu_name'           => __('People', 'byuh'),
     );
 
     $person_args = array(
@@ -128,37 +127,10 @@ function byuh_setup() {
         'show_in_menu'        => true, 
         'query_var'           => true,
         'rewrite'             => array( 'slug' => __('person', 'byuh') ),
-        // Customized by TSA 2015.09.22
-        'capability_type'     => array('person','people'),
-        'capabilities' => array(
-          // meta caps (don't assign these to roles)
-          'edit_post'              => 'edit_person',
-          'read_post'              => 'read_person',
-          'delete_post'            => 'delete_person',
-
-          // primitive/meta caps
-          'create_posts'           => 'create_people',
-
-          // primitive caps used outside of map_meta_cap()
-          'edit_posts'             => 'edit_people',
-          'edit_others_posts'      => 'manage_people',
-          'publish_posts'          => 'manage_people',
-          'read_private_posts'     => 'read',
-
-          // primitive caps used inside of map_meta_cap()
-          'read'                   => 'read',
-          'delete_posts'           => 'manage_people',
-          'delete_private_posts'   => 'manage_people',
-          'delete_published_posts' => 'manage_people',
-            'delete_others_posts'    => 'manage_people',
-            'edit_private_posts'     => 'edit_people',
-            'edit_published_posts'   => 'edit_people'
-
-        ),
-        'map_meta_cap' => true,
+        'capability_type'     => 'page',
         'has_archive'         => false, 
         'hierarchical'        => false,
-        'menu_position'       => 20,
+        'menu_position'       => 19,
         'supports'            => array('title', 'thumbnail', 'excerpt'),
         'menu_icon'           => 'dashicons-businessman',
 
@@ -169,6 +141,7 @@ function byuh_setup() {
 
     ); 
     register_post_type('person', $person_args);
+
 }
 add_action('init', 'byuh_setup');
 

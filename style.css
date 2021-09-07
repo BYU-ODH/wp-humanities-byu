@@ -6819,6 +6819,20 @@ h3.odhFirstTitle{
     color: #141414;
     font-size: 19px;
 }
+
+#odhBoxDescription{
+	color: #141414;
+	display: block;
+    display: -webkit-box;
+    font-size: 14px;
+    line-height: 1.4;
+    height: 58.8; /* line-height * font-size * num-lines */
+    -webkit-line-clamp: 3; /* num-lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
 .odhBoxInfo{
     display: flex;
     align-self: flex-end;

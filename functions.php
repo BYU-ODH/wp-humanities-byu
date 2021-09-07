@@ -68,40 +68,6 @@ add_action( 'init', 'mobile_menu');
 
 function byuh_setup() {
 
-    // Department
-    $department_labels = array(
-        'name' 						=> __('Department', 'byuh'),
-        'singular_name' 			=> __('Department', 'byuh'),
-        'add_new' 					=> __('Add New', 'byuh'),
-        'add_new_item' 				=> __('Add New', 'byuh'),
-        'edit_item' 			    => __('Edit', 'byuh'),
-        'new_item' 					=> __('New', 'byuh'),
-        'all_items' 				=> __('All', 'byuh'),
-        'view_item' 				=> __('View', 'byuh'),
-        'search_items' 				=> __('Search', 'byuh'),
-        'not_found' 				=> __('Nothing found', 'byuh'),
-        'not_found_in_trash' 	    => __('Nothing found in Trash', 'byuh'), 
-        'parent_item_colon' 	    => '',
-        'menu_name' 				=> __('Departments', 'byuh'),
-    );
-
-    $department_args = array(
-        'labels' 				=> $department_labels,
-        'public' 				=> true,
-        'publicly_queryable' 	=> true,
-        'show_ui' 				=> true, 
-        'show_in_menu' 			=> true, 
-        'query_var' 			=> true,
-        'rewrite' 				=> array( 'slug' => __('department', 'byuh') ),
-        'capability_type' 		=> 'page',
-        'has_archive' 			=> false, 
-        'hierarchical' 			=> true,
-        'menu_position' 		=> 20,
-        'supports' 				=> array('title', 'thumbnail', 'excerpt'),
-        'menu_icon'             => 'dashicons-feedback'
-    ); 
-    register_post_type('department', $department_args);
-
     // Person
     $person_labels = array(
         'name'                => __('Person', 'byuh'),
@@ -161,7 +127,7 @@ function return_acf_fields ($postray, $postdat, $context) {
     //ACF field names are changed
     //New ACF fields are added
     if ($postdat['post_type'] === 'person') {
-        $acf_fields['department'] = get_field('department', $postdat['ID']);
+        
         $acf_fields['position'] = get_field('position', $postdat['ID']);
         $acf_fields['address'] = get_field('address', $postdat['ID']);
         $acf_fields['phone'] = get_field('phone', $postdat['ID']);
@@ -193,49 +159,6 @@ add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 /*********************/
 /* Custom Taxonomies */
 /*********************/
-
-add_action('init', 'create_persondepartments_tax');
-register_activation_hook( __FILE__, 'activate_persondepartments_tax' );
-
-function activate_persondepartments_tax() {
-    create_persondepartments_tax();
-    flush_rewrite_rules();
-}
-
-function create_persondepartments_tax() {
-    register_taxonomy(
-        'persondepartments',
-        'person',
-        array(
-            'labels' => array(
-                'name'  => _x( 'Departments', 'taxonomy general name' ),
-                'singular_name'		=> __( 'Department', 'taxonomy singular name' ),
-                'search_items'		=> __( 'Search Departments' ),
-                'all_items'		=> __( 'All Departments' ),
-                'parent_item'		=> __( 'Parent Department' ),
-                'parent_item_colon'	=> __( 'Parent Department:' ),
-                'edit_item'		=> __( 'Edit Department' ),
-                'update_item'		=> __( 'Update Department' ),
-                'add_new_item'		=> __( 'Add New Department' ),
-                'new_item_name'		=> __( 'New Department Name' ),
-                'menu_name'		=> __( 'Departments' ),
-                'separate_items_with_commas' => __( 'Separate departments with commas' ),
-                'add_or_remove_items' => __( 'Add or remove departments' ),
-                'choose_from_most_used' => __( 'Choose from the most used departments' ),
-            ),
-            'capabilities' => array(
-                'manage_terms' => 'manage_pdepts',
-                'edit_terms' => 'edit_pdepts',
-                'assign_terms' => 'assign_pdepts'
-            ),
-            'hierarchical' => true,
-            'show_admin_column' => true,
-            'rewrite' => true,
-            'query_var' => true,
-	    'show_in_rest' => true
-        )
-    );
-}
 
 function get_edit_person_by_netid ($nid) {
 	// get the "Person" page where netid = $netid

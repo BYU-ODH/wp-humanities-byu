@@ -66,51 +66,6 @@ function mobile_menu() {
 }
 add_action( 'init', 'mobile_menu');
 
-function byuh_setup() {
-
-    // Person
-    $person_labels = array(
-        'name'                => __('Person', 'byuh'),
-        'singular_name'       => __('Person', 'byuh'),
-        'add_new'             => __('Add New', 'byuh'),
-        'add_new_item'        => __('Add New', 'byuh'),
-        'edit_item'           => __('Edit', 'byuh'),
-        'new_item'            => __('New', 'byuh'),
-        'all_items'           => __('All', 'byuh'),
-        'view_item'           => __('View', 'byuh'),
-        'search_items'        => __('Search', 'byuh'),
-        'not_found'           => __('Nothing found', 'byuh'),
-        'not_found_in_trash'  => __('Nothing found in Trash', 'byuh'), 
-        'parent_item_colon'   => '',
-        'menu_name'           => __('People', 'byuh'),
-    );
-
-    $person_args = array(
-        'labels'              => $person_labels,
-        'public'              => true,
-        'publicly_queryable'  => true,
-        'show_ui'             => true, 
-        'show_in_menu'        => true, 
-        'query_var'           => true,
-        'rewrite'             => array( 'slug' => __('person', 'byuh') ),
-        'capability_type'     => 'page',
-        'has_archive'         => false, 
-        'hierarchical'        => false,
-        'menu_position'       => 19,
-        'supports'            => array('title', 'thumbnail', 'excerpt'),
-        'menu_icon'           => 'dashicons-businessman',
-
-        // For the REST API v2
-        'show_in_rest'       => true,
-  	'rest_base'          => 'people',
-  	'rest_controller_class' => 'WP_REST_Posts_Controller'
-
-    ); 
-    register_post_type('person', $person_args);
-
-}
-add_action('init', 'byuh_setup');
-
 //Shortcodes
 include_once('shortcodes/register.php');
 

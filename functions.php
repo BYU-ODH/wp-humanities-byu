@@ -111,39 +111,150 @@ function add_menu_parent_class( $items ) {
 }
 add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
 
+
+function byuh_setup() {
+
+    // Department
+    /* $department_labels = array(
+     *     'name' 								=> __('Department', 'byuh'),
+     *     'singular_name' 			=> __('Department', 'byuh'),
+     *     'add_new' 						=> __('Add New', 'byuh'),
+     *     'add_new_item' 				=> __('Add New', 'byuh'),
+     *     'edit_item' 					=> __('Edit', 'byuh'),
+     *     'new_item' 						=> __('New', 'byuh'),
+     *     'all_items' 					=> __('All', 'byuh'),
+     *     'view_item' 					=> __('View', 'byuh'),
+     *     'search_items' 				=> __('Search', 'byuh'),
+     *     'not_found' 					=> __('Nothing found', 'byuh'),
+     *     'not_found_in_trash' 	=> __('Nothing found in Trash', 'byuh'), 
+     *     'parent_item_colon' 	=> '',
+     *     'menu_name' 					=> __('Departments', 'byuh'),
+     * );
+
+     * $department_args = array(
+     *     'labels' 							=> $department_labels,
+     *     'public' 							=> true,
+     *     'publicly_queryable' 	=> true,
+     *     'show_ui' 						=> true, 
+     *     'show_in_menu' 				=> true, 
+     *     'query_var' 					=> true,
+     *     'rewrite' 						=> array( 'slug' => __('department', 'byuh') ),
+     *     'capability_type' 		=> 'page',
+     *     'has_archive' 				=> false, 
+     *     'hierarchical' 				=> true,
+     *     'menu_position' 			=> 20,
+     *     'supports' 						=> array('title', 'thumbnail', 'excerpt'),
+     *     'menu_icon'           => 'dashicons-feedback'
+     * ); 
+     * register_post_type('department', $department_args);
+     */
+
+    // Person
+    $person_labels = array(
+        'name'                => __('Person', 'byuh'),
+        'singular_name'       => __('Person', 'byuh'),
+        'add_new'             => __('Add New', 'byuh'),
+        'add_new_item'        => __('Add New', 'byuh'),
+        'edit_item'           => __('Edit', 'byuh'),
+        'new_item'            => __('New', 'byuh'),
+        'all_items'           => __('All', 'byuh'),
+        'view_item'           => __('View', 'byuh'),
+        'search_items'        => __('Search', 'byuh'),
+        'not_found'           => __('Nothing found', 'byuh'),
+        'not_found_in_trash'  => __('Nothing found in Trash', 'byuh'), 
+        'parent_item_colon'   => '',
+        'menu_name'           => __('People', 'byuh')
+    );
+
+    $person_args = array(
+        'labels'              => $person_labels,
+        'public'              => true,
+        'publicly_queryable'  => true,
+        'show_ui'             => true, 
+        'show_in_menu'        => true, 
+        'query_var'           => true,
+        'rewrite'             => array( 'slug' => __('person', 'byuh') ),
+        //			       'capability_type'     => 'page',
+        // Customized by TSA 2015.09.22
+        'capability_type'     => array('person','people'),
+        'capabilities' => array(
+            // meta caps (don't assign these to roles)
+            'edit_post'              => 'edit_person',
+            'read_post'              => 'read_person',
+            'delete_post'            => 'delete_person',
+
+            // primitive/meta caps
+            'create_posts'           => 'create_people',
+
+            // primitive caps used outside of map_meta_cap()
+            'edit_posts'             => 'edit_people',
+            'edit_others_posts'      => 'manage_people',
+            'publish_posts'          => 'manage_people',
+            'read_private_posts'     => 'read',
+
+            // primitive caps used inside of map_meta_cap()
+            'read'                   => 'read',
+            'delete_posts'           => 'manage_people',
+            'delete_private_posts'   => 'manage_people',
+            'delete_published_posts' => 'manage_people',
+            'delete_others_posts'    => 'manage_people',
+            'edit_private_posts'     => 'edit_people',
+            'edit_published_posts'   => 'edit_people'
+
+        ),
+        'map_meta_cap' => true,
+        'has_archive'         => false, 
+        'hierarchical'        => false,
+        'menu_position'       => 20,
+        'supports'            => array('title', 'thumbnail', 'excerpt'),
+        'menu_icon'           => 'dashicons-businessman',
+
+        // For the REST API v2
+        'show_in_rest'       => true,
+  	'rest_base'          => 'people',
+  	'rest_controller_class' => 'WP_REST_Posts_Controller'
+
+    ); 
+    register_post_type('person', $person_args);
+}
+add_action('init', 'byuh_setup');
+
+
+
+
 /*********************/
 /* Custom Taxonomies */
 /*********************/
 
 function get_edit_person_by_netid ($nid) {
-	// get the "Person" page where netid = $netid
-	$args = array(
-		'posts_per_page'	=> 1,
+    // get the "Person" page where netid = $netid
+    $args = array(
+	'posts_per_page'	=> 1,
         'post_type'	=> 'person',
         'meta_key'	=> 'netid',
         'meta_value'	=> $nid
-	);
-	$people = get_posts( $args );
-	foreach ($people as $person) {
-		$personid = $person->ID;
-		return get_edit_post_link($personid, '&');
-	}
-	return null;
+    );
+    $people = get_posts( $args );
+    foreach ($people as $person) {
+	$personid = $person->ID;
+	return get_edit_post_link($personid, '&');
+    }
+    return null;
 }
 
 function get_person_by_netid ($nid) {
-	// get the "Person" page where netid = $netid
-	$args = array(
-		'posts_per_page'	=> 1,
+    // get the "Person" page where netid = $netid
+    $args = array(
+	'posts_per_page'	=> 1,
         'post_type'	=> 'person',
         'meta_key'	=> 'netid',
         'meta_value'	=> $nid
-	);
-	$people = get_posts( $args );
-	foreach ($people as $person) {
-		$personid = $person->ID;
-		$netid = get_field('netid', $personid);
-	}
+    );
+    $people = get_posts( $args );
+    foreach ($people as $person) {
+	$personid = $person->ID;
+	$netid = get_field('netid', $personid);
+    }
 }
 
 add_filter( 'get_custom_logo', 'byu_logo' );
@@ -151,11 +262,11 @@ add_filter( 'get_custom_logo', 'byu_logo' );
 function byu_logo() {
     $custom_logo_id = get_theme_mod( 'custom_logo' );
     $html = sprintf( '<a href="https://byu.edu" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
-            esc_url( home_url( '/' ) ),
-            wp_get_attachment_image( $custom_logo_id, 'full', false, array(
-                'class'    => 'custom-logo',
-            ) )
-        );
+		     esc_url( home_url( '/' ) ),
+		     wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+			 'class'    => 'custom-logo',
+		     ) )
+    );
     return $html;   
 }
 
@@ -164,25 +275,25 @@ function byu_logo() {
 add_action( 'pre_get_posts',  'set_posts_per_page'  );
 function set_posts_per_page( $query ) {
 
-  global $wp_the_query;
+    global $wp_the_query;
 
-  if ( ( ! is_admin() ) && ( $query === $wp_the_query ) 
-  && ( $query->is_search() || $query->is_archive()) ) {
-    $query->set( 'posts_per_page', 40 );
-  }
+    if ( ( ! is_admin() ) && ( $query === $wp_the_query ) 
+      && ( $query->is_search() || $query->is_archive()) ) {
+	$query->set( 'posts_per_page', 40 );
+    }
 
-  return $query;
+    return $query;
 }
 
 function format_phone_num ($phone) {
     $phone = preg_replace('/[^0-9]/', '', $phone);
     if (strlen($phone) == 10) 
     {
-    $phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
+	$phone = '('.substr($phone, 0, 3).')'.substr($phone, 3, 3).'-'.substr($phone,6);
     }
     else if (strlen($phone) == 7)
     {
-    $phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3); 
+	$phone = '(801)'.substr($phone, 0, 3).'-'.substr($phone,3); 
     }
     else{
         $phone = "Invalid Number";
@@ -202,15 +313,15 @@ function format_phone_block ($phone) {
 
 function posts_orderby_lastname ($orderby_statement) 
 {
-  $orderby_statement = "RIGHT(post_title, LOCATE(' ', REVERSE(post_title)) - 1) ASC";
+    $orderby_statement = "RIGHT(post_title, LOCATE(' ', REVERSE(post_title)) - 1) ASC";
     return $orderby_statement;
 }
 add_filter( 'posts_orderby' , 'posts_orderby_lastname' );
-    $loop = new WP_Query(
-        array (
-            'post_type' => 'person'
-        )
-    );
+$loop = new WP_Query(
+    array (
+        'post_type' => 'person'
+    )
+);
 
 
 

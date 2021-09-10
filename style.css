@@ -6736,6 +6736,16 @@ aside#colophon .fa-youtube {
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px; 
 }
+
+.archivedStatus{
+	border:5px solid #C5C5C5;
+}
+.liveStatus{
+	border:5px solid #10A170;
+}
+.intakeStatus{
+	border:5px solid #FFED74;
+}
 .odhBoxSingleCard{
     /*single card content here*/
     grid-column-end: span 4;

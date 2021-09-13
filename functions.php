@@ -176,33 +176,7 @@ function byuh_setup() {
         'rewrite'             => array( 'slug' => __('person', 'byuh') ),
         //			       'capability_type'     => 'page',
         // Customized by TSA 2015.09.22
-        'capability_type'     => array('person','people'),
-        'capabilities' => array(
-            // meta caps (don't assign these to roles)
-            'edit_post'              => 'edit_person',
-            'read_post'              => 'read_person',
-            'delete_post'            => 'delete_person',
-
-            // primitive/meta caps
-            'create_posts'           => 'create_people',
-
-            // primitive caps used outside of map_meta_cap()
-            'edit_posts'             => 'edit_people',
-            'edit_others_posts'      => 'manage_people',
-            'publish_posts'          => 'manage_people',
-            'read_private_posts'     => 'read',
-
-            // primitive caps used inside of map_meta_cap()
-            'read'                   => 'read',
-            'delete_posts'           => 'manage_people',
-            'delete_private_posts'   => 'manage_people',
-            'delete_published_posts' => 'manage_people',
-            'delete_others_posts'    => 'manage_people',
-            'edit_private_posts'     => 'edit_people',
-            'edit_published_posts'   => 'edit_people'
-
-        ),
-        'map_meta_cap' => true,
+        'capability_type'     => 'page',
         'has_archive'         => false, 
         'hierarchical'        => false,
         'menu_position'       => 20,

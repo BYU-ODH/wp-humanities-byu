@@ -38,7 +38,7 @@ function byuh_populate_depts_taxonomy ( $tax ) {
     }
 }
 
-function byuh_populate_research_taxonomy ( $tax ) {
+function byuh_populate_projects_taxonomy ( $tax ) {
     $terms = array(
 	'Adaptation' => array(),
 	'Aesthetics' => array(),
@@ -127,7 +127,7 @@ function byuh_populate_research_taxonomy ( $tax ) {
 	'Victorian' => array(),
 	'Women’s studies' => array(),
 	'Young adult ' => array());
-    echo "<script>console.log('in byuh_populate_research_taxonomy, getting terms from $tax');</script>";
+    echo "<script>console.log('in byuh_populate_projects_taxonomy, getting terms from $tax');</script>";
 
     foreach ( $terms as $parent => $children ) {
         $inserted_parent = wp_insert_term(

@@ -18,10 +18,12 @@
 get_header();
 
 function fill_bucket() {
-    $bucket = array();
+    $bucket= array();
     while (have_posts() ) {
 	the_post();
-	$bucket[]=get_post_meta(get_the_ID());
+	$mainpost=get_post(get_the_ID());
+	$metapost=get_post_meta(get_the_ID());
+	$bucket[]=array($mainpost,$metapost);
 	}
     return $bucket;
 }
@@ -62,7 +64,7 @@ article{
 					<?php
 					$faclist = fill_bucket();
 					echo make_list($faclist, 'all');
-					print_r(make_list);
+					// print_r($faclist);
 					?>
 				</div><!--content-masonry-->
 				<!--not really nessessary-->

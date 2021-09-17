@@ -24,7 +24,16 @@ function make_list($people,$dept) {
   
   $block.="<ul class='directory-list filterable'>";
 
+  // print_r($people, false);
+
   foreach($people as $post) {
+    // echo 'Hello!';
+    $personmain=$post[0];
+    $personmeta=$post[1];
+    var_dump($personmain);
+
+    // print_r($people, false);
+
     // print_r($post, false);
     if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))
     {
@@ -56,19 +65,19 @@ function make_list($people,$dept) {
       </div>";
         }
       $block.="<div class=\"content\">";
-      $block.="<a href=\"$permalink\"><h4>".$post['post_title'][0]."</h4></a>";
-      if (!empty($post['phone'])) {
-        $phone = $post['phone'][0];
+      $block.="<a href=\"$permalink\"><h4>".$personmain['post_title']."</h4></a>";
+      if (!empty($personmeta['phone'])) {
+        $phone = $personmeta['phone'][0];
         $block.= format_phone_block($phone);
         // $block.= $phone;
         // print_r($post, true);
       }
 
-      if (!empty($post['address'])) {
-        $block.="<div class=\"link address\"><span>".$post['address'][0]."</span></div>";	
+      if (!empty($personmeta['address'])) {
+        $block.="<div class=\"link address\"><span>".$personmeta['address'][0]."</span></div>";	
       }
-      if (!empty($post['email'])) {
-        $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email'][0]."</a></span></div>";
+      if (!empty($personmeta['email'])) {
+        $block.="<div class=\"link email\"><span><a href='mailto:" . $personmeta['email'] . "'>".$personmeta['email'][0]."</a></span></div>";
       }
       
       $block.="</div>"; 

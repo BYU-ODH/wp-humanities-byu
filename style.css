@@ -6689,9 +6689,6 @@ aside#colophon .fa-twitter {
 aside#colophon .fa-youtube {
 	color: #c4302b;
 }
-
-
-
 /******************************/
 /* Style for testing lab page */
 /******************************/
@@ -6713,8 +6710,6 @@ aside#colophon .fa-youtube {
         background-color: #0057b8;
         color: white !important;
 }
-
-
 /***********************/
 /*End of custom testing page css*/
 /***********************/
@@ -6736,7 +6731,6 @@ aside#colophon .fa-youtube {
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px; 
 }
-
 .archivedStatus{
 	border:5px solid #C5C5C5;
 }
@@ -6784,7 +6778,6 @@ h3.odhFirstTitle{
     color: #141414;
     font-size: 19px;
 }
-
 #odhBoxDescription{
 	color: #141414;
 	display: block;
@@ -6834,6 +6827,28 @@ h3.odhFirstTitle{
 /*End of grid styles*/
 /********/
 
+/*********/
+/*styles for the custom projects page*/
+/*********/
+.projectHeroIMG{
+	position: relative;
+	left: 20%;
+}
+.projectDescriptionCont{
+	position: relative;
+}
+.projectDetailsCont{
+	position: absolute;
+	left: 50%;
+}
+.projectPersonnel{
+	position: relative;
+}
+.projectSnapshotsIMG{
+	position: absolute;
+	padding: 20px;
+}
+/*END of Project Styles*/
 /* END OF SUBMENUS */
 
 /* change link colors on faculty & staff commons */

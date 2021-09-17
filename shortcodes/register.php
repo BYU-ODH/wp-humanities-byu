@@ -25,52 +25,55 @@ function make_list($people,$dept) {
   $block.="<ul class='directory-list filterable'>";
 
   foreach($people as $post) {
+    // print_r($post, false);
     if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))
     {
-      if (in_array($post['status'],array("full","part","emeritus","staff","visiting"))) {
-        $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'medium');
-        $image_alt = get_post_meta(get_post_thumbnail_id($post['ID']), '_wp_attachment_image_alt', TRUE);
-        if (empty($image_alt)) {
-          $image_alt = get_the_title($post['ID']);
-        }
-        $image = $imageArr[0];
-        $permalink=get_permalink($post['ID']);
-        $color=$colormap[$deptID];
-
-        $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
-        if ($post['affiliated_faculty']) {
-          array_push($directory_entry_classes, "affiliated-".$post['affiliated_department'], "status-affiliated"); 
-        }
-	      $classes=implode(" ", $directory_entry_classes);
-
-        $block.="<li class='$classes'>";
-
-        if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-        <a href=\"$permalink\">
-          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
-        </a>
-        </div>"; }
-          else{   /*else statement to add default image to faculty department page*/ 
-            $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-        </div>";
-          }
-        $block.="<div class=\"content\">";
-	      $block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-        if (!empty($post['phone'])) {
-          $phone = $post['phone'];
-          $block.= format_phone_block($phone);
-        }
-
-        if (!empty($post['address'])) {
-          $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
-        }
-        if (!empty($post['email'])) {
-          $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
-        }
-        
-        $block.="</div>"; 
-	      $block.="</li>";
+      // if (in_array($post['status'],array("full","part","emeritus","staff","visiting"))) {
+      $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'medium');
+      $image_alt = get_post_meta(get_post_thumbnail_id($post['ID']), '_wp_attachment_image_alt', TRUE);
+      if (empty($image_alt)) {
+        $image_alt = get_the_title($post['ID']);
       }
+      $image = $imageArr[0];
+      $permalink=get_permalink($post['ID']);
+      $color=$colormap[$deptID];
+
+      $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
+      if ($post['affiliated_faculty']) {
+        array_push($directory_entry_classes, "affiliated-".$post['affiliated_department'], "status-affiliated"); 
+      }
+      $classes=implode(" ", $directory_entry_classes);
+
+      $block.="<li class='$classes'>";
+
+      if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+      <a href=\"$permalink\">
+        <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
+      </a>
+      </div>"; }
+        else{   /*else statement to add default image to faculty department page*/ 
+          $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
+      </div>";
+        }
+      $block.="<div class=\"content\">";
+      $block.="<a href=\"$permalink\"><h4>".$post['post_title'][0]."</h4></a>";
+      if (!empty($post['phone'])) {
+        $phone = $post['phone'][0];
+        $block.= format_phone_block($phone);
+        // $block.= $phone;
+        // print_r($post, true);
+      }
+
+      if (!empty($post['address'])) {
+        $block.="<div class=\"link address\"><span>".$post['address'][0]."</span></div>";	
+      }
+      if (!empty($post['email'])) {
+        $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email'][0]."</a></span></div>";
+      }
+      
+      $block.="</div>"; 
+      $block.="</li>";
+      // }
     }
   } //end foreach
   $block.="</ul>";

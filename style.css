@@ -6830,12 +6830,23 @@ h3.odhFirstTitle{
 /*********/
 /*styles for the custom projects page*/
 /*********/
+.projectMainContODH{
+	position: relative;
+}
+h2.projectMainContODH{
+	text-align: center;
+}
 .projectHeroIMG{
 	position: relative;
 	left: 20%;
 }
-.projectDescriptionCont{
+.projectMidContODH{
 	position: relative;
+	padding: 20px;
+}
+.projectDescriptionCont{
+	position: absolute;
+	width: 500px;
 }
 .projectDetailsCont{
 	position: absolute;
@@ -6845,7 +6856,7 @@ h3.odhFirstTitle{
 	position: relative;
 }
 .projectSnapshotsIMG{
-	position: absolute;
+	position: relative;
 	padding: 20px;
 }
 /*END of Project Styles*/

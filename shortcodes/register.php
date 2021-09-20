@@ -31,6 +31,7 @@ function make_list($people,$dept) {
     $personmain=$post[0];
     $personmeta=$post[1];
     var_dump($personmain);
+    var_dump($personmeta);
 
     // print_r($people, false);
 

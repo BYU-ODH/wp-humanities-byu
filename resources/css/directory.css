@@ -217,12 +217,13 @@ ul.directory-list.filterable {
     }
 }
 .directory ul.directory-list li .image-container {
-  width: 5em;
-  height: 7em;
+  width: 6.5em;
+  height: 9.1em;
   display: table-cell;
   list-style: none;
   vertical-align: top;
 }
+
 @media all and (max-width: 975px) {
     .directory ul.directory-list li .image-container {
 	display: inline-block;
@@ -251,10 +252,11 @@ ul.directory-list.filterable {
     display: table-cell;
     padding: 0;
     position: relative;
+    margin-left: .75em;
 }
 @media all and (max-width: 699px) {
-    .directory ul.directory-list li .content {
-	padding: 1.25rem;
+    .directory ul.directory-list li {
+	padding: 1rem;
     }
 }
 .directory ul.directory-list li .content h4 {
@@ -264,12 +266,7 @@ ul.directory-list.filterable {
     margin: 0;
     font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 }
-@media all and (max-width: 699px) {
-    .directory ul.directory-list li .content h4 {
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #b3b1a9;
-    }
-}
+
 .directory ul.directory-list li .content .link {
     font-size: 1.0625rem;
     color: #666;
@@ -284,14 +281,7 @@ ul.directory-list.filterable {
 .directory ul.directory-list li .content .link:last-of-type {
     border-right: none;
 }
-@media all and (max-width: 699px) {
-    .directory ul.directory-list li .content .link {
-	border: none;
-	padding: 0;
-	display: block;
-	margin-top: 1rem;
-    }
-}
+
 .directory ul.directory-list li .content .link .icon {
     display: none;
 }

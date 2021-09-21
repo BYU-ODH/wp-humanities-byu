@@ -21,9 +21,19 @@ function fill_bucket() {
     $bucket= array();
     while (have_posts() ) {
 	the_post();
-	$mainpost=get_post(get_the_ID());
-	$metapost=get_post_meta(get_the_ID());
-	$bucket[]=array($mainpost,$metapost);
+	$id=get_the_ID();
+	// echo 'Hello!';
+	$mainpost=get_post($id);
+	$metapost=get_post_meta($id);
+	$bucket=wp_parse_args($mainpost, $metapost);
+	// echo 'Is $mainpost an array?' . print_r(is_array($mainpost), true);
+	// print_r(is_array($mainpost));
+	// $bucket=array($mainpost,$metapost);
+	// $bucket[]=array_splice($mainpost,$metapost);
+	// $bucket[]=get_post_meta($id);
+	// var_dump(get_post_meta($id));
+	// var_dump(get_post($id));
+	var_dump($bucket);
 	}
     return $bucket;
 }

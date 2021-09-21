@@ -6894,4 +6894,14 @@ ul#research a{
 	color: #0062B8
 }
 
+/* for phone links and emails */
+
+a[href^="tel:"] {
+	text-decoration: underline;
+}
+
+a[href^="mailto:"] {
+	text-decoration: underline;
+}
+
 /* FIN! */

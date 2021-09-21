@@ -6836,9 +6836,15 @@ h3.odhFirstTitle{
 h2.projectMainContODH{
 	text-align: center;
 }
+.projectHeroODH{
+	position: relative;
+	background-color: #e6e6e6;
+	width: 100%;
+}
 .projectHeroIMG{
 	position: relative;
-	left: 20%;
+	width: 400px;
+	padding: 10px;
 }
 .projectMidContODH{
 	position: relative;
@@ -6855,8 +6861,11 @@ h2.projectMainContODH{
 .projectPersonnel{
 	position: relative;
 }
-.projectSnapshotsIMG{
+.projectSnapshotsODH{
 	position: relative;
+}
+.projectSnapshotsIMG{
+	position: absolute;
 	padding: 20px;
 }
 /*END of Project Styles*/

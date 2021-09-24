@@ -6732,7 +6732,7 @@ aside#colophon .fa-youtube {
     grid-gap: 40px; 
 }
 .archivedStatus{
-	border:5px solid #C5C5C5;
+	border:5px solid #8f8f8f;
 }
 .liveStatus{
 	border:5px solid #10A170;
@@ -6832,6 +6832,7 @@ h3.odhFirstTitle{
 /*********/
 .projectMainContODH{
 	position: relative;
+	top:0;
 }
 h2.projectMainContODH{
 	text-align: center;
@@ -6848,7 +6849,8 @@ h2.projectMainContODH{
 }
 .projectMidContODH{
 	position: relative;
-	padding: 20px;
+	padding-top: 40px;
+	padding-bottom: 100px;
 }
 .projectDescriptionCont{
 	position: absolute;
@@ -6856,7 +6858,7 @@ h2.projectMainContODH{
 }
 .projectDetailsCont{
 	position: absolute;
-	left: 50%;
+	left: 60%;
 }
 .projectPersonnel{
 	position: relative;
@@ -6867,6 +6869,9 @@ h2.projectMainContODH{
 .projectSnapshotsIMG{
 	position: absolute;
 	padding: 20px;
+}
+.statusLineSizeODH{
+	border-width: 3px;
 }
 /*END of Project Styles*/
 /* END OF SUBMENUS */

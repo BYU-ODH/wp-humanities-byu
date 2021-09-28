@@ -469,11 +469,6 @@ object {
   max-height: 100vh;
 }
 
-a:link,
-a:visited {
-	text-decoration: none;
-}
-
 /* Text meant only for screen readers */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -6884,18 +6879,15 @@ div#content .elementor-text-editor a {
 	background-size: 100% 100%;
 }
 
-/* style links on research areas page */
-ul#research{
-	column-count: 2;
-	list-style-type: none;
+/* style for links */
+
+a:-webkit-any-link {
+	text-decoration: none;
 }
 
-ul#research a{
-	text-decoration: underline; 
-	color: #0062B8
+.text-content a {
+	text-decoration: underline;
 }
-
-/* for phone links and emails */
 
 a[href^="tel:"] {
 	text-decoration: underline;

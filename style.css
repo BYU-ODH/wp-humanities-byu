@@ -6767,18 +6767,19 @@ aside#colophon .fa-youtube {
 }
 .odhBoxInner{
     padding: 20px;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     font-size: 14px;
 }
 h3.odhFirstTitle{
     margin-bottom: 20px;
+	text-align: center;
 }
-#odhBoxTitle{
+.odhBoxTitle{
     color: #141414;
     font-size: 19px;
 }
-#odhBoxDescription{
+.odhBoxDescription{
 	color: #141414;
 	display: block;
     display: -webkit-box;

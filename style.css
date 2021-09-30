@@ -6833,7 +6833,8 @@ h3.odhFirstTitle{
 /*********/
 .projectMainContODH{
 	position: relative;
-	top:0;
+	width: 100%;
+	height: 700px;
 }
 h2.projectMainContODH{
 	text-align: center;

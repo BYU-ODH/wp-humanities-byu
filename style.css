@@ -6765,12 +6765,12 @@ h3.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
 }
-.odhBoxTitle{
-    color: #141414 !important;
+.entry-content .odhBoxTitle{
+    color: #141414;
     font-size: 19px;
 }
-.odhBoxInner a:hover {
-	text-decoration: none !important;
+.entry-content .odhBoxInner a:hover {
+	text-decoration: none;
 }
 .odhBoxDescription{
 	color: #141414;
@@ -6884,6 +6884,16 @@ a:-webkit-any-link {
 }
 
 .entry-content a:hover {
+	text-decoration: underline;
+	color:#002E5D;
+}
+
+.text-content a {
+	text-decoration: underline;
+	color:#0057b8;
+}
+
+.text-content a:hover {
 	text-decoration: underline;
 	color:#002E5D;
 }

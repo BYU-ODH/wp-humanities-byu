@@ -469,11 +469,6 @@ object {
   max-height: 100vh;
 }
 
-a:link,
-a:visited {
-	text-decoration: none;
-}
-
 /* Text meant only for screen readers */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -6410,17 +6405,9 @@ i.icon-search {
 	float: right;
 }
 
-div#content a {
-    color: inherit;
-}
-
 .staticslider-caption-buttons {
 	justify-content: center;
 	display: flex;
-}
-
-div#content a:hover {
-    color: #002E5D;    
 }
 
 a.lp-box-readmore {
@@ -6771,13 +6758,19 @@ aside#colophon .fa-youtube {
     text-decoration: none;
     font-size: 14px;
 }
+.odhBoxInner p {
+	color: #141414;
+}
 h3.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
 }
-.odhBoxTitle{
+.entry-content .odhBoxTitle{
     color: #141414;
     font-size: 19px;
+}
+.entry-content .odhBoxInner a:hover {
+	text-decoration: none;
 }
 .odhBoxDescription{
 	color: #141414;
@@ -6872,11 +6865,6 @@ h2.projectMainContODH{
 /*END of Project Styles*/
 /* END OF SUBMENUS */
 
-/* change link colors on faculty & staff commons */
-div#content .elementor-text-editor a {
-	color: #0062B8;
-}
-
 /*Here to set the default image for profiles*/
 .defaultIMG{
 	background-image: url("resources/images/default_logo-hum.png");
@@ -6884,25 +6872,30 @@ div#content .elementor-text-editor a {
 	background-size: 100% 100%;
 }
 
-/* style links on research areas page */
-ul#research{
-	column-count: 2;
-	list-style-type: none;
+/* style for links */
+
+a:-webkit-any-link {
+	text-decoration: none;
 }
 
-ul#research a{
-	text-decoration: underline; 
-	color: #0062B8
-}
-
-/* for phone links and emails */
-
-a[href^="tel:"] {
+.entry-content a {
 	text-decoration: underline;
+	color:#0057b8;
 }
 
-a[href^="mailto:"] {
+.entry-content a:hover {
 	text-decoration: underline;
+	color:#002E5D;
+}
+
+.text-content a {
+	text-decoration: underline;
+	color:#0057b8;
+}
+
+.text-content a:hover {
+	text-decoration: underline;
+	color:#002E5D;
 }
 
 /* FIN! */

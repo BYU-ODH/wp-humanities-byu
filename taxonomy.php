@@ -23,17 +23,18 @@ function fill_bucket() {
 	the_post();
 	$id=get_the_ID();
 	// echo 'Hello!';
-	$mainpost=get_post($id);
-	$metapost=get_post_meta($id);
-	$bucket=wp_parse_args($mainpost, $metapost);
+	// $mainpost=get_post($id);
+	// $metapost=get_post_meta($id);
+	// $bucket=wp_parse_args($mainpost, $metapost);
 	// echo 'Is $mainpost an array?' . print_r(is_array($mainpost), true);
 	// print_r(is_array($mainpost));
 	// $bucket=array($mainpost,$metapost);
-	// $bucket[]=array_splice($mainpost,$metapost);
+	// $bucket=array_merge($mainpost, $metapost);
+	// $bucket=$mainpost + $metapost;
 	// $bucket[]=get_post_meta($id);
-	// var_dump(get_post_meta($id));
-	// var_dump(get_post($id));
-	var_dump($bucket);
+	var_dump(get_post_meta($id));
+	var_dump(get_post($id));
+	// var_dump($bucket);
 	}
     return $bucket;
 }
@@ -73,8 +74,8 @@ article{
 				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php
 					$faclist = fill_bucket();
-					echo make_list($faclist, 'all');
-					// print_r($faclist);
+					// echo make_list($faclist, 'all');
+					print_r($faclist);
 					?>
 				</div><!--content-masonry-->
 				<!--not really nessessary-->

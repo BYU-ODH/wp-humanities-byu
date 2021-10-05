@@ -18,13 +18,15 @@
 get_header();
 
 function fill_bucket() {
-    $bucket= array();
+    $bucket = array();
     while (have_posts() ) {
 	the_post();
 	$id=get_the_ID();
 	// echo 'Hello!';
 	// $mainpost=get_post($id);
 	// $metapost=get_post_meta($id);
+	// $buckets[] = get_post($id);
+	// $buckets[] = get_post_meta($id);
 	// $bucket=wp_parse_args($mainpost, $metapost);
 	// echo 'Is $mainpost an array?' . print_r(is_array($mainpost), true);
 	// print_r(is_array($mainpost));
@@ -34,7 +36,16 @@ function fill_bucket() {
 	// $bucket[]=get_post_meta($id);
 	var_dump(get_post_meta($id));
 	var_dump(get_post($id));
-	// var_dump($bucket);
+	// var_dump($buckets);
+
+	// $list = array();
+
+	// foreach($buckets as $bucket) {
+	// 	if(is_array($bucket)) {
+	// 		$list = array_merge($list, $bucket);
+	// 	}
+	// }
+
 	}
     return $bucket;
 }

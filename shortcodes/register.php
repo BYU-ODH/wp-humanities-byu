@@ -28,9 +28,9 @@ function make_list($people,$dept) {
 
   foreach($people as $post) {
     // echo 'Hello!';
-    $personmain=$post[0];
+    // $personmain=$post[0];
     // $personmain=$post;
-    $personmeta=$post[1];
+    // $personmeta=$post[1];
     // var_dump($personmain);
     // var_dump($personmeta);
 
@@ -69,17 +69,17 @@ function make_list($people,$dept) {
       $block.="<div class=\"content\">";
       $block.="<a href=\"$permalink\"><h4>".$personmain['post_title']."</h4></a>";
       if (!empty($post['phone'])) {
-        $phone = $post['phone'][0];
+        $phone = $post['phone'];
         $block.= format_phone_block($phone);
         // $block.= $phone;
         // print_r($post, true);
       }
 
       if (!empty($post['address'])) {
-        $block.="<div class=\"link address\"><span>".$post['address'][0]."</span></div>";	
+        $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
       }
       if (!empty($post['email'])) {
-        $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email'][0]."</a></span></div>";
+        $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
       }
       
       $block.="</div>"; 

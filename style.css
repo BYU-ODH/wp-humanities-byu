@@ -6831,6 +6831,9 @@ h3.odhFirstTitle{
 /*********/
 /*styles for the custom projects page*/
 /*********/
+.single-projects #content {
+    margin-top: 4rem;
+}
 .projectMainContODH{
 	position: relative;
 	width: 100%;

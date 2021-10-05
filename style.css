@@ -6824,8 +6824,13 @@ h3.odhFirstTitle{
 /*********/
 /*styles for the custom projects page*/
 /*********/
+.single-projects #content {
+    margin-top: 4rem;
+}
 .projectMainContODH{
 	position: relative;
+	width: 100%;
+	height: 700px;
 }
 h2.projectMainContODH{
 	text-align: center;
@@ -6842,7 +6847,8 @@ h2.projectMainContODH{
 }
 .projectMidContODH{
 	position: relative;
-	padding: 20px;
+	padding-top: 40px;
+	padding-bottom: 100px;
 }
 .projectDescriptionCont{
 	position: absolute;
@@ -6850,7 +6856,7 @@ h2.projectMainContODH{
 }
 .projectDetailsCont{
 	position: absolute;
-	left: 50%;
+	left: 60%;
 }
 .projectPersonnel{
 	position: relative;
@@ -6861,6 +6867,9 @@ h2.projectMainContODH{
 .projectSnapshotsIMG{
 	position: absolute;
 	padding: 20px;
+}
+.statusLineSizeODH{
+	border-width: 3px;
 }
 /*END of Project Styles*/
 /* END OF SUBMENUS */

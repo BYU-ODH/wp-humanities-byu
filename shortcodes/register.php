@@ -26,8 +26,13 @@ function make_list($people,$dept) {
 
   // print_r($people, false);
 
+  // $people = $people[0];
+
+  print_r($people[0] -> ID);
+
   foreach($people as $post) {
-    // echo 'Hello!';
+    $main = $post[0];
+    echo 'Hello!';
     // $personmain=$post[0];
     // $personmain=$post;
     // $personmeta=$post[1];
@@ -39,14 +44,15 @@ function make_list($people,$dept) {
     // print_r($post, false);
     if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))
     {
+      echo 'Hello!';
       // if (in_array($post['status'],array("full","part","emeritus","staff","visiting"))) {
-      $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'medium');
-      $image_alt = get_post_meta(get_post_thumbnail_id($post['ID']), '_wp_attachment_image_alt', TRUE);
+      $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($main -> ID ), 'medium');
+      $image_alt = get_post_meta(get_post_thumbnail_id($main['ID']), '_wp_attachment_image_alt', TRUE);
       if (empty($image_alt)) {
-        $image_alt = get_the_title($post['ID']);
+        $image_alt = get_the_title($main['ID']);
       }
       $image = $imageArr[0];
-      $permalink=get_permalink($post['ID']);
+      $permalink=get_permalink($main['ID']);
       $color=$colormap[$deptID];
 
       $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
@@ -67,24 +73,26 @@ function make_list($people,$dept) {
       </div>";
         }
       $block.="<div class=\"content\">";
-      $block.="<a href=\"$permalink\"><h4>".$personmain['post_title']."</h4></a>";
-      if (!empty($post['phone'])) {
-        $phone = $post['phone'];
-        $block.= format_phone_block($phone);
+      $block.="<a href=\"$permalink\"><h4>". $main['post_title'] ."</h4></a>";
+      // $block.=print_r($post, true);
+      // if (!empty($post['phone'][0])) {
+        // $phone = $post['phone'][0];
+        // $block.= format_phone_block($phone);
         // $block.= $phone;
+        // print_r($phone, false);
         // print_r($post, true);
-      }
-
-      if (!empty($post['address'])) {
-        $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
-      }
-      if (!empty($post['email'])) {
-        $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
-      }
-      
-      $block.="</div>"; 
-      $block.="</li>";
       // }
+
+    //   if (!empty($post['address'])) {
+    //     $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
+    //   }
+    //   if (!empty($post['email'])) {
+    //     $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
+    //   }
+      
+    //   $block.="</div>"; 
+    //   $block.="</li>";
+    //   // }
     }
   } //end foreach
   $block.="</ul>";

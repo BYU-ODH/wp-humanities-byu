@@ -330,7 +330,7 @@ ul.directory-list.filterable {
 	border-radius: 0.75em;
 }
 
-.single #content {
+.single-person #content {
     margin-top: 10rem;
 }
 
@@ -350,9 +350,13 @@ ul.directory-list.filterable {
     margin-top: 2rem;
 }
 
-/*adding underline to research areas list on profiles*/
-.research_areas_list a{
-	text-decoration:underline;
+/*link styling*/
+.research_areas_list a {
+	text-decoration: underline;
+}
+
+ul.directory-list.filterable a {
+    text-decoration: none;
 }
 
 /*Sytle to add hover color text headings on ODH faculty directory*/

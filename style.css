@@ -6843,6 +6843,7 @@ h2.projectMainContODH{
 	position: relative;
 	background-color: #e6e6e6;
 	width: 100%;
+	border: solid 2px red;
 }
 .projectHeroIMG{
 	position: relative;
@@ -6853,6 +6854,7 @@ h2.projectMainContODH{
 	position: relative;
 	padding-top: 40px;
 	padding-bottom: 100px;
+	border: solid 2px red;
 }
 .projectDescriptionCont{
 	position: absolute;
@@ -6868,13 +6870,34 @@ h2.projectMainContODH{
 .projectSnapshotsODH{
 	position: relative;
 }
-.projectSnapshotsIMG{
-	position: absolute;
+.projectSnapshotsODH{
+	position: relative;
 	padding: 20px;
+	border: solid 2px red;
 }
 .statusLineSizeODH{
 	border-width: 3px;
 }
+/***grid content***/
+.gridContWrapperCont{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+.gridDescriptionProjODH{
+	grid-column: 1;
+	grid-row: 1/2;
+}
+.gridProjStatODH{
+	grid-column: 2;
+	grid-row: 1/2;
+}
+.gridSnapshotsODH{
+	grid-column: 2/3;
+	grid-row: 3;
+}
+
 /*END of Project Styles*/
 /* END OF SUBMENUS */
 

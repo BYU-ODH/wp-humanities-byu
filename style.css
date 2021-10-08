@@ -6824,53 +6824,80 @@ h3.odhFirstTitle{
 /*********/
 /*styles for the custom projects page*/
 /*********/
-.single-projects #content {
-    margin-top: 4rem;
-}
 .projectMainContODH{
 	position: relative;
 	width: 100%;
-	height: 700px;
 }
 h2.projectMainContODH{
 	text-align: center;
 }
 .projectHeroODH{
 	position: relative;
-	background-color: #e6e6e6;
 	width: 100%;
+	height: 300px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .projectHeroIMG{
 	position: relative;
-	width: 400px;
-	padding: 10px;
-}
-.projectMidContODH{
-	position: relative;
-	padding-top: 40px;
-	padding-bottom: 100px;
-}
-.projectDescriptionCont{
-	position: absolute;
-	width: 500px;
-}
-.projectDetailsCont{
-	position: absolute;
-	left: 60%;
+	flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 .projectPersonnel{
 	position: relative;
 }
-.projectSnapshotsODH{
-	position: relative;
-}
-.projectSnapshotsIMG{
-	position: absolute;
-	padding: 20px;
-}
 .statusLineSizeODH{
 	border-width: 3px;
 }
+.listDetailsStyle{
+	list-style-type:none
+}
+/***grid content***/
+.gridContWrapperCont{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	grid-auto-rows: minmax(100px, auto);
+	position: relative;
+	padding-top: 100px;
+}
+.gridDescriptionProjODH{
+	grid-column: 1;
+	grid-row: 1/4;
+	position: relative;
+	background-color: #e6e6e6;
+	padding: 40px;
+	left: 15%;
+}
+.gridDescriptionTitle{
+	text-align: center;
+}
+.gridProjStatODH{
+	grid-column: 2;
+	grid-row: 1/4;
+	position: relative;
+	padding-left: 18%;
+}
+.projectODHStyle{
+	font-weight:bolder;
+	font-size: larger;
+}
+.listStyleODH{
+	padding: 5px;
+}
+.gridSnapshotsODH{
+	grid-column: 1/3;
+	grid-row: 4; 
+	position: relative;
+	padding-top: 50px;
+}
+.gallery figure img {
+	border-radius: 0px;
+}
+
 /*END of Project Styles*/
 /* END OF SUBMENUS */
 

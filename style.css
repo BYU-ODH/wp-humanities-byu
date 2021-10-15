@@ -6881,10 +6881,6 @@ h2.projectMainContODH{
 	position: relative;
 	padding-left: 18%;
 }
-.projectODHStyle{
-	font-weight:bolder;
-	font-size: larger;
-}
 .listStyleODH{
 	padding: 5px;
 }
@@ -6897,7 +6893,10 @@ h2.projectMainContODH{
 .gallery figure img {
 	border-radius: 0px;
 }
-
+span.archivedStatus{
+	padding-left: 3px;
+	margin: 3px;
+}
 /*END of Project Styles*/
 /* END OF SUBMENUS */
 

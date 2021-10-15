@@ -1583,7 +1583,7 @@ h1.entry-title {
 }
 
 .entry-title.singular-title {
-	margin-top: 4rem;
+	padding-top: .5em;
 }
 
 .entry-title a {
@@ -6709,7 +6709,7 @@ aside#colophon .fa-youtube {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
-    padding: 1vh 0;
+    padding: 60px 0;
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -6820,6 +6820,7 @@ h3.odhFirstTitle{
 /*********/
 /*End of grid styles*/
 /********/
+
 /*********/
 /*styles for the custom projects page*/
 /*********/
@@ -6880,10 +6881,6 @@ h2.projectMainContODH{
 	position: relative;
 	padding-left: 18%;
 }
-.projectODHStyle{
-	font-weight:bolder;
-	font-size: larger;
-}
 .listStyleODH{
 	padding: 5px;
 }
@@ -6896,23 +6893,22 @@ h2.projectMainContODH{
 .gallery figure img {
 	border-radius: 0px;
 }
-.entry-title.singular-title.single-projects{
-	margin-top: 15vh;
-}
-@media only screen  and (max-width: 360px){
-	.entry-title.singular-title {
-		margin-top: 0rem;
-	}
+span.archivedStatus{
+	padding-left: 3px;
+	margin: 3px;
 }
 /*END of Project Styles*/
 /* END OF SUBMENUS */
+
 /*Here to set the default image for profiles*/
 .defaultIMG{
 	background-image: url("resources/images/default_logo-hum.png");
   background-repeat:no-repeat;
 	background-size: 100% 100%;
 }
+
 /* style for links */
+
 .menu-odhmain-container a {
 	text-decoration: none;
 }

@@ -6898,6 +6898,14 @@ span.archivedStatus{
 	margin: 3px;
 }
 /*END of Project Styles*/
+/*project legend*/
+.projectLegend{
+	position: relative;
+	left: 50%;
+}
+.projectLegendStyle{
+	border-bottom: 5px solid #8f8f8f;
+}
 /* END OF SUBMENUS */
 
 /*Here to set the default image for profiles*/

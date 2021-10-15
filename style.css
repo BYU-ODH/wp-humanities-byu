@@ -1492,7 +1492,6 @@ img#wpstats {
 .entry-content,
 .entry-summary {
 	clear: both;
-	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
@@ -6900,11 +6899,13 @@ span.archivedStatus{
 /*END of Project Styles*/
 /*project legend*/
 .projectLegend{
-	position: relative;
-	left: 50%;
+	position: relative;	
 }
 .projectLegendStyle{
-	border-bottom: 5px solid #8f8f8f;
+	text-align: center;
+}
+.projectLegendStyle span{
+	padding: 2px 3px 2px 3px;
 }
 /* END OF SUBMENUS */
 

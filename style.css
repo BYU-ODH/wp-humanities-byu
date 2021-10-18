@@ -6771,18 +6771,18 @@ h3.odhFirstTitle{
 .entry-content .odhBoxInner a:hover {
 	text-decoration: none;
 }
-.odhBoxDescription{
+.odhBoxDescription+p{
 	color: #141414;
 	display: block;
     display: -webkit-box;
     font-size: 14px;
     line-height: 1.4;
-    height: 58.8; /* line-height * font-size * num-lines */
-    -webkit-line-clamp: 3; /* num-lines */
+	height: 100px; /* line-height * font-size * num-lines */
+	overflow: hidden;
+	-webkit-line-clamp: 3; /* num-lines */
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
 .odhBoxInfo{
     display: flex;

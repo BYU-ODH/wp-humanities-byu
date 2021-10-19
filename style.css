@@ -1492,7 +1492,6 @@ img#wpstats {
 .entry-content,
 .entry-summary {
 	clear: both;
-	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
@@ -6772,18 +6771,18 @@ h3.odhFirstTitle{
 .entry-content .odhBoxInner a:hover {
 	text-decoration: none;
 }
-.odhBoxDescription{
+.odhBoxDescription+p{
 	color: #141414;
 	display: block;
     display: -webkit-box;
     font-size: 14px;
     line-height: 1.4;
-    height: 58.8; /* line-height * font-size * num-lines */
-    -webkit-line-clamp: 3; /* num-lines */
+	height: 100px; /* line-height * font-size * num-lines */
+	overflow: hidden;
+	-webkit-line-clamp: 3; /* num-lines */
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
 .odhBoxInfo{
     display: flex;
@@ -6881,10 +6880,6 @@ h2.projectMainContODH{
 	position: relative;
 	padding-left: 18%;
 }
-.projectODHStyle{
-	font-weight:bolder;
-	font-size: larger;
-}
 .listStyleODH{
 	padding: 5px;
 }
@@ -6897,8 +6892,21 @@ h2.projectMainContODH{
 .gallery figure img {
 	border-radius: 0px;
 }
-
+span.archivedStatus{
+	padding-left: 3px;
+	margin: 3px;
+}
 /*END of Project Styles*/
+/*project legend*/
+.projectLegend{
+	position: relative;	
+}
+.projectLegendStyle{
+	text-align: center;
+}
+.projectLegendStyle span{
+	padding: 2px 3px 2px 3px;
+}
 /* END OF SUBMENUS */
 
 /*Here to set the default image for profiles*/

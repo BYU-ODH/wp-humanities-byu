@@ -723,6 +723,7 @@ a#logo > img {
     font-size: 24px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
+	line-height: 1.1em;
 }
 
 #site-title a span {

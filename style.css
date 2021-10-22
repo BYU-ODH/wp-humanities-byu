@@ -6832,12 +6832,14 @@ h2.projectMainContODH{
 }
 .projectHeroODH{
 	position: relative;
-	width: 100%;
+	width: 90%;
 	height: 300px;
+	left: 6%;
 	display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+	box-shadow: 5px 5px 18px #e6e6e6;
 }
 .projectHeroIMG{
 	position: relative;
@@ -6907,6 +6909,14 @@ span.archivedStatus{
 .projectLegendStyle span{
 	padding: 2px 3px 2px 3px;
 }
+.alignmentStyleODH{
+	position: relative;
+	left: 50px;
+}
+.alignmentStyle1ODH{
+	position: relative;
+	left: 85px;	
+}
 /* END OF SUBMENUS */
 
 /*Here to set the default image for profiles*/
@@ -6920,7 +6930,7 @@ span.archivedStatus{
 
 .menu-odhmain-container a {
 	text-decoration: none;
-}
+} 
 
 .entry-content a {
 	text-decoration: underline;

@@ -6771,15 +6771,19 @@ h3.odhFirstTitle{
 .entry-content .odhBoxInner a:hover {
 	text-decoration: none;
 }
-
-.odhBoxDescription + p {
+.odhBoxDescription+p{
 	color: #141414;
-	display: -webkit-box;
+	display: block;
+    display: -webkit-box;
+    font-size: 14px;
+    line-height: 1.4;
+	height: 100px; /* line-height * font-size * num-lines */
 	overflow: hidden;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; /* num-lines */
+    -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
-
 .odhBoxInfo{
     display: flex;
     align-self: flex-end;
@@ -6835,7 +6839,7 @@ h2.projectMainContODH{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-	box-shadow: 2px 2px 5px #e6e6e6;
+	box-shadow: 5px 5px 18px #e6e6e6;
 }
 .projectHeroIMG{
 	position: relative;
@@ -6887,8 +6891,19 @@ h2.projectMainContODH{
 	position: relative;
 	padding-top: 50px;
 }
-.gallery figure img {
-	border-radius: 0px;
+.object-fit_contain { 
+	object-fit: contain 
+}
+.singleSnapshot img { 
+	height: 150px; background-color: #E6E6E6;
+}
+.singleSnapshot img[class] { 
+  width: 100%;
+}
+.singleSnapshot {
+  float: left;
+  width: 20%;
+  margin: 0 30px 20px 0;
 }
 span.archivedStatus{
 	padding-left: 3px;
@@ -6913,8 +6928,9 @@ span.archivedStatus{
 	position: relative;
 	left: 85px;	
 }
-.single-projects h1.entry-title.singular-title{
-	margin-top: 5rem;
+.alignmentStyle2ODH{
+	position: absolute;
+	left: 157px;
 }
 /* END OF SUBMENUS */
 
@@ -6950,5 +6966,16 @@ span.archivedStatus{
 	text-decoration: underline;
 	color:#002E5D;
 }
+
+/* style for individual 'person' pages */
+
+.individual-person {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+	.individual-person { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
 
 /* FIN! */

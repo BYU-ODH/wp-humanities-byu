@@ -6839,7 +6839,7 @@ h2.projectMainContODH{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-	box-shadow: 2px 2px 5px #e6e6e6;
+	box-shadow: 5px 5px 18px #e6e6e6;
 }
 .projectHeroIMG{
 	position: relative;
@@ -6894,6 +6894,20 @@ h2.projectMainContODH{
 .gallery figure img {
 	border-radius: 0px;
 }
+.gallery-icon figure img{ 
+	object-fit: cover;
+ }
+.single-projects .gallery-icon img{
+	height: 200px;
+	background-color: #444;
+	/*FFFDFF*/
+}
+.single-projects .gallery-icon img[class]{
+	width: 100%;
+}
+.gallery-icon{
+	margin: 0 30px 20px 0;
+}
 span.archivedStatus{
 	padding-left: 3px;
 	margin: 3px;
@@ -6917,8 +6931,9 @@ span.archivedStatus{
 	position: relative;
 	left: 85px;	
 }
-.single-projects h1.entry-title.singular-title{
-	margin-top: 5rem;
+.alignmentStyle2ODH{
+	position: absolute;
+	left: 157px;
 }
 /* END OF SUBMENUS */
 
@@ -6954,5 +6969,16 @@ span.archivedStatus{
 	text-decoration: underline;
 	color:#002E5D;
 }
+
+/* style for individual 'person' pages */
+
+.individual-person {
+	display: grid;
+	grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+	.individual-person { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
 
 /* FIN! */

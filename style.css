@@ -6890,12 +6890,13 @@ h2.projectMainContODH{
 	grid-row: 4; 
 	position: relative;
 	padding-top: 50px;
+	padding-left: 25%;
 }
 .object-fit_contain { 
 	object-fit: contain 
 }
 .singleSnapshot img { 
-	height: 150px; background-color: #E6E6E6;
+	height: 250px; background-color: #E6E6E6;
 }
 .singleSnapshot img[class] { 
   width: 100%;

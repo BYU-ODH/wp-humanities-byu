@@ -6771,15 +6771,19 @@ h3.odhFirstTitle{
 .entry-content .odhBoxInner a:hover {
 	text-decoration: none;
 }
-
-.odhBoxDescription + p {
+.odhBoxDescription+p{
 	color: #141414;
-	display: -webkit-box;
+	display: block;
+    display: -webkit-box;
+    font-size: 14px;
+    line-height: 1.4;
+	height: 100px; /* line-height * font-size * num-lines */
 	overflow: hidden;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; /* num-lines */
+    -webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
-
 .odhBoxInfo{
     display: flex;
     align-self: flex-end;
@@ -6898,8 +6902,9 @@ h2.projectMainContODH{
 	padding-left: 25%;
 }
 .object-fit_contain { 
-	object-fit: contain 
+	object-fit: contain; 
 }
+
 .singleSnapshot img { 
 	height: 250px; background-color: #E6E6E6;
 }

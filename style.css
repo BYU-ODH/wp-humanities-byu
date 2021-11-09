@@ -6901,7 +6901,7 @@ h2.projectMainContODH{
 	object-fit: contain 
 }
 .singleSnapshot img { 
-	height: 250px; background-color: #E6E6E6;
+	height: 10vh; background-color: #E6E6E6;
 }
 .singleSnapshot img[class] { 
   width: 100%;
@@ -6914,6 +6914,10 @@ h2.projectMainContODH{
 span.archivedStatus{
 	padding-left: 3px;
 	margin: 3px;
+}
+/*mobile project styles*/
+@media only screen  and (max-width: 425px){
+    
 }
 /*END of Project Styles*/
 /*project legend*/

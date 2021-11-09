@@ -17,93 +17,11 @@ function qualified_post($terms, $dept) {
   return false;  
 }
 
-function make_list($people,$dept) {
-  $deptmap=array();
-  $colormap=array();
-  $block="<div class='directory'>";
-  
-  $block.="<ul class='directory-list filterable'>";
-
-  foreach($people as $post) {
-    if ($dept=="all" || qualified_post(wp_get_post_terms($post['ID'], 'persondepartments'), $dept))
-    {
-      if (in_array($post['status'],array("full","part","emeritus","staff","visiting"))) {
-        $imageArr = wp_get_attachment_image_src(get_post_thumbnail_id($post['ID']), 'medium');
-        $image_alt = get_post_meta(get_post_thumbnail_id($post['ID']), '_wp_attachment_image_alt', TRUE);
-        if (empty($image_alt)) {
-          $image_alt = get_the_title($post['ID']);
-        }
-        $image = $imageArr[0];
-        $permalink=get_permalink($post['ID']);
-        $color=$colormap[$deptID];
-
-        $directory_entry_classes=array("filterable-item", "department-".$post['department'], "status-".$post['status']);
-        if ($post['affiliated_faculty']) {
-          array_push($directory_entry_classes, "affiliated-".$post['affiliated_department'], "status-affiliated"); 
-        }
-	      $classes=implode(" ", $directory_entry_classes);
-
-        $block.="<li class='$classes'>";
-
-        if($image) { $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-        <a href=\"$permalink\">
-          <img src='$image' class='directory-portrait' alt='$image_alt' title='$image_alt'>
-        </a>
-        </div>"; }
-          else{   /*else statement to add default image to faculty department page*/ 
-            $block.="<div style='border-color: $color;' class='image-container defaultIMG'>
-        </div>";
-          }
-        $block.="<div class=\"content\">";
-	      $block.="<a href=\"$permalink\"><h4>".$post['post_title']."</h4></a>";
-        if (!empty($post['phone'])) {
-          $phone = $post['phone'];
-          $block.= format_phone_block($phone);
-        }
-
-        if (!empty($post['address'])) {
-          $block.="<div class=\"link address\"><span>".$post['address']."</span></div>";	
-        }
-        if (!empty($post['email'])) {
-          $block.="<div class=\"link email\"><span><a href='mailto:" . $post['email'] . "'>".$post['email']."</a></span></div>";
-        }
-        
-        $block.="</div>"; 
-	      $block.="</li>";
-      }
-    }
-  } //end foreach
-  $block.="</ul>";
-  $block.="</div>";
-  return $block;
-}
 
 function directory_list($atts) {
-  global $wpdb;
-  $attrs = shortcode_atts( array(
-    'dept' => 'all'
-  ), $atts );
-  $querystr = "SELECT $wpdb->posts.ID, $wpdb->posts.post_title, $wpdb->postmeta.meta_key, $wpdb->postmeta.meta_value FROM $wpdb->posts, 
-$wpdb->postmeta WHERE $wpdb->posts.ID = $wpdb->postmeta.post_id AND $wpdb->postmeta.meta_key 
-IN ('email','phone','address','status','affiliated_faculty','affiliated_department') AND $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_type = 'person'";
-  $personposts = $wpdb->get_results($querystr, OBJECT);
-  $faclist=array();
-  $faculty=array();
-  foreach ($personposts as $meta) {
-    if (!array_key_exists($meta->ID,$faculty)) {
-      $faculty[$meta->ID]=array('post_title'=>$meta->post_title,'ID'=>$meta->ID);
-    }
-    $faculty[$meta->ID][$meta->meta_key]=$meta->meta_value;
-  }
-  foreach ($faculty as $id=>$meta) {
-    array_push($faclist,$meta);
-  }
-  usort($faclist, function($a, $b) {
-      $nameparts = explode(" ", trim($a['post_title']));
-      $potential = explode(" ", trim($b['post_title']));
-      return end($nameparts) < end($potential) ? -1 : 1;
-  });
-  return make_list($faclist,$attrs['dept']);
+return "<div id=\"odh-directory\">Loading Directory</div>";
+
+
   
 }
 

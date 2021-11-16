@@ -51,7 +51,6 @@ function byuh_scripts_styles() {
     wp_enqueue_script('byuh-script', get_template_directory_uri() . '/resources/js/script.js', array('jquery'));
     wp_enqueue_script('byuh-filters', get_template_directory_uri() . '/resources/js/filters.js', array('jquery'));
 
-
     //jQuery
     wp_enqueue_script('jquery');
 

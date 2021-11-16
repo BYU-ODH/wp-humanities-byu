@@ -6628,6 +6628,11 @@ aside#colophon .fa-youtube {
 .odhBoxInner p {
 	color: #141414;
 }
+
+.entry-content .odhBoxInner a {
+	text-decoration: none;
+}
+
 h3.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
@@ -6906,6 +6911,15 @@ span.archivedStatus{
     .single.single-person .cryout#content {
         margin-top: 10em;
     }
+}
+
+/*Styling for page titles*/
+#content > h1 {
+	top: 2em;
+	position: relative;
+	text-align: center;
+	margin: 1.25em 0 3.75em;
+	color: #002e5d;
 }
 
 /* FIN! */

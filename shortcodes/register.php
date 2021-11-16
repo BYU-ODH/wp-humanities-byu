@@ -19,6 +19,7 @@ function qualified_post($terms, $dept) {
 
 
 function directory_list($atts) {
+  wp_enqueue_script('byuh-directory', get_template_directory_uri() . '/resources/js/directory.js', array('jquery'));
 return "<div id=\"odh-directory\">Loading Directory</div>";
 
 

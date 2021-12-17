@@ -6725,6 +6725,7 @@ h2.projectMainContODH{
 }
 .statusLineSizeODH{
 	border-width: 3px;
+	padding: 2px;
 }
 .listDetailsStyle{
 	list-style-type:none

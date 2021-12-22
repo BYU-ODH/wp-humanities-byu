@@ -6739,6 +6739,28 @@ h2.projectMainContODH{
 	position: relative;
 	padding-top: 100px;
 }
+.innerProjectGrid{
+	display: grid;
+  	grid-template-columns: 1fr;
+	grid-gap: 5px;
+	width: 90%;
+}
+.projectGridRow{
+	display: grid;
+	grid-template-columns: 1fr, 1fr;
+	display: inline-block;
+}
+.projectGridRow div {
+	display: inline-block;
+}
+.projectGridRow > div{
+	width: 45%;
+	padding: 3px;
+	vertical-align: top;
+}
+.projectGridRow:nth-child(even){
+	background-color: #F6F6F8;
+}
 .gridDescriptionProjODH{
 	grid-column: 1;
 	grid-row: 1/4;
@@ -6766,6 +6788,7 @@ h2.projectMainContODH{
 	padding-top: 50px;
 	padding-left: 10%;
 }
+
 .object-fit_contain { 
 	object-fit: contain; 
 }
@@ -6798,7 +6821,7 @@ span.archivedStatus{
 	left: 150px;
 }
 /*mobile project styles*/
-@media only screen  and (max-width: 426px){
+@media only screen  and (max-width: 600px){
 	.gridContWrapperCont{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);

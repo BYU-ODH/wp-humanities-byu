@@ -6739,6 +6739,33 @@ h2.projectMainContODH{
 	position: relative;
 	padding-top: 100px;
 }
+.innerProjectGrid{
+	display: grid;
+  	grid-template-columns: 1fr;
+	grid-gap: 5px;
+	width: 90%;
+}
+.projectGridRow{
+	display: grid;
+	grid-template-columns: 1fr, 1fr;
+	display: inline-block;
+}
+.projectGridRow div {
+	display: inline-block;
+}
+.projectGridRow > div{
+	width: 40%;
+	padding: 3px;
+	vertical-align: top;
+}
+.projectGridRow:nth-child(even){
+	background-color: #F6F6F8;
+}
+.rightInner{
+	padding: 5px;
+	border: solid 2px yellow;
+	padding-right: 250px;
+}
 .gridDescriptionProjODH{
 	grid-column: 1;
 	grid-row: 1/4;
@@ -6766,6 +6793,7 @@ h2.projectMainContODH{
 	padding-top: 50px;
 	padding-left: 10%;
 }
+
 .object-fit_contain { 
 	object-fit: contain; 
 }

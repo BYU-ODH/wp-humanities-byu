@@ -6754,17 +6754,12 @@ h2.projectMainContODH{
 	display: inline-block;
 }
 .projectGridRow > div{
-	width: 40%;
+	width: 45%;
 	padding: 3px;
 	vertical-align: top;
 }
 .projectGridRow:nth-child(even){
 	background-color: #F6F6F8;
-}
-.rightInner{
-	padding: 5px;
-	border: solid 2px yellow;
-	padding-right: 250px;
 }
 .gridDescriptionProjODH{
 	grid-column: 1;
@@ -6826,7 +6821,7 @@ span.archivedStatus{
 	left: 150px;
 }
 /*mobile project styles*/
-@media only screen  and (max-width: 426px){
+@media only screen  and (max-width: 600px){
 	.gridContWrapperCont{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);

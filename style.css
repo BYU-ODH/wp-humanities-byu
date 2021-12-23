@@ -6601,7 +6601,6 @@ aside#colophon .fa-youtube {
     flex-direction: column;
     background-color: white;
     box-shadow: 8px 12px 18px #969595c2;
-    cursor: pointer;
 }
 .odhBoxSingleCard:hover{
     background-color:rgba(0, 0, 0, .05);
@@ -6618,6 +6617,7 @@ aside#colophon .fa-youtube {
     top: 50%;
     left: 50%; /*helps position images with diff ratio size*/
     transform: translate(-50%, -50%);
+	cursor: pointer;
 }
 .odhBoxInner{
     padding: 20px;
@@ -6636,6 +6636,7 @@ aside#colophon .fa-youtube {
 h3.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
+	cursor: pointer;
 }
 .entry-content .odhBoxTitle{
     color: #141414;

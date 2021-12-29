@@ -6657,6 +6657,18 @@ h3.odhFirstTitle{
 	text-overflow: ellipsis;
 	max-width: 100%;
 }
+.projectTag{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding: 5px;
+	top: 0px;
+	color: #2CB3CF;
+	text-decoration: none;
+}
+.projectTagLink:hover{
+	color: #0D64B5;
+}
 .odhBoxInfo{
     display: flex;
     align-self: flex-end;

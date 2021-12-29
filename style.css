@@ -2162,7 +2162,6 @@ body .main .wp-caption > a {
 	font-size: 1.1em;
 }
 
-
 /* Blog, Archive Pages Previous/Next Posts Pagination */
 #nav-old-below {
 	display: block;
@@ -6656,6 +6655,17 @@ h3.odhFirstTitle{
     -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 	max-width: 100%;
+}
+.projectTag{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	padding-top: 5vh;
+	color: #0D64B5;
+}
+.projectTag:hover{
+	color: #032F5C;
+	text-decoration: underline;
 }
 .odhBoxInfo{
     display: flex;

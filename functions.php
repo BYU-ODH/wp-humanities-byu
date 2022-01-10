@@ -300,5 +300,53 @@ $loop = new WP_Query(
 );
 
 
+function activate_personresearch_taxo() {
+    create_personresearch_tax();
+    flush_rewrite_rules();
+  }
+  
+function create_personresearch_tax() {
+    register_taxonomy(
+        'personresearch',
+        'person',
+        array(
+            'labels' => array(
+                'name'  => __( 'Research', 'taxonomy general name' ),
+                'singular_name'		=> __( 'Research', 'taxonomy singular name' ),
+                'search_items'		=> __( 'Search Research' ),
+                'all_items'		=> __( 'All Research' ),
+                'parent_item'		=> __( 'Parent Research' ),
+                'parent_item_colon'	=> __( 'Parent Research:' ),
+                'edit_item'		=> __( 'Edit Research' ),
+                'update_item'		=> __( 'Update Research' ),
+                'add_new_item'		=> __( 'Add New Research' ),
+                'new_item_name'		=> __( 'New Research Name' ),
+                'menu_name'		=> __( 'Research' ),
+                'separate_items_with_commas' => __( 'Separate research areas with commas' ),
+                'add_or_remove_items' => __( 'Add or remove research area' ),
+                'choose_from_most_used' => __( 'Choose from the most used research areas' ),
+            ),
+            'capabilities' => array(
+                'manage_terms' => 'manage_presearch',
+                'edit_terms' => 'edit_presearch',
+                'assign_terms' => 'assign_presearch'
+            ),
+            'hierarchical' => true,
+            'show_admin_column' => true,
+            'rewrite' => true,
+            'query_var' => true,
+      'show_in_rest' => true
+        )
+    );
+  }
+  
+function byuh_init () {
+    /* Disable for production reboot */
+    activate_personresearch_taxo();
+    register_activation_hook( __FILE__, 'activate_personresearch_taxo' );
+   
+}
+add_action('init', 'byuh_init');
+
 
 // FIN

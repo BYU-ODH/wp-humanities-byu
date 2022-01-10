@@ -13,6 +13,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="icon" type="image/x-icon" href="https://humstaging.byu.edu/odh/wp-content/uploads/humanitiesLogo.png">
+<link rel="shortcut icon" type="image/x-icon" href="https://humstaging.byu.edu/odh/wp-content/uploads/humanitiesLogo.png">
 <?php
 	cryout_header_hook();
 	wp_head();

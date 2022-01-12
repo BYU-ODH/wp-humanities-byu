@@ -348,11 +348,4 @@ function byuh_init () {
 }
 add_action('init', 'byuh_init');
 
-//favicon function
-function add_favicon() {
-	echo '<link rel="shortcut icon" type="image/x-icon" href="https://humstaging.byu.edu/odh/wp-content/uploads/humanitiesLogo.png" />';
-}
-
-add_action('wp_head', 'add_favicon');
-
 // FIN

@@ -245,6 +245,45 @@ function byu_logo() {
     );
     return $html;   
 }
+// Custom Research Tags/Taxomonies //
+
+add_action( 'init', 'create_research_nonhierarchical_taxonomy', 0 );
+ 
+function create_research() {
+ 
+// Labels part for the GUI
+ 
+  $labels = array(
+    'name' => _x( 'Research', 'taxonomy general name' ),
+    'singular_name' => _x( 'Research', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Research' ),
+    'popular_items' => __( 'Popular Research' ),
+    'all_items' => __( 'All Research' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Research' ), 
+    'update_item' => __( 'Update Research' ),
+    'add_new_item' => __( 'Add New Research Item' ),
+    'new_item_name' => __( 'New Research Name' ),
+    'separate_items_with_commas' => __( 'Separate research with commas' ),
+    'add_or_remove_items' => __( 'Add or remove research' ),
+    'choose_from_most_used' => __( 'Choose from the most used research' ),
+    'menu_name' => __( 'Research' ),
+  ); 
+ 
+// Now register the non-hierarchical taxonomy like tag
+ 
+  register_taxonomy('research','research categories',array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'research' ),
+  ));
+}
 
 //code to set the default number of posts per page
 

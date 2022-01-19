@@ -47,7 +47,10 @@ get_header(); ?>
 					get_template_part( 'content/content', get_post_format() );
 					endwhile;
 					?>
-				</div><!--content-masonry-->
+				</div>
+				<?php the_terms( $post->ID, 'research', 'Research: ', ', ', ' ' ); ?>
+
+				<!--content-masonry-->
 				<?php septera_pagination();
 
 			// If no content, include the "No posts found" template.

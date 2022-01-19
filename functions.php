@@ -247,7 +247,7 @@ function byu_logo() {
 }
 // Custom Research Tags/Taxomonies //
 
-add_action( 'init', 'create_research_nonhierarchical_taxonomy', 0 );
+add_action( 'init', 'create_research', 0 );
  
 function create_research() {
  

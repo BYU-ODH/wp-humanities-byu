@@ -6,6 +6,8 @@
  *
  * @package Septera
  */
+$favicon = get_template_directory_uri() . '/resources/images/humanitiesLogo.png';
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -13,6 +15,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="icon" type="image/x-icon" href="<?php echo $favicon ?>">
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon ?>">
 <?php
 	cryout_header_hook();
 	wp_head();

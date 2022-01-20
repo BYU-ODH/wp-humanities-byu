@@ -273,7 +273,7 @@ function create_research() {
  
 // Now register the non-hierarchical taxonomy like tag
  
-  register_taxonomy('research','research categories',array(
+  register_taxonomy('research','person',array(
     'hierarchical' => false,
     'labels' => $labels,
     'show_ui' => true,

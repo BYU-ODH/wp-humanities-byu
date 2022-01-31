@@ -1494,11 +1494,11 @@ img#wpstats {
 h1.entry-title {
 	text-align:center;
 	font-weight: 700;
-	line-height: 1.3;
+	/*line-height: 1.3;*/
 }
 
 .entry-title.singular-title {
-	padding-top: .5em;
+	padding-top: 2em;
 }
 
 .entry-title a {

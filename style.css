@@ -723,6 +723,7 @@ a#logo > img {
     font-size: 24px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
+	line-height: 1.1em;
 }
 
 #site-title a span {
@@ -1113,66 +1114,6 @@ nav#mobile-menu ul li {
   	line-height: 1;
 }
 
-.dropdown-toggle {
-	display: inline-block;
-	position: relative;
-	float: right;
-	margin-right: -1em;
-	border: 0;
-	padding: .5em 1em;
-	cursor: pointer;
-	font-size: 1em;
-	color: inherit;
-	background: transparent;
-	-webkit-transform: rotateX(0);
-	-ms-transform: rotateX(0);
-	transform: rotateX(0);
-	-webkit-transition: .6s all ease-in-out;
-	transition: .6s all ease-in-out;
-}
-
-.dropdown-toggle:hover {
-	background: transparent;
-}
-
-.toggle-on.dropdown-toggle {
-	-webkit-transform: rotateX(-180deg);
-	-ms-transform: rotateX(-180deg);
-	transform: rotateX(-180deg);
-}
-
-a.toggled-on {
-	border-bottom: 3px solid;
-}
-
-.dropdown-toggle::after {
-	font-family: "iconmeta";
-    content: '\f0a3';
-	font-size: 1.3em;
-	line-height: 2;
-}
-
-nav#mobile-menu .sub-menu,
-nav#mobile-menu .children {
-	display: none;
-	opacity: 0;
-	max-height: 0;
-	margin: 0 auto;
-	padding-left: 10px;
-	font-size: .95em;
-	-webkit-transition: .5s max-height ease-in-out, .3s opacity ease-in-out, .3s padding ease;
-	transition: .5s max-height ease-in-out, .3s opacity ease-in-out, .3s padding ease;
-}
-
-nav#mobile-menu .sub-menu.toggled-on,
-nav#mobile-menu .children.toggled-on {
-	display: block;
-	opacity: 1;
-	max-height: 1000px;
-	-webkit-transition: 1s max-height ease-in-out, .3s .3s opacity ease-in-out, .3s .3s padding ease;
-	transition: 1s max-height ease-in-out, .3s .3s opacity ease-in-out, .3s .3s padding ease;
-}
-
 nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
@@ -1219,6 +1160,14 @@ nav#mobile-menu #smobile {
 	text-align: center;
 }
 
+#mobile-menu .searchform input[type="search"] {
+	height: 3em;
+}
+
+#mobile-menu .searchform .searchsubmit {
+	right: .5em;
+	height: 3em;
+}
 
 /*--------------------------------------------------------------
 	# FOOTER
@@ -1275,39 +1224,6 @@ nav#mobile-menu #smobile {
 img#wpstats {
 	display: block;
 	margin: 0 auto .5em;
-}
-
-/*--------------------------------------------------------------
-	## FOOTER MENU
---------------------------------------------------------------*/
-.footermenu {
-	display: block;
-	float: left;
-}
-
-
-.footermenu ul li {
-	display: block;
-	float: left;
-	white-space: nowrap;
-	-webkit-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-}
-
-.footermenu ul li span.sep {
-	margin: 0 .5em;
-	font-weight: bold;
-	visibility: hidden;
-}
-
-.footermenu ul li:last-child span.sep {
-	display: none;
-}
-
-.footermenu ul li a {
-	font-size: .9em;
-	font-weight: bold;
-	text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -1492,7 +1408,6 @@ img#wpstats {
 .entry-content,
 .entry-summary {
 	clear: both;
-	padding-top: 1em;
 	padding-bottom: 1em;
 }
 
@@ -1579,11 +1494,11 @@ img#wpstats {
 h1.entry-title {
 	text-align:center;
 	font-weight: 700;
-	line-height: 1.3;
+	/*line-height: 1.3;*/
 }
 
 .entry-title.singular-title {
-	padding-top: .5em;
+	padding-top: 2em;
 }
 
 .entry-title a {
@@ -2245,8 +2160,13 @@ body .main .wp-caption > a {
 #nav-below .nav-next a  {
 	clear: both;
 	font-size: 1.1em;
+	text-decoration: none;
+	color: 	#0D64B5;
 }
-
+#nav-below .nav-previous a:hover,
+#nav-below .nav-next a:hover  {
+	text-decoration: underline;
+}
 
 /* Blog, Archive Pages Previous/Next Posts Pagination */
 #nav-old-below {
@@ -4754,7 +4674,6 @@ ul.cryout-wposts li:last-child {
 	padding: 0;
 }
 
-/* ## SIDEBAR SEARCH */
 .searchform input[type="search"] {
 	display: block;
 	float: left;
@@ -4762,22 +4681,13 @@ ul.cryout-wposts li:last-child {
 	z-index: 7;
 	height: 3.5em;
 	width: 100%;
-	padding: 0 3.5em 0 1em;
+	padding: 0 2em 0 .5em;
 	font-size: 1em;
 	font-weight: bold;
 	background: transparent;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
 	padding-bottom: 1em;
-}
-
-.searchform:hover input[type="search"],
-.searchform input[type="search"]:focus {
-	background: transparent;
-}
-
-.sidey .widget_search {
-	padding: 0;
 }
 
 .searchform .searchsubmit {
@@ -4807,7 +4717,6 @@ ul.cryout-wposts li:last-child {
 	transform: scale(.8);
 }
 
-/* ## HEADER SEARCHFORM */
 #access {
 	text-align: center;
 }
@@ -4823,34 +4732,6 @@ ul.cryout-wposts li:last-child {
     height: 2.3rem;
     border-radius: 2rem;
     margin-top: 1rem;
-}
-
-/* ## FOOTER MENU SEARCHFORM */
-li.menu-footer-search {
-	max-width: 10em;
-}
-
-li.menu-footer-search .searchform {
-	border: 0;
-	background: rgba(0,0,0,.1);
-}
-
-li.menu-footer-search .s {
-	border: 0;
-	height: 2em;
-}
-
-li.menu-footer-search .searchform .searchsubmit {
-	height: 2em;
-	width: 2em;
-	-webkit-transform: scale(.8);
-	-ms-transform: scale(.8);
-	transform: scale(.8);
-}
-
-.widget_rss .widget-title img {
-	width: 11px;
-	height: 11px;
 }
 
 /*--------------------------------------------------------------
@@ -4880,10 +4761,6 @@ li.menu-footer-search .searchform .searchsubmit {
 	transition: color .2s ease-out;
 }
 
-.socials a:hover::before {
-
-}
-
 /* ## HEADER SOCIALS */
 #sheader {
 	float: right;
@@ -4910,7 +4787,6 @@ li.menu-footer-search .searchform .searchsubmit {
 	float: right;
 	clear: right;
 }
-
 
 /*--------------------------------------------------------------
 	# MISCELLANEOUS
@@ -6372,10 +6248,6 @@ nav#humanities-menu li:hover {
 	border-bottom: 3px solid #002E5D
 }
 
-nav#humanities-menu li.current-menu-item {
-	border-bottom: 3px solid #002E5D
-}
-
 nav#humanities-menu a {
 	color: #002E5D;
 }
@@ -6503,6 +6375,7 @@ aside#colophon a {
 
 aside#colophon a:hover {
 	color: #C5C5C5;
+	text-decoration: underline;
 }
 
 
@@ -6734,10 +6607,12 @@ aside#colophon .fa-youtube {
     flex-direction: column;
     background-color: white;
     box-shadow: 8px 12px 18px #969595c2;
-    cursor: pointer;
 }
 .odhBoxSingleCard:hover{
     background-color:rgba(0, 0, 0, .05);
+}
+.odhBoxSingleCard:hover .projects{
+	text-decoration: underline;
 }
 .odhCardImgContainer{ /*styles for cards with images*/
     width: 100%;
@@ -6751,6 +6626,7 @@ aside#colophon .fa-youtube {
     top: 50%;
     left: 50%; /*helps position images with diff ratio size*/
     transform: translate(-50%, -50%);
+	cursor: pointer;
 }
 .odhBoxInner{
     padding: 20px;
@@ -6761,9 +6637,13 @@ aside#colophon .fa-youtube {
 .odhBoxInner p {
 	color: #141414;
 }
+.entry-content .odhBoxInner a {
+	text-decoration: none;
+}
 h3.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
+	cursor: pointer;
 }
 .entry-content .odhBoxTitle{
     color: #141414;
@@ -6772,18 +6652,21 @@ h3.odhFirstTitle{
 .entry-content .odhBoxInner a:hover {
 	text-decoration: none;
 }
-.odhBoxDescription{
+.projectTag:hover{
+	text-decoration: underline;
+}
+.odhBoxDescription+p{
 	color: #141414;
 	display: block;
     display: -webkit-box;
     font-size: 14px;
     line-height: 1.4;
-    height: 58.8; /* line-height * font-size * num-lines */
-    -webkit-line-clamp: 3; /* num-lines */
+	height: 100px; /* line-height * font-size * num-lines */
+	overflow: hidden;
+	-webkit-line-clamp: 3; /* num-lines */
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+	text-overflow: ellipsis;
+	max-width: 100%;
 }
 .odhBoxInfo{
     display: flex;
@@ -6833,12 +6716,14 @@ h2.projectMainContODH{
 }
 .projectHeroODH{
 	position: relative;
-	width: 100%;
+	width: 90%;
 	height: 300px;
+	left: 6%;
 	display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+	box-shadow: 5px 5px 18px #e6e6e6;
 }
 .projectHeroIMG{
 	position: relative;
@@ -6851,6 +6736,7 @@ h2.projectMainContODH{
 }
 .statusLineSizeODH{
 	border-width: 3px;
+	padding: 2px;
 }
 .listDetailsStyle{
 	list-style-type:none
@@ -6863,6 +6749,28 @@ h2.projectMainContODH{
 	grid-auto-rows: minmax(100px, auto);
 	position: relative;
 	padding-top: 100px;
+}
+.innerProjectGrid{
+	display: grid;
+  	grid-template-columns: 1fr;
+	grid-gap: 5px;
+	width: 90%;
+}
+.projectGridRow{
+	display: grid;
+	grid-template-columns: 1fr, 1fr;
+	display: inline-block;
+}
+.projectGridRow div {
+	display: inline-block;
+}
+.projectGridRow > div{
+	width: 45%;
+	padding: 3px;
+	vertical-align: top;
+}
+.projectGridRow:nth-child(even){
+	background-color: #F6F6F8;
 }
 .gridDescriptionProjODH{
 	grid-column: 1;
@@ -6889,15 +6797,92 @@ h2.projectMainContODH{
 	grid-row: 4; 
 	position: relative;
 	padding-top: 50px;
+	padding-left: 10%;
 }
-.gallery figure img {
-	border-radius: 0px;
+.object-fit_contain { 
+	object-fit: contain; 
 }
+<<<<<<< HEAD
+=======
+
+.singleSnapshot img { 
+	height: 10vh; background-color: #E6E6E6;
+}
+.singleSnapshot img[class] { 
+  width: 100%;
+}
+.singleSnapshot {
+  float: left;
+  width: 20%;
+  margin: 0 30px 20px 0;
+}
+>>>>>>> b151909d53e85872605ea5bbe73fc15ba1cd971b
 span.archivedStatus{
 	padding-left: 3px;
 	margin: 3px;
 }
+<<<<<<< HEAD
+=======
+.alignmentStyleODH{
+	position: relative;
+	left: 50px;
+}
+.alignmentStyle1ODH{
+	position: relative;
+	left: 85px;	
+}
+.alignmentStyle2ODH{
+	position: absolute;
+	left: 150px;
+}
+/*mobile project styles*/
+@media only screen  and (max-width: 600px){
+	.gridContWrapperCont{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 20px;
+		grid-auto-rows: minmax(100px, auto);
+		position: relative;
+		padding-top: 100px;
+	}
+    .gridDescriptionProjODH{
+		grid-column: 1;
+		grid-row: 1/3;
+		position: relative;
+		background-color: #e6e6e6;
+		padding: 40px;
+		left: 0%
+	}
+	.gridDescriptionTitle{
+		text-align: center;
+	}
+	.gridProjStatODH{
+		grid-column: 1;
+		grid-row: 3;
+		position: relative;
+		padding-left: 5%;
+		padding-top: 20px;
+	}	
+	.gridSnapshotsODH{
+		grid-column: 1;
+		grid-row: 4; 
+		position: relative;
+		padding-left: 15%;
+		padding-top: 100px;
+	}
+}
+>>>>>>> b151909d53e85872605ea5bbe73fc15ba1cd971b
 /*END of Project Styles*/
+/*project legend*/
+.projectLegend{
+	position: relative;	
+}
+.projectLegendStyle{
+	text-align: center;
+}
+.projectLegendStyle span{
+	padding: 2px 3px 2px 3px;
+}
 /* END OF SUBMENUS */
 
 /*Here to set the default image for profiles*/
@@ -6911,10 +6896,10 @@ span.archivedStatus{
 
 .menu-odhmain-container a {
 	text-decoration: none;
-}
+} 
 
 .entry-content a {
-	text-decoration: underline;
+	text-decoration: none;
 	color:#0057b8;
 }
 
@@ -6924,13 +6909,57 @@ span.archivedStatus{
 }
 
 .text-content a {
-	text-decoration: underline;
+	text-decoration: none;
 	color:#0057b8;
 }
 
 .text-content a:hover {
 	text-decoration: underline;
 	color:#002E5D;
+}
+
+/* style for individual 'person' pages */
+
+.single-person .text-content {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.single.single-person .content {
+    max-width: none;
+}
+.single.single-person .image-container {
+    max-width: none;
+}
+
+.single.single-person .image-container img {
+    max-height: 50vh;
+}
+.single.single-person .profile-content .text-content {
+    padding: 1em 2em;
+}
+
+.single.single-person .cryout#content {
+    margin-top: 3em;
+}
+
+@media (min-width: 600px) {
+    .single-person .text-content { 
+        grid-gap: 1em;
+        grid-template-columns: 1fr 3fr;
+    }
+    .single.single-person .cryout#content {
+        margin-top: 10em;
+    }
+}
+
+/*Styling for page titles*/
+#content > h1 {
+	top: 2em;
+	position: relative;
+	text-align: center;
+	margin: 1.25em 0 3.75em;
+	color: #002e5d;
 }
 
 /* FIN! */

@@ -161,8 +161,8 @@ function create_personresearch_tax() {
                 'singular_name'		=> __( 'Research', 'taxonomy singular name' ),
                 'search_items'		=> __( 'Search Research' ),
                 'all_items'		=> __( 'All Research' ),
-                'parent_item'		=> __( 'Parent Research' ),
-                'parent_item_colon'	=> __( 'Parent Research:' ),
+                'parent_item'		=> null,
+                'parent_item_colon'	=> null,
                 'edit_item'		=> __( 'Edit Research' ),
                 'update_item'		=> __( 'Update Research' ),
                 'add_new_item'		=> __( 'Add New Research' ),
@@ -172,12 +172,12 @@ function create_personresearch_tax() {
                 'add_or_remove_items' => __( 'Add or remove research area' ),
                 'choose_from_most_used' => __( 'Choose from the most used research areas' ),
             ),
-            'capabilities' => array(
+            /* 'capabilities' => array(
                 'manage_terms' => 'manage_presearch',
                 'edit_terms' => 'edit_presearch',
                 'assign_terms' => 'assign_presearch'
-            ),
-            'hierarchical' => true,
+            ), */
+            'hierarchical' => false,
             'show_admin_column' => true,
             'rewrite' => true,
             'query_var' => true,

@@ -235,11 +235,15 @@ ul.directory-list.filterable {
 .directory ul.directory-list li .content .link.phone {
     color: #0062B8;
 }
-
+.directory ul.directory-list li .content .link.phone:hover {
+    text-decoration: underline;
+}
 .directory ul.directory-list li .content .link.email {
     color: #0062B8;
 }
-
+.directory ul.directory-list li .content .link.email:hover {
+    text-decoration: underline;
+}
 .directory-list .filterable-item .content h5 {
 	color: #333;
 	font-size: 1rem;

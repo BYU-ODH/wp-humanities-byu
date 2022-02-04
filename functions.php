@@ -247,7 +247,7 @@ function byu_logo() {
 }
 // Custom Specialty Tags/Taxomonies //
 
-add_action( 'init', 'create_specialty', 0 );
+/* add_action( 'init', 'create_specialty', 0 );
  
 function create_specialty() {
  
@@ -283,7 +283,7 @@ function create_specialty() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'specialty' ),
   ));
-}
+} */
 
 //code to set the default number of posts per page
 

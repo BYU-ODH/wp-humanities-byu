@@ -40,7 +40,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		<ul>
 		<?php 
 		// Define our WP Query Parameters
-		$the_query = new WP_Query( array('post_type' => 'post') ); ?>
+		$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
 		
 		<?php 
 		// Start our WP Query
@@ -53,6 +53,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		<li><?php 
 		// Display the Post Excerpt
 		the_excerpt(__('(more…)')); ?></li>
+
+		<?php print_r(the_post());?>
 		
 		<?php 
 		// Repeat the process and reset once it hits the limit
@@ -60,6 +62,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		wp_reset_postdata();
 		?>
 		</ul>	
+		
 	</div>
 </div>
 <!--end of post content-->

@@ -34,6 +34,36 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		<?php if ( ! $septera_landingpage ) { septera_get_sidebar(); } ?>
 	</div><!-- #container -->
 
+<!--Add posts to home page-->
+<div class="homePostContainer">
+	<div class="homePostInner">
+		<ul>
+		<?php 
+		// Define our WP Query Parameters
+		$the_query = new WP_Query( array('post_type' => 'post') ); ?>
+		
+		<?php 
+		// Start our WP Query
+		while ($the_query -> have_posts()) : $the_query -> the_post(); 
+		// Display the Post Title with Hyperlink
+		?>
+		
+		<li><a class="homePagePost" href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+		
+		<li><?php 
+		// Display the Post Excerpt
+		the_excerpt(__('(more…)')); ?></li>
+		
+		<?php 
+		// Repeat the process and reset once it hits the limit
+		endwhile;
+		wp_reset_postdata();
+		?>
+		</ul>	
+	</div>
+</div>
+<!--end of post content-->
+
 	<?php get_footer();
 
 } //else !posts

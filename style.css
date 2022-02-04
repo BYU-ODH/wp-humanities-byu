@@ -6867,6 +6867,19 @@ span.archivedStatus{
 	}
 }
 /*END of Project Styles*/
+/*home page post styles*/
+.homePagePost{
+	color: black;
+}
+.homePostContainer{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 100px;
+}
+.homePostInner{
+	position: relative;
+	width: 50%;
+}
 /*project legend*/
 .projectLegend{
 	position: relative;	

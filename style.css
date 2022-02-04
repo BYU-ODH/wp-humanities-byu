@@ -6802,8 +6802,6 @@ h2.projectMainContODH{
 .object-fit_contain { 
 	object-fit: contain; 
 }
-<<<<<<< HEAD
-=======
 
 .singleSnapshot img { 
 	height: 10vh; background-color: #E6E6E6;
@@ -6816,13 +6814,10 @@ h2.projectMainContODH{
   width: 20%;
   margin: 0 30px 20px 0;
 }
->>>>>>> b151909d53e85872605ea5bbe73fc15ba1cd971b
 span.archivedStatus{
 	padding-left: 3px;
 	margin: 3px;
 }
-<<<<<<< HEAD
-=======
 .alignmentStyleODH{
 	position: relative;
 	left: 50px;
@@ -6871,7 +6866,6 @@ span.archivedStatus{
 		padding-top: 100px;
 	}
 }
->>>>>>> b151909d53e85872605ea5bbe73fc15ba1cd971b
 /*END of Project Styles*/
 /*project legend*/
 .projectLegend{

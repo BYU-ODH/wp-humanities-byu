@@ -189,14 +189,5 @@ function byuh_init () {
 }
 add_action('init', 'byuh_init');
 
-function specialties_redirect() {
-	global $post;
-	$slug = $post -> post_name;
-	$my_sanitized_slug = str_replace("-", "%20", $slug);
-	$my_site = get_site_url();
-	$target_url = $my_site . "/people/?search=" . $my_sanitized_slug;
-}
-add_action( 'template_redirect', 'specialties_redirect' );
-
 /* Person ACF settings */
 // these can be exported from ACF, but they must wait until they are done/correct, as they override dev efforts

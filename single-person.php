@@ -85,7 +85,25 @@ get_header(); ?>
 						
 						?>
 						<!-- End Directory Details -->
-
+						
+						<!-- Research Projects Someone is On -->
+						<h3>Projects</h3>
+						<?php
+						$params = array(
+							'orderby' => 't.post_title ASC',    
+							'limit' => -1,
+							);
+						
+						$mypod = pods( 'projects' , $params);
+					
+						while ( $mypod -> fetch() ) {
+							$id = $mypod -> field('id');
+							$permalink = get_permalink($id);
+							echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+						} 
+						?>
+						<!-- End Research Projects -->
+						
 					<?php if (get_field('schedule')) { ?>
 						<div class="row">
 						<?php foreach (get_field('schedule') as $s) { ?>

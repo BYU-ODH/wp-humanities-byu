@@ -6880,6 +6880,9 @@ span.archivedStatus{
 	position: relative;
 	width: 50%;
 }
+.homePostInner li{
+	list-style-type: none;
+}
 /*project legend*/
 .projectLegend{
 	position: relative;	

@@ -47,14 +47,22 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 		while ($the_query -> have_posts()) : $the_query -> the_post(); 
 		// Display the Post Title with Hyperlink
 		?>
+		<!--<div class="homePagePostSinge"></div>-->
+		<div class="homePostSingle">
+			<!--thumbnail info-->
+			<?php 
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'medium'); 
+			?>
+			<div><img src="<?php $featured_img_url?>"></div>
+			<div class="homePostText">
+				<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+				
+				<li><?php 
+				// Display the Post Excerpt
+				the_excerpt(__('(more…)')); ?></li>
+			</div>
+		</div>
 		
-		<li><a class="homePagePost" href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
-		
-		<li><?php 
-		// Display the Post Excerpt
-		the_excerpt(__('(more…)')); ?></li>
-
-		<?php print_r(the_post());?>
 		
 		<?php 
 		// Repeat the process and reset once it hits the limit

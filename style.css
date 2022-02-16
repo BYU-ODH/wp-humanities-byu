@@ -6874,7 +6874,7 @@ span.archivedStatus{
 .homePostContainer{
 	display: flex;
 	justify-content: center;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 .homePostInner{
 	position: relative;
@@ -6883,6 +6883,42 @@ span.archivedStatus{
 .homePostInner li{
 	list-style-type: none;
 }
+.homePostSingle{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	padding-bottom: 2em;
+	position: relative;
+	height: 40vh;
+	width: 800px;
+}
+.homePostAuthor{
+	font-weight: 600;
+	color: #8F8F8F;
+	padding: 5px 0px 5px 0;
+}
+.homePostLine{
+	margin-bottom: 45px;
+	background-color: #E6E6E6;
+}
+.object-fit_cover{
+	object-fit: cover;
+}
+.homePostIMG{
+	position: absolute;
+	grid-column: 1;
+	width: 25%;
+	margin: 10px 30px 20px 0;
+}
+.homePostIMG img { 
+	height: 25vh; background-color: #E6E6E6;
+}
+.homePostIMG img[class] { 
+  width: 100%;
+}
+.homePostText{
+	grid-column: 2;
+}
+/*End of Home posts */
 /*project legend*/
 .projectLegend{
 	position: relative;	

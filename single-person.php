@@ -102,8 +102,10 @@ get_header(); ?>
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
 							$personnel = $mypod -> field('project_personnel.ID');
+
 							foreach ($personnel as $person) {
 								$link = get_permalink($person);
+								
 								if($link == $currentPageUrl) {
 									echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 								}

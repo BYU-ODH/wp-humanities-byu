@@ -89,6 +89,8 @@ get_header(); ?>
 						<!-- Research Projects Someone is On -->
 						<h3>Projects</h3>
 						<?php
+						$currentPageUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+						
 						$params = array(
 							'orderby' => 't.post_title ASC',    
 							'limit' => -1
@@ -99,8 +101,13 @@ get_header(); ?>
 						while ( $mypod -> fetch() ) {
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
-							echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . $mypod->display('project_personnel') . '</a>' . '</li>';
-							print_r($mypod -> field('project_personnel'));
+							$personnel = $mypod -> field('project_personnel.ID');
+							foreach ($personnel as $person) {
+								$link = get_permalink($person);
+								if($link == $currentPageUrl) {
+									echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+								}
+							}
 						}
 						?>
 						<!-- End Research Projects -->

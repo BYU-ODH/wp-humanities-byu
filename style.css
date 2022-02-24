@@ -6882,11 +6882,13 @@ a.homePagePost:hover{
 }
 .homePostContainer{
 	display: flex;
-	justify-content: center;
 	padding-bottom: 50px;
+	justify-content: center;
 }
 .homePostInner{
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	width: 50%;
 }
 .homePostInner li{
@@ -6895,11 +6897,9 @@ a.homePagePost:hover{
 .homePostSingle{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	padding-bottom: 2em;
 	position: relative;
-	height: 40vh;
-	width: 800px;
-	background-color: #FFF8D3;
+	background-color: white;
+	padding: 5px 5px 5px 5px;
 }
 .homePostAuthor, .homePostDate{
 	font-weight: 600;
@@ -6914,9 +6914,7 @@ a.homePagePost:hover{
 	object-fit: cover;
 }
 .homePostIMG{
-	position: absolute;
 	grid-column: 1;
-	width: 25%;
 	margin: 10px 30px 20px 0;
 }
 .homePostIMG img { 

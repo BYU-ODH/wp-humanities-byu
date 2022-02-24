@@ -77,6 +77,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			
 		</div>
 	</div>
+	
 </section>
 <!--end of post content-->
 

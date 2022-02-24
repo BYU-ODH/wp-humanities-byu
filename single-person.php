@@ -91,7 +91,7 @@ get_header(); ?>
 						<?php
 						$params = array(
 							'orderby' => 't.post_title ASC',    
-							'limit' => -1,
+							'limit' => -1
 							);
 						
 						$mypod = pods( 'projects' , $params);
@@ -99,8 +99,9 @@ get_header(); ?>
 						while ( $mypod -> fetch() ) {
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
-							echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
-						} 
+							echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . $mypod->display('project_personnel') . '</a>' . '</li>';
+							print_r($mypod -> field('project_personnel'));
+						}
 						?>
 						<!-- End Research Projects -->
 						

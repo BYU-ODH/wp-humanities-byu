@@ -87,7 +87,6 @@ get_header(); ?>
 						<!-- End Directory Details -->
 						
 						<!-- Research Projects Someone is On -->
-						<h3>Projects</h3>
 						<?php
 						$currentPageUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 						
@@ -97,6 +96,8 @@ get_header(); ?>
 							);
 						
 						$mypod = pods( 'projects' , $params);
+
+						$projects = array();
 					
 						while ( $mypod -> fetch() ) {
 							$id = $mypod -> field('id');
@@ -107,9 +108,17 @@ get_header(); ?>
 								$link = get_permalink($person);
 								
 								if($link == $currentPageUrl) {
-									echo '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$project = '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$projects[] = $project; 
 								}
 							}
+						}
+						if (!empty($projects)) {
+							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
+							foreach ($projects as $p) {
+								echo $p;
+							}
+							echo "</div>";
 						}
 						?>
 						<!-- End Research Projects -->

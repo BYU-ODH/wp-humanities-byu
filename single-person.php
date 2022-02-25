@@ -115,6 +115,7 @@ get_header(); ?>
 						}
 						if (!empty($projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
+							echo "<br>";
 							foreach ($projects as $p) {
 								echo $p;
 							}

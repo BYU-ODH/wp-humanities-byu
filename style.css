@@ -6454,6 +6454,12 @@ header.entry-header h2 {
 	font-weight: lighter;
 }
 
+h3.label.projects ~ li {
+	font-family: 'Public Sans', Arial, sans-serif;
+	font-weight: lighter;
+	font-size: large;
+}
+
 header.page-header.pad-container h1 {
 	font-size: larger;
 }

@@ -85,18 +85,44 @@ get_header(); ?>
 						
 						?>
 						<!-- End Directory Details -->
+						
+						<!-- Research Projects Someone is On -->
+						<?php
+						$currentPageUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+						
+						$params = array(
+							'orderby' => 't.post_title ASC',    
+							'limit' => -1
+							);
+						
+						$mypod = pods( 'projects' , $params);
 
-					<?php if (get_field('schedule')) { ?>
-						<div class="row">
-						<?php foreach (get_field('schedule') as $s) { ?>
-							<div class="class-info">
-							<?php echo $s['name']; ?><br>
-							<?php echo $s['times']; ?><br>
-							<?php echo $s['location']; ?>
-							</div>
-						<?php } ?>
-						</div>
-					<?php } ?>
+						$projects = array();
+					
+						while ( $mypod -> fetch() ) {
+							$id = $mypod -> field('id');
+							$permalink = get_permalink($id);
+							$personnel = $mypod -> field('project_personnel.ID');
+
+							foreach ($personnel as $person) {
+								$link = get_permalink($person);
+								
+								if($link == $currentPageUrl) {
+									$project = '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$projects[] = $project; 
+								}
+							}
+						}
+						if (!empty($projects)) {
+							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
+								foreach ($projects as $p) {
+									echo $p;
+								}
+							echo "</div>";
+						}
+						?>
+						<!-- End Research Projects -->
+						
 				</div>
 			</div>
 		</div>

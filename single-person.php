@@ -123,17 +123,6 @@ get_header(); ?>
 						?>
 						<!-- End Research Projects -->
 						
-					<?php if (get_field('schedule')) { ?>
-						<div class="row">
-						<?php foreach (get_field('schedule') as $s) { ?>
-							<div class="class-info">
-							<?php echo $s['name']; ?><br>
-							<?php echo $s['times']; ?><br>
-							<?php echo $s['location']; ?>
-							</div>
-						<?php } ?>
-						</div>
-					<?php } ?>
 				</div>
 			</div>
 		</div>

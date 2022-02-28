@@ -77,7 +77,7 @@ get_header(); ?>
 							$f = get_field($field);
 							if ($f) {
 							echo "<div class='personal-info-box'><h3 class='label $field'>$label</h3>";
-							echo "<p class='$field_content'>"
+							echo "<p>"
 							. get_field($field)
 							. "</p></div>";
 							}

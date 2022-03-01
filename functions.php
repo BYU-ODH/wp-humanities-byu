@@ -276,8 +276,12 @@ function get_person_by_netid ($nid) {
     }
 }
 //Edit blog by id
+
+$post_id = get_the_ID();
+
 function get_edit_blog_by_postid ($post_id) {
-    // get the "Blog" page where netid = $netid
+    // get the "Blog" page
+    
     $args = array(
 	'posts_per_page'	=> 1,
         'post_type'	=> 'blog',
@@ -290,20 +294,6 @@ function get_edit_blog_by_postid ($post_id) {
 	return get_edit_post_link($blogid, '&');
     }
     return null;
-}
-
-function get_blog_by_postid ($post_id) {
-    // get the "Berson" page where netid = $netid
-    $args = array(
-	'posts_per_page'	=> 1,
-        'post_type'	=> 'blog',
-        'meta_key'	=> 'postid',
-        'meta_value'	=> $post_id
-    );
-    $blogs = get_posts( $args );
-    foreach ($blogs as $blog) {
-	$blogid = $blog->ID;
-	$postid = get_field('postid', $blogid);
 }
 
 

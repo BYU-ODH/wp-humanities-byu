@@ -44,7 +44,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<ul>
 			<?php 
 			// WP Query Parameters to get blog posts
-			$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
+			$the_query = new WP_Query( array('post_type' => 'blog', 'posts_per_page' => 5) ); ?>
 			
 			<?php // Start of WP Query
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 

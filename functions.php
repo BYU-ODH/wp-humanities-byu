@@ -192,6 +192,49 @@ function byuh_setup() {
 
     ); 
     register_post_type('person', $person_args);
+
+    //Custom Blog Post Type, separate from posts
+
+    $blog_labels = array(
+        'name'                => __('Blog', 'byuh'),
+        'singular_name'       => __('Blog', 'byuh'),
+        'add_new'             => __('Add New', 'byuh'),
+        'add_new_item'        => __('Add New', 'byuh'),
+        'edit_item'           => __('Edit', 'byuh'),
+        'new_item'            => __('New', 'byuh'),
+        'all_items'           => __('All', 'byuh'),
+        'view_item'           => __('View', 'byuh'),
+        'search_items'        => __('Search', 'byuh'),
+        'not_found'           => __('Nothing found', 'byuh'),
+        'not_found_in_trash'  => __('Nothing found in Trash', 'byuh'), 
+        'parent_item_colon'   => '',
+        'menu_name'           => __('Blogs', 'byuh')
+    );
+
+    $blog_args = array(
+        'labels'              => $blog_labels,
+        'public'              => true,
+        'publicly_queryable'  => true,
+        'show_ui'             => true, 
+        'show_in_menu'        => true, 
+        'query_var'           => true,
+        'rewrite'             => array( 'slug' => __('blog', 'byuh') ),
+        //			       'capability_type'     => 'page',
+        // Customized by TSA 2015.09.22
+        'capability_type'     => 'page',
+        'has_archive'         => false, 
+        'hierarchical'        => false,
+        'menu_position'       => 20,
+        'supports'            => array('title', 'thumbnail', 'excerpt'),
+        'menu_icon'           => 'dashicons-feedback',
+
+        // For the REST API v2
+        'show_in_rest'       => true,
+  	'rest_base'          => 'blogs',
+  	'rest_controller_class' => 'WP_REST_Posts_Controller'
+    ); 
+    register_post_type('blog', $blog_args);
+
 }
 add_action('init', 'byuh_setup');
 
@@ -232,6 +275,37 @@ function get_person_by_netid ($nid) {
 	$netid = get_field('netid', $personid);
     }
 }
+//Edit blog by id
+function get_edit_blog_by_postid ($post_id) {
+    // get the "Blog" page where netid = $netid
+    $args = array(
+	'posts_per_page'	=> 1,
+        'post_type'	=> 'blog',
+        'meta_key'	=> 'postid',
+        'meta_value'	=> $post_id
+    );
+    $blogs = get_posts( $args );
+    foreach ($blogs as $blog) {
+	$blogid = $blog->ID;
+	return get_edit_post_link($blogid, '&');
+    }
+    return null;
+}
+
+function get_blog_by_postid ($post_id) {
+    // get the "Berson" page where netid = $netid
+    $args = array(
+	'posts_per_page'	=> 1,
+        'post_type'	=> 'blog',
+        'meta_key'	=> 'postid',
+        'meta_value'	=> $post_id
+    );
+    $blogs = get_posts( $args );
+    foreach ($blogs as $blog) {
+	$blogid = $blog->ID;
+	$postid = get_field('postid', $blogid);
+}
+
 
 add_filter( 'get_custom_logo', 'byu_logo' );
 // Filter the output of logo to fix Googles Error about itemprop logo

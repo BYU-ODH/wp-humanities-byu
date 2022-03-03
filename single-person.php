@@ -98,8 +98,33 @@ get_header(); ?>
 						$mypod = pods( 'projects' , $params);
 
 						$projects = array();
+						$intake_dates = array();
+						$live_dates = array();
+						$archived_dates = array();
+
 					
 						while ( $mypod -> fetch() ) {
+							// $intake_status = $mypod -> field('intake_status_date');
+							// $intake_dates[] = $intake_status;
+
+							// foreach ($intake_dates as $intake_date) {
+							// 	print_r($intake_date . '<br />');
+							// }
+
+							// $live_status = $mypod -> field('live_status_date');
+							// $live_dates[] = $live_status;
+
+							// foreach ($live_dates as $live_date) {
+							// 	print_r($live_date . '<br />');
+							// }
+
+							$archived_status = $mypod -> field('archived_status_date');
+							$archived_dates[] = $archived_status;
+
+							foreach ($archived_dates as $archived_date) {
+								print_r($archived_date . '<br />');
+							}
+
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
 							$personnel = $mypod -> field('project_personnel.ID');

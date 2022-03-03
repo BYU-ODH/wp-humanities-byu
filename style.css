@@ -6926,6 +6926,22 @@ a.homePagePost:hover{
 .homePostText{
 	grid-column: 2;
 }
+@media only screen  and (max-width: 600px){
+	.homePostSingle{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		background-color: white;
+		padding: 5px 5px 5px 5px;
+	}
+	.homePostIMG{
+		order: 1;
+		margin: 10px 0px 20px 0;
+	}
+	.homePostText{
+		order: 2;
+	}
+}
 /*End of Home posts */
 /*project legend*/
 .projectLegend{

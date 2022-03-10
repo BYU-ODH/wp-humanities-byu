@@ -102,16 +102,32 @@ get_header(); ?>
 						$live_dates = array();
 						$archived_dates = array();
 
-					
+						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
+							if (!empty($archive_status_date)) {
+								"archivedStatus";
+							}
+							elseif (!empty($live_status_date)) {
+								"liveStatus";
+							}
+							elseif (!empty($intake_status_date)) {
+								"intakeStatus";
+							}
+							else {
+								"unknownStatus";
+							}
+						}
+
+
 						while ( $mypod -> fetch() ) {
-							// $intake_status = $mypod -> field('intake_status_date');
+
+							$intake_status = $mypod -> field('intake_status_date');
 							// $intake_dates[] = $intake_status;
 
 							// foreach ($intake_dates as $intake_date) {
 							// 	print_r($intake_date . '<br />');
 							// }
 
-							// $live_status = $mypod -> field('live_status_date');
+							$live_status = $mypod -> field('live_status_date');
 							// $live_dates[] = $live_status;
 
 							// foreach ($live_dates as $live_date) {
@@ -119,11 +135,13 @@ get_header(); ?>
 							// }
 
 							$archived_status = $mypod -> field('archived_status_date');
-							$archived_dates[] = $archived_status;
+							// $archived_dates[] = $archived_status;
 
-							foreach ($archived_dates as $archived_date) {
-								print_r($archived_date . '<br />');
-							}
+							// foreach ($archived_dates as $archived_date) {
+							// 	print_r($archived_date . '<br />');
+							// }
+
+							$status_css_class = get_status_style($archived_status, $live_status, $intake_status);
 
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
@@ -133,7 +151,7 @@ get_header(); ?>
 								$link = get_permalink($person);
 								
 								if($link == $currentPageUrl) {
-									$project = '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$projects[] = $project; 
 								}
 							}

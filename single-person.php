@@ -98,9 +98,9 @@ get_header(); ?>
 						$mypod = pods( 'projects' , $params);
 
 						$projects = array();
-						$intake_dates = array();
-						$live_dates = array();
-						$archived_dates = array();
+						// $intake_dates = array();
+						// $live_dates = array();
+						// $archived_dates = array();
 
 						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
 							if (!empty($archive_status_date)) {

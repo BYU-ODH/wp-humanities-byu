@@ -102,46 +102,37 @@ get_header(); ?>
 						// $live_dates = array();
 						// $archived_dates = array();
 
+						function not_empty_date($date) {
+							return !empty($date) && $date != '0000-00-00';
+						}
+
 						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
-							if (!empty($archive_status_date)) {
-								"archivedStatus";
+							$status_code = "noStyleFound";
+							if (not_empty_date($archive_status_date)) {
+								$status_code = "archivedStatus";
 							}
-							elseif (!empty($live_status_date)) {
-								"liveStatus";
+							elseif (not_empty_date($live_status_date)) {
+								$status_code = "liveStatus";
 							}
-							elseif (!empty($intake_status_date)) {
-								"intakeStatus";
+							elseif (not_empty_date($intake_status_date)) {
+								$status_code = "intakeStatus";
 							}
 							else {
-								"unknownStatus";
+								$status_code = "unknownStatus";
 							}
+							return $status_code;
 						}
 
 
 						while ( $mypod -> fetch() ) {
 
+
 							$intake_status = $mypod -> field('intake_status_date');
-							// $intake_dates[] = $intake_status;
-
-							// foreach ($intake_dates as $intake_date) {
-							// 	print_r($intake_date . '<br />');
-							// }
-
 							$live_status = $mypod -> field('live_status_date');
-							// $live_dates[] = $live_status;
-
-							// foreach ($live_dates as $live_date) {
-							// 	print_r($live_date . '<br />');
-							// }
-
 							$archived_status = $mypod -> field('archived_status_date');
-							// $archived_dates[] = $archived_status;
-
-							// foreach ($archived_dates as $archived_date) {
-							// 	print_r($archived_date . '<br />');
-							// }
 
 							$status_css_class = get_status_style($archived_status, $live_status, $intake_status);
+							// $status_css_class = 'archivedStatus';
 
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);

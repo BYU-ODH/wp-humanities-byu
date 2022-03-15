@@ -35,8 +35,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 	</div><!-- #container -->
 
 <!--Add posts to home page-->
-<section class="blog">
-	<h1><a style= color:#000000 href="http://localhost/odh/blog/">Blog</a></h1>
+<section class="blog text-content" >
+	<h1><a href="blog/">Blog</a></h1> <!-- This links expects you to be at the front page -->
 	<!--Post container, sets space for the posts to display-->
 	<div class="homePostContainer">
 		<!--Inner container to align post content with flex-->

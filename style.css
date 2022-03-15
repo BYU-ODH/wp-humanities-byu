@@ -6723,19 +6723,20 @@ h2.projectMainContODH{
 .projectHeroODH{
 	position: relative;
 	width: 90%;
-	height: 300px;
+	/* height: 300px; */
 	left: 6%;
 	display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 	box-shadow: 5px 5px 18px #e6e6e6;
 }
 .projectHeroIMG{
 	position: relative;
 	flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
+  min-width: 100%;
+    /* min-height: 100%; */
+		/* max-height: 75vh; */
 }
 .projectPersonnel{
 	position: relative;

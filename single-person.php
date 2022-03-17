@@ -97,10 +97,9 @@ get_header(); ?>
 						
 						$mypod = pods( 'projects' , $params);
 
-						$projects = array();
-						// $intake_dates = array();
-						// $live_dates = array();
-						// $archived_dates = array();
+						$live_projects = array();
+						$intake_projects = array();
+						$archived_projects = array();
 
 						function not_empty_date($date) {
 							return !empty($date) && $date != '0000-00-00';
@@ -126,7 +125,6 @@ get_header(); ?>
 
 						while ( $mypod -> fetch() ) {
 
-
 							$intake_status = $mypod -> field('intake_status_date');
 							$live_status = $mypod -> field('live_status_date');
 							$archived_status = $mypod -> field('archived_status_date');
@@ -141,17 +139,35 @@ get_header(); ?>
 							foreach ($personnel as $person) {
 								$link = get_permalink($person);
 								
-								if($link == $currentPageUrl) {
-									$project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
-									$projects[] = $project; 
+								if($link == $currentPageUrl && $status_css_class == "liveStatus") {
+									$live_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$live_projects[] = $live_project; 
+								}
+								elseif($link == $currentPageUrl && $status_css_class == "intakeStatus") {
+									$intake_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$intake_projects[] = $intake_project; 
+								}
+								elseif($link == $currentPageUrl && $status_css_class == "archivedStatus") {
+									$archived_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$archived_projects[] = $archived_project;
+								}
+								else {
+									continue;
 								}
 							}
 						}
-						if (!empty($projects)) {
+						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
-								foreach ($projects as $p) {
-									echo $p;
+								foreach ($live_projects as $live_p) {
+									echo $live_p;
 								}
+								foreach ($intake_projects as $intake_p) {
+									echo $intake_p;
+								}
+								foreach ($archived_projects as $archived_p) {
+									echo $archived_p;
+								}
+
 							echo "</div>";
 						}
 						?>

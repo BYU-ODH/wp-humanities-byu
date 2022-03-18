@@ -100,6 +100,7 @@ get_header(); ?>
 						$live_projects = array();
 						$intake_projects = array();
 						$archived_projects = array();
+						$noStatus_projects = array();
 
 						function not_empty_date($date) {
 							return !empty($date) && $date != '0000-00-00';
@@ -130,7 +131,6 @@ get_header(); ?>
 							$archived_status = $mypod -> field('archived_status_date');
 
 							$status_css_class = get_status_style($archived_status, $live_status, $intake_status);
-							// $status_css_class = 'archivedStatus';
 
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
@@ -151,12 +151,16 @@ get_header(); ?>
 									$archived_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$archived_projects[] = $archived_project;
 								}
+								elseif($link == $currentPageUrl && $status_css_class == "unknownStatus") {
+									$noStatus_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$noStatus_projects[] = $noStatus_project;
+								}
 								else {
 									continue;
 								}
 							}
 						}
-						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects)) {
+						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects) || !empty($noStatus_projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
 								foreach ($live_projects as $live_p) {
 									echo $live_p;
@@ -167,7 +171,9 @@ get_header(); ?>
 								foreach ($archived_projects as $archived_p) {
 									echo $archived_p;
 								}
-
+								foreach ($noStatus_projects as $noStatus_p) {
+									echo $noStatus_p;
+								}
 							echo "</div>";
 						}
 						?>

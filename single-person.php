@@ -134,7 +134,7 @@ get_header(); ?>
 
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
-							$personnel = $mypod -> field('project_personnel.ID');
+							$personnel = $mypod -> field('odh_personnel.ID');
 
 							foreach ($personnel as $person) {
 								$link = get_permalink($person);

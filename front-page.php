@@ -60,6 +60,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<a href="#"><span class="homePostAuthor"><?php echo get_the_author(); ?></span></a>&nbsp;/
+						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</li>
 					<li><?php 
 					// Display the Post Excerpt

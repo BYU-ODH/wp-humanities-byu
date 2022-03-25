@@ -163,25 +163,25 @@ get_header(); ?>
 						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects) || !empty($noStatus_projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
 								if (!empty($live_projects)) {
-									echo "<h5 class=projectStatus'>Live</h5>";
+									echo "<h5 class='projectStatus'>Live</h5>";
 									foreach ($live_projects as $live_p) {
 										echo $live_p;
 									}
 								}
 								if (!empty($intake_projects)) {
-									echo "<h5 class=projectStatus'>Intake</h5>";
+									echo "<h5 class='projectStatus'>Intake</h5>";
 									foreach ($intake_projects as $intake_p) {
 										echo $intake_p;
 									}
 								}
 								if (!empty($archived_projects)) {
-									echo "<h5 class=projectStatus'>Archived</h5>";
+									echo "<h5 class='projectStatus'>Archived</h5>";
 									foreach ($archived_projects as $archived_p) {
 										echo $archived_p;
 									}
 								}
 								if (!empty($noStatus_projects)) {
-									echo "<h5 class=projectStatus'>Others</h5>";
+									echo "<h5 class='projectStatus'>Others</h5>";
 									foreach ($noStatus_projects as $noStatus_p) {
 										echo $noStatus_p;
 									}

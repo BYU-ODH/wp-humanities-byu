@@ -44,7 +44,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<ul>
 			<?php 
 			// WP Query Parameters to get blog posts
-			$the_query = new WP_Query( array('post_type' => 'blog', 'posts_per_page' => 5) ); ?>
+			$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
 			
 			<?php // Start of WP Query
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 
@@ -59,7 +59,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
-						<a href="#"><span class="homePostAuthor"><?php echo get_the_author(); ?></span></a>&nbsp;/
+						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>&nbsp;/
+						
 						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
 					</li>
 					<li><?php 

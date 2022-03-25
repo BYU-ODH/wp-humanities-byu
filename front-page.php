@@ -58,8 +58,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 				<div class="homePostText">
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
-					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>
-						<span class="homePostAuthor"><?php echo get_the_author(); ?></span>
+					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
+						<a href="#"><span class="homePostAuthor"><?php echo get_the_author(); ?></span></a>&nbsp;/
 					</li>
 					<li><?php 
 					// Display the Post Excerpt

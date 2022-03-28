@@ -6875,19 +6875,8 @@ span.archivedStatus{
 /*END of Project Styles*/
 
 /*Styling for projects listed on individual person pages*/
-h3.label.projects ~ li a.liveStatus {
-	border-width: 2px;
-	border-color: transparent transparent #10A170 transparent;
-}
-
-h3.label.projects ~ li a.intakeStatus {
-	border-width: 2px;
-	border-color: transparent transparent #FFED74 transparent;
-}
-
-h3.label.projects ~ li a.archivedStatus {
-	border-width: 2px;
-	border-color: transparent transparent #8f8f8f transparent;
+h3.label.projects ~ li a {
+	border-color: transparent;
 }
 
 /*End styling*/

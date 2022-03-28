@@ -6737,6 +6737,13 @@ h2.projectMainContODH{
 .projectPersonnel{
 	position: relative;
 }
+.projectList{
+	list-style-type:none;
+}
+.odhAlumni .projectAlumni{
+	margin-bottom: 0px;
+	font-size: 14px;
+}
 .statusLineSizeODH{
 	border-width: 3px;
 	padding: 2px;

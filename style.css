@@ -6877,7 +6877,40 @@ span.archivedStatus{
 /*Styling for projects listed on individual person pages*/
 h3.label.projects ~ li a {
 	border-color: transparent;
+	border-width: 0px;
 }
+/* 
+h5.projectStatus {
+	border-color: transparent;
+	border-width: 0px;
+}
+
+h5.projectStatus.liveStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #10A170;
+    display: inline-block;
+}
+
+h5.projectStatus.intakeStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFED74;
+    display: inline-block;
+}
+
+h5.projectStatus.archivedStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    display: inline-block;
+} */
 
 /*End styling*/
 

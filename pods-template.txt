@@ -1,0 +1,161 @@
+This is a file that has the code for every pods template from the browser. 
+Please edit when you make changes to any pod templates
+
+** Single Project Page Template ** 
+
+  <div class="projectMainContODH">
+	<div class="projectHeroODH">
+		<img class="projectHeroIMG" src="{@project_image._src.large}" alt="{@project_image._wp_attachment_image_alt}" title="{@project_image._wp_attachment_image_alt}"/><!--header image dynamic to have featured image be  img-->
+	</div>
+	<!--container for the project description and detail/status-->
+</div>
+
+<div class="gridContWrapperCont">
+		<!--left side of grid-->
+		<div class="gridDescriptionProjODH">
+			<h2 class="gridDescriptionTitle">Description</h2>
+			<p>{@project_description}</p>
+		</div>
+		<!--right side of grid-->
+		<div class="gridProjStatODH">
+			<div class="innerProjectGrid">
+				<div class="projectGridRow projectTypeRow"><div class="coltest">Project Type:</div>
+					<div class="coltest">{@project_type}</div></div>
+				<div class="projectGridRow projectURLRow">
+					[if project_link]<div>Project URL:</div>[/if]
+					[if project_link]<div>{@project_link}</div>[/if]
+				</div>
+				<div class="projectGridRow projectURLRow">
+					<div>Status:</div>
+					<div>
+					[if archived_status_date]
+							<span class="archivedStatus statusLineSizeODH">Archived&nbsp;</span>
+								[else]
+								[if live_status_date]
+								<span class="liveStatus statusLineSizeODH"> Live</span>
+									[else]
+									<span class="intakeStatus statusLineSizeODH"> Intake</span>
+						[/if]
+						[/if]
+					</div>
+				</div>
+				<div class="projectGridRow projectURLRow">
+					[if project_personnel]<div>ODH Personnel:</div>[/if]
+					[if project_personnel]<div>[each project_personnel]
+							<a class="projectPersonnelSingle" href="{@permalink}">
+								{@post_title}</a><br>
+						[/each]
+					</div>[/if]
+				</div>
+				<div class="projectGridRow projectURLRow">
+					[if project_alumni]<div>Project Alumni:</div>
+					 <div class="odhAlumni">
+						 [each project_alumni] [if homepage]
+						<ul class="projectAlumni">
+							<li class="projectList"><a class="projectPersonnelSingle" href="{@homepage}">
+								{@post_title}</a></li>
+						</ul>
+						 [else]
+						 <ul class="projectAlumni">
+							 <li class="projectList">{@post_title}</li>
+						</ul>[/if]
+						[/each]
+					
+					[/if]
+					</div>
+				</div>
+				<div class="projectGridRow projectURLRow">
+					[if non-odh_collaborators]<div>Non-Odh Collaborators:</div>
+					 <div class="odhAlumni">
+						 [each non-odh_collaborators] [if homepage]
+						<ul class="projectAlumni">
+							<li class="projectList"><a class="projectPersonnelSingle" href="{@homepage}">
+								{@post_title}</a></li>
+						</ul>
+						 [else]
+						 <ul class="projectAlumni">
+							 <li class="projectList">{@post_title}</li>
+						</ul>[/if]
+						[/each]
+					
+					[/if]
+					</div>
+				</div>
+	
+				<!--<div class="rightInner">
+					
+				</div>-->
+			</div>
+		</div>
+	
+	<div class="gridSnapshotsODH">
+		
+		[each project_descriptive_images]
+			<div class="singleSnapshot">
+				<a href="{@_src.post-thumbnail}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}"/></a>
+			</div>
+		[/each]
+		
+	</div>
+	
+</div>
+
+** Room Card Template **
+
+<div class="odhBoxSingleCard">
+	<div class="odhBoxInner">
+		<a href="{@room_link}">
+			<h3 class="odhBoxTitle odhFirstTitle">{@room_name}</h3>
+			<p class="odhBoxInfo">{@room_info}</p>
+		</a>
+	</div>
+</div>
+
+** Project Card Template **
+[if archived_status_date]
+	<div class="odhBoxSingleCard archivedStatus">
+[else]
+	[if live_status_date]
+		<div class="odhBoxSingleCard liveStatus">
+	[else]
+		[if intake_status_date]
+			<div class="odhBoxSingleCard intakeStatus">
+		[else]
+			<div class="odhBoxSingleCard">
+		[/if]
+				
+	[/if]
+		
+[/if]
+			
+	<div class="odhBoxInner">
+		<a class="projects" href="{@permalink}">
+			<div class="odhCardImgContainer">
+				<img src="{@project_image._src}"/>
+			</div>
+			<h3 class="odhBoxTitle odhFirstTitle projects">{@project_title}</h3>
+		</a>
+		<p class="odhBoxDescription">{@project_description}</p>
+		<a class="projectTagLink" href="#"><div class="projectTag">project tag</div></a>
+	</div>
+</div>
+
+** Test Lab Card Template **
+
+<div class="odhBoxSingleCard">
+	<div class="odhBoxInner">
+		<h3 class="odhBoxTitle odhFirstTitle">{@testing_card_name}</h3>
+		<p class="odhBoxInfo">{@testing_card_info}</p>
+	</div>
+</div>
+
+** Home Cards Template **
+
+<div class="odhBoxSingleCard"> 
+	<div class="odhBoxInner">
+		<a href="{@home_card_link}">
+			<h3 class="odhBoxTitle odhFirstTitle">{@home_card_name}</h3>
+			<p class="odhBoxInfo">{@home_card_info}</p>
+		</a>
+	</div>
+</div>

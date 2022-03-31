@@ -6580,6 +6580,13 @@ aside#colophon .fa-youtube {
 /*End of custom testing page css*/
 /***********************/
 
+/* Define status colors*/
+:root {
+	--liveStatusColor: #10A170;
+	--intakeStatusColor: #FFED74;
+	--archivedStatusColor: #8f8f8f;
+}
+
 /**********/
 /*Styles for grid content*/
 /**********/ 
@@ -6598,13 +6605,13 @@ aside#colophon .fa-youtube {
     grid-gap: 40px; 
 }
 .archivedStatus{
-	border:5px solid #8f8f8f;
+	border:5px solid var(--archivedStatusColor);
 }
 .liveStatus{
-	border:5px solid #10A170;
+	border:5px solid var(--liveStatusColor);
 }
 .intakeStatus{
-	border:5px solid #FFED74;
+	border:5px solid var(--intakeStatusColor);
 }
 .odhBoxSingleCard{
     /*single card content here*/
@@ -6879,7 +6886,7 @@ h3.label.projects ~ li a {
 	border-color: transparent;
 	border-width: 0px;
 }
-/* 
+
 h5.projectStatus {
 	border-color: transparent;
 	border-width: 0px;
@@ -6890,7 +6897,7 @@ h5.projectStatus.liveStatus:after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #10A170;
+    background: var(--liveStatusColor);
     display: inline-block;
 }
 
@@ -6899,7 +6906,7 @@ h5.projectStatus.intakeStatus:after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #FFED74;
+    background: var(--intakeStatusColor);
     display: inline-block;
 }
 
@@ -6908,9 +6915,9 @@ h5.projectStatus.archivedStatus:after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #8f8f8f;
+    background: var(--archivedStatusColor);
     display: inline-block;
-} */
+}
 
 /*End styling*/
 

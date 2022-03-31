@@ -54,14 +54,24 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<article class="homePostSingle">
 				<!--gets the post id which will help get the thumbnail/image-->
 				<?php $post_id = get_the_ID();?>
-				<div class="homePostIMG"><?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'object-fit_cover' ) );?></div>
+				<div class="homePostIMG"><a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'object-fit_cover' ) );?></a></div>
 				<div class="homePostText">
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>&nbsp;/
 						
-						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>&nbsp;/
+						<?php
+							// Get the ID of a given category
+							$category_id = get_cat_ID( 'Category Name' );
+						
+							// Get the URL of this category
+							$category_link = get_category_link( $category_id );
+						?>
+ 
+						<!-- Print a link to this category -->
+						<a href="<?php echo esc_url( $category_link ); ?>"><?php $category_id ?></a>
 					</li>
 					<li><?php 
 					// Display the Post Excerpt
@@ -86,3 +96,5 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 	<?php get_footer();
 
 } //else !posts
+
+

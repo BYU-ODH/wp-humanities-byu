@@ -59,19 +59,24 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
-						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>&nbsp;/
+						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
 						
-						<a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>&nbsp;/
+						<!--<a href="#" title="Visit in Directory"><i class="fa fa-user" aria-hidden="true"></i></a>-->
 						<?php
-							// Get the ID of a given category
-							$category_id = get_cat_ID( 'Category Name' );
-						
-							// Get the URL of this category
-							$category_link = get_category_link( $category_id );
+							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
+							$cats = array();
+							$cats_display = array();
+							 
+							if( $post_categories ){ // Always Check before loop!
+								print("<div class='post_categories'>");
+								foreach($post_categories as $c){
+									$cats[] = array( 'name' => $c->name, 'slug' => $c->slug );
+									$cats_display[] = sprintf("<a href=%s>%s</a>", esc_url( get_category_link( $c->term_id ) ), $c->name );
+								}
+								print(implode(", ", $cats_display));
+								print("</div>");
+							}
 						?>
- 
-						<!-- Print a link to this category -->
-						<a href="<?php echo esc_url( $category_link ); ?>"><?php $category_id ?></a>
 					</li>
 					<li><?php 
 					// Display the Post Excerpt

@@ -155,8 +155,8 @@ function byuh_setup() {
     $person_labels = array(
         'name'                => __('Person', 'byuh'),
         'singular_name'       => __('Person', 'byuh'),
-        'add_new'             => __('Add New', 'byuh'),
-        'add_new_item'        => __('Add New', 'byuh'),
+        'add_new'             => __('Add New Person', 'byuh'),
+        'add_new_item'        => __('Add New Person', 'byuh'),
         'edit_item'           => __('Edit', 'byuh'),
         'new_item'            => __('New', 'byuh'),
         'all_items'           => __('All', 'byuh'),
@@ -198,8 +198,8 @@ function byuh_setup() {
     $blog_labels = array(
         'name'                => __('Blog', 'byuh'),
         'singular_name'       => __('Blog', 'byuh'),
-        'add_new'             => __('Add New', 'byuh'),
-        'add_new_item'        => __('Add New', 'byuh'),
+        'add_new'             => __('Add New Blog Post', 'byuh'),
+        'add_new_item'        => __('Add New Blog PosT', 'byuh'),
         'edit_item'           => __('Edit', 'byuh'),
         'new_item'            => __('New', 'byuh'),
         'all_items'           => __('All', 'byuh'),
@@ -363,6 +363,10 @@ $loop = new WP_Query(
     )
 );
 
-
+//add custom author to post of type "blog"
+function add_author_support_to_posts() {
+    add_post_type_support( 'blog', 'author' ); 
+ }
+ add_action( 'init', 'add_author_support_to_posts' );
 
 // FIN

@@ -99,21 +99,21 @@ Please edit when you make changes to any pod templates
 				</div>
 				
 				<!--<div class="rightInner">
-					
+
 				</div>-->
 			</div>
 		</div>
-	
+
 	<div class="gridSnapshotsODH">
-		
+
 		[each project_descriptive_images]
 			<div class="singleSnapshot">
 				<a href="{@_src.post-thumbnail}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}"/></a>
 			</div>
 		[/each]
-		
+
 	</div>
-	
+
 </div>
 
 ** Room Card Template **
@@ -139,11 +139,11 @@ Please edit when you make changes to any pod templates
 		[else]
 			<div class="odhBoxSingleCard">
 		[/if]
-				
+
 	[/if]
-		
+
 [/if]
-			
+
 	<div class="odhBoxInner">
 		<a class="projects" href="{@permalink}">
 			<div class="odhCardImgContainer">

@@ -6580,6 +6580,13 @@ aside#colophon .fa-youtube {
 /*End of custom testing page css*/
 /***********************/
 
+/* Define status colors*/
+:root {
+	--liveStatusColor: #10A170;
+	--intakeStatusColor: #FFED74;
+	--archivedStatusColor: #8f8f8f;
+}
+
 /**********/
 /*Styles for grid content*/
 /**********/ 
@@ -6598,13 +6605,13 @@ aside#colophon .fa-youtube {
     grid-gap: 40px; 
 }
 .archivedStatus{
-	border:5px solid #8f8f8f;
+	border:5px solid var(--archivedStatusColor);
 }
 .liveStatus{
-	border:5px solid #10A170;
+	border:5px solid var(--liveStatusColor);
 }
 .intakeStatus{
-	border:5px solid #FFED74;
+	border:5px solid var(--intakeStatusColor);
 }
 .odhBoxSingleCard{
     /*single card content here*/
@@ -6881,6 +6888,47 @@ span.archivedStatus{
 	}
 }
 /*END of Project Styles*/
+
+/*Styling for projects listed on individual person pages*/
+h3.label.projects ~ li a {
+	border-color: transparent;
+	border-width: 0px;
+}
+
+h5.projectStatus {
+	border-color: transparent;
+	border-width: 0px;
+}
+
+h5.projectStatus.liveStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--liveStatusColor);
+    display: inline-block;
+}
+
+h5.projectStatus.intakeStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--intakeStatusColor);
+    display: inline-block;
+}
+
+h5.projectStatus.archivedStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--archivedStatusColor);
+    display: inline-block;
+}
+
+/*End styling*/
+
 /*home page post styles*/
 section.blog > h1{
 	text-align: center;
@@ -6918,7 +6966,7 @@ a.homePagePost:hover{
 .homePostAuthor, .homePostDate{
 	font-weight: 600;
 	color: #8F8F8F;
-	padding: 1em 1em 1em 0;
+	
 }
 .homePostLine{
 	margin-bottom: 45px;

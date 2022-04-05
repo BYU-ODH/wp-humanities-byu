@@ -35,8 +35,8 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 	</div><!-- #container -->
 
 <!--Add posts to home page-->
-<section class="blog">
-	<h1>Blog</h1>
+<section class="blog text-content" >
+	<h1><a href="blog/">Blog</a></h1> <!-- This links expects you to be at the front page -->
 	<!--Post container, sets space for the posts to display-->
 	<div class="homePostContainer">
 		<!--Inner container to align post content with flex-->
@@ -44,7 +44,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<ul>
 			<?php 
 			// WP Query Parameters to get blog posts
-			$the_query = new WP_Query( array('post_type' => 'blog', 'posts_per_page' => 5) ); ?>
+			$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
 			
 			<?php // Start of WP Query
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 
@@ -54,12 +54,29 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<article class="homePostSingle">
 				<!--gets the post id which will help get the thumbnail/image-->
 				<?php $post_id = get_the_ID();?>
-				<div class="homePostIMG"><?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'object-fit_cover' ) );?></div>
+				<div class="homePostIMG"><a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'object-fit_cover' ) );?></a></div>
 				<div class="homePostText">
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
-					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>
-						<span class="homePostAuthor"><?php echo get_the_author(); ?></span>
+					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
+						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
+						
+						<!--<a href="#" title="Visit in Directory"><i class="fa fa-user" aria-hidden="true"></i></a>-->
+						<?php
+							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
+							$cats = array();
+							$cats_display = array();
+							 
+							if( $post_categories ){ // Always Check before loop!
+								print("<div class='post_categories'>");
+								foreach($post_categories as $c){
+									$cats[] = array( 'name' => $c->name, 'slug' => $c->slug );
+									$cats_display[] = sprintf("<a href=%s>%s</a>", esc_url( get_category_link( $c->term_id ) ), $c->name );
+								}
+								print(implode(", ", $cats_display));
+								print("</div>");
+							}
+						?>
 					</li>
 					<li><?php 
 					// Display the Post Excerpt
@@ -84,3 +101,5 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 	<?php get_footer();
 
 } //else !posts
+
+

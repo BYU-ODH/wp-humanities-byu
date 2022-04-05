@@ -97,9 +97,41 @@ get_header(); ?>
 						
 						$mypod = pods( 'projects' , $params);
 
-						$projects = array();
-					
+						$live_projects = array();
+						$intake_projects = array();
+						$archived_projects = array();
+						$noStatus_projects = array();
+
+						function not_empty_date($date) {
+							return !empty($date) && $date != '0000-00-00';
+						}
+
+						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
+							$status_code = "noStyleFound";
+							if (not_empty_date($archive_status_date)) {
+								$status_code = "archivedStatus";
+							}
+							elseif (not_empty_date($live_status_date)) {
+								$status_code = "liveStatus";
+							}
+							elseif (not_empty_date($intake_status_date)) {
+								$status_code = "intakeStatus";
+							}
+							else {
+								$status_code = "unknownStatus";
+							}
+							return $status_code;
+						}
+
+
 						while ( $mypod -> fetch() ) {
+
+							$intake_status = $mypod -> field('intake_status_date');
+							$live_status = $mypod -> field('live_status_date');
+							$archived_status = $mypod -> field('archived_status_date');
+
+							$status_css_class = get_status_style($archived_status, $live_status, $intake_status);
+
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
 							$personnel = $mypod -> field('project_personnel.ID');
@@ -107,16 +139,52 @@ get_header(); ?>
 							foreach ($personnel as $person) {
 								$link = get_permalink($person);
 								
-								if($link == $currentPageUrl) {
-									$project = '<li>' . '<a href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
-									$projects[] = $project; 
+								if($link == $currentPageUrl && $status_css_class == "liveStatus") {
+									$live_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$live_projects[] = $live_project; 
+								}
+								elseif($link == $currentPageUrl && $status_css_class == "intakeStatus") {
+									$intake_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$intake_projects[] = $intake_project; 
+								}
+								elseif($link == $currentPageUrl && $status_css_class == "archivedStatus") {
+									$archived_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$archived_projects[] = $archived_project;
+								}
+								elseif($link == $currentPageUrl && $status_css_class == "unknownStatus") {
+									$noStatus_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
+									$noStatus_projects[] = $noStatus_project;
+								}
+								else {
+									continue;
 								}
 							}
 						}
-						if (!empty($projects)) {
+						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects) || !empty($noStatus_projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
-								foreach ($projects as $p) {
-									echo $p;
+								if (!empty($live_projects)) {
+									echo "<h5 class='projectStatus liveStatus'>Live </h5>";
+									foreach ($live_projects as $live_p) {
+										echo $live_p;
+									}
+								}
+								if (!empty($intake_projects)) {
+									echo "<h5 class='projectStatus intakeStatus'>Intake </h5>";
+									foreach ($intake_projects as $intake_p) {
+										echo $intake_p;
+									}
+								}
+								if (!empty($archived_projects)) {
+									echo "<h5 class='projectStatus archivedStatus'>Archived </h5>";
+									foreach ($archived_projects as $archived_p) {
+										echo $archived_p;
+									}
+								}
+								if (!empty($noStatus_projects)) {
+									echo "<h5 class='projectStatus unknownStatus'>Others</h5>";
+									foreach ($noStatus_projects as $noStatus_p) {
+										echo $noStatus_p;
+									}
 								}
 							echo "</div>";
 						}

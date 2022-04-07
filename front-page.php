@@ -8,6 +8,20 @@
 
 $septera_landingpage = cryout_get_option( 'septera_landingpage' );
 
+function GetBlogAuthDirectoryLink($blogpostId)
+{
+	//TODO: check if this works with guest author
+	//Get the author username
+	$author_id = get_post_field( 'post_author', $blogpostId );
+	$username = get_the_author_meta( 'user_login', $author_id );
+
+	//Find a matching person netid
+	//loop through all people and check that person.netid == $username
+	
+	//Return permalink to matching person directory page
+	return $username ;
+}
+
 if ( is_page() && ! $septera_landingpage ) { 
 	load_template( get_page_template() );
 	return true;
@@ -61,7 +75,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
 						
-						<!--<a href="#" title="Visit in Directory"><i class="fa fa-user" aria-hidden="true"></i></a>-->
+						
 						<?php
 							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
 							$cats = array();
@@ -78,6 +92,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 							}
 						?>
 					</li>
+					<?php echo(GetBlogAuthDirectoryLink($post_id));?>
 					<li><?php 
 					// Display the Post Excerpt
 					the_excerpt(__('(more…)')); ?></li>

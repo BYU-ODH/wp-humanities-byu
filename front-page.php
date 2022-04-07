@@ -17,7 +17,15 @@ function GetBlogAuthDirectoryLink($blogpostId)
 
 	//Find a matching person netid
 	//loop through all people and check that person.netid == $username
-	
+	/*$params = array(
+		'orderby' => 't.post_title ASC',
+		'limit' => -1
+	);*/
+
+	//$personstuff = ('post')
+
+	//while ($mypod -> fetch)
+
 	//Return permalink to matching person directory page
 	return $username ;
 }

@@ -1,0 +1,70 @@
+{
+    "meta": {
+        "version": "2.8.10",
+        "build": 1649365258
+    },
+    "templates": [
+        {
+            "name": "Single Project Page",
+            "code": "<div class=\"projectMainContODH\">\r\n\t<div class=\"projectHeroODH\">\r\n\t\t<img class=\"projectHeroIMG\" src=\"{@project_image._src.large}\" alt=\"{@project_image._wp_attachment_image_alt}\" title=\"{@project_image._wp_attachment_image_alt}\"\/><!--header image dynamic to have featured image be  img-->\r\n\t<\/div>\r\n\t<!--container for the project description and detail\/status-->\r\n<\/div>\r\n\r\n\r\n<div class=\"gridContWrapperCont\">\r\n\t\t<!--left side of grid-->\r\n\t\t<div class=\"gridDescriptionProjODH\">\r\n\t\t\t<h2 class=\"gridDescriptionTitle\">Description<\/h2>\r\n\t\t\t<p>{@project_description}<\/p>\r\n\t\t<\/div>\r\n\t\t<!--right side of grid-->\r\n\t\t<div class=\"gridProjStatODH\">\r\n\t\t\t<div class=\"innerProjectGrid\">\r\n\t\t\t\t<div class=\"projectGridRow projectTypeRow\"><div class=\"coltest\">Project Type:<\/div>\r\n\t\t\t\t\t<div class=\"coltest\">{@project_type}<\/div><\/div>\r\n\t\t\t\t<div class=\"projectGridRow projectURLRow\">\r\n\t\t\t\t\t[if project_link]<div>Project URL:<\/div>[\/if]\r\n\t\t\t\t\t[if project_link]<div>{@project_link}<\/div>[\/if]\r\n\t\t\t\t<\/div>\r\n\t\t\t\t<div class=\"projectGridRow projectURLRow\">\r\n\t\t\t\t\t<div>Status:<\/div>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t[if archived_status_date]\r\n\t\t\t\t\t\t\t<span class=\"archivedStatus statusLineSizeODH\">Archived&nbsp;<\/span>\r\n\t\t\t\t\t\t\t\t[else]\r\n\t\t\t\t\t\t\t\t[if live_status_date]\r\n\t\t\t\t\t\t\t\t<span class=\"liveStatus statusLineSizeODH\"> Live<\/span>\r\n\t\t\t\t\t\t\t\t\t[else]\r\n\t\t\t\t\t\t\t\t\t<span class=\"intakeStatus statusLineSizeODH\"> Intake<\/span>\r\n\t\t\t\t\t\t[\/if]\r\n\t\t\t\t\t\t[\/if]\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\t\t\t<div class=\"projectGridRow projectURLRow\">\r\n\t\t\t\t\t[if project_personnel]<div>ODH Personnel:<\/div>[\/if]\r\n\t\t\t\t\t[if project_personnel]<div>[each project_personnel]\r\n\t\t\t\t\t\t\t<a class=\"projectPersonnelSingle\" href=\"{@permalink}\">\r\n\t\t\t\t\t\t\t\t{@post_title}<\/a><br>\r\n\t\t\t\t\t\t[\/each]\r\n\t\t\t\t\t<\/div>[\/if]\r\n\t\t\t\t<\/div>\r\n\t\t\t\t<div class=\"projectGridRow projectURLRow\">\r\n\t\t\t\t\t[if project_alumni]<div>Project Alumni:<\/div>\r\n\t\t\t\t\t <div class=\"odhAlumni\">\r\n\t\t\t\t\t\t [each project_alumni] [if homepage]\r\n\t\t\t\t\t\t<ul class=\"projectAlumni\">\r\n\t\t\t\t\t\t\t<li class=\"projectList\"><a class=\"projectPersonnelSingle\" href=\"{@homepage}\">\r\n\t\t\t\t\t\t\t\t{@post_title}<\/a><\/li>\r\n\t\t\t\t\t\t<\/ul>\r\n\t\t\t\t\t\t [else]\r\n\t\t\t\t\t\t <ul class=\"projectAlumni\">\r\n\t\t\t\t\t\t\t <li class=\"projectList\">{@post_title}<\/li>\r\n\t\t\t\t\t\t<\/ul>[\/if]\r\n\t\t\t\t\t\t[\/each]\r\n\t\t\t\t\t\r\n\t\t\t\t\t[\/if]\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\t\t\t<div class=\"projectGridRow projectURLRow\">\r\n\t\t\t\t\t[if non-odh_collaborators]<div>Non-Odh Collaborators:<\/div>\r\n\t\t\t\t\t <div class=\"odhAlumni\">\r\n\t\t\t\t\t\t [each non-odh_collaborators] [if homepage]\r\n\t\t\t\t\t\t<ul class=\"projectAlumni\">\r\n\t\t\t\t\t\t\t<li class=\"projectList\"><a class=\"projectPersonnelSingle\" href=\"{@homepage}\">\r\n\t\t\t\t\t\t\t\t{@post_title}<\/a><\/li>\r\n\t\t\t\t\t\t<\/ul>\r\n\t\t\t\t\t\t [else]\r\n\t\t\t\t\t\t <ul class=\"projectAlumni\">\r\n\t\t\t\t\t\t\t <li class=\"projectList\">{@post_title}<\/li>\r\n\t\t\t\t\t\t<\/ul>[\/if]\r\n\t\t\t\t\t\t[\/each]\r\n\t\t\t\t\t\r\n\t\t\t\t\t[\/if]\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\r\n\t\t\t\t<!--<div class=\"rightInner\">\r\n\t\t\t\t\t\r\n\t\t\t\t<\/div>-->\r\n\t\t\t<\/div>\r\n\t\t<\/div>\r\n\t\r\n\t<div class=\"gridSnapshotsODH\">\r\n\t\t\r\n\t\t[each project_descriptive_images]\r\n\t\t\t<div class=\"singleSnapshot\">\r\n\t\t\t\t<a href=\"{@_src.post-thumbnail}\"><img class=\"object-fit_contain\" src=\"{@_src.post-thumbnail.medium, esc_url}\"\/><\/a>\r\n\t\t\t<\/div>\r\n\t\t[\/each]\r\n\t\t\r\n\t<\/div>\r\n\t\r\n<\/div>",
+            "id": 27569,
+            "_edit_lock": "1648744119:312",
+            "_edit_last": "578",
+            "show_restrict_message": "1",
+            "pod_reference": {
+                "pod": "collaborator"
+            }
+        },
+        {
+            "name": "Room Card Template",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@room_link}\">\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@room_name}<\/h3>\r\n\t\t\t<p class=\"odhBoxInfo\">{@room_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
+            "id": 27282,
+            "_edit_lock": "1632338170:413",
+            "_edit_last": "413",
+            "_pp_is_autodraft": "1",
+            "show_restrict_message": "1",
+            "restrict_message": "You do not have access to view this content.",
+            "pod_reference": {
+                "pod": "room"
+            }
+        },
+        {
+            "name": "Project Card Template",
+            "code": "[if archived_status_date]\r\n\t<div class=\"odhBoxSingleCard archivedStatus\">\r\n[else]\r\n\t[if live_status_date]\r\n\t\t<div class=\"odhBoxSingleCard liveStatus\">\r\n\t[else]\r\n\t\t[if intake_status_date]\r\n\t\t\t<div class=\"odhBoxSingleCard intakeStatus\">\r\n\t\t[else]\r\n\t\t\t<div class=\"odhBoxSingleCard\">\r\n\t\t[\/if]\r\n\t\t\t\t\r\n\t[\/if]\r\n\t\t\r\n[\/if]\r\n\t\t\t\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a class=\"projects\" href=\"{@permalink}\">\r\n\t\t\t<div class=\"odhCardImgContainer\">\r\n\t\t\t\t<img src=\"{@project_image._src}\"\/>\r\n\t\t\t<\/div>\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle projects\">{@project_title}<\/h3>\r\n\t\t<\/a>\r\n\t\t<p class=\"odhBoxDescription\">{@project_description}<\/p>\r\n\t\t<a class=\"projectTagLink\" href=\"#\"><div class=\"projectTag\">project tag<\/div><\/a>\r\n\t<\/div>\r\n<\/div>",
+            "id": 27286,
+            "_edit_lock": "1648751339:581",
+            "_edit_last": "312",
+            "_pp_is_autodraft": "1",
+            "show_restrict_message": "1",
+            "pod_reference": {
+                "pod": "projects"
+            }
+        },
+        {
+            "name": "Testing Lab Card Template",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@testing_card_name}<\/h3>\r\n\t\t<p class=\"odhBoxInfo\">{@testing_card_info}<\/p>\r\n\t<\/div>\r\n<\/div>",
+            "id": 27288,
+            "_edit_lock": "1632337911:413",
+            "_edit_last": "413",
+            "_pp_is_autodraft": "1",
+            "show_restrict_message": "1",
+            "restrict_message": "You do not have access to view this content.",
+            "pod_reference": {
+                "pod": "testing_lab"
+            }
+        },
+        {
+            "name": "Home Cards Template",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\"> \r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@home_card_link}\">\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@home_card_name}<\/h3>\r\n\t\t\t<p class=\"odhBoxInfo\">{@home_card_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
+            "id": 27385,
+            "_edit_lock": "1638913791:581",
+            "_edit_last": "413",
+            "_pp_is_autodraft": "1",
+            "show_restrict_message": "1",
+            "restrict_message": "You do not have access to view this content.",
+            "pod_reference": {
+                "pod": "home_card"
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+Projects Template (should be in advanced mode)
+
+Display:
+
+<div class="projectLegend">
+    <div class="projectLegendStyle">
+        <span class="intakeStatus statusLineSizeODH"> Intake</span>&nbsp;
+        <span class="liveStatus statusLineSizeODH"> Live</span>
+		<span class="archivedStatus statusLineSizeODH">Archived</span>
+    </div>
+</div>
+
+<div class="entry-content odhBoxContentGrid">
+    <!--main card content starts here-->
+    <div class="odhBoxCards">
+        <?php while ( have_posts() ): the_post(); ?>
+        <?php echo pods( 'projects', get_the_id() )->template( 'Project Card Template' ); ?>
+        <?php endwhile; ?>
+    </div>
+</div>
+
+Query:
+
+<?php
+return [
+  "post_type" => "projects",
+  "post_status" => [
+    "publish"
+  ],
+  "facetwp" => true,
+"posts_per_page" => "50",
+];

@@ -29,4 +29,6 @@ return [
   ],
   "facetwp" => true,
 "posts_per_page" => "50",
+"orderby" => "title",
+"order"   => "ASC",
 ];

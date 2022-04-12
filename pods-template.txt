@@ -123,20 +123,27 @@ Please edit when you make changes to any pod templates
 		[else]
 			<div class="odhBoxSingleCard">
 		[/if]
-
+				
 	[/if]
-
+		
 [/if]
-
+			
 	<div class="odhBoxInner">
-		<a class="projects" href="{@permalink}">
+		<a href="{@permalink}">
 			<div class="odhCardImgContainer">
 				<img src="{@project_image._src}"/>
 			</div>
-			<h3 class="odhBoxTitle odhFirstTitle projects">{@project_title}</h3>
+			<h3 class="odhBoxTitle odhFirstTitle">{@project_title}</h3>
 		</a>
-		<p class="odhBoxDescription">{@project_description}</p>
-		<a class="projectTagLink" href="#"><div class="projectTag">project tag</div></a>
+		[if excerpt]
+		<div class="projectExcerpt">
+			<p>{@excerpt}</p>
+		</div>
+		[else]
+		<div class="odhBoxDescription">
+			<p>{@project_description,trim_post_content}</p>
+		</div>
+		[/if]
 	</div>
 </div>
 

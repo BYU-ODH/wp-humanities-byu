@@ -357,4 +357,7 @@ function add_author_support_to_posts() {
  }
  add_action( 'init', 'add_author_support_to_posts' );
 
+function trim_post_content($content) {
+    return wp_trim_words($content, $num_words = 40);
+}
 // FIN

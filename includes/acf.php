@@ -1,35 +1,5 @@
 <?php
 
-function odh_populate_specialties_taxonomy ( $tax ) {
-    $terms = array(
-	'American studies' => array(),
-	'Computational linguistics' => array(),
-	'Computer assisted learning' => array(),
-	'Corpus linguistics' => array(),
-	'Digital humanities' => array(),
-  'Linguistics' => array(),
- 	'Twentieth century' => array(),
- 	'Twenty-first century' => array(),
-	'Young adult ' => array());
-    echo "<script>console.log('in odh_populate_specialties_taxonomy , getting terms from $tax');</script>";
-
-    foreach ( $terms as $parent => $children ) {
-        $inserted_parent = wp_insert_term(
-            $parent,
-            $tax
-        );
-        foreach ($children as $child) {
-            wp_insert_term(
-                $child,
-                $tax,
-                array(
-                    'parent' => $inserted_parent['term_id']
-                )
-            );
-        }
-    }
-}
-
 function activate_personresearch_tax() {
     create_personresearch_tax();
     flush_rewrite_rules();

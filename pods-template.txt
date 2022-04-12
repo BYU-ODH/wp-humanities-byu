@@ -149,11 +149,7 @@ Please edit when you make changes to any pod templates
 			<div class="odhCardImgContainer">
 				<img src="{@project_image._src}"/>
 			</div>
-<<<<<<< HEAD
-			<h3 class="odhBoxTitle odhFirstTitle">{@project_title}</h3>
-=======
 			<h3 class="odhBoxTitle odhFirstTitle projects">{@post_title}</h3>
->>>>>>> master
 		</a>
 		[if excerpt]
 		<div class="projectExcerpt">

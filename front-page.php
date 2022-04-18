@@ -17,17 +17,31 @@ function GetBlogAuthDirectoryLink($blogpostId)
 
 	//Find a matching person netid
 	//loop through all people and check that person.netid == $username
-	/*$params = array(
+	$args = array(
+		'post_type' => "person",
 		'orderby' => 't.post_title ASC',
-		'limit' => -1
-	);*/
+		'posts_per_page' => 1,
+		'limit' => -1,
+		'meta_key'	=> 'netid',
+        'meta_value'	=> $username
+	);
 
-	//$personstuff = ('post')
-
-	//while ($mypod -> fetch)
-
-	//Return permalink to matching person directory page
-	return $username ;
+	$personid = "personid";
+	$link = false; 
+	$people = get_posts( $args );
+	foreach ($people as $person) {
+		$personid = $person->ID;
+		if ($personid)
+		{
+			//What happens to $link if this is bogus: the_permalink($personid)
+			$link = get_the_permalink($personid);
+			
+		}
+		else{
+			$link = "person id is false";
+		}
+	} 
+	return($link);
 }
 
 if ( is_page() && ! $septera_landingpage ) { 
@@ -68,21 +82,23 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			// WP Query Parameters to get blog posts
 			$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
 			
-			<?php // Start of WP Query
+			<?php 
+			// Start of WP Query
 			while ($the_query -> have_posts()) : $the_query -> the_post(); 
 			// Display the Post Title with Hyperlink
 			?>
 			
 			<article class="homePostSingle">
 				<!--gets the post id which will help get the thumbnail/image-->
-				<?php $post_id = get_the_ID();?>
+				<?php $post_id = get_the_ID();
+				$person_link = GetBlogAuthDirectoryLink($post_id);?>
 				<div class="homePostIMG"><a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array( 'class' => 'object-fit_cover' ) );?></a></div>
 				<div class="homePostText">
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
-						
+						<span><a href="<?php echo($person_link);?>"><i class="fa fa-user" aria-hidden="true"></i></a></span>
 						
 						<?php
 							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
@@ -100,7 +116,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 							}
 						?>
 					</li>
-					<?php echo(GetBlogAuthDirectoryLink($post_id));?>
+					
 					<li><?php 
 					// Display the Post Excerpt
 					the_excerpt(__('(more…)')); ?></li>

@@ -30,7 +30,7 @@ function create_personresearch_tax() {
             'show_admin_column' => true,
             'rewrite' => true,
             'query_var' => true,
-	    'show_in_rest' => true
+	        'show_in_rest' => true
         )
     );
 }
@@ -42,6 +42,3 @@ function byuh_init () {
    
 }
 add_action('init', 'byuh_init');
-
-/* Person ACF settings */
-// these can be exported from ACF, but they must wait until they are done/correct, as they override dev efforts

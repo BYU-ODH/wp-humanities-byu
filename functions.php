@@ -175,7 +175,8 @@ function byuh_setup() {
         'show_ui'             => true, 
         'show_in_menu'        => true, 
         'query_var'           => true,
-        'rewrite'             => array( 'slug' => __('person', 'byuh') ),
+        'rewrite'             => array( 'slug' => __('person', 'byuh'), 
+                                        'with_front' => false ),
         //			       'capability_type'     => 'page',
         // Customized by TSA 2015.09.22
         'capability_type'     => 'page',

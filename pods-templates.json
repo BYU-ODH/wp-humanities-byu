@@ -16,7 +16,7 @@
         },
         {
             "name": "Room Card Template",
-            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@room_link}\">\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@room_name}<\/h3>\r\n\t\t\t<p class=\"odhBoxInfo\">{@room_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@room_link}\">\r\n\t\t\t<h2 class=\"odhBoxTitle odhFirstTitle\">{@room_name}<\/h2>\r\n\t\t\t<p class=\"odhBoxInfo\">{@room_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
             "id": 27282,
             "_edit_lock": "1632338170:413",
             "_edit_last": "413",
@@ -29,7 +29,7 @@
         },
         {
             "name": "Project Card Template",
-            "code": "[if archived_status_date]\r\n\t<div class=\"odhBoxSingleCard archivedStatus\">\r\n[else]\r\n\t[if live_status_date]\r\n\t\t<div class=\"odhBoxSingleCard liveStatus\">\r\n\t[else]\r\n\t\t[if intake_status_date]\r\n\t\t\t<div class=\"odhBoxSingleCard intakeStatus\">\r\n\t\t[else]\r\n\t\t\t<div class=\"odhBoxSingleCard\">\r\n\t\t[\/if]\r\n\t\t\t\t\r\n\t[\/if]\r\n\t\t\r\n[\/if]\r\n\t\t\t\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a class=\"projects\" href=\"{@permalink}\">\r\n\t\t\t<div class=\"odhCardImgContainer\">\r\n\t\t\t\t<img src=\"{@project_image._src}\"\/>\r\n\t\t\t<\/div>\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle projects\">{@post_title}<\/h3>\r\n\t\t<\/a>\r\n\t\t<p class=\"odhBoxDescription\">{@project_description}<\/p>\r\n\t\t<a class=\"projectTagLink\" href=\"#\"><div class=\"projectTag\">project tag<\/div><\/a>\r\n\t<\/div>\r\n<\/div>",
+            "code": "[if archived_status_date]\r\n\t<div class=\"odhBoxSingleCard archivedStatus\">\r\n[else]\r\n\t[if live_status_date]\r\n\t\t<div class=\"odhBoxSingleCard liveStatus\">\r\n\t[else]\r\n\t\t[if intake_status_date]\r\n\t\t\t<div class=\"odhBoxSingleCard intakeStatus\">\r\n\t\t[else]\r\n\t\t\t<div class=\"odhBoxSingleCard\">\r\n\t\t[\/if]\r\n\t\t\t\t\r\n\t[\/if]\r\n\t\t\r\n[\/if]\r\n\t\t\t\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a class=\"projects\" href=\"{@permalink}\">\r\n\t\t\t<div class=\"odhCardImgContainer\">\r\n\t\t\t\t<img src=\"{@project_image._src}\"\/>\r\n\t\t\t<\/div>\r\n\t\t\t<h2 class=\"odhBoxTitle odhFirstTitle projects\">{@post_title}<\/h2>\r\n\t\t<\/a>\r\n\t\t<p class=\"odhBoxDescription\">{@project_description}<\/p>\r\n\t\t<a class=\"projectTagLink\" href=\"#\"><div class=\"projectTag\">project tag<\/div><\/a>\r\n\t<\/div>\r\n<\/div>",
             "id": 27286,
             "_edit_lock": "1648751339:581",
             "_edit_last": "312",
@@ -41,7 +41,7 @@
         },
         {
             "name": "Testing Lab Card Template",
-            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@testing_card_name}<\/h3>\r\n\t\t<p class=\"odhBoxInfo\">{@testing_card_info}<\/p>\r\n\t<\/div>\r\n<\/div>",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\">\r\n\t<div class=\"odhBoxInner\">\r\n\t\t<h2 class=\"odhBoxTitle odhFirstTitle\">{@testing_card_name}<\/h2>\r\n\t\t<p class=\"odhBoxInfo\">{@testing_card_info}<\/p>\r\n\t<\/div>\r\n<\/div>",
             "id": 27288,
             "_edit_lock": "1632337911:413",
             "_edit_last": "413",
@@ -54,7 +54,7 @@
         },
         {
             "name": "Home Cards Template",
-            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\"> \r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@home_card_link}\">\r\n\t\t\t<h3 class=\"odhBoxTitle odhFirstTitle\">{@home_card_name}<\/h3>\r\n\t\t\t<p class=\"odhBoxInfo\">{@home_card_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
+            "code": "<!--Start of box card content-->\r\n<div class=\"odhBoxSingleCard\"> \r\n\t<div class=\"odhBoxInner\">\r\n\t\t<a href=\"{@home_card_link}\">\r\n\t\t\t<h2 class=\"odhBoxTitle odhFirstTitle\">{@home_card_name}<\/h2>\r\n\t\t\t<p class=\"odhBoxInfo\">{@home_card_info}<\/p>\r\n\t\t<\/a>\r\n\t<\/div>\r\n<\/div>",
             "id": 27385,
             "_edit_lock": "1638913791:581",
             "_edit_last": "413",

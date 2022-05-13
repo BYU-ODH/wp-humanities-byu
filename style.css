@@ -1499,6 +1499,11 @@ h1.entry-title {
 
 .entry-title.singular-title {
 	padding-top: 2em;
+	text-align: center;
+}
+
+.blog-post-author {
+	text-align: center;
 }
 
 .entry-title a {

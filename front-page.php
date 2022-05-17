@@ -8,42 +8,6 @@
 
 $septera_landingpage = cryout_get_option( 'septera_landingpage' );
 
-function GetBlogAuthDirectoryLink($blogpostId)
-{
-    //TODO: check if this works with guest author
-    //Get the author username
-    $author_id = get_post_field( 'post_author', $blogpostId );
-    $username = get_the_author_meta( 'user_login', $author_id );
-
-    //Find a matching person netid
-    //loop through all people and check that person.netid == $username
-    $args = array(
-        'post_type' => "person",
-        'orderby' => 't.post_title ASC',
-        'posts_per_page' => 1,
-        'limit' => -1,
-        'meta_key'  => 'netid',
-        'meta_value'    => $username
-    );
-
-    $personid = "personid";
-    $link = false; 
-    $people = get_posts( $args );
-    foreach ($people as $person) {
-        $personid = $person->ID;
-        if ($personid)
-        {
-            //What happens to $link if this is bogus: the_permalink($personid)
-            $link = get_the_permalink($personid);
-            
-        }
-        else{
-            $link = "person id is false";
-        }
-    } 
-    return($link);
-}
-
 if ( is_page() && ! $septera_landingpage ) { 
 	load_template( get_page_template() );
 	return true;
@@ -97,8 +61,10 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					</li>
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
-                        <span><a href="<?php echo($person_link);?>"><i class="fa fa-user" aria-hidden="true"></i></a></span>
-
+						<?php if($person_link) : ?>
+                        	<span><a href="<?php echo($person_link);?>"><i class="fa fa-user" aria-hidden="true"></i></a></span>
+						<?php endif; ?>
+						
 						<?php
 							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
 							$cats = array();

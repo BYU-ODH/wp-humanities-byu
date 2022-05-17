@@ -361,4 +361,42 @@ function add_author_support_to_posts() {
 function trim_post_content($content) {
     return wp_trim_words($content, $num_words = 40);
 }
+
+// get the link to a person's directory page for a blog post
+function GetBlogAuthDirectoryLink($blogpostId)
+{
+    //TODO: check if this works with guest author
+    //Get the author username
+    $author_id = get_post_field( 'post_author', $blogpostId );
+    $username = get_the_author_meta( 'user_login', $author_id );
+
+    //Find a matching person netid
+    //loop through all people and check that person.netid == $username
+    $args = array(
+        'post_type' => "person",
+        'orderby' => 't.post_title ASC',
+        'posts_per_page' => 1,
+        'limit' => -1,
+        'meta_key'  => 'netid',
+        'meta_value'    => $username
+    );
+
+    $personid = "personid";
+    $link = false; 
+    $people = get_posts( $args );
+    foreach ($people as $person) {
+        $personid = $person->ID;
+        if ($personid)
+        {
+            //What happens to $link if this is bogus: the_permalink($personid)
+            $link = get_the_permalink($personid);
+            
+        }
+        else{
+            $link = "person id is false";
+        }
+    } 
+    return($link);
+}
+
 // FIN

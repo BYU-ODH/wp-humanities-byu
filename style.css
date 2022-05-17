@@ -6295,7 +6295,7 @@ a.lp-box-readmore {
 	display: none;
 }
 
-div#content #colophon, div#content #footer {
+aside#colophon {
 	background-color: #f9f9f9;
 	color: #141414;
 	text-align: center;
@@ -6965,7 +6965,7 @@ a.homePagePost:hover{
 }
 .homePostAuthor, .homePostDate{
 	font-weight: 600;
-	color: #8F8F8F;
+	color: #414141;
 	
 }
 .homePostLine{
@@ -7092,6 +7092,17 @@ a.homePagePost:hover{
 	text-align: center;
 	margin: 1.25em 0 3.75em;
 	color: #002e5d;
+}
+
+/*Styling for elementor text boxes*/
+.elementor-text-editor {
+	color: #000000;
+}
+
+/*Styling for 'Read More' Button on Blog Page*/
+.pt-cv-wrapper .btn-success {
+	background-color: #367c36;
+    border-color: #306e30;
 }
 
 /* FIN! */

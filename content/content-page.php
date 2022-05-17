@@ -16,8 +16,8 @@
 		</div>
 		<div class="article-inner">
 			<header>
-				<?php $septera_heading_tag = 'h2'; // ( is_front_page() ) ? 'h2' : 'h1';
-					the_title( '<' . $septera_heading_tag . ' class="entry-title singular-title" ' . cryout_schema_microdata( 'entry-title', 0 ) . '>', '</' . $septera_heading_tag . '>' ); ?>
+				<?php
+					the_title( '<h2 class="entry-title singular-title" ' . cryout_schema_microdata( 'entry-title', 0 ) . '>', '</h2>' ); ?>
 			   <span class="entry-meta" >
 					<?php septera_posted_edit(); ?>
 				</span>

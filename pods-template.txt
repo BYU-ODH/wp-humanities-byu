@@ -108,7 +108,7 @@ Please edit when you make changes to any pod templates
 
 		[each project_descriptive_images]
 			<div class="singleSnapshot">
-				<a href="{@_src.post-thumbnail}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}"/></a>
+				<a href="{@_src.post-thumbnail}" title="{@post_content, esc_attr}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}" alt = "{@_wp_attachment_image_alt}"/></a>
 			</div>
 		[/each]
 

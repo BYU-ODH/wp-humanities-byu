@@ -98,7 +98,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
                         <span><a href="<?php echo($person_link);?>"><i class="fa fa-user" aria-hidden="true"></i></a></span>
->
+
 						<?php
 							$post_categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
 							$cats = array();

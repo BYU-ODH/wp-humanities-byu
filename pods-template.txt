@@ -147,7 +147,7 @@ Please edit when you make changes to any pod templates
 	<div class="odhBoxInner">
 		<a class="projects" href="{@permalink}">
 			<div class="odhCardImgContainer">
-				<img src="{@project_image._src}"/>
+				<img src="{@project_image._src}" alt="@project_image._wp_attachment_image_alt"/>
 			</div>
 			<h3 class="odhBoxTitle odhFirstTitle projects">{@post_title}</h3>
 		</a>

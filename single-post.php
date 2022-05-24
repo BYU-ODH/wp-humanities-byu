@@ -22,8 +22,8 @@ get_header();?>
 						<div class="entry-meta beforetitle-meta">
 							<?php cryout_post_title_hook(); ?>
 						</div><!-- .entry-meta -->
-						<?php the_title( '<h1 class="entry-title singular-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h1>' ); ?>
-            <h5 style = "text-align:center">By <?php the_author(); ?> , <?php the_time('F jS, Y'); ?> <h5>
+						<?php the_title( '<h2 class="entry-title singular-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h2>' ); ?>
+            <h5 class="blog-post-author">By <?php the_author(); ?>, <?php the_time('F jS, Y'); ?><h5>
 						<div class="entry-meta aftertitle-meta">
 							<?php cryout_post_meta_hook(); ?>
 						</div><!-- .entry-meta -->

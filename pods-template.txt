@@ -108,7 +108,7 @@ Please edit when you make changes to any pod templates
 
 		[each project_descriptive_images]
 			<div class="singleSnapshot">
-				<a href="{@_src.post-thumbnail}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}"/></a>
+				<a href="{@_src.post-thumbnail}" title="{@post_content, esc_attr}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}" alt = "{@_wp_attachment_image_alt}"/></a>
 			</div>
 		[/each]
 
@@ -121,7 +121,7 @@ Please edit when you make changes to any pod templates
 <div class="odhBoxSingleCard">
 	<div class="odhBoxInner">
 		<a href="{@room_link}">
-			<h3 class="odhBoxTitle odhFirstTitle">{@room_name}</h3>
+			<h2 class="odhBoxTitle odhFirstTitle">{@room_name}</h2>
 			<p class="odhBoxInfo">{@room_info}</p>
 		</a>
 	</div>
@@ -147,9 +147,9 @@ Please edit when you make changes to any pod templates
 	<div class="odhBoxInner">
 		<a href="{@permalink}">
 			<div class="odhCardImgContainer">
-				<img src="{@project_image._src}"/>
+				<img src="{@project_image._src}" alt="@project_image._wp_attachment_image_alt"/>
 			</div>
-			<h3 class="odhBoxTitle odhFirstTitle projects">{@post_title}</h3>
+			<h2 class="odhBoxTitle odhFirstTitle projects">{@post_title}</h2>
 		</a>
 		[if excerpt]
 		<div class="projectExcerpt">
@@ -167,7 +167,7 @@ Please edit when you make changes to any pod templates
 
 <div class="odhBoxSingleCard">
 	<div class="odhBoxInner">
-		<h3 class="odhBoxTitle odhFirstTitle">{@testing_card_name}</h3>
+		<h2 class="odhBoxTitle odhFirstTitle">{@testing_card_name}</h2>
 		<p class="odhBoxInfo">{@testing_card_info}</p>
 	</div>
 </div>
@@ -177,7 +177,7 @@ Please edit when you make changes to any pod templates
 <div class="odhBoxSingleCard"> 
 	<div class="odhBoxInner">
 		<a href="{@home_card_link}">
-			<h3 class="odhBoxTitle odhFirstTitle">{@home_card_name}</h3>
+			<h2 class="odhBoxTitle odhFirstTitle">{@home_card_name}</h2>
 			<p class="odhBoxInfo">{@home_card_info}</p>
 		</a>
 	</div>

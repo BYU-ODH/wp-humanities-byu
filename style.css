@@ -1499,6 +1499,11 @@ h1.entry-title {
 
 .entry-title.singular-title {
 	padding-top: 2em;
+	text-align: center;
+}
+
+.blog-post-author {
+	text-align: center;
 }
 
 .entry-title a {
@@ -6295,7 +6300,7 @@ a.lp-box-readmore {
 	display: none;
 }
 
-div#content #colophon, div#content #footer {
+aside#colophon {
 	background-color: #f9f9f9;
 	color: #141414;
 	text-align: center;
@@ -6653,7 +6658,7 @@ aside#colophon .fa-youtube {
 .entry-content .odhBoxInner a {
 	text-decoration: none;
 }
-h3.odhFirstTitle{
+h2.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
 	cursor: pointer;
@@ -6965,7 +6970,7 @@ a.homePagePost:hover{
 }
 .homePostAuthor, .homePostDate{
 	font-weight: 600;
-	color: #8F8F8F;
+	color: #414141;
 	
 }
 .homePostLine{
@@ -7092,6 +7097,17 @@ a.homePagePost:hover{
 	text-align: center;
 	margin: 1.25em 0 3.75em;
 	color: #002e5d;
+}
+
+/*Styling for elementor text boxes*/
+.elementor-text-editor {
+	color: #000000;
+}
+
+/*Styling for 'Read More' Button on Blog Page*/
+.pt-cv-wrapper .btn-success {
+	background-color: #367c36;
+    border-color: #306e30;
 }
 
 /* FIN! */

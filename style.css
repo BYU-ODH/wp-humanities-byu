@@ -1499,6 +1499,11 @@ h1.entry-title {
 
 .entry-title.singular-title {
 	padding-top: 2em;
+	text-align: center;
+}
+
+.blog-post-author {
+	text-align: center;
 }
 
 .entry-title a {
@@ -6653,7 +6658,7 @@ aside#colophon .fa-youtube {
 .entry-content .odhBoxInner a {
 	text-decoration: none;
 }
-h3.odhFirstTitle{
+h2.odhFirstTitle{
     margin-bottom: 20px;
 	text-align: center;
 	cursor: pointer;

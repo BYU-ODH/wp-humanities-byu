@@ -352,12 +352,6 @@ function format_phone_block ($phone) {
     return $block;
 }
 
-//add custom author to post of type "blog"
-function add_author_support_to_posts() {
-    add_post_type_support( 'blog', 'author' ); 
- }
- add_action( 'init', 'add_author_support_to_posts' );
-
 function trim_post_content($content) {
     return wp_trim_words($content, $num_words = 40);
 }

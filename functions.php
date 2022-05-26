@@ -352,22 +352,13 @@ function format_phone_block ($phone) {
     return $block;
 }
 
-function posts_orderby_lastname ($orderby_statement) 
-{
-    $orderby_statement = "RIGHT(post_title, LOCATE(' ', REVERSE(post_title)) - 1) ASC";
-    return $orderby_statement;
-}
-add_filter( 'posts_orderby' , 'posts_orderby_lastname' );
-$loop = new WP_Query(
-    array (
-        'post_type' => 'person'
-    )
-);
-
 //add custom author to post of type "blog"
 function add_author_support_to_posts() {
     add_post_type_support( 'blog', 'author' ); 
  }
  add_action( 'init', 'add_author_support_to_posts' );
 
+function trim_post_content($content) {
+    return wp_trim_words($content, $num_words = 40);
+}
 // FIN

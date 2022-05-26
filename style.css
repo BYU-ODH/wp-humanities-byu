@@ -106,7 +106,7 @@ To safely make customizations to the theme:
 /*variables*/
 
 :root {
-	--header-nav-height: 4.5rem;
+	--header-nav-height: 4.5rem; /* used for the navigation bar */
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
@@ -129,81 +129,74 @@ time, mark, audio, video {
 }
 
 html {
-	-webkit-box-sizing: border-box;
+	/* -webkit-box-sizing: border-box; */
 	        box-sizing: border-box;
 }
 
 *,
-*::before,
+/* *::before, */
 *::after {
-	-webkit-box-sizing: inherit;
-	        box-sizing: inherit;
-}
+	/* -webkit-box-sizing: inherit; */
+	box-sizing: inherit;
+} 
 
-audio,
+/* audio, we don't use any of these selectors?
 canvas,
 progress,
-video {
+*/
+
+/* video {
 	display: inline-block;
 	vertical-align: baseline;
-}
+} 
 
 audio:not([controls]) {
 	display: none;
 	height: 0;
-}
+} */
 
-[hidden],
+/* [hidden],
 template {
 	display: none;
-}
+} */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
+article, aside, details, figcaption, figure, footer, header, main,
+menu, nav, section,
 summary {
 	display: block;
 }
 
-body {
-	-webkit-font-smoothing: antialiased;
+/* body {
+	-webkit-font-smoothing: antialiased; only supported by some search engine.
 	-moz-font-smoothing: grayscale;
-	-moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale; 
 	font-family: 'Public Sans', Arial, sans-serif;
-}
+} */
 
-blockquote {
+/* blockquote { don't believe it is necessary, also doesn't seem to affect the blockquotes tag at all.
 	quotes: none;
-}
+} 
 
-blockquote::before,
+/* blockquote::before, normally people do not use blockquotes. They can manually do it themselves("")
 blockquote::after {
 	content: '';
 	content: none;
-}
+} */
 
-blockquote cite {
+/* blockquote cite { do not know of any blogs or post that uses blockquote html tag.
 	font-weight: 400;
 	font-style: normal;
 	font-family: 'Public Sans', Arial, sans-serif;
 	letter-spacing: 2px;
 	font-size: 0.7em;
-}
-
+} */
+/* 
 table {
 	max-width: 100%;
 	margin: 0 0 1.5em;
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 	# THEME SPECIFIC DEFAULTS
@@ -217,12 +210,7 @@ body {
 	font-family: 'Public Sans', Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-weight: normal;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
@@ -231,8 +219,6 @@ h6 {
 	font-variant: normal; 
 	font-weight: 700; 
 	line-height: 26.4px;
-
-
 }
 
 

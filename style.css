@@ -130,7 +130,7 @@ time, mark, audio, video {
 
 html {
 	/* -webkit-box-sizing: border-box; */
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 *,
@@ -201,13 +201,13 @@ table {
 /*--------------------------------------------------------------
 	# THEME SPECIFIC DEFAULTS
 --------------------------------------------------------------*/
-html {
-	line-height: 1.8;
-}
+/* html {
+	line-height: 3.0em;
+} */
 
 body {
-	font-size: 1em;
-	font-family: 'Public Sans', Arial, sans-serif;
+	/* font-size: 1em;  already set at 1*/
+	/* font-family: 'Public Sans', Arial, sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -205,13 +205,14 @@ table {
 	line-height: 3.0em;
 } */
 
+/* 
 body {
-	/* font-size: 1em;  already set at 1*/
-	/* font-family: 'Public Sans', Arial, sans-serif; */
-}
+	font-size: 1em;  already set at 1
+	font-family: 'Public Sans', Arial, sans-serif;
+} */
 
 h1, h2, h3, h4, h5, h6 {
-	clear: both;
+	/* clear: both; */
 	font-weight: normal;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 24px; 

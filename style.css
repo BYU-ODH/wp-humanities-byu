@@ -211,8 +211,8 @@ body {
 	font-family: 'Public Sans', Arial, sans-serif;
 } */
 
-h1, h2, h3, h4, h5, h6 {
-	/* clear: both; */
+/* h1, h2, h3, h4, h5, h6 { usually the this tag has its own class.
+	clear: both;
 	font-weight: normal;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 24px; 
@@ -220,69 +220,67 @@ h1, h2, h3, h4, h5, h6 {
 	font-variant: normal; 
 	font-weight: 700; 
 	line-height: 26.4px;
-}
+} */
 
 
-pre {
+/* pre { preformatted text, do we ever use that? 
 	padding: 1em;
 	max-width: 100%;
 	overflow: auto;
 	border: 1px solid transparent;
-}
+} */
 
-kbd,
-tt,
-var,
-code {
+/* kbd, tt, var, code { tt is deprecated, kbd shows keyboard, var is variables, and code?
 	padding: 0 5px;
 	overflow: auto;
 	vertical-align: middle;
-	text-indent: 0;}
+	text-indent: 0;
+} */
 
-q,
-blockquote {
-	font-size: 1.1em;}
+/* blockquote {
+	font-size: 1.1em;
+} */
 
-address {
+/* address {
 	padding-left: 1em;
-}
+} */
 
-del {
+/* del {
 	text-decoration: line-through;
-}
+} */
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-	border: 0;
+	/* height: auto; Make sure images are scaled correctly. */
+	max-width: 100%; /*Adhere to container width.*/
+	/* border: 0; */
 }
 
-a img {
+/* a img {
 	border: none;
 	vertical-align: middle;
-}
+} */
 
 hr {
 	height: 1px;
 	border: 0;
-	clear: both;
+	/* clear: both; */
 }
 
 /* Text elements */
 
-li > ul,
+/* li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 2em;
-}
+} */
 
 ul {
-	list-style-type: disc;
-    font-size: 16px;
-    font-weight: 600;
+	/* list-style-type: disc; */
+  font-size: 16px;
+  font-weight: 600;
 }
 
-ul ul {
+/* ul ul {
 	list-style-type: square;
 }
 
@@ -304,61 +302,60 @@ ol ol ol {
 
 ol ol ol ol {
 	list-style-type: lower-alpha;
-}
+} */
 
-dl {
+/* dl { can't find it in the gutenburg editor. 
 	margin: 0 0 2em 0;
-}
+} */
 
-dt {
+/* dt { same as above.
 	font-weight: bold;
-}
+} */
 
 strong {
 	font-weight: bold;
 }
 
-dfn,
-cite,
+/* dfn, people rarely use these.
+cite, */
 em,
 i {
 	font-style: italic;
 }
 
-big {
+/* big { not supported in HTML5
 	font-size: 125%;
-}
+} */
 
-mark,
+/* mark,
 ins {
 	text-decoration: none;
-}
+} */
 
-abbr,
-acronym {
+/* abbr {
 	border-bottom: 1px dotted;
 	cursor: help;
-}
+} */
 
-sup,
+/* 
+sup, subscript and superscript are rarely used.At least in our website.
 sub {
 	position: relative;
 	vertical-align: baseline;
 	font-size: .8em;
 	line-height: 0;
-}
+} */
 
-sup {
+/* sup {
 	top: -0.5em;
 }
 
 sub {
 	bottom: -0.25em;
-}
+} */
 
-textarea,
+/* textarea,
 select,
-input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="color"],
@@ -368,89 +365,89 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="number"],
 input[type="range"],
-input[type="search"],
 input[type="tel"],
 input[type="time"],
-input[type="url"],
-input[type="week"] {
+input[type="url"], */
+input[type="text"],
+input[type="search"] {
 	max-width: 100%;
 	padding: .7em 1em;
 	border: 3px solid transparent;
 	background: transparent;
 	font-size: inherit;
 	font-weight: bold;
-	-webkit-transition: background .3s ease-out;
+	/* -webkit-transition: background .3s ease-out; */
 	transition: background .3s ease-out;
-}
+} 
 
-input[type="file"] {
+/* input[type="file"] {
 	font-size: initial;
-}
+} */
 
 button,
-input[type="button"],
-input[type="submit"],
+/* input[type="button"],
+input[type="submit"], */
 input[type="reset"] {
-	padding: 1em 1.5em;
+	/* padding: 1em 1.5em; */
 	border: 0;
-	font-size: .9em;
+	/* font-size: .9em;
 	text-transform: uppercase;
 	font-weight: bold;
 	-webkit-transition: background-color .3s ease-out;
-	transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out; */
 }
 
-button[disabled],
+/* button[disabled],
 html input[disabled] {
 	cursor: default;
-}
+} */
 
-button::-moz-focus-inner,
+/* button::-moz-focus-inner, not supported and has incompabilites
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
-}
+} */
 
-input:focus,
+/* input:focus,
 textarea:focus {
 	outline: none;
-}
+} */
 
-input[type="checkbox"],
+/* input[type="checkbox"],
 input[type="radio"] {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
-}
+} */
 
-input[type="number"]::-webkit-inner-spin-button,
+/* input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
-}
+} */
 
-input[type="search"]::-webkit-search-cancel-button,
+/* input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
-}
+} */
 
-input[type="search"] {
+/* input[type="search"] {
     -webkit-appearance: textfield;
-}
+} */
 
-select option {
+/* select option {
 	padding: .25em .5em;
-}
+} */
 
 input::-moz-focus-inner { /*Remove button padding in FF*/
 	border: 0;
 	padding: 0;
 }
 
-embed,
+/* embed,
 iframe,
 object {
 	max-width: 100%;
-}
+} */
 
 .fluid-width-video-wrapper {
   max-height: 100vh;
@@ -472,11 +469,10 @@ object {
 .entry-content .wp-block-archives,
 .entry-content .wp-block-categories,
 .entry-content .wp-block-latest-posts {
-    padding: 0;
-    list-style: none;
+	padding: 0;
+	list-style: none;
 	display: none;
 }
-
 
 .wp-block-quote.is-large, .wp-block-quote.is-style-large {
 	padding: 1.5em;
@@ -6261,7 +6257,7 @@ li.menu-main-search.menu-search-animated {
 
 i.icon-search {
 	color: #002E5D;
-	float: right;
+	/* float: right; */
 }
 
 .staticslider-caption-buttons {

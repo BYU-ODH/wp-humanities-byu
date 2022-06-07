@@ -6993,6 +6993,11 @@ a.homePagePost:hover{
 .homePostText{
 	grid-column: 2;
 }
+
+.homePostText li p {
+	font-size: 1rem;
+	font-weight: 400;
+}
 @media only screen  and (max-width: 600px){
 	.homePostSingle{
 		display: flex;

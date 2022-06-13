@@ -48,9 +48,9 @@
 									</li>
 										<!-- // Display the Post Excerpt -->
 									<li><?php the_excerpt(__('(more…)')); ?></li>
-									<hr class="homePostLine">
 								</div>
 							</article>
+							<hr class="homePostLine">
 							<!-- // get_template_part( 'content/content', get_post_format());
 							get_template_part( 'content/content', 'excerpt'); -->
 							<?php	endwhile; ?>

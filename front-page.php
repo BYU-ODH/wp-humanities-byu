@@ -86,9 +86,9 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			<hr class="homePostLine">
 			
 			<?php 
-			// Repeat the process and reset once it hits the limit
-			endwhile;
-			wp_reset_postdata();
+				// Repeat the process and reset once it hits the limit
+				endwhile;
+				wp_reset_postdata();
 			?>
 			</ul>	
 			

@@ -1398,7 +1398,6 @@ img#wpstats {
 .entry-summary::after,
 .content-masonry::after {
 	content: "";
-	display: block;
 	clear: both;
 }
 

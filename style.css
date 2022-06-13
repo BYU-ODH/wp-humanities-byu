@@ -465,16 +465,16 @@ object {
 /*--------------------------------------------------------------
 	# GUTENBERG
 --------------------------------------------------------------*/
-
+/* 
 .entry-content .wp-block-archives,
 .entry-content .wp-block-categories,
 .entry-content .wp-block-latest-posts {
 	padding: 0;
 	list-style: none;
 	display: none;
-}
+} */
 
-.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+/* .wp-block-quote.is-large, .wp-block-quote.is-style-large {
 	padding: 1.5em;
 }
 
@@ -520,15 +520,15 @@ object {
 .wp-block-gallery.is-cropped .blocks-gallery-image a:hover,
 .wp-block-gallery.is-cropped .blocks-gallery-item a:hover {
 	opacity: 0.8;
-}
+} */
 
 /*--------------------------------------------------------------
 	# LAYOUT
 --------------------------------------------------------------*/
 
-#site-wrapper {
+/* #site-wrapper {
 	overflow: hidden;
-}
+} */
 
 .septera-boxed-layout #site-wrapper {
 	margin: 0 auto;

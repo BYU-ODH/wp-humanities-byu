@@ -47,7 +47,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 			$the_query = new WP_Query( array('post_type' => 'post', 'posts_per_page' => 5) ); ?>
 			
 			<?php // Start of WP Query
-			while ($the_query -> have_posts()) : $the_query -> the_post(); 
+			while ($the_query -> have_posts()) : $the_query -> the_post(); //the_template?
 			// Display the Post Title with Hyperlink
 			?>
 			
@@ -58,7 +58,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 				<div class="homePostText">
 					<li><a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</li>
-					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;/
+					<li><span class="homePostDate"><?php echo get_the_date( 'F j, Y', $post_id )?></span>&nbsp;
 						<span class="homePostAuthor"><?php the_author_posts_link(); ?></span>
 						
 						<!--<a href="#" title="Visit in Directory"><i class="fa fa-user" aria-hidden="true"></i></a>-->

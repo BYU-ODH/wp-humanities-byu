@@ -528,7 +528,7 @@ object {
 
 /* #site-wrapper {
 	overflow: hidden;
-} */
+}
 
 .septera-boxed-layout #site-wrapper {
 	margin: 0 auto;
@@ -551,19 +551,19 @@ object {
 #container.three-columns-left #secondary,
 #container.three-columns-sided #primary  	{ -webkit-order: -1; -ms-flex-order: -1; order: -1; }
 #container.three-columns-sided .main 		{ -webkit-order: 0; -ms-flex-order: 0; order: 0; }
-#container.three-columns-sided #secondary 	{ -webkit-order: 1; -ms-flex-order: 1; order: 1; }
+#container.three-columns-sided #secondary 	{ -webkit-order: 1; -ms-flex-order: 1; order: 1; } */
 
-.main {
+/* .main {
 	clear: both;
 	overflow: hidden;
 	min-height: 400px;
 	margin-bottom: 0;
-}
+} */
 
-#container:not(.septera-landing-page) .main {
+/* #container:not(.septera-landing-page) .main {
 	padding-top: 2em;
 	padding-bottom: 2em;
-}
+} */
 
 /* Left/right padding for content */
 #site-header-main-inside,
@@ -583,10 +583,10 @@ object {
 	padding-right: 2em;
 }
 
-#container:not(.septera-landing-page) .main {
+/* #container:not(.septera-landing-page) .main {
 	padding-left: 2em;
 	padding-right: 2em;
-}
+} */
 
 @media (min-width: 1152px) {
 
@@ -609,22 +609,22 @@ object {
 	}
 }
 
-.sidey {
+/* .sidey {
 	position: relative;
 	display: block;
 	float: left;
 	padding: 3.5em 3%;
-}
+} */
 
-#main {
+/* #main {
 	position: relative;
 	overflow: visible !important;
-}
+} */
 
-#footer {
+/* #footer {
 	width: 100%;
 	clear: both;
-}
+} */
 
 /*--------------------------------------------------------------
 	# HEADER

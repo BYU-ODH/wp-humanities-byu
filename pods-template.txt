@@ -3,7 +3,7 @@ Please edit when you make changes to any pod templates
 
 ** Single Project Page Template ** 
 
-  <div class="projectMainContODH">
+<div class="projectMainContODH">
 	<div class="projectHeroODH">
 		<img class="projectHeroIMG" src="{@project_image._src.large}" alt="{@project_image._wp_attachment_image_alt}" title="{@project_image._wp_attachment_image_alt}"/><!--header image dynamic to have featured image be  img-->
 	</div>
@@ -20,100 +20,98 @@ Please edit when you make changes to any pod templates
 		<!--right side of grid-->
 		<div class="gridProjStatODH">
 			<div class="innerProjectGrid">
-				<div class="projectGridRow projectTypeRow"><div class="coltest">Project Type:</div>
-					<div class="coltest">{@project_type}</div></div>
-				<div class="projectGridRow projectURLRow">
-					[if project_link]<div>Project URL:</div>[/if]
-					[if project_link]<div>{@project_link}</div>[/if]
-				</div>
+                [if project_type]
+				    <div class="projectGridRow projectTypeRow">
+                        <div>Project Type:</div>
+					    <div>{@project_type}</div>
+                    </div>
+                [/if]
+				[if project_link]
+                    <div class="projectGridRow projectURLRow">
+                        <div>Project URL:</div>
+					    <div>{@project_link}</div>
+				    </div>
+                [/if]
 				<div class="projectGridRow projectURLRow">
 					<div>Status:</div>
 					<div>
-					[if archived_status_date]
-							<span class="archivedStatus statusLineSizeODH">Archived&nbsp;</span>
-								[else]
-								[if live_status_date]
+					    [if archived_status_date]
+							<span class="archivedStatus statusLineSizeODH"> Archived</span>
+						[else]
+							[if live_status_date]
 								<span class="liveStatus statusLineSizeODH"> Live</span>
-									[else]
-									<span class="intakeStatus statusLineSizeODH"> Intake</span>
+							[else]
+								<span class="intakeStatus statusLineSizeODH"> Intake</span>
+						    [/if]
 						[/if]
-						[/if]
 					</div>
 				</div>
-				<div class="projectGridRow projectURLRow">
-					[if project_personnel]<div>ODH Personnel:</div>[/if]
-					[if project_personnel]<div>
-							<ul class="projectAlumni">
-							[each project_personnel]
-								<li class="projectListItem"><a class="projectPersonnelSingle" href="{@permalink}"> {@post_title}</a></li>
-								[/each]
-							</ul>
-					</div>[/if]
-				</div>
-				<div class="projectGridRow projectURLRow">
-					[if project_alumni]<div>Project Alumni:</div>
-					 <div class="odhAlumni">
-						 <ul class="projectAlumni">
-						 [each project_alumni] [if homepage]
-							<li class="projectListItem"><a class="projectPersonnelSingle" href="{@homepage}">
-								{@post_title}</a></li>
-						 [else]
-							 <li class="projectListItem">{@post_title}</li>
-							 [/if]
-						[/each]
-						 </ul>
-					
-					[/if]
-					</div>
-				</div>
-				<div class="projectGridRow projectURLRow">
-					[if project_owner]<div>Project Owner:</div>
-					 <div class="odhAlumni">
-						 <ul class="projectAlumni">
-						 [each non-odh_collaborators] [if homepage]
-							<li class="projectListItem"><a class="projectPersonnelSingle" href="{@homepage}">
-								{@post_title}</a></li>
-						 [else]
-							 <li class="projectListItem">{@post_title}</li>
-							 [/if]
-						[/each]
-						 </ul>
-					
-					[/if]
-					</div>
-				</div>
-				<div class="projectGridRow projectURLRow">
-					[if non-odh_collaborators]<div>Non-Odh Collaborators:</div>
-					 <div class="odhAlumni">
-						 <ul class="projectAlumni">
-						 [each non-odh_collaborators] [if homepage]
-							<li class="projectListItem"><a class="projectPersonnelSingle" href="{@homepage}">
-								{@post_title}</a></li>
-						 [else]
-							 <li class="projectListItem">{@post_title}</li>
-							[/if]
-						[/each]
-						 </ul>
-					[/if]
-					</div>
-				</div>
-				
+                [if project_directors]
+                    <div class="projectGridRow projectDirectorsRow">
+                        <div>Project Director(s):</div>
+                        <div class="odhAlumni">
+                            [each project_directors]
+                                [if homepage]
+                                    <a class="projectPersonnelSingle" href="{@homepage}">{@post_title}</a><br>
+                                [else]
+                                    {@post_title}<br>
+                                [/if]
+                            [/each]
+                        </div>
+				    </div>
+                [/if]
+                [if project_personnel]
+				    <div class="projectGridRow projectURLRow">
+					    <div>ODH Personnel:</div>
+					    <div>
+                            [each project_personnel]
+							    <a class="projectPersonnelSingle" href="{@permalink}">{@post_title}</a><br>
+						    [/each]
+					    </div>
+				    </div>
+                [/if]
+                [if project_alumni]
+				    <div class="projectGridRow projectURLRow">
+					    <div>Project Alumni:</div>
+					    <div class="odhAlumni">
+						    [each project_alumni]
+                                [if homepage]
+						            <a class="projectPersonnelSingle" href="{@homepage}">{@post_title}</a><br>
+						        [else]
+                                    {@post_title}<br>
+						        [/if]
+						    [/each]
+					    </div>
+				    </div>
+                [/if]
+                [if non-odh_collaborators]
+                    <div class="projectGridRow projectURLRow">
+                        <div>Non-ODH Collaborators:</div>
+                        <div class="odhAlumni">
+                            [each non-odh_collaborators]
+                                [if homepage]
+                                    <a class="projectPersonnelSingle" href="{@homepage}">{@post_title}</a><br>
+                                [else]
+                                    {@post_title}<br>
+                                [/if]
+                            [/each]
+					    </div>
+				    </div>
+                [/if]
+	
 				<!--<div class="rightInner">
-
+					
 				</div>-->
 			</div>
 		</div>
-
-	<div class="gridSnapshotsODH">
-
+	
+	<div class="gridSnapshotsODH">		
 		[each project_descriptive_images]
 			<div class="singleSnapshot">
 				<a href="{@_src.post-thumbnail}" title="{@post_content, esc_attr}"><img class="object-fit_contain" src="{@_src.post-thumbnail.medium, esc_url}" alt = "{@_wp_attachment_image_alt}"/></a>
 			</div>
-		[/each]
-
-	</div>
-
+		[/each]	
+	</div>	
 </div>
 
 ** Room Card Template **

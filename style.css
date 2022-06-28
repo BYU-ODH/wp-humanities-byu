@@ -630,32 +630,32 @@ object {
 	# HEADER
 --------------------------------------------------------------*/
 
-#masthead {
+/* #masthead {
 	position: relative;
-}
+} */
 
-#masthead::after {
+/* #masthead::after {
 	display: table;
 	clear: both;
 	content: "";
-}
+} */
 
 #branding {
 	float: left;
-	-webkit-transition: .5s height ease-in-out;
+	/* -webkit-transition: .5s height ease-in-out; */
 	transition: .5s height ease-in-out;
 }
 
-#branding .identity {
+#branding .identity {  /* Logo */
 	float: left;
 }
 
-a#logo {
+/* a#logo {
 	display: inline;
-}
+} */
 
 a#logo > img {
-	max-height: 80%;
+	/* max-height: 80%; */
 	vertical-align: middle;
 }
 
@@ -664,63 +664,63 @@ a#logo > img {
 	top: 50%;
 	display: inline-block;
 	float: left;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+	/* -webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%); */
 	transform: translateY(-50%);
 }
 
 #site-title {
-	float: left;
-	border-left: .15rem solid;
-	border-color: white;
+	/* float: left; */
+	border-left: .15rem solid white;
+	/* border-color: white; */
 	padding-left: .5rem;
 }
 
-#site-title a::before,
+/* #site-title a::before,
 .lp-box-title::before,
 .widget-title::before {
 	position: relative;
-    display: block;
-    width: 1.5em;
+  display: block;
+  width: 1.5em;
 	border-bottom: .2em solid;
-}
+} */
 
 .lp-box-title::before {
 	opacity: .25;
 	top: -5px;
 }
 
-.widget-title::before {
+/* .widget-title::before {
 	opacity: .25;
 	top: -2px;
-}
+} */
 
 #branding .identity + #site-text {
 	margin-left: 1em;
-	clear: none;
+	/* clear: none; */
 }
 
 #site-title a {
-	display: block;
+	/* display: block; */
 	text-decoration: none;
-    font-size: 24px;
+  font-size: 24px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
-    font-weight: lighter;
+  font-weight: lighter;
 	line-height: 1.1em;
 }
-
+/* 
 #site-title a span {
 	display: inline-block;
-}
+} */
 
-#site-title a::before {
+/* #site-title a::before {
 	-webkit-transition: .5s width ease-in-out, .5s .5s background ease-out;
 	transition: .5s width ease-in-out, .5s .5s background ease-out;
-}
+} */
 
-#site-title a:hover::before {
+/* #site-title a:hover::before {
 	width: 100%;
-}
+} */
 
 #site-description {
 	display: none;
@@ -794,25 +794,25 @@ a#logo > img {
 }
 
 .wp-custom-header {
-    position: relative;
-    line-height: 0;
+  position: relative;
+  line-height: 0;
 }
 
 .wp-custom-header-video-button.wp-custom-header-video-button {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background: rgba(255,255,255,.1);
-    opacity: 0;
-    cursor: pointer;
-    -webkit-transition: .3s all ease-out;
-    transition: .3s all ease-out;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: rgba(255,255,255,.1);
+	opacity: 0;
+	cursor: pointer;
+	-webkit-transition: .3s all ease-out;
+	transition: .3s all ease-out;
 }
 
 .wp-custom-header:hover .wp-custom-header-video-button.wp-custom-header-video-button {
-    opacity: .7;
+  opacity: .7;
 }
 
 .wp-custom-header video {
@@ -1101,13 +1101,13 @@ nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
 	right: 0;
-    display: inline-block;
+  display: inline-block;
 	width: auto;
 	height: 2em;
 	margin-top: 25px;
 	padding: 0 1em;
 	cursor: pointer;
-    font-size: 24px;
+  font-size: 24px;
 	line-height: 2.3;
 }
 
@@ -1311,10 +1311,7 @@ img#wpstats {
 	# CONTENT
 --------------------------------------------------------------*/
 
-.main h1,
-.main h2,
-.main h3,
-.main h4,
+.main h1,.main h2,.main h3,.main h4,
 .main h5,
 .main h6 {
 	margin: 1em 0 .5em;

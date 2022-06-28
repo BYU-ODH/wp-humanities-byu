@@ -4000,6 +4000,8 @@ nav.sidebarmenu li a:hover {
 	text-align: left;
 }
 
+/* JULIANA START */
+
 #wp-calendar tbody td:hover {
 	opacity: 0.8;
 	-webkit-filter: alpha(opacity=80);

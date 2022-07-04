@@ -1014,9 +1014,9 @@ a#logo > img {
 	## MOBILE MENU
 --------------------------------------------------------------*/
 
-.noscroll { /* to be added to body on mobile */
+/* .noscroll { 
 	overflow: hidden;
-}
+} */
 
 #nav-toggle { /* Mobile nav toggle will only be visible on mobile */
 	display: none;
@@ -1045,61 +1045,61 @@ nav#mobile-menu { /* Actual mobile menu */
 	padding: 2em;
 }
 
-#mobile-menu > div {
+/* #mobile-menu > div {
 	margin: 8em auto 0;
     max-width: 400px;
     width: 80%;
-}
+} */
 
-@media (max-width: 450px) {
-	#mobile-menu > div {
+/* @media (max-width: 450px) {
+	 #mobile-menu > div {
 	    width: 90%;
-	}
+	} 
+} */
 
-	a#logo > img {
-		display: none;
-	}
+a#logo > img {
+	display: none;
 }
 
-nav#mobile-menu a {
+/* nav#mobile-menu a {
 	display: inline;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-}
+} */
 
-nav#mobile-menu a span {
+/* nav#mobile-menu a span {
 	display: inline-block;
-}
+} */
 
-nav#mobile-menu > div  ul li a:not([href]) { /* Default cursor for menu items with no link */
+/* nav#mobile-menu > div  ul li a:not([href]) { 
 	cursor: default;
-}
+} */
 
-nav#mobile-menu > div > ul > li > a {
+/* nav#mobile-menu > div > ul > li > a {
 	position: relative;
 	z-index: 9999;
-}
+} */
 
-nav#mobile-menu ul li {
+/* nav#mobile-menu ul li {
     clear: both;
     display: block;
     float: none;
     line-height: 3;
     position: relative;
     white-space: normal;
-}
+} */
 
-#mobile-nav ul li a span {
+/* #mobile-nav ul li a span {
 	max-width: 85%;
  	overflow: hidden;
   	white-space: nowrap;
   	text-overflow: ellipsis;
   	line-height: 1;
-}
+} */
 
-nav#mobile-menu #nav-cancel {
+/* nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1111,9 +1111,9 @@ nav#mobile-menu #nav-cancel {
 	cursor: pointer;
   font-size: 24px;
 	line-height: 2.3;
-}
+} */
 
-#mobile-menu .menu-main-search { /* Searchbar in main menu will always be top */
+/* #mobile-menu .menu-main-search { 
 	font-size: 1.2em;
 	left: 0;
 	margin: 25px auto 0;
@@ -1122,20 +1122,20 @@ nav#mobile-menu #nav-cancel {
 	right: 0;
 	top: 0;
 	width: 70%;
-}
+} */
 
-#mobile-menu .menu-main-search a > .icon-search {
+/* #mobile-menu .menu-main-search a > .icon-search {
 	display: none;
-}
+} */
 
-#mobile-menu .searchform .searchsubmit,
+/* #mobile-menu .searchform .searchsubmit,
 #mobile-menu .searchform:hover input[type="search"],
 #mobile-menu .searchform input[type="search"]:focus {
 	background: transparent;
 	color: inherit;
-}
+} */
 
-#mobile-menu .menu-main-search .searchform{
+/* #mobile-menu .menu-main-search .searchform{
 	max-width: 100%;
 }
 
@@ -1152,7 +1152,7 @@ nav#mobile-menu #smobile {
 #mobile-menu .searchform .searchsubmit {
 	right: .5em;
 	height: 3em;
-}
+} */
 
 /*--------------------------------------------------------------
 	# FOOTER
@@ -1206,10 +1206,10 @@ nav#mobile-menu #smobile {
 	text-decoration: none;
 }
 
-img#wpstats {
+/* img#wpstats {
 	display: block;
 	margin: 0 auto .5em;
-}
+} */
 
 /*--------------------------------------------------------------
 	## FOOTER WIDGET AREA

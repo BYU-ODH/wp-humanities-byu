@@ -1259,53 +1259,53 @@ nav#mobile-menu #smobile {
 	margin: 0 auto;
 } */
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
 	.footer-center .footer-widget-inside {
 		width: 100%;
 	}
-}
+} */
 
-#colophon .footer-four .widget-container {
+/* #colophon .footer-four .widget-container {
 	width: 25%;
-}
+} */
 
-#colophon.footer-four .widget-container:nth-child(4n) {
+/* #colophon.footer-four .widget-container:nth-child(4n) {
 	clear: both;
 	padding-right: 0;
-}
+} */
 
 #colophon .footer-three .widget-container {
 	width: 33.333%;
 }
 
-#colophon .footer-three .widget-container:nth-child(3n) {
+/* #colophon .footer-three .widget-container:nth-child(3n) {
 	clear: both;
 	padding-right: 0;
-}
+} */
 
-#colophon .footer-two .widget-container {
+/* #colophon .footer-two .widget-container {
 	width: 50%;
-}
+} */
 
-#colophon .footer-two .widget-container:nth-child(2n) {
+/* #colophon .footer-two .widget-container:nth-child(2n) {
 	clear: both;
 	padding-right: 0;
-}
+} */
 
-#colophon .footer-one .widget-container {
+/* #colophon .footer-one .widget-container {
 	width: 100%;
 	clear: both;
 	padding-left: 0;
 	padding-right: 0;
-}
+} */
 
 
-.footer-all .widget-container {
+/* .footer-all .widget-container {
 	-webkit-box-flex: 1;
 	-moz-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -1332,59 +1332,59 @@ nav#mobile-menu #smobile {
 	margin-top: 0;
 }
 
-.main article ul:not([class]),
+/* .main article ul:not([class]),
 .main article ol:not([class]) {
 	margin-left: 2em;
-}
+} */
 
-.main table {
+/* .main table {
 	max-width: 100%;
 	margin: 0 0 2em 0;
 	border: 0;
 	vertical-align: top;
-}
+} */
 
-.main tr {
+/* .main tr {
 	vertical-align: top;
-}
+} */
 
 
-.main th{
+/* .main th{
 	font-weight: 600;
-}
+} */
 
-.main th,
+/* .main th,
 .main td {
 	padding: .75em;
-}
+} */
 
-.septera-stripped-table .main td {
+/* .septera-stripped-table .main td {
 	border-top: 1px solid transparent;
-}
+} */
 
-.septera-stripped-table .main tr.even {
+/* .septera-stripped-table .main tr.even {
 	background-color: transparent;
-}
+} */
 
-.septera-bordered-table .main th,
+/* .septera-bordered-table .main th,
 .septera-bordered-table .main td {
 	border: 1px solid transparent;
-}
+} */
 
-.septera-stripped-table .main th,
+/* .septera-stripped-table .main th,
 .septera-bordered-table .main th {
 	border-top: 1px solid transparent;
-}
+} */
 
 
-.septera-stripped-table .main thead th,
+/* .septera-stripped-table .main thead th,
 .septera-bordered-table .main thead th {
 	border-bottom: 2px solid transparent;
-}
+} */
 
-.septera-stripped-table .main thead th {
+/* .septera-stripped-table .main thead th {
 	border-top-width: 2px;
-}
+} */
 
 .entry-content,
 .entry-summary {
@@ -1400,17 +1400,17 @@ nav#mobile-menu #smobile {
 	clear: both;
 }
 
-.septera-magazine-two .content-masonry .entry-content,
+/* .septera-magazine-two .content-masonry .entry-content,
 .septera-magazine-two .content-masonry .entry-summary,
 .septera-magazine-three .content-masonry .entry-content,
 .septera-magazine-three .content-masonry .entry-summary {
 	padding-top: 1em;
 	padding-bottom: 1.5em;
-}
+} */
 
-.main .entry-summary p:last-child {
+/* .main .entry-summary p:last-child {
 	margin-bottom: 0;
-}
+} */
 
 .entry-content h1, .entry-summary h1,
 .entry-content h2, .entry-summary h2,
@@ -1421,36 +1421,37 @@ nav#mobile-menu #smobile {
 	line-height: 1.2;
 }
 
-.entry-content h5,
+/* .entry-content h5,
 .entry-content h6 {
 	text-transform: none;
 	font-weight: bold;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
-}
+} */
 
-.entry-content fieldset {
+/* .entry-content fieldset {
 	border: 1px solid transparent;
 	margin: 0 0 2em 0;
-}
+} */
 
-.entry-content fieldset legend {
+/* .entry-content fieldset legend {
 	font-weight: bold;
-}
+} */
 
-.entry-content blockquote.left {
+/* .entry-content blockquote.left {
 	float: left;
 	width: 33%;
 	margin-right: 2em;
 	margin-left: 0;
 	text-align: right;
-}
-.entry-content blockquote.right {
+} */
+
+/* .entry-content blockquote.right {
 	float: right;
 	width: 33%;
 	margin-right: 0;
 	margin-left: 2em;
 	text-align: left;
-}
+} */
 
 /*--------------------------------------------------------------
 	## PAGE TITLES

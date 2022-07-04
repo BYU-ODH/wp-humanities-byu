@@ -134,7 +134,7 @@ html {
 }
 
 *,
-/* *::before, */
+*::before,
 *::after {
 	/* -webkit-box-sizing: inherit; */
 	box-sizing: inherit;
@@ -166,12 +166,12 @@ summary {
 	display: block;
 }
 
-/* body {
-	-webkit-font-smoothing: antialiased; only supported by some search engine.
+body {
+	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: grayscale;
 	-moz-osx-font-smoothing: grayscale; 
 	font-family: 'Public Sans', Arial, sans-serif;
-} */
+}
 
 /* blockquote { don't believe it is necessary, also doesn't seem to affect the blockquotes tag at all.
 	quotes: none;
@@ -190,28 +190,28 @@ blockquote::after {
 	letter-spacing: 2px;
 	font-size: 0.7em;
 } */
-/* 
+
 table {
 	max-width: 100%;
 	margin: 0 0 1.5em;
 	border-collapse: collapse;
 	border-spacing: 0;
-} */
+}
 
 /*--------------------------------------------------------------
 	# THEME SPECIFIC DEFAULTS
 --------------------------------------------------------------*/
-/* html {
+html {
 	line-height: 3.0em;
-} */
+}
 
-/* 
+
 body {
-	font-size: 1em;  already set at 1
+	font-size: 1em; 
 	font-family: 'Public Sans', Arial, sans-serif;
-} */
+}
 
-/* h1, h2, h3, h4, h5, h6 { usually the this tag has its own class.
+h1, h2, h3, h4, h5, h6 { 
 	clear: both;
 	font-weight: normal;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
@@ -220,7 +220,7 @@ body {
 	font-variant: normal; 
 	font-weight: 700; 
 	line-height: 26.4px;
-} */
+}
 
 
 /* pre { preformatted text, do we ever use that? 
@@ -250,15 +250,15 @@ body {
 } */
 
 img {
-	/* height: auto; Make sure images are scaled correctly. */
-	max-width: 100%; /*Adhere to container width.*/
-	/* border: 0; */
+	height: auto;
+	max-width: 100%;
+	border: 0;
 }
 
-/* a img {
+a img {
 	border: none;
 	vertical-align: middle;
-} */
+}
 
 hr {
 	height: 1px;
@@ -280,10 +280,10 @@ ul {
   font-weight: 600;
 }
 
-/* ul ul {
+ ul ul {
 	list-style-type: square;
 }
-
+/*
 ul ul ul {
 	list-style-type: circle;
 }
@@ -312,9 +312,9 @@ ol ol ol ol {
 	font-weight: bold;
 } */
 
-strong {
+/* strong {
 	font-weight: bold;
-}
+} */
 
 /* dfn, people rarely use these.
 cite, */
@@ -425,14 +425,14 @@ input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 } */
 
-/* input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
-} */
+}
 
-/* input[type="search"] {
+input[type="search"] {
     -webkit-appearance: textfield;
-} */
+}
 
 /* select option {
 	padding: .25em .5em;
@@ -449,9 +449,9 @@ object {
 	max-width: 100%;
 } */
 
-.fluid-width-video-wrapper {
+/* .fluid-width-video-wrapper {
   max-height: 100vh;
-}
+} */
 
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -526,15 +526,15 @@ object {
 	# LAYOUT
 --------------------------------------------------------------*/
 
-/* #site-wrapper {
+ #site-wrapper {
 	overflow: hidden;
 }
-
+/*
 .septera-boxed-layout #site-wrapper {
 	margin: 0 auto;
 	box-shadow: 0 0 8px rgba(0,0,0,.2);
 }
-
+*/
 #container {
 	display: block;
 	display: -webkit-flex;
@@ -546,19 +546,19 @@ object {
 	overflow: hidden;
 }
 
-#container.two-columns-left #primary,
+/* #container.two-columns-left #primary,
 #container.three-columns-left #primary,
 #container.three-columns-left #secondary,
 #container.three-columns-sided #primary  	{ -webkit-order: -1; -ms-flex-order: -1; order: -1; }
 #container.three-columns-sided .main 		{ -webkit-order: 0; -ms-flex-order: 0; order: 0; }
-#container.three-columns-sided #secondary 	{ -webkit-order: 1; -ms-flex-order: 1; order: 1; } */
+#container.three-columns-sided #secondary 	{ -webkit-order: 1; -ms-flex-order: 1; order: 1; } */ 
 
-/* .main {
+.main {
 	clear: both;
 	overflow: hidden;
 	min-height: 400px;
 	margin-bottom: 0;
-} */
+}
 
 /* #container:not(.septera-landing-page) .main {
 	padding-top: 2em;tschen02	0
@@ -588,7 +588,7 @@ object {
 	padding-right: 2em;
 } */
 
-@media (min-width: 1152px) {
+/* @media (min-width: 1152px) {
 
 	#container.two-columns-right .main,
 	#container.three-columns-right .main,
@@ -607,7 +607,7 @@ object {
 	.three-columns-sided #breadcrumbs-container-inside {
 		padding-left: 2.5em;
 	}
-}
+} */
 
 /* .sidey {
 	position: relative;
@@ -616,15 +616,15 @@ object {
 	padding: 3.5em 3%;
 } */
 
-/* #main {
+#main {
 	position: relative;
 	overflow: visible !important;
-} */
+}
 
-/* #footer {
+#footer {
 	width: 100%;
 	clear: both;
-} */
+}
 
 /*--------------------------------------------------------------
 	# HEADER
@@ -664,15 +664,15 @@ a#logo > img {
 	top: 50%;
 	display: inline-block;
 	float: left;
-	/* -webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%); */
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
 #site-title {
-	/* float: left; */
+	float: left;
 	border-left: .15rem solid white;
-	/* border-color: white; */
+	border-color: white;
 	padding-left: .5rem;
 }
 
@@ -697,11 +697,11 @@ a#logo > img {
 
 #branding .identity + #site-text {
 	margin-left: 1em;
-	/* clear: none; */
+	clear: none;
 }
 
 #site-title a {
-	/* display: block; */
+	display: block;
 	text-decoration: none;
   font-size: 24px;
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
@@ -759,12 +759,12 @@ a#logo > img {
 	margin: 0;
 }
 
-/* .header-fixed#site-header-main,
+.header-fixed#site-header-main,
 .header-fixed#site-header-main #access::after {
 	box-shadow: 0 0 3px rgba(0,0,0,0.2);
 	-webkit-transition: .25s background-color ease-in-out;
 	transition: .25s background-color ease-in-out;
-} */
+}
 
 #header-image-main,
 #header-image-main-inside {
@@ -776,15 +776,15 @@ a#logo > img {
 	height: 100%;
 } */
 
-/* .septera-responsive-headerimage #masthead div.header-image {
+.septera-responsive-headerimage #masthead div.header-image {
 	display: none;
-} */
+}
 
 /* .septera-cropped-headerimage #masthead img.header-image {
 	display: none;
 } */
 
-/* 
+
 #masthead .header-image {
 	display: block;
 	width: inherit;
@@ -792,7 +792,7 @@ a#logo > img {
 	margin: 0 auto;
 	background-size: cover;
 	background-position: 50% 50%;
-} */
+}
 
 /* .wp-custom-header {
   position: relative;
@@ -850,7 +850,7 @@ a#logo > img {
 	margin: 0 auto;
 } */
 
-/* 
+
 #access::after {
 	position: absolute;
 	z-index: -1;
@@ -860,7 +860,7 @@ a#logo > img {
 	width: 100%;
 	height: 100%;
 	content: "";
-} */
+}
 
 
 /* #access a {
@@ -1045,51 +1045,50 @@ nav#mobile-menu { /* Actual mobile menu */
 	padding: 2em;
 }
 
-/* #mobile-menu > div {
+#mobile-menu > div {
 	margin: 8em auto 0;
     max-width: 400px;
     width: 80%;
-} */
-
-/* @media (max-width: 450px) {
-	 #mobile-menu > div {
-	    width: 90%;
-	} 
-} */
-
-a#logo > img {
-	display: none;
 }
 
-/* nav#mobile-menu a {
+@media (max-width: 450px) {
+	#mobile-menu > div {
+		width: 90%;
+	 }
+	a#logo > img {
+		display: none;
+	}
+} 
+
+nav#mobile-menu a {
 	display: inline;
 	font-size: 1.2em;
 	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
-} */
+}
 
-/* nav#mobile-menu a span {
+nav#mobile-menu a span {
 	display: inline-block;
-} */
+}
 
 /* nav#mobile-menu > div  ul li a:not([href]) { 
 	cursor: default;
 } */
 
-/* nav#mobile-menu > div > ul > li > a {
+nav#mobile-menu > div > ul > li > a {
 	position: relative;
 	z-index: 9999;
-} */
+}
 
-/* nav#mobile-menu ul li {
+nav#mobile-menu ul li {
     clear: both;
     display: block;
     float: none;
     line-height: 3;
     position: relative;
     white-space: normal;
-} */
+}
 
 /* #mobile-nav ul li a span {
 	max-width: 85%;
@@ -1099,7 +1098,7 @@ a#logo > img {
   	line-height: 1;
 } */
 
-/* nav#mobile-menu #nav-cancel {
+nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -1111,9 +1110,9 @@ a#logo > img {
 	cursor: pointer;
   font-size: 24px;
 	line-height: 2.3;
-} */
+}
 
-/* #mobile-menu .menu-main-search { 
+#mobile-menu .menu-main-search { 
 	font-size: 1.2em;
 	left: 0;
 	margin: 25px auto 0;
@@ -1122,20 +1121,20 @@ a#logo > img {
 	right: 0;
 	top: 0;
 	width: 70%;
-} */
+}
 
-/* #mobile-menu .menu-main-search a > .icon-search {
+#mobile-menu .menu-main-search a > .icon-search {
 	display: none;
-} */
+}
 
-/* #mobile-menu .searchform .searchsubmit,
+#mobile-menu .searchform .searchsubmit,
 #mobile-menu .searchform:hover input[type="search"],
 #mobile-menu .searchform input[type="search"]:focus {
 	background: transparent;
 	color: inherit;
-} */
+}
 
-/* #mobile-menu .menu-main-search .searchform{
+#mobile-menu .menu-main-search .searchform{
 	max-width: 100%;
 }
 
@@ -1152,7 +1151,7 @@ nav#mobile-menu #smobile {
 #mobile-menu .searchform .searchsubmit {
 	right: .5em;
 	height: 3em;
-} */
+}
 
 /*--------------------------------------------------------------
 	# FOOTER
@@ -1255,10 +1254,10 @@ nav#mobile-menu #smobile {
 	padding-right: 4em;
 }
 
-.footer-center .footer-widget-inside {
+/* .footer-center .footer-widget-inside {
 	display: table;
 	margin: 0 auto;
-}
+} */
 
 @media (max-width: 640px) {
 	.footer-center .footer-widget-inside {

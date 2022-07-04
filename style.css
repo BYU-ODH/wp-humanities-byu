@@ -844,12 +844,13 @@ a#logo > img {
 	margin-left: 2em;
 }
 
-.septera-menu-center #access {
+/* .septera-menu-center #access {
 	display: table;
 	float: none;
 	margin: 0 auto;
-}
+} */
 
+/* 
 #access::after {
 	position: absolute;
 	z-index: -1;
@@ -859,42 +860,42 @@ a#logo > img {
 	width: 100%;
 	height: 100%;
 	content: "";
-}
+} */
 
 
-#access a {
+/* #access a {
 	display: block;
 	padding: 0 1.6em;
 	text-decoration: none;
 	line-height: 3.5;
 	-webkit-transition: .3s color ease-out;
 	transition: .3s color ease-out;
-}
+} */
 
-#access a > span {
+/* #access a > span {
 	display: block;
 	text-transform: uppercase;
-}
+} */
 
-#access > div ul li a:not([href]) { /* Default cursor for menu items with no link */
+/* #access > div ul li a:not([href]) { <!--Default cursor for menu items with no link-->
 	cursor: default;
-}
+} */
 
 
-#access > div > ul > li > a {
+/* #access > div > ul > li > a {
 	position: relative;
 	z-index: 999;
-}
+} */
 
-#access ul.children {
+/* #access ul.children {
 	z-index: -1;
-}
+} */
 
-#access > div > ul li > a:not(:only-child) span {
+/* #access > div > ul li > a:not(:only-child) span {
 	padding-right: .5em;
-}
+} */
 
-#access > div > ul li > a:not(:only-child) > span::after {
+/* #access > div > ul li > a:not(:only-child) > span::after {
 	position: absolute;
 	z-index: 251;
 	right: 1em;
@@ -904,40 +905,40 @@ a#logo > img {
 	top: 0;
 	-webkit-transition: all .3s ease-out;
 	transition: all .3s ease-out;
-}
+} */
 
-#access > div > ul li:hover > a:not(:only-child) > span::after {
+/* #access > div > ul li:hover > a:not(:only-child) > span::after {
 	top: .5em;
 	opacity: 0;
 	-webkit-filter: alpha(opacity=0);
 	-ms-filter: alpha(opacity=0);
 	filter: alpha(opacity=0);
-}
+} */
 
-#access > div > ul ul > li a:not(:only-child) > span::after {
+/* #access > div > ul ul > li a:not(:only-child) > span::after {
 	-webkit-transform: rotate(270deg);
 	-ms-transform: rotate(270deg);
 	transform: rotate(270deg);
 	right: 1em;
-}
+} */
 
-#access > div > ul ul > li:hover > a:not(:only-child) > span::after {
+/* #access > div > ul ul > li:hover > a:not(:only-child) > span::after {
 	top: auto;
 	right: -0.5em;
 	opacity: 0;
 	-webkit-filter: alpha(opacity=0);
 	-ms-filter: alpha(opacity=0);
 	filter: alpha(opacity=0);
-}
+} */
 
-#access ul li {
+/* #access ul li {
 	display: block;
 	float: left;
 	position: relative;
 	white-space: nowrap;
-}
+} */
 
-#access ul ul {
+/* #access ul ul {
 	position: absolute;
 	z-index: 1000;
 	clear: both;
@@ -948,33 +949,33 @@ a#logo > img {
 	visibility: hidden;
 	-webkit-transition: .5s all ease;
 	transition: .5s all ease;
-}
+} */
 
-#access ul li.menu-hover > ul {
+/* #access ul li.menu-hover > ul {
 	opacity: 1;
 	visibility: visible;
-}
+} */
 
-#access li ul ul {
+/* #access li ul ul {
 	height: 0;
-}
+} */
 
-#access li.menu-hover > ul > li > ul {
+/* #access li.menu-hover > ul > li > ul {
 	width: auto;
 	height: auto;
-}
+} */
 
-#access ul ul li { /* level 2 */
+/* #access ul ul li { 
 	display: table;
 	position: relative;
 	float: left;
 	clear: both;
-	width: 100%; /* submenu width fix */
+	width: 100%; 
 	margin: 0;
 	min-width: 150px;
-}
+} */
 
-
+/* 
 #access ul ul ul {
 	position: absolute;
 	top: 0;
@@ -982,30 +983,30 @@ a#logo > img {
 	margin: 0;
 	min-width: 150px;
 	border-top: 0;
-}
+} */
 
-#access ul ul ul li { /* level 3 */
+/* #access ul ul ul li { 
 	display: block;
 	float: none;
 	width: 100%;
-}
+} */
 
-#access ul ul a,
+/* #access ul ul a,
 #access ul ul ul a {
 	display: block;
 	float: none;
 	width: 100%;
-}
+} */
 
-#access li,
+/* #access li,
 #access ul ul li {
 	-webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
 	transition: background .3s ease-in-out, color .3s ease-in-out;
-}
+} */
 
-.menu-item a img {
+/* .menu-item a img {
 	vertical-align: middle;
-}
+} */
 
 
 

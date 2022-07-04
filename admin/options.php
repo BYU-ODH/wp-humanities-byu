@@ -2229,8 +2229,8 @@ $septera_big = array(
 		'description' 	=> __('You can configure how many columns the footer displays from the theme options', 'septera'),
 		'before_widget' => '<section id="%1$s" class="widget-container %2$s"><div class="footer-widget-inside">',
 		'after_widget' => '</div></section>',
-		'before_title' => '<h3 class="widget-title"><span>',
-		'after_title' => '</span></h3>',
+		'before_title' => '<h2 class="widget-title"><span>',
+		'after_title' => '</span></h2>',
 	),
 	'content-widget-area-before' => array(
 		'name' => __( 'Content Before', 'septera' ),

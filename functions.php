@@ -194,48 +194,6 @@ function byuh_setup() {
     ); 
     register_post_type('person', $person_args);
 
-    //Custom Blog Post Type, separate from posts
-
-    $blog_labels = array(
-        'name'                => __('Blog', 'byuh'),
-        'singular_name'       => __('Blog', 'byuh'),
-        'add_new'             => __('Add New Blog Post', 'byuh'),
-        'add_new_item'        => __('Add New Blog PosT', 'byuh'),
-        'edit_item'           => __('Edit', 'byuh'),
-        'new_item'            => __('New', 'byuh'),
-        'all_items'           => __('All', 'byuh'),
-        'view_item'           => __('View', 'byuh'),
-        'search_items'        => __('Search', 'byuh'),
-        'not_found'           => __('Nothing found', 'byuh'),
-        'not_found_in_trash'  => __('Nothing found in Trash', 'byuh'), 
-        'parent_item_colon'   => '',
-        'menu_name'           => __('Blogs', 'byuh')
-    );
-
-    $blog_args = array(
-        'labels'              => $blog_labels,
-        'public'              => true,
-        'publicly_queryable'  => true,
-        'show_ui'             => true, 
-        'show_in_menu'        => true, 
-        'query_var'           => true,
-        'rewrite'             => array( 'slug' => __('blog', 'byuh') ),
-        //			       'capability_type'     => 'page',
-        // Customized by TSA 2015.09.22
-        'capability_type'     => 'page',
-        'has_archive'         => false, 
-        'hierarchical'        => false,
-        'menu_position'       => 20,
-        'supports'            => array('title', 'thumbnail', 'excerpt', 'editor', 'author'),
-        'menu_icon'           => 'dashicons-feedback',
-
-        // For the REST API v2
-        'show_in_rest'       => true,
-  	'rest_base'          => 'blogs',
-  	'rest_controller_class' => 'WP_REST_Posts_Controller'
-    ); 
-    register_post_type('blog', $blog_args);
-
 }
 add_action('init', 'byuh_setup');
 
@@ -352,13 +310,45 @@ function format_phone_block ($phone) {
     return $block;
 }
 
-//add custom author to post of type "blog"
-function add_author_support_to_posts() {
-    add_post_type_support( 'blog', 'author' ); 
- }
- add_action( 'init', 'add_author_support_to_posts' );
-
 function trim_post_content($content) {
     return wp_trim_words($content, $num_words = 40);
 }
+
+// get the link to a person's directory page for a blog post
+function GetBlogAuthDirectoryLink($blogpostId)
+{
+    //TODO: check if this works with guest author
+    //Get the author username
+    $author_id = get_post_field( 'post_author', $blogpostId );
+    $username = get_the_author_meta( 'user_login', $author_id );
+
+    //Find a matching person netid
+    //loop through all people and check that person.netid == $username
+    $args = array(
+        'post_type' => "person",
+        'orderby' => 't.post_title ASC',
+        'posts_per_page' => 1,
+        'limit' => -1,
+        'meta_key'  => 'netid',
+        'meta_value'    => $username
+    );
+
+    $personid = "personid";
+    $link = false; 
+    $people = get_posts( $args );
+    foreach ($people as $person) {
+        $personid = $person->ID;
+        if ($personid)
+        {
+            //What happens to $link if this is bogus: the_permalink($personid)
+            $link = get_the_permalink($personid);
+            
+        }
+        else{
+            $link = "person id is false";
+        }
+    } 
+    return($link);
+}
+
 // FIN

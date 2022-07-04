@@ -4002,7 +4002,7 @@ nav.sidebarmenu li a:hover {
 
 /* JULIANA START */
 
-#wp-calendar tbody td:hover {
+/* #wp-calendar tbody td:hover {
 	opacity: 0.8;
 	-webkit-filter: alpha(opacity=80);
 	-ms-filter: alpha(opacity=80);
@@ -4023,19 +4023,19 @@ nav.sidebarmenu li a:hover {
 	text-align: right;
 }
 
-/* ## TAG CLOUD WIDGET */
+ ## TAG CLOUD WIDGET 
 .septera-normalizedtags #content .tagcloud a {
 	display: inline-block;
 	margin: 0 4px 8px 0;
 	padding: 4px 10px;
-	font-size: .8em !important; /* !important needed to override inline sizing */
+	font-size: .8em !important;  ##!important needed to override inline sizing 
 	font-weight: bold;
 	text-transform: uppercase;
 	-webkit-transition: background .3s ease;
 	transition: background .3s ease;
 }
 
-/* ## EMPTY PAGE */
+ ## EMPTY PAGE 
 .main .content-empty-page {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4058,7 +4058,7 @@ nav.sidebarmenu li a:hover {
 	margin-right: 2em;
 }
 
-/* ## Cryout Tabs */
+ ## Cryout Tabs 
 .cryout-wtabs-nav {
 	display: block;
 	overflow: hidden;
@@ -4330,13 +4330,13 @@ ul.cryout-wposts li:last-child {
 	color: #141414;
 }
 
-/* ## Cryout Posts */
+ ## Cryout Posts 
 
 .cryout-wposts .post-item-thumbnail {
 	margin-bottom: 10px;
 }
 
-/* ## Cryout Related Posts */
+ ## Cryout Related Posts 
 .main .related-posts {
 	display: block;
 	overflow: hidden;
@@ -4445,7 +4445,7 @@ ul.cryout-wposts li:last-child {
 	opacity: .5;
 }
 
-/* ## Cryout About */
+ ## Cryout About 
 .cryout-about-image {
 	display: inline-block;
 	margin-bottom: 1em;
@@ -4455,7 +4455,7 @@ ul.cryout-wposts li:last-child {
 	font-size: .9em;
 }
 
-/* ## Cryout Contact */
+ ## Cryout Contact 
 .widget_cryout_contact address {
 	padding-left: 0;
 }
@@ -4513,7 +4513,7 @@ ul.cryout-wposts li:last-child {
 	background: rgba(255,255,255,.1);
 }
 
-/* ## Cryout Portfolio */
+ ## Cryout Portfolio 
 .widget-portfolio {
     overflow: hidden;
 }
@@ -4634,7 +4634,7 @@ ul.cryout-wposts li:last-child {
 	transform: scale(1.5);
 }
 
-/* Cryout GetInTouch */
+## Cryout GetInTouch 
 .cryoutgetintouch-extra {
 	font-size: 1.1em;
 	font-weight: bold;
@@ -4659,12 +4659,12 @@ ul.cryout-wposts li:last-child {
 	font-size: 1em;
 }
 
-/* Padding fixes for custom widgets */
+## Padding fixes for custom widgets 
 .widget_cryout_contact .widget-title + address,
 .widget_cryout_about .widget-title + .cryout-about-image,
 .widget_cryout_portfolio .widget-title + .widget-portfolio  {
 	padding-top: .5em;
-}
+} */
 
 /*--------------------------------------------------------------
 	# SEARCHFORM

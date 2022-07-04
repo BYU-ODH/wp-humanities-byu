@@ -561,7 +561,7 @@ object {
 } */
 
 /* #container:not(.septera-landing-page) .main {
-	padding-top: 2em;
+	padding-top: 2em;tschen02	0
 	padding-bottom: 2em;
 } */
 
@@ -630,15 +630,15 @@ object {
 	# HEADER
 --------------------------------------------------------------*/
 
-/* #masthead {
+#masthead {
 	position: relative;
-} */
+}
 
-/* #masthead::after {
+#masthead::after {
 	display: table;
 	clear: both;
 	content: "";
-} */
+}
 
 #branding {
 	float: left;
@@ -650,9 +650,9 @@ object {
 	float: left;
 }
 
-/* a#logo {
+a#logo {
 	display: inline;
-} */
+}
 
 a#logo > img {
 	/* max-height: 80%; */
@@ -685,10 +685,10 @@ a#logo > img {
 	border-bottom: .2em solid;
 } */
 
-.lp-box-title::before {
+/* .lp-box-title::before {
 	opacity: .25;
 	top: -5px;
-}
+} */
 
 /* .widget-title::before {
 	opacity: .25;
@@ -743,14 +743,14 @@ a#logo > img {
 	height: var(--header-nav-height) !important;
 }
 
-.septera-over-menu #site-header-main {
+/* .septera-over-menu #site-header-main {
  	position: absolute;
-}
+} */
 
-.septera-over-menu #site-header-main,
+/* .septera-over-menu #site-header-main,
 .septera-over-menu #access::after {
 	background: transparent;
-}
+} */
 
 #site-header-main-inside {
 	position: relative;
@@ -759,12 +759,12 @@ a#logo > img {
 	margin: 0;
 }
 
-.header-fixed#site-header-main,
+/* .header-fixed#site-header-main,
 .header-fixed#site-header-main #access::after {
 	box-shadow: 0 0 3px rgba(0,0,0,0.2);
 	-webkit-transition: .25s background-color ease-in-out;
 	transition: .25s background-color ease-in-out;
-}
+} */
 
 #header-image-main,
 #header-image-main-inside {
@@ -772,18 +772,19 @@ a#logo > img {
 	overflow: hidden;
 }
 
-.septera-cropped-headerimage div.header-image {
+/* .septera-cropped-headerimage div.header-image {
 	height: 100%;
-}
+} */
 
-.septera-responsive-headerimage #masthead div.header-image {
+/* .septera-responsive-headerimage #masthead div.header-image {
 	display: none;
-}
+} */
 
-.septera-cropped-headerimage #masthead img.header-image {
+/* .septera-cropped-headerimage #masthead img.header-image {
 	display: none;
-}
+} */
 
+/* 
 #masthead .header-image {
 	display: block;
 	width: inherit;
@@ -791,14 +792,14 @@ a#logo > img {
 	margin: 0 auto;
 	background-size: cover;
 	background-position: 50% 50%;
-}
+} */
 
-.wp-custom-header {
+/* .wp-custom-header {
   position: relative;
   line-height: 0;
-}
+} */
 
-.wp-custom-header-video-button.wp-custom-header-video-button {
+/* .wp-custom-header-video-button.wp-custom-header-video-button {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -809,25 +810,25 @@ a#logo > img {
 	cursor: pointer;
 	-webkit-transition: .3s all ease-out;
 	transition: .3s all ease-out;
-}
+} */
 
-.wp-custom-header:hover .wp-custom-header-video-button.wp-custom-header-video-button {
+/* .wp-custom-header:hover .wp-custom-header-video-button.wp-custom-header-video-button {
   opacity: .7;
-}
+} */
 
-.wp-custom-header video {
+/* .wp-custom-header video {
 	object-fit: cover;
 	max-width: 100%;
-}
+} */
 
 /* Header widget area */
-#header-widget-area {
+/* #header-widget-area {
 	display: block;
 	position: absolute;
 	overflow: hidden;
 	height: 100%;
 	z-index: 10;
-}
+} */
 
 /*--------------------------------------------------------------
 	## MAIN MENU

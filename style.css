@@ -4677,9 +4677,9 @@ ul.cryout-wposts li:last-child {
 	height: auto;
 }
 
-.no-results .content-search {
+/* .no-results .content-search {
 	padding: 0;
-}
+} */
 
 .searchform input[type="search"] {
 	display: block;
@@ -4718,11 +4718,11 @@ ul.cryout-wposts li:last-child {
 	transition: .3s all ease-in-out;
 }
 
-.searchform .searchsubmit:hover {
+/* .searchform .searchsubmit:hover {
 	-webkit-transform: scale(.8);
 	-ms-transform: scale(.8);
 	transform: scale(.8);
-}
+} */
 
 #access {
 	text-align: center;
@@ -4746,7 +4746,7 @@ ul.cryout-wposts li:last-child {
 --------------------------------------------------------------*/
 
 /* ## GENERAL */
-.socials {
+/* .socials {
 	position: relative;
 }
 
@@ -4768,7 +4768,7 @@ ul.cryout-wposts li:last-child {
 	transition: color .2s ease-out;
 }
 
-/* ## HEADER SOCIALS */
+ ## HEADER SOCIALS 
 #sheader {
 	float: right;
 	margin-left: .5em;
@@ -4779,7 +4779,7 @@ ul.cryout-wposts li:last-child {
 	vertical-align: bottom;
 }
 
-/* ## SIDEBAR SOCIALS */
+ ## SIDEBAR SOCIALS 
 
 .sidey .socials {
 	display: table;
@@ -4788,12 +4788,12 @@ ul.cryout-wposts li:last-child {
 	font-size: 1.2em;
 }
 
-/* ## FOOTER SOCIALS */
+ ## FOOTER SOCIALS 
 #sfooter {
 	display: block;
 	float: right;
 	clear: right;
-}
+} */
 
 /*--------------------------------------------------------------
 	# MISCELLANEOUS
@@ -4822,7 +4822,7 @@ a#toTop.toTop-show {
 	opacity: 1;
 }
 
-.septera-totop-fixed #toTop {
+/* .septera-totop-fixed #toTop { 
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -4836,7 +4836,7 @@ a#toTop.toTop-show {
 
 .septera-totop-disabled .cryout #footer-inside #toTop {
 	display: none;
-}
+} */
 
 #toTop .icon-back2top::before {
 	font-size: .8em;
@@ -4846,7 +4846,7 @@ a#toTop.toTop-show {
 
 /* ## CUSTOM IMAGE BORDER */
 
-.septera-image-one .entry-content img[class*='align'],
+/* .septera-image-one .entry-content img[class*='align'],
 .septera-image-one .entry-summary img[class*='align'] {
 	padding-bottom: 5px;
 	border-bottom: 5px solid transparent;
@@ -4876,7 +4876,7 @@ a#toTop.toTop-show {
 	transition: all .3s ease-in-out;
 }
 
-/* ## CUSTOM CAPTION LOOK */
+/* ## CUSTOM CAPTION LOOK 
 .septera-caption-one .main .wp-caption .wp-caption-text {
 	border-bottom: 3px solid transparent;
 }
@@ -4885,7 +4885,7 @@ a#toTop.toTop-show {
 	margin-top: 3px;
 }
 
-/* ## BREADCRUMBS */
+ ## BREADCRUMBS 
 #breadcrumbs-container {
 	display: block;
 	float: none;
@@ -4923,7 +4923,7 @@ a#toTop.toTop-show {
 	vertical-align: middle;
 }
 
-/* ## PAGINATION */
+ ## PAGINATION 
 .pagination {
 	display: table;
 	float: none;
@@ -4957,7 +4957,7 @@ a#toTop.toTop-show {
 }
 
 
-/* ## CONTINUE READING */
+ ## CONTINUE READING 
 .post-continue-container {
     overflow: hidden;
 }
@@ -5008,7 +5008,7 @@ i.icon-continue-reading {
 	top: 1px;
 }
 
-/* ## BLOCKQUOTES */
+ ## BLOCKQUOTES 
 .entry-content blockquote {
 	display: table;
 	float: none;
@@ -5043,11 +5043,11 @@ i.icon-continue-reading {
 	margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 	# TEMPLATES
---------------------------------------------------------------*/
+--------------------------------------------------------------
 
-/* Template Contact */
+## Template Contact 
 .template-content {
 	padding: 30px 0;
 	margin: 20px 0 50px;
@@ -5100,11 +5100,11 @@ i.icon-continue-reading {
 	margin-top: 50px;
 }
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 	# PORTFOLIO
---------------------------------------------------------------*/
+--------------------------------------------------------------
 
-/* General Porfolio items */
+## General Porfolio items 
 article .jetpack-portfolio-shortcode,
 #portfolio-masonry  .jetpack-portfolio-shortcode {
 	margin-left: -1%;
@@ -5150,7 +5150,7 @@ article .jetpack-portfolio-shortcode div.portfolio-entry {
 	overflow: hidden;
 }
 
-/* Portfolio page template & Archive template */
+## Portfolio page template & Archive template 
 body .jetpack-portfolio-shortcode,
 .portfolio-template article.hentry,
 .portfolio-template article.hentry .article-inner {
@@ -5313,7 +5313,7 @@ body .jetpack-portfolio-shortcode,
 }
 
 
-/* Single Portfolio item */
+## Single Portfolio item 
 .single article.jetpack-portfolio header {
 	position: relative;
 }
@@ -5380,9 +5380,9 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 }
 
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 	# CONDITIONALS
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .single-post.septera-comhide-in-posts .nocomments {
 	display: none;
 }
@@ -5411,11 +5411,11 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 	margin-top: 0;
 }
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 	# FIXES
--------------------------------------------------------------- */
+--------------------------------------------------------------
 
-/* ## Woocommerce */
+ ## Woocommerce 
 .woocommerce .product .entry-summary {
 	clear: none;
 }
@@ -5492,7 +5492,7 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 	font-weight: bold;
 }
 
-.woocommerce #comments { /* woocommerce reviews */
+.woocommerce #comments { ## woocommerce reviews 
 	padding-top: 0;
 }
 
@@ -5508,7 +5508,7 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 	margin-left: 80px;
 }
 
-.woocommerce.septera-comment-placeholder #respond label { /* show woocommerce form lables */
+.woocommerce.septera-comment-placeholder #respond label {  ##show woocommerce form lables 
 	display: block;
 }
 
@@ -5550,7 +5550,7 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 	padding-right: .5em;
 }
 
-/* Team Members */
+## Team Members 
 .tmm .tmm_container .tmm_member .tmm_photo {
 	border-radius: 0 !important;
 }
@@ -5577,19 +5577,19 @@ article.jetpack-portfolio header .entry-title + .taxonomy-description {
 	letter-spacing: 4px;
 }
 
-/* Jetpack Portfolio shortcode in widget */
+## Jetpack Portfolio shortcode in widget 
 .widget-container h2.portfolio-entry-title {
     font-size: 1.2em;
-}
+}*/
 
-/* Safari fixed cover background images */
+/* ## Safari fixed cover background images  */
 body.safari,
 .safari .lp-text {
     background-attachment: scroll;
 	background-position: top center !important;
 }
 
-/* Edge shaky fixed cover background images */
+/*## Edge shaky fixed cover background images 
 @supports (-ms-ime-align:auto) {
 	body, .lp-text {
 		background-attachment: scroll !important;
@@ -5597,7 +5597,7 @@ body.safari,
 	}
 }
 
-/* IE 10-11 shaky fixed cover background images */
+## IE 10-11 shaky fixed cover background images 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 	body, .lp-text {
 		background-attachment: scroll !important;
@@ -5605,7 +5605,7 @@ body.safari,
 	}
 }
 
-/* Shortcodes */
+## Shortcodes
 .btn {
 	padding: 0.75em 2em;
 	border-radius: 0;
@@ -5628,7 +5628,7 @@ body.safari,
 
 .well {
 	border: 1px solid rgba(0,0,0,.075);
-}
+} */
 
 /*--------------------------------------------------------------
 	# RESPONSIVENESS

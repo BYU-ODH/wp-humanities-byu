@@ -6882,12 +6882,12 @@ h3.label.projects ~ li a {
 	border-width: 0px;
 }
 
-h5.projectStatus {
+h4.projectStatus {
 	border-color: transparent;
 	border-width: 0px;
 }
 
-h5.projectStatus.liveStatus:after {
+h4.projectStatus.liveStatus:after {
     content: "\A";
     width: 10px;
     height: 10px;
@@ -6896,7 +6896,7 @@ h5.projectStatus.liveStatus:after {
     display: inline-block;
 }
 
-h5.projectStatus.intakeStatus:after {
+h4.projectStatus.intakeStatus:after {
     content: "\A";
     width: 10px;
     height: 10px;
@@ -6905,7 +6905,7 @@ h5.projectStatus.intakeStatus:after {
     display: inline-block;
 }
 
-h5.projectStatus.archivedStatus:after {
+h4.projectStatus.archivedStatus:after {
     content: "\A";
     width: 10px;
     height: 10px;

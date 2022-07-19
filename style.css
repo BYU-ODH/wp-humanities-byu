@@ -6419,13 +6419,13 @@ div#content .news-title {
 } */
 
 
-/* .elementor-button span, h4.elementor-heading-title.elementor-size-xl,
+.elementor-button span, h4.elementor-heading-title.elementor-size-xl,
 .elementor-4 .elementor-element.elementor-element-9dd584b .elementor-heading-title,
 h3.widget-title, h1.entry-title.singular-title, .filter-container span.current,
 .statusfilter.current, .elementor-text-editor.elementor-clearfix h3, .text-content.group.wrapper .content h2,
 .text-content.group.wrapper .content h3 {
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
-} */
+}
 
 /* header.entry-header h2 {
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
@@ -6548,7 +6548,7 @@ div#content .main p {
 /* Style for testing lab page */
 /******************************/
 
-/* .button {
+.button {
         background-color: white;
         border: 2px solid #0057b8;
         color: black;
@@ -6560,7 +6560,7 @@ div#content .main p {
         font-size: 14px;
         transition-duration: 0.4s;
         cursor: pointer;
-      } */
+      }
 /* .button:hover {
         background-color: #0057b8;
         color: white !important;
@@ -6593,15 +6593,15 @@ div#content .main p {
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px; 
 }
-/* .archivedStatus{
+.archivedStatus{
 	border:5px solid var(--archivedStatusColor);
-} */
-/* .liveStatus{
+}
+.liveStatus{
 	border:5px solid var(--liveStatusColor);
-} */
-/* .intakeStatus{
+}
+.intakeStatus{
 	border:5px solid var(--intakeStatusColor);
-} */
+}
 .odhBoxSingleCard{
     /*single card content here*/
     grid-column-end: span 4;
@@ -6616,20 +6616,20 @@ div#content .main p {
 /* .odhBoxSingleCard:hover .projects{
 	text-decoration: underline;
 } */
-/* .odhCardImgContainer{ /*styles for cards with images
+.odhCardImgContainer{ /*styles for cards with images */
     width: 100%;
-    padding-top: 56.25%; /*aspect ratio of 16x9
+    padding-top: 56.25%; /*aspect ratio of 16x9 */
     overflow: hidden;
     position: relative;
-} */
-/* .odhCardImgContainer img{
+}
+.odhCardImgContainer img{
     width: 100%;
     position: absolute;
     top: 50%;
-    left: 50%; /*helps position images with diff ratio size
+    left: 50%; /*helps position images with diff ratio size */
     transform: translate(-50%, -50%);
 	cursor: pointer;
-} */
+}
 .odhBoxInner{
     padding: 20px;
     text-align: left;
@@ -6744,10 +6744,10 @@ h2.odhFirstTitle{
 	font-size: 15px;
 	font-weight: 0px;
 } */
-/* .statusLineSizeODH{
+.statusLineSizeODH{
 	border-width: 3px;
 	padding: 2px;
-} */
+}
 /* .listDetailsStyle{
 	list-style-type:none
 } */
@@ -6824,10 +6824,10 @@ h2.odhFirstTitle{
   width: 20%;
   margin: 0 30px 20px 0;
 } */
-/* span.archivedStatus{
+span.archivedStatus{
 	padding-left: 3px;
 	margin: 3px;
-} */
+}
 /* .alignmentStyleODH{
 	position: relative;
 	left: 50px;
@@ -7000,15 +7000,15 @@ section.blog > h1{
 }
 /*End of Home posts */
 /*project legend*/
-/* .projectLegend{
+.projectLegend{
 	position: relative;	
-} */
-/* .projectLegendStyle{
+}
+.projectLegendStyle{
 	text-align: center;
-} */
-/* .projectLegendStyle span{
+}
+.projectLegendStyle span{
 	padding: 2px 3px 2px 3px;
-} */
+}
 /* END OF SUBMENUS */
 
 /*Here to set the default image for profiles*/
@@ -7089,9 +7089,9 @@ section.blog > h1{
 } */
 
 /*Styling for elementor text boxes*/
-/* .elementor-text-editor {
+.elementor-text-editor {
 	color: #000000;
-} */
+}
 
 /*Styling for 'Read More' Button on Blog Page*/
 /* .pt-cv-wrapper .btn-success {

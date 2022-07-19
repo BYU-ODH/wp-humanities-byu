@@ -167,18 +167,21 @@ get_header(); ?>
 									foreach ($live_projects as $live_p) {
 										echo $live_p;
 									}
+									echo "<br/>";
 								}
 								if (!empty($intake_projects)) {
 									echo "<h4 class='projectStatus intakeStatus'>Intake </h4>";
 									foreach ($intake_projects as $intake_p) {
 										echo $intake_p;
 									}
+									echo "<br/>";
 								}
 								if (!empty($archived_projects)) {
 									echo "<h4 class='projectStatus archivedStatus'>Archived </h4>";
 									foreach ($archived_projects as $archived_p) {
 										echo $archived_p;
 									}
+									echo "<br/>";
 								}
 								if (!empty($noStatus_projects)) {
 									echo "<h4 class='projectStatus unknownStatus'>Others</h4>";

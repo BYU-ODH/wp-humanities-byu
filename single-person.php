@@ -164,30 +164,35 @@ get_header(); ?>
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";
 								if (!empty($live_projects)) {
 									echo "<h4 class='projectStatus liveStatus'>Live </h4>";
+									echo "<ul>";
 									foreach ($live_projects as $live_p) {
 										echo $live_p;
 									}
-									echo "<br/>";
+									echo "</ul>";
 								}
 								if (!empty($intake_projects)) {
 									echo "<h4 class='projectStatus intakeStatus'>Intake </h4>";
+									echo "<ul>";
 									foreach ($intake_projects as $intake_p) {
 										echo $intake_p;
 									}
-									echo "<br/>";
+									echo "</ul>";
 								}
 								if (!empty($archived_projects)) {
 									echo "<h4 class='projectStatus archivedStatus'>Archived </h4>";
+									echo "<ul>";
 									foreach ($archived_projects as $archived_p) {
 										echo $archived_p;
 									}
-									echo "<br/>";
+									echo "</ul>";
 								}
 								if (!empty($noStatus_projects)) {
 									echo "<h4 class='projectStatus unknownStatus'>Others</h4>";
+									echo "<ul>";
 									foreach ($noStatus_projects as $noStatus_p) {
 										echo $noStatus_p;
 									}
+									echo "</ul>";
 								}
 							echo "</div>";
 						}

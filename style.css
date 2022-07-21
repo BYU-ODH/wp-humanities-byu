@@ -6913,6 +6913,12 @@ h4.projectStatus.archivedStatus:after {
     background: var(--archivedStatusColor);
     display: inline-block;
 }
+h4.projectStatus + ul li a {
+	border: 0px;
+}
+h4.projectStatus + ul li:last-child {
+	margin-bottom: .6em;
+}
 
 /*End styling*/
 

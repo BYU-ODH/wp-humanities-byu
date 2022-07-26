@@ -25,7 +25,7 @@
             } ?>
     </li>
       <!-- // Display the Post Excerpt -->
-    <li><?php the_excerpt(__('(more…)')); ?></li>
+    <li><?php print_r(get_post_meta($post_id)['flexible_content_0_content'][0]); ?></li>
   </div>
 </article>
 <hr class="homePostLine">

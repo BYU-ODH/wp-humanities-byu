@@ -6237,9 +6237,9 @@ nav#humanities-menu li {
 	border-bottom: 3px solid #002E5D
 } */
 
-nav#humanities-menu a {
+/* nav#humanities-menu a {
 	color: #002E5D;
-}
+} */
 
 .staticslider-caption {
 	padding-top: 20px;
@@ -6468,11 +6468,11 @@ div#site-header-main div {
 	max-width: 100%;
 }
 
-/* .menu-mobile-humanities-container {
+.menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
 	padding-top: 1rem;
-} */
+}
 
 /* ul#menu-mobile-humanities.menu > li > a {
 	color: white;
@@ -6561,10 +6561,10 @@ div#content .main p {
         transition-duration: 0.4s;
         cursor: pointer;
       }
-/* .button:hover {
+.button:hover {
         background-color: #0057b8;
         color: white !important;
-} */
+}
 /***********************/
 /*End of custom testing page css*/
 /***********************/
@@ -6610,12 +6610,12 @@ div#content .main p {
     background-color: white;
     box-shadow: 8px 12px 18px #969595c2;
 }
-/* .odhBoxSingleCard:hover{
+.odhBoxSingleCard:hover{
     background-color:rgba(0, 0, 0, .05);
-} */
-/* .odhBoxSingleCard:hover .projects{
+}
+.odhBoxSingleCard:hover .projects{
 	text-decoration: underline;
-} */
+}
 .odhCardImgContainer{ /*styles for cards with images */
     width: 100%;
     padding-top: 56.25%; /*aspect ratio of 16x9 */
@@ -7039,10 +7039,10 @@ section.blog > h1{
 	color:#0057b8;
 }
 
-/* .text-content a:hover {
+.text-content a:hover {
 	text-decoration: underline;
 	color:#002E5D;
-} */
+}
 
 /* style for individual 'person' pages */
 

@@ -6232,14 +6232,14 @@ nav#humanities-menu li {
 	font-weight: lighter;
 }
 
-/* nav#humanities-menu li:hover {
+nav#humanities-menu li:hover {
 	background-color: #fafafa;
 	border-bottom: 3px solid #002E5D
-} */
+}
 
-/* nav#humanities-menu a {
+nav#humanities-menu a {
 	color: #002E5D;
-} */
+}
 
 .staticslider-caption {
 	padding-top: 20px;

@@ -110,21 +110,16 @@ function septera_setup() {
 		'height'		=> (int) $options['septera_headerheight'],
 		'flex-width'	=> true,
 		'width'			=> 1920,
-		'default-image'	=> get_template_directory_uri() . '/resources/images/headers/bike.jpg',
+		'default-image'	=> get_template_directory_uri() . '/resources/images/headers/byu.jpg',
 		'video'         => true,
 	));
 
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
-		'bike' => array(
-			'url' => '%s/resources/images/headers/bike.jpg',
-			'thumbnail_url' => '%s/resources/images/headers/bike.jpg',
-			'description' => __( 'Bike', 'septera' )
-		),
-		'mountain' => array(
-			'url' => '%s/resources/images/headers/mountain.jpg',
-			'thumbnail_url' => '%s/resources/images/headers/mountain.jpg',
-			'description' => __( 'Mountain', 'septera' )
+		'byu' => array(
+			'url' => '%s/resources/images/headers/byu.jpg',
+			'thumbnail_url' => '%s/resources/images/headers/byu.jpg',
+			'description' => __( 'BYU', 'septera' )
 		),
 	) );
 	

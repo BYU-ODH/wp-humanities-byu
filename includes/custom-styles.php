@@ -583,7 +583,7 @@ a.staticslider-button:nth-child(2n) { border-color: <?php echo esc_html( $septer
 .staticslider-button:nth-child(2n):hover { color: <?php echo esc_html( $septera_sitetext ) ?>;
 											background-color: <?php echo esc_html( $septera_contentbackground ) ?>; }
 
-.lp-staticslider::before, .lp-dynamic-slider .item > a::before, #header-image-main::before { background-color: <?php echo esc_html( $septera_headeroverlay ); ?>; }
+.lp-staticslider::before, .lp-dynamic-slider .item > a::before, #header-image-main::before { background-color: <?php /*echo esc_html( $septera_headeroverlay ); */?>; }
 <?php if ( $septera_headeroverlayopacity ) { ?>
 	.lp-staticslider::before, .lp-dynamic-slider .item > a::before,  #header-image-main::before { z-index: 2; }
 	.lp-staticslider-image, .header-image, .seriousslider .item-image { -webkit-filter: grayscale(<?php echo intval($septera_headeroverlayopacity) ?>%) brightness(110%); filter: grayscale(<?php echo intval($septera_headeroverlayopacity) ?>%) brightness(110%); }

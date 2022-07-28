@@ -25,7 +25,13 @@
             } ?>
     </li>
       <!-- // Display the Post Excerpt -->
-    <li><?php print_r(get_post_meta($post_id)['flexible_content_0_content'][0]); ?></li>
+    <?php 
+    if (!empty(the_excerpt())) {
+      the_excerpt();
+    } else {
+      $text = get_post_meta($post_id)['flexible_content_0_content'][0]; 
+      echo wp_trim_words($text, 50, '...');
+    } ?>
   </div>
 </article>
 <hr class="homePostLine">

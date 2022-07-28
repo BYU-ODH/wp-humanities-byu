@@ -1097,6 +1097,10 @@ nav#mobile-menu ul li {
   	line-height: 1;
 }
 
+#mobile-nav .menu-main-search .searchform {
+	width: 64vw;
+}
+
 nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
@@ -1119,7 +1123,7 @@ nav#mobile-menu #nav-cancel {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 70%;
+	width: 65%;
 }
 
 #mobile-menu .menu-main-search a > .icon-search {
@@ -1148,7 +1152,7 @@ nav#mobile-menu #smobile {
 }
 
 #mobile-menu .searchform .searchsubmit {
-	right: .5em;
+	/* right: .5em; */
 	height: 3em;
 }
 
@@ -4680,7 +4684,7 @@ ul.cryout-wposts li:last-child {
 .searchform .searchsubmit {
 	display: block;
 	position: absolute;
-	right: 0;
+	right: -2vw;
 	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
@@ -6470,6 +6474,10 @@ div#site-header-main div {
 	display: flex;
 	justify-content: center;
 	padding-top: 1rem;
+}
+
+#menu-mobile-humanities.menu {
+	text-align: center;
 }
 
 ul#menu-mobile-humanities.menu > li > a {

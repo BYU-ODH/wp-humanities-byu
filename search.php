@@ -20,7 +20,7 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				</header>
 
-				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php /* Start the Loop */
 					while ( have_posts() ) : the_post();
 						get_template_part( 'content/content', 'search' );

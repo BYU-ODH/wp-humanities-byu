@@ -17,7 +17,6 @@ get_header(); ?>
 					<h1 class="page-title" <?php cryout_schema_microdata( 'entry-title' ); ?>>
 						<?php printf( __( 'Search Results for: %s', 'septera' ), '<strong>' . get_search_query() . '</strong>' ); ?>
 					</h1>
-					<?php /*get_search_form();*/ ?>
 				</header>
 
 				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>

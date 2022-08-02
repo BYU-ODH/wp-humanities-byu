@@ -19,14 +19,15 @@ get_header(); ?>
 					</h1>
 					<?php get_search_form(); ?>
 				</header>
-
-				<div class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div class="homePostContainer">
+				<div class=" homePostInner" <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php /* Start the Loop */
 					while ( have_posts() ) : the_post();
 						get_template_part( 'content/content', 'search' );
 					endwhile;
 					?>
 				</div><!--content-masonry-->
+				</div>
 				<?php
 
 				septera_pagination();

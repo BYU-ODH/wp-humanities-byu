@@ -28,10 +28,10 @@
     <?php 
     $x = strlen(get_the_excerpt());
     if ($x && $x > 0) {
-      the_excerpt();
+      echo '<li><p>'.get_the_excerpt().'</p></li>';
     } else {
       $text = get_post_meta($post_id)['flexible_content_0_content'][0]; 
-      echo '<p>'.wp_trim_words($text, 50, '...').'</p>';
+      echo '<li><p>'.wp_trim_words($text, 50, '...').'</p></li>';
     } ?>
   </div>
 </article>

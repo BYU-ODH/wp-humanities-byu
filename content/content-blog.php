@@ -26,11 +26,12 @@
     </li>
       <!-- // Display the Post Excerpt -->
     <?php 
-    if (!empty(the_excerpt())) {
+    $x = strlen(get_the_excerpt());
+    if ($x && $x > 0) {
       the_excerpt();
     } else {
       $text = get_post_meta($post_id)['flexible_content_0_content'][0]; 
-      echo wp_trim_words($text, 50, '...');
+      echo '<p>'.wp_trim_words($text, 50, '...').'</p>';
     } ?>
   </div>
 </article>

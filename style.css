@@ -1084,7 +1084,7 @@ nav#mobile-menu ul li {
     clear: both;
     display: block;
     float: none;
-    line-height: 3;
+    line-height: 2.5;
     position: relative;
     white-space: normal;
 }
@@ -4684,7 +4684,7 @@ ul.cryout-wposts li:last-child {
 .searchform .searchsubmit {
 	display: block;
 	position: absolute;
-	right: -1vw;
+	right: -0.5vw;
 	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
@@ -6010,6 +6010,7 @@ body.mobile .main {min-height:0;}
 		font-size: 2.5em;
 		letter-spacing: 0;
 		line-height: 1.1;
+		width: fit-content;
 	}
 
 	#cryout_ajax_more_trigger {
@@ -6473,7 +6474,7 @@ div#site-header-main div {
 .menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
-	padding-top: 1rem;
+	/* padding-top: 1rem; */
 }
 
 #menu-mobile-humanities.menu {

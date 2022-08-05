@@ -4684,7 +4684,7 @@ ul.cryout-wposts li:last-child {
 .searchform .searchsubmit {
 	display: block;
 	position: absolute;
-	right: -2vw;
+	right: -1vw;
 	top: -.5em;
 	z-index: 8;
 	height: 3.5em;

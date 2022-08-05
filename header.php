@@ -35,7 +35,7 @@ $favicon = get_template_directory_uri() . '/resources/images/humanitiesLogo.png'
 					<span id="nav-cancel"><i class="icon-cancel"></i></span>
 					<?php cryout_mobilemenu_hook(); ?>
 					<nav id="humanities-menu">
-					<?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>	
 					</nav>
 				</nav> <!-- #mobile-menu -->
 
@@ -48,14 +48,16 @@ $favicon = get_template_directory_uri() . '/resources/images/humanitiesLogo.png'
 				<a id="nav-toggle"><i class="icon-menu"></i></a>
 				<nav id="access" role="navigation"  aria-label="<?php esc_attr_e('Primary Menu', 'septera') ?>" <?php cryout_schema_microdata( 'menu' ); ?>>
 				<?php get_search_form() ?>
-
-        </nav><!-- #access -->
+				</nav><!-- #access -->
 
 			</div><!-- #site-header-main-inside -->
 
 			<nav id="humanities-menu">
-				<?php wp_nav_menu( array( 'theme_location' => 'humanities-menu' ) ); ?>
-			</nav>
+				<div class="menu-odhmain-container">
+					<?php wp_nav_menu( array( 'theme_location' => 'humanities-menu' ) ); ?>
+					</div>
+				</nav>
+			
 		</div><!-- #site-header-main -->
 
 		<div id="header-image-main">

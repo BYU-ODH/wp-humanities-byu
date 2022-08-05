@@ -1152,7 +1152,6 @@ nav#mobile-menu #smobile {
 }
 
 #mobile-menu .searchform .searchsubmit {
-	/* right: .5em; */
 	height: 3em;
 }
 
@@ -6474,7 +6473,6 @@ div#site-header-main div {
 .menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
-	/* padding-top: 1rem; */
 }
 
 #menu-mobile-humanities.menu {

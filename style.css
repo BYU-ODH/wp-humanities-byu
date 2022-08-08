@@ -5291,9 +5291,19 @@ a.homePagePost:hover{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	position: relative;	
-	padding: 5px 5px 5px 5px;
+	padding: 5px 5px 30px 20px;
 	gap: 50px;
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid #c5c5c5;
+	margin-bottom: 10px;
+	font-size: 16px;
 }
-
+.pagePost {
+	color: #0057b8;
+	text-decoration: none;
+	font-weight: 600;
+}
+a.pagePost:hover{
+	color: #0062B8;
+	text-decoration: underline;
+}
 /* FIN! */

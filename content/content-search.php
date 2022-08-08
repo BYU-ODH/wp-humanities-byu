@@ -5,7 +5,6 @@
 
     case "person":
       ?>
-      <!-- <div class="homePostText searchPost"> -->
       <article class="searchPostSingle">
         <?php if ( has_post_thumbnail() ) {
           the_post_thumbnail('thumbnail', array('class' => 'postIMG'));
@@ -13,10 +12,10 @@
         <img class="homePostIMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php } ?>
         <div class="homePostText">
-        <a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        <a class= "homePagePost" href="<?php the_permalink();?>"><li><?php the_field('phone');?></li></a>
-        <a class= "homePagePost" href="<?php the_permalink();?>"><li><?php the_field('email'); ?></li></a>
-        <a class= "homePagePost" href="<?php the_permalink();?>"><li><?php the_field('address');?></li></a>
+        <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <a class= "pagePost" href="<?php the_permalink();?>"><li><?php the_field('phone');?></li></a>
+        <a class= "pagePost" href="<?php the_permalink();?>"><li><?php the_field('email'); ?></li></a>
+        <a class= "pagePost" href="<?php the_permalink();?>"><li><?php the_field('address');?></li></a>
         </div>
       </article>
    <?php break;
@@ -30,7 +29,7 @@
         <img class="post-IMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php } ?>
         <div class="homePostText">
-        <a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </div>
     </article>
     <?php break;
@@ -46,7 +45,7 @@
           echo "<img class='postIMG' src = $src >";
           ?>
           <div class="homePostText">
-            <a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
+            <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
           <p>Project Owner: <?php $project = $pods->field( 'project_owner' );
           $owner = ($project['post_title']);
           echo($owner);?>
@@ -69,7 +68,7 @@
         <img class="post-IMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php } ?>
         <div class="homePostText">
-        <a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <?php the_excerpt();?>
       </div>
     </article>
@@ -83,7 +82,7 @@
         <img class="post-IMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php } ?>
         <div class="homePostText">
-        <a class="homePagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </div>
     </article>
 <?php }

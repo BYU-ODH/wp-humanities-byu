@@ -5281,7 +5281,7 @@ a.homePagePost:hover{
 	list-style-type: none;
 }
 .postIMG {
-	width: 100%;
+	width: 280px;
 	height: auto;
 }
 .description {
@@ -5290,10 +5290,10 @@ a.homePagePost:hover{
 .searchPostSingle{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	position: relative;
-	background-color: white;
+	position: relative;	
 	padding: 5px 5px 5px 5px;
 	gap: 50px;
+	border-bottom: 2px solid black;
 }
 
 /* FIN! */

@@ -4193,7 +4193,7 @@ body.mobile .main {min-height:0;}
 
 @media (min-width: 1152px) {
 	.septera-fixed-menu.admin-bar #site-header-main {
-		margin-top: 32px;
+		margin-top: 0;
 	}
 }
 

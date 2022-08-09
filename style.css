@@ -1084,7 +1084,7 @@ nav#mobile-menu ul li {
     clear: both;
     display: block;
     float: none;
-    line-height: 3;
+    line-height: 2.5;
     position: relative;
     white-space: normal;
 }
@@ -1095,6 +1095,10 @@ nav#mobile-menu ul li {
   	white-space: nowrap;
   	text-overflow: ellipsis;
   	line-height: 1;
+}
+
+mobile-nav .menu-main-search .searchform {
+	width: 64vw;
 }
 
 nav#mobile-menu #nav-cancel {
@@ -1119,7 +1123,7 @@ nav#mobile-menu #nav-cancel {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 70%;
+	width: 65%;
 }
 
 #mobile-menu .menu-main-search a > .icon-search {
@@ -1148,7 +1152,6 @@ nav#mobile-menu #smobile {
 }
 
 #mobile-menu .searchform .searchsubmit {
-	right: .5em;
 	height: 3em;
 }
 
@@ -4045,7 +4048,7 @@ nav.sidebarmenu li a:hover {
 .searchform .searchsubmit {
 	display: block;
 	position: absolute;
-	right: 0;
+	right: -0.5vw;
 	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
@@ -4907,7 +4910,10 @@ div#site-header-main div {
 .menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
-	padding-top: 1rem;
+}
+
+#menu-mobile-humanities.menu {
+	text-align: center;
 }
 
 /***********************/

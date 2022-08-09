@@ -141,7 +141,7 @@ function septera_get_option_defaults() {
 	"septera_contentbackground"	=> "#FFFDFF",
 	"septera_primarybackground"	=> "#EEEFF0",
 	"septera_secondarybackground"=> "#F7F8F9",
-	"septera_menubackground"	=> "#FFF",
+	"septera_menubackground"	=> "#777777",
 	"septera_headeroverlay" 	=> "#24A7CF",
 	"septera_headeroverlayopacity" => 75,
 	"septera_menutext" 			=> "#AAA",

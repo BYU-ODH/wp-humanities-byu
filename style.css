@@ -5441,4 +5441,7 @@ text-align: center;
 	display:inline;
 	margin-left: 5px;
 }
+.homePostText a {
+	color: #0062B8;
+}
 /* FIN! */

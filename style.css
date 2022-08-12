@@ -1101,13 +1101,13 @@ nav#mobile-menu #nav-cancel {
 	position: absolute;
 	top: 0;
 	right: 0;
-    display: inline-block;
+  display: inline-block;
 	width: auto;
 	height: 2em;
 	margin-top: 25px;
 	padding: 0 1em;
 	cursor: pointer;
-    font-size: 24px;
+  font-size: 24px;
 	line-height: 2.3;
 }
 
@@ -4789,16 +4789,17 @@ body.mobile .main {min-height:0;}
 }
 
 nav#humanities-menu {
-    display: block;
-    margin-top: var(--header-nav-height);
+	display: block;
+	margin-top: var(--header-nav-height);
 }
 
 nav#humanities-menu li {
 	display: inline-block;
-	padding-top: 10px;
-	padding-left: 35px;
-	padding-bottom: 7px;
-	padding-right: 35px; 
+	margin-top: 1rem;
+	margin-left: 2rem;
+	margin-bottom: 1em;
+	margin-right: 2rem;
+	border-bottom: 3px solid white;
 	border-bottom: 3px solid white; 
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: lighter;
@@ -4951,9 +4952,7 @@ div#content .main p {
 
 /* Define status colors*/
 :root {
-	--liveStatusColor: #10A170;
-	--intakeStatusColor: #FFED74;
-	--archivedStatusColor: #8f8f8f;
+
 }
 
 /**********/
@@ -4973,15 +4972,7 @@ div#content .main p {
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px; 
 }
-.archivedStatus{
-	border:5px solid var(--archivedStatusColor);
-}
-.liveStatus{
-	border:5px solid var(--liveStatusColor);
-}
-.intakeStatus{
-	border:5px solid var(--intakeStatusColor);
-}
+
 .odhBoxSingleCard{
     /*single card content here*/
     grid-column-end: span 4;
@@ -5375,4 +5366,41 @@ section.blog > h1{
 	color: #000000;
 }
 
+/* Styling for projects listed on individual person pages */
+h3.label.projects ~ li a {
+	border-color: transparent;
+	border-width: 0px;
+} 
+
+ .projectStatus {
+	border-color: transparent;
+	border-width: 0px;
+} 
+
+.projectStatus.liveStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:#10A170;
+    display: inline-block;
+}
+
+.projectStatus.intakeStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFED74;
+    display: inline-block;
+}
+
+ .projectStatus.archivedStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    display: inline-block;
+} 
 /* FIN! */

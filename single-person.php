@@ -123,6 +123,23 @@ get_header(); ?>
 							return $status_code;
 						}
 
+						function get_status($archive_status_date, $live_status_date, $intake_status_date) {
+							$project_status = "noStatus";
+							if(not_empty_date($archive_status_date)) {
+								$project_status = "Archived";
+							}
+							elseif (not_empty_date($live_status_date)) {
+								$project_status = "Live";
+							}
+							elseif (not_empty_date($intake_status_date)) {
+								$project_status = "Intake";
+							}
+							else {
+								$project_status = "Unknown";
+							}
+							return $project_status;
+						}
+
 
 						while ( $mypod -> fetch() ) {
 

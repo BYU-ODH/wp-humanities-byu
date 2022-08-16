@@ -102,28 +102,6 @@ get_header(); ?>
 						$archived_projects = array();
 						$noStatus_projects = array();
 
-						function not_empty_date($date) {
-							return !empty($date) && $date != '0000-00-00';
-						}
-
-						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
-							$status_code = "noStyleFound";
-							if (not_empty_date($archive_status_date)) {
-								$status_code = "archivedStatus";
-							}
-							elseif (not_empty_date($live_status_date)) {
-								$status_code = "liveStatus";
-							}
-							elseif (not_empty_date($intake_status_date)) {
-								$status_code = "intakeStatus";
-							}
-							else {
-								$status_code = "unknownStatus";
-							}
-							return $status_code;
-						}
-
-
 						while ( $mypod -> fetch() ) {
 
 							$intake_status = $mypod -> field('intake_status_date');

@@ -413,5 +413,43 @@ function GetBlogAuthDirectoryLink($blogpostId)
         
         </div>
         </article>
+
+        
  <?php }
+
+function not_empty_date($date) {
+    return !empty($date) && $date != '0000-00-00';
+}
+
+function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
+    $status_code = "noStyleFound";
+    if (not_empty_date($archive_status_date)) {
+        $status_code = "archivedStatus";
+    }
+    elseif (not_empty_date($live_status_date)) {
+        $status_code = "liveStatus";
+    }
+    elseif (not_empty_date($intake_status_date)) {
+        $status_code = "intakeStatus";
+    }
+    else {
+        $status_code = "unknownStatus";
+    }
+    return $status_code;
+}
+
+function get_project_status($post_id) {
+    setup_postdata($post_id);
+    $post = get_post($post_id);
+
+    $mypod = pods('projects', $post_id);
+
+    $intake_status = $mypod -> field('intake_status_date');
+    $live_status = $mypod -> field('live_status_date');
+    $archived_status = $mypod -> field('archived_status_date');
+
+    $status = get_status_style($archived_status, $live_status, $intake_status);
+
+    return $status;
+
 // FIN

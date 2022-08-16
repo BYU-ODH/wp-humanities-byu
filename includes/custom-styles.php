@@ -219,7 +219,7 @@ body 										{ color: <?php echo esc_html( $septera_sitetext ) ?>;
 #site-header-main, #access ul ul,
 .menu-search-animated .searchform input[type="search"], #access::after,
 .septera-over-menu .header-fixed#site-header-main, .septera-over-menu .header-fixed#site-header-main #access:after
-											{ background-color: <?php echo esc_html( $septera_menubackground ) ?>; }
+											{ background-color: #002f5d; }
 
 
 .septera-over-menu .header-fixed#site-header-main #site-title a
@@ -273,8 +273,8 @@ body:not(.septera-landing-page) .main, #lp-posts, #lp-page, .searchform
 #primary	 								{ background-color: <?php echo esc_html( $septera_primarybackground ) ?>; }
 #secondary			 						{ background-color: <?php echo esc_html( $septera_secondarybackground ) ?>; }
 
-#colophon, #footer 							{ background-color: <?php echo esc_html( $septera_footerbackground ) ?>;
- 											  color: <?php echo esc_html( $septera_footertext ) ?>; }
+#colophon, #footer 							{ background-color: #002f5d;
+ 											  color: #FFF; }
 .entry-title a:active, .entry-title a:hover { color: <?php echo esc_html( $septera_accent1 ) ?>; }
 span.entry-format 							{ color: <?php echo esc_html( $septera_accent1 ) ?>; }
 
@@ -584,10 +584,9 @@ a.staticslider-button:nth-child(2n) { border-color: <?php echo esc_html( $septer
 											background-color: <?php echo esc_html( $septera_contentbackground ) ?>; }
 
 .lp-staticslider::before, .lp-dynamic-slider .item > a::before, #header-image-main::before { background-color: <?php echo esc_html( $septera_headeroverlay ); ?>; }
-<?php if ( $septera_headeroverlayopacity ) { ?>
-	.lp-staticslider::before, .lp-dynamic-slider .item > a::before,  #header-image-main::before { z-index: 2; }
-	.lp-staticslider-image, .header-image, .seriousslider .item-image { -webkit-filter: grayscale(<?php echo intval($septera_headeroverlayopacity) ?>%) brightness(110%); filter: grayscale(<?php echo intval($septera_headeroverlayopacity) ?>%) brightness(110%); }
-<?php } ?>
+
+// REMOVED CODE FROM HERE
+
 @-webkit-keyframes animation-slider-overlay { to { opacity: <?php echo esc_html( absint( $septera_headeroverlayopacity )/100 ); ?>; } }
 @keyframes animation-slider-overlay { to { opacity:  <?php echo esc_html( absint( $septera_headeroverlayopacity )/100 ); ?>; } }
 .lp-dynamic-slider .item > a::before  { opacity:  <?php echo esc_html( absint( $septera_headeroverlayopacity )/100 ); ?>; }

@@ -19,6 +19,7 @@ if ( 'posts' == get_option( 'show_on_front' ) ) {
 
 	get_header();
 	?>
+	<h1>status of project 28340: <?php echo get_project_status(28340);?> </h1>
 
     <div id="container" class="septera-landing-page one-column">
 		<main id="main" role="main" class="main">

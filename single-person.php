@@ -102,43 +102,43 @@ get_header(); ?>
 						$archived_projects = array();
 						$noStatus_projects = array();
 
-						function not_empty_date($date) {
-							return !empty($date) && $date != '0000-00-00';
-						}
+						// function not_empty_date($date) {
+						// 	return !empty($date) && $date != '0000-00-00';
+						// }
 
-						function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
-							$status_code = "noStyleFound";
-							if (not_empty_date($archive_status_date)) {
-								$status_code = "archivedStatus";
-							}
-							elseif (not_empty_date($live_status_date)) {
-								$status_code = "liveStatus";
-							}
-							elseif (not_empty_date($intake_status_date)) {
-								$status_code = "intakeStatus";
-							}
-							else {
-								$status_code = "unknownStatus";
-							}
-							return $status_code;
-						}
+						// function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
+						// 	$status_code = "noStyleFound";
+						// 	if (not_empty_date($archive_status_date)) {
+						// 		$status_code = "archivedStatus";
+						// 	}
+						// 	elseif (not_empty_date($live_status_date)) {
+						// 		$status_code = "liveStatus";
+						// 	}
+						// 	elseif (not_empty_date($intake_status_date)) {
+						// 		$status_code = "intakeStatus";
+						// 	}
+						// 	else {
+						// 		$status_code = "unknownStatus";
+						// 	}
+						// 	return $status_code;
+						// }
 
-						function get_status($archive_status_date, $live_status_date, $intake_status_date) {
-							$project_status = "noStatus";
-							if(not_empty_date($archive_status_date)) {
-								$project_status = "Archived";
-							}
-							elseif (not_empty_date($live_status_date)) {
-								$project_status = "Live";
-							}
-							elseif (not_empty_date($intake_status_date)) {
-								$project_status = "Intake";
-							}
-							else {
-								$project_status = "Unknown";
-							}
-							return $project_status;
-						}
+						// function get_status($archive_status_date, $live_status_date, $intake_status_date) {
+						// 	$project_status = "noStatus";
+						// 	if(not_empty_date($archive_status_date)) {
+						// 		$project_status = "Archived";
+						// 	}
+						// 	elseif (not_empty_date($live_status_date)) {
+						// 		$project_status = "Live";
+						// 	}
+						// 	elseif (not_empty_date($intake_status_date)) {
+						// 		$project_status = "Intake";
+						// 	}
+						// 	else {
+						// 		$project_status = "Unknown";
+						// 	}
+						// 	return $project_status;
+						// }
 
 
 						while ( $mypod -> fetch() ) {

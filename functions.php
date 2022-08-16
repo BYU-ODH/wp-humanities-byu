@@ -414,8 +414,6 @@ function GetBlogAuthDirectoryLink($blogpostId)
         </article>
  <?php }
 
-        
-
     function not_empty_date($date) {
         return !empty($date) && $date != '0000-00-00';
     }

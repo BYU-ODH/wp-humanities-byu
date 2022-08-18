@@ -4795,9 +4795,9 @@ nav#humanities-menu {
 
 nav#humanities-menu li {
 	display: inline-block;
-	margin-top: 1rem;
+	margin-top: 1vh;
 	margin-left: 2rem;
-	margin-bottom: 1em;
+	margin-bottom: 1vh;
 	margin-right: 2rem;
 	border-bottom: 3px solid white;
 	border-bottom: 3px solid white; 

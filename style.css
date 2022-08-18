@@ -707,6 +707,7 @@ a#logo > img {
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
     font-weight: lighter;
 	line-height: 1.1em;
+	color: #FFF;
 }
 
 #site-title a span {
@@ -1084,7 +1085,7 @@ nav#mobile-menu ul li {
     clear: both;
     display: block;
     float: none;
-    line-height: 3;
+    line-height: 2.5;
     position: relative;
     white-space: normal;
 }
@@ -1095,6 +1096,10 @@ nav#mobile-menu ul li {
   	white-space: nowrap;
   	text-overflow: ellipsis;
   	line-height: 1;
+}
+
+mobile-nav .menu-main-search .searchform {
+	width: 64vw;
 }
 
 nav#mobile-menu #nav-cancel {
@@ -1119,7 +1124,7 @@ nav#mobile-menu #nav-cancel {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 70%;
+	width: 65%;
 }
 
 #mobile-menu .menu-main-search a > .icon-search {
@@ -1148,7 +1153,6 @@ nav#mobile-menu #smobile {
 }
 
 #mobile-menu .searchform .searchsubmit {
-	right: .5em;
 	height: 3em;
 }
 
@@ -4045,7 +4049,7 @@ nav.sidebarmenu li a:hover {
 .searchform .searchsubmit {
 	display: block;
 	position: absolute;
-	right: 0;
+	right: -0.5vw;
 	top: -.5em;
 	z-index: 8;
 	height: 3.5em;
@@ -4192,7 +4196,7 @@ body.mobile .main {min-height:0;}
 
 @media (min-width: 1152px) {
 	.septera-fixed-menu.admin-bar #site-header-main {
-		margin-top: 32px;
+		margin-top: 0;
 	}
 }
 
@@ -4907,7 +4911,10 @@ div#site-header-main div {
 .menu-mobile-humanities-container {
 	display: flex;
 	justify-content: center;
-	padding-top: 1rem;
+}
+
+#menu-mobile-humanities.menu {
+	text-align: center;
 }
 
 /***********************/
@@ -4951,9 +4958,7 @@ div#content .main p {
 
 /* Define status colors*/
 :root {
-	--liveStatusColor: #10A170;
-	--intakeStatusColor: #FFED74;
-	--archivedStatusColor: #8f8f8f;
+
 }
 
 /**********/
@@ -4973,15 +4978,7 @@ div#content .main p {
     grid-template-columns: repeat(12, minmax(auto, 60px));
     grid-gap: 40px; 
 }
-.archivedStatus{
-	border:5px solid var(--archivedStatusColor);
-}
-.liveStatus{
-	border:5px solid var(--liveStatusColor);
-}
-.intakeStatus{
-	border:5px solid var(--intakeStatusColor);
-}
+
 .odhBoxSingleCard{
     /*single card content here*/
     grid-column-end: span 4;
@@ -5251,10 +5248,10 @@ section.blog > h1{
 	color: black;
 	text-decoration: none;
 }
-/* a.homePagePost:hover{
+a.homePagePost:hover{
 	color: #0062B8;
 	text-decoration: underline;
-} */
+}
 .homePostContainer{
 	display: flex;
 	padding-bottom: 50px;
@@ -5375,4 +5372,110 @@ section.blog > h1{
 	color: #000000;
 }
 
+/* Styling for projects listed on individual person pages */
+h3.label.projects ~ li a {
+	border-color: transparent;
+	border-width: 0px;
+} 
+
+ .projectStatus {
+	border-color: transparent;
+	border-width: 0px;
+} 
+
+.projectStatus.liveStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background:#10A170;
+    display: inline-block;
+}
+
+.projectStatus.intakeStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFED74;
+    display: inline-block;
+}
+
+ .projectStatus.archivedStatus:after {
+    content: "\A";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8f8f8f;
+    display: inline-block;
+} 
+/* Search Display Styles */
+.search-color {
+	color: black;
+	text-decoration: none;
+}
+
+.search-grid {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto;
+	gap: 50px;
+}
+
+.searchPost {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+}
+
+.searchPost li{
+	list-style-type: none;
+}
+
+.postIMG {
+	width: auto;
+	height: 8em;
+}
+.image-resize {
+	height: 8em;
+	width: auto;
+}
+.description {
+	position:relative;
+}
+
+.searchPostSingle{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	position: relative;	
+	padding: 5px 5px 30px 20px;
+	gap: 50px;
+	border-bottom: 1px solid #c5c5c5;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.pagePost {
+	color: #0057b8;
+	text-decoration: none;
+	font-weight: 600;
+	display:inline;
+}
+
+a.pagePost:hover{
+	color: #0062B8;
+	text-decoration: underline;
+}
+.searchImgContainer {
+display: inline;
+text-align: center;
+}
+.icon-list{
+	display:inline;
+	margin-left: 5px;
+}
+.homePostText a {
+	color: #0062B8;
+}
 /* FIN! */

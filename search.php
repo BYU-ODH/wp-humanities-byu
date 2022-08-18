@@ -18,14 +18,15 @@ get_header(); ?>
 						<?php printf( __( 'Search Results for: %s', 'septera' ), '<strong>' . get_search_query() . '</strong>' ); ?>
 					</h1>
 				</header>
-
-				<div id="content-masonry" class="content-masonry" <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div class="homePostContainer">
+				<div class=" homePostInner" <?php cryout_schema_microdata( 'blog' ); ?>>
 					<?php /* Start the Loop */
 					while ( have_posts() ) : the_post();
-						get_template_part( 'content/content', get_post_format() );
+						get_template_part( 'content/content', 'search' );
 					endwhile;
 					?>
 				</div><!--content-masonry-->
+				</div>
 				<?php
 
 				septera_pagination();

@@ -470,5 +470,4 @@ function set_default_meta($post_id){
 
 add_action('wp_insert_post','set_default_meta');
 
-
 // FIN

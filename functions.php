@@ -450,6 +450,7 @@ function get_project_status($post_id) {
 
     $status = get_status_style($archived_status, $live_status, $intake_status);
 
-    return $status;
+    return $status; 
+}
 
 // FIN

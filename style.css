@@ -4959,7 +4959,9 @@ div#content .main p {
 
 /* Define status colors*/
 :root {
-
+	--liveStatusColor: #10A170;
+	--intakeStatusColor: #FFED74;
+	--archivedStatusColor: #8f8f8f;
 }
 
 /**********/
@@ -4971,6 +4973,16 @@ div#content .main p {
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
     padding: 60px 0;
+}
+
+.archivedStatus{
+	border:5px solid var(--archivedStatusColor);
+}
+.liveStatus{
+	border:5px solid var(--liveStatusColor);
+}
+.intakeStatus{
+	border:5px solid var(--intakeStatusColor);
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -5410,6 +5422,21 @@ h3.label.projects ~ li a {
     background: #8f8f8f;
     display: inline-block;
 } 
+	h5.projectStatus {
+		border-color: transparent;
+		border-width: 0px;
+	}
+	
+	a.liveStatus {
+		border: 0px;
+	}
+	a.archivedStatus {
+		border: 0px;
+	}
+	a.intakeStatus {
+		border: 0px;
+	}
+
 /* Search Display Styles */
 .search-color {
 	color: black;

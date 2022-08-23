@@ -1,4 +1,4 @@
-	<?php
+<?php
 	/**
 	 * The main template file.
 	 *
@@ -12,13 +12,13 @@
 	get_header();
 	?>
 
-<div id="container" class="<?php echo septera_get_layout_class(); ?>">
+<div id="container" class="<?php /*echo septera_get_layout_class();*/ ?>">
 	<main id="main" role="main" class="main">
-		<?php cryout_before_content_hook(); ?>
+		<?php /*cryout_before_content_hook();*/ ?>
 		<?php if ( have_posts() ) : ?>
 		<section class="blog text-content">
 			<h1>Blog</h1>
-			<div <?php cryout_schema_microdata( 'blog' ); ?>>
+			<div <?php /*cryout_schema_microdata( 'blog' );*/ ?>>
 				<div class="homePostContainer">
 					<div class="homePostInner">
 						<ul>
@@ -33,12 +33,12 @@
 			</div> <!-- content-masonry -->
 		</section>
 				
-	<?php septera_pagination(); ?>
+	<?php /*septera_pagination();*/ ?>
 	<?php else : get_template_part( 'content/content', 'notfound' ); endif; ?>
-	<?php cryout_after_content_hook(); ?>
+	<?php /*cryout_after_content_hook();*/ ?>
 				
 	</main><!-- #main -->
-	<?php septera_get_sidebar(); ?>
+	<?php /*septera_get_sidebar();*/ ?>
 </div><!-- #container -->
 
 	<?php get_footer();

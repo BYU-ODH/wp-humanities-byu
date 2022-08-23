@@ -384,7 +384,7 @@ input[type="search"] {
 	font-size: initial;
 } */
 
-button,
+
 /* input[type="button"],
 input[type="submit"], */
 input[type="reset"] {
@@ -5378,7 +5378,7 @@ h3.label.projects ~ li a {
 	border-width: 0px;
 } 
 
- .projectStatus {
+.projectStatus {
 	border-color: transparent;
 	border-width: 0px;
 } 

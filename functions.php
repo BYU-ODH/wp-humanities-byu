@@ -450,6 +450,24 @@ function get_project_status($post_id) {
 
     $status = get_status_style($archived_status, $live_status, $intake_status);
 
+    
+
     return $status;
 }
+
+function set_default_meta($post_id){
+
+    $current_field_value = get_post_meta($post_ID,'project_status',true);
+
+    $project_status = get_project_status($post_id);
+    $project_id = $post_ID;
+
+    if (!wp_is_post_revision($post_id)){
+            add_post_meta($post_id,'project_status',$project_status,true);
+    }
+    return $post_id;
+}
+
+add_action('wp_insert_post','set_default_meta');
+
 // FIN

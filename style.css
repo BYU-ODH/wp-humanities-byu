@@ -4970,7 +4970,6 @@ div#content .main p {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
-    padding: 60px 0;
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -5333,6 +5332,21 @@ a.homePagePost:hover{
 }
 /* END OF SUBMENUS */
 
+/*facet checkbox for projects*/
+.facetwp-facet{
+	margin-bottom: 0;
+}
+.facetwp-facet-project_status.facetwp-type-checkboxes {
+	display: inline-flex;
+	margin-left: 20%;
+}
+.facetwp-checkbox {
+	padding-right: 4vw;
+}
+.facetwp-counter{
+	display: none;
+}
+/*End of facet checkbox*/
 
 /* style for links */
 

@@ -5357,6 +5357,19 @@ a.homePagePost:hover{
 .facetwp-counter{
 	display: none;
 }
+.facetwp-display-value {
+	border-color: gray;
+	border-width: 2px;
+	border-style: solid;
+	padding: 2%;
+	padding-right: 2%;
+}
+.facetwp-checkbox.checked {
+	background-image: none;
+}
+.facetwp-checkbox {
+	background: none;
+}
 /*End of facet checkbox*/
 
 /* style for links */

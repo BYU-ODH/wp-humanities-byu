@@ -5347,17 +5347,20 @@ a.homePagePost:hover{
 	display: none;
 }
 .facetwp-display-value {
-	border-color: gray;
+	border-color: #002f5d;
 	border-width: 2px;
 	border-style: solid;
-	padding: 2%;
-	padding-right: 2%;
+	padding: 5%;
+	padding-right: 5% !important;
 }
 .facetwp-checkbox.checked {
-	background-image: none;
+	background-image: none !important;
+}
+.facetwp-checkbox.checked .facetwp-display-value {
+	background-color: #abcef2;
 }
 .facetwp-checkbox {
-	background: none;
+	background: none !important;
 }
 /*End of facet checkbox*/
 

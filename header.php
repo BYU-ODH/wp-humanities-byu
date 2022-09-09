@@ -26,7 +26,7 @@ $favicon = get_template_directory_uri() . '/resources/images/humanitiesLogo.png'
 <body <?php body_class(); /* cryout_schema_microdata( 'body' ); */ ?>>
 	<?php /* cryout_body_hook(); */ ?>
 <div id="site-wrapper">
-	<header id="masthead" class="cryout" <?php /* cryout_schema_microdata( 'header' ) */ ?> role="banner">
+	<header id="masthead" class="cryout" <?php cryout_schema_microdata( 'header' )?> role="banner">
 
 		<div id="site-header-main">
 			<div id="site-header-main-inside">

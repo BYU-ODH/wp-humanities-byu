@@ -548,7 +548,7 @@ $header_image = septera_header_image_url();
 if ( empty( $header_image ) ) { ?>
 @media (min-width: 1152px) {
 	body:not(.septera-landing-page) #masthead
-											{ border-bottom: 1px solid <?php echo esc_html( cryout_hexdiff( $septera_menubackground, 17 ) ); ?>; }
+											<!-- { border-bottom: 1px solid <?php echo esc_html( cryout_hexdiff( $septera_menubackground, 17 ) ); ?>; } -->
 }
 <?php }; ?>
 

@@ -10,7 +10,7 @@
 
 ?>
 		<?php /*cryout_absolute_bottom_hook();*/ ?>
-
+		
 		<aside id="colophon" role="complementary" <?php /* cryout_schema_microdata( 'sidebar' ); */?>>
 			<div id="colophon-inside" <?php septera_footer_colophon_class(); ?>>
 				<?php get_sidebar( 'footer' );?>
@@ -20,7 +20,7 @@
 	</div><!-- #main -->
 
 	<footer id="footer" class="cryout" role="contentinfo" <?php /* cryout_schema_microdata( 'footer' ); */?>>
-		<?php cryout_master_footer_hook(); ?>
+		<?php /* cryout_master_footer_hook(); */?>
 	</footer>
 </div><!-- site-wrapper -->
 	<?php wp_footer(); ?>

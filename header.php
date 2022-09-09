@@ -53,9 +53,9 @@ $favicon = get_template_directory_uri() . '/resources/images/humanitiesLogo.png'
 			</div><!-- #site-header-main-inside -->
 
 			<nav id="humanities-menu">
-				<div class="menu-odhmain-container">
+				
 					<?php wp_nav_menu( array( 'theme_location' => 'humanities-menu' ) ); ?>
-					</div>
+					
 				</nav>
 			
 		</div><!-- #site-header-main -->

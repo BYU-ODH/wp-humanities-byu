@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 				'style'       => 'ol',
 				'short_ping'  => true,
 				'avatar_size' => 50,
-				'callback' => 'septera_comment',
+				/* 'callback' => 'septera_comment', */
 			) );
 			?>
 		</ol><!-- .commentlist -->
@@ -42,7 +42,7 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'septera' ); ?></p>
+		<p class="nocomments"><?php _e( 'Comments are closed.' /*, 'septera' */); ?></p>
 	<?php endif; ?>
 	<?php if ( comments_open() ) comment_form();  ?>
 </section><!-- #comments -->

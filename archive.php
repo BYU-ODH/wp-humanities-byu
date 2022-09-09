@@ -17,7 +17,7 @@
 
 get_header(); ?>
 
-	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
+	<div id="container" class="<?php /*echo septera_get_layout_class(); */?>">
 		<main id="main" role="main" class="main">
 			<?php cryout_before_content_hook(); ?>
 
@@ -51,7 +51,7 @@ get_header(); ?>
 				<?php the_terms( $post->ID, 'research', 'Research: ', ', ', ' ' ); ?>
 
 				<!--content-masonry-->
-				<?php septera_pagination();
+				<?php /* septera_pagination()*/ ;
 
 			// If no content, include the "No posts found" template.
 			else :
@@ -61,7 +61,7 @@ get_header(); ?>
 			cryout_after_content_hook(); ?>
 		</main><!-- #main -->
 
-		<?php septera_get_sidebar(); ?>
+		<?php /* septera_get_sidebar(); */ ?>
 	</div><!-- #container -->
 
 <?php get_footer(); ?>

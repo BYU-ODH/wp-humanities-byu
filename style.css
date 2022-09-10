@@ -5376,9 +5376,7 @@ a.homePagePost:hover{
 .facetwp-checkbox.checked {
 	background-image: none !important;
 }
-.facetwp-checkbox.checked .facetwp-display-value {
-	background-color: #abcef2;
-}
+
 .facetwp-checkbox {
 	background: none !important;
 }

@@ -424,16 +424,16 @@ function not_empty_date($date) {
 function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
     $status_code = "noStyleFound";
     if (not_empty_date($archive_status_date)) {
-        $status_code = "archivedStatus";
+        $status_code = "Archived";
     }
     elseif (not_empty_date($live_status_date)) {
-        $status_code = "liveStatus";
+        $status_code = "Live";
     }
     elseif (not_empty_date($intake_status_date)) {
-        $status_code = "intakeStatus";
+        $status_code = "Intake";
     }
     else {
-        $status_code = "unknownStatus";
+        $status_code = "Unknown";
     }
     return $status_code;
 }

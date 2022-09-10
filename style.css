@@ -5351,19 +5351,28 @@ a.homePagePost:hover{
 	display: inline-flex;
 	margin-left: 20%;
 }
-.facetwp-checkbox {
-	padding-right: 4vw;
+
+.facetwp-checkbox[data-value = live] {
+	border:5px solid var(--liveStatusColor);
 }
+.facetwp-checkbox[data-value = archived] {
+	border:5px solid var(--archivedStatusColor);
+}
+.facetwp-checkbox[data-value = intake] {
+	border:5px solid var(--intakeStatusColor);
+}
+
+.facetwp-checkbox {
+	padding: .3vw 0.5vw .3vw 0.5vw !important;
+	margin-right: 33%;
+	min-width: 6vw;
+	text-align: center;
+}
+
 .facetwp-counter{
 	display: none;
 }
-.facetwp-display-value {
-	border-color: #002f5d;
-	border-width: 2px;
-	border-style: solid;
-	padding: 5%;
-	padding-right: 5% !important;
-}
+
 .facetwp-checkbox.checked {
 	background-image: none !important;
 }

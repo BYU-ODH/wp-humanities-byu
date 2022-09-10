@@ -4958,9 +4958,7 @@ div#content .main p {
 
 /* Define status colors*/
 :root {
-	--liveStatusColor: #10A170;
-	--intakeStatusColor: #FFED74;
-	--archivedStatusColor: #8f8f8f;
+
 }
 
 /**********/
@@ -4971,6 +4969,7 @@ div#content .main p {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
+<<<<<<< HEAD
 }
 
 .archivedStatus{
@@ -4981,6 +4980,8 @@ div#content .main p {
 }
 .intakeStatus{
 	border:5px solid var(--intakeStatusColor);
+=======
+>>>>>>> 25ff2340326b2d6bb5e3142a83ce3f8eaf06858d
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -5351,6 +5352,7 @@ a.homePagePost:hover{
 	display: inline-flex;
 	margin-left: 20%;
 }
+<<<<<<< HEAD
 
 .facetwp-checkbox[data-value = live] {
 	border:5px solid var(--liveStatusColor);
@@ -5377,6 +5379,27 @@ a.homePagePost:hover{
 	background-image: none !important;
 }
 
+=======
+.facetwp-checkbox {
+	padding-right: 4vw;
+}
+.facetwp-counter{
+	display: none;
+}
+.facetwp-display-value {
+	border-color: #002f5d;
+	border-width: 2px;
+	border-style: solid;
+	padding: 5%;
+	padding-right: 5% !important;
+}
+.facetwp-checkbox.checked {
+	background-image: none !important;
+}
+.facetwp-checkbox.checked .facetwp-display-value {
+	background-color: #abcef2;
+}
+>>>>>>> 25ff2340326b2d6bb5e3142a83ce3f8eaf06858d
 .facetwp-checkbox {
 	background: none !important;
 }

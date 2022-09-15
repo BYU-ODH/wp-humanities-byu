@@ -4971,7 +4971,6 @@ div#content .main p {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
-<<<<<<< HEAD
 }
 
 .archivedStatus{
@@ -4982,8 +4981,6 @@ div#content .main p {
 }
 .intakeStatus{
 	border:5px solid var(--intakeStatusColor);
-=======
->>>>>>> 25ff2340326b2d6bb5e3142a83ce3f8eaf06858d
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/

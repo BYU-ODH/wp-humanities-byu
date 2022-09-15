@@ -5,7 +5,7 @@
  */
 
 /* Panel maximizer */
-#customize-theme-controls .customize-control + .customize-control { margin-top: 5px; }
+/* #customize-theme-controls .customize-control + .customize-control { margin-top: 5px; }
 .wp-full-overlay .button.cryout-expand-sidebar {
 	left: initial;
 	right: 0;
@@ -32,16 +32,16 @@
 
 .wp-full-overlay.cryout-maximized .wp-full-overlay-sidebar {
 	margin-left: 0 !important;
-	width: 40% !important; }
+	width: 40% !important; } */
 
 /* Panel maximizer wp 4.5+ */
-.wp-full-overlay .wp-full-overlay-footer { transition: width .2s; }
+/* .wp-full-overlay .wp-full-overlay-footer { transition: width .2s; }
 .wp-full-overlay.cryout-maximized .wp-full-overlay-footer { width: 40% !important; }
 .wp-full-overlay-footer .devices .cryout-expand-sidebar { float: left; position: static; }
-.wp-full-overlay-footer .devices .cryout-expand-sidebar .collapse-sidebar-label { display: none; }
+.wp-full-overlay-footer .devices .cryout-expand-sidebar .collapse-sidebar-label { display: none; } */
 
 /* General panels/sections */
-#customize-theme-controls [id*="cryout-"] .customize-control-radioimage input[type="radio"] {
+/* #customize-theme-controls [id*="cryout-"] .customize-control-radioimage input[type="radio"] {
 	display: none;
 }
 
@@ -70,20 +70,20 @@
 #customize-theme-controls [id*="cryout-"] .customize-control-radioimage .ui-state-active img,
 #customize-theme-controls [id*="cryout-"] .customize-control-radioimage input[type="radio"]:checked + label > img {
     border-color: #00a0d2;
-}
+} */
 
 /* Theme panels/sections */
-#customize-theme-controls [id*="cryout-"] .ui-slider { max-width: 80%; }
+/* #customize-theme-controls [id*="cryout-"] .ui-slider { max-width: 80%; }
 #customize-theme-controls [id*="cryout-"] .customize-control-numberslider .ui-slider { max-width: 62%; margin-top: 11px; }
 #customize-theme-controls [id*="cryout-"] .customize-control-numberslider + .customize-control-numberslider { margin-top: -0.7em; }
 
 
 #customize-theme-controls [id*="cryout-"].control-panel .control-section .accordion-section-content,
-#customize-theme-controls [id*="cryoutspecial-"].control-panel .control-section .accordion-section-content  {
+#customize-theme-controls [id*="cryoutspecial-"].control-panel .control-section .accordion-section-content  { */
 	/*position: initial;
 	left: 0;*/
-	border-bottom: 1px solid #ddd;
-}
+	/* border-bottom: 1px solid #ddd;
+} */
 
 
 
@@ -92,7 +92,7 @@
     margin-top: 0 !important;
 }*/
 
-#customize-theme-controls [id*="cryout-"].control-section.control-section-sidebar .accordion-section-content.ui-sortable {
+/* #customize-theme-controls [id*="cryout-"].control-section.control-section-sidebar .accordion-section-content.ui-sortable {
 	overflow: auto;
 }
 
@@ -114,10 +114,10 @@
 .rtl #customize-theme-controls [id*="cryout-"] .customize-control-color .customize-control-content { float: left; }
 #customize-theme-controls [id*="cryout-"] .customize-control-color .customize-control-description { clear: both; }
 #customize-theme-controls [id*="cryout-"] .customize-control-color .wp-color-result::after { content: ''; }
-
+ */
 /* theme identifier */
 
-#customize-theme-controls [id*="cryout-"] h3.accordion-section-title::before {
+/* #customize-theme-controls [id*="cryout-"] h3.accordion-section-title::before {
     background-color: #fff;
     display: block;
     font-size: 0.85em;
@@ -130,10 +130,10 @@
     padding-left: 40px;
 }
 
-
+ */
 
 /* about section */
-#customize-theme-controls [id*="site_icon"] img,
+/* #customize-theme-controls [id*="site_icon"] img,
 #customize-theme-controls [id*="_logoupload"] img {
     width: initial;
 }
@@ -171,10 +171,10 @@
 #customize-theme-controls [id*="accordion-section-about"] a.customizer-plus-link:hover,
 #customize-theme-controls [id*="accordion-section-cryoutspecial-about-theme"] a.customizer-plus-link:hover {
 	opacity: 0.85;
-}
+} */
 
 /* theme help/plus link in about section */
-#accordion-section-cryoutspecial-about-theme > .accordion-section-title > a,
+/* #accordion-section-cryoutspecial-about-theme > .accordion-section-title > a,
 #accordion-panel-cryoutspecial-about-theme > .accordion-section-title >a {
     content: "Get Plus";
     position: absolute;
@@ -183,10 +183,10 @@
 	font-weight: 400;
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
-}
+} */
 
 /* custom length selects */
-.customize-control.customize-control-selecthalf {
+/* .customize-control.customize-control-selecthalf {
 	float: left;
 	max-width: 49%;
 }
@@ -218,15 +218,15 @@
 .rtl .customize-control.customize-control-selectthird + .customize-control.customize-control-selectthird + .customize-control.customize-control-selectthird {
 	clear: left;
 }
-
+ */
 /* iconselect.select2 visibility tweak */
-.select2-container.cryout-select2 { 
+/* .select2-container.cryout-select2 { 
 	z-index: 599999;
 	min-width: 100%;
-}
+} */
 
 /* sortable */
-.customize-control-sortable .ui-sortable-handle {
+/* .customize-control-sortable .ui-sortable-handle {
 	cursor: move;
 	padding: .5em 1em;
 	background: #FFF;
@@ -246,10 +246,10 @@
 }
 .customize-control-sortable .sortable-edit:hover {
 	opacity: 1;
-}
+} */
 
 /* toggle */
-.customize-control-toggle .customize-control-title {
+/* .customize-control-toggle .customize-control-title {
 	padding-right: 55px;
 }
 
@@ -334,10 +334,10 @@
 
 .customize-control-toggle .toggler + .description {
 	clear: both;
-}
+} */
 
 /* Notices */
-#customize-theme-controls [id*="cryout-"] .customize-control-cryout-notice {
+/* #customize-theme-controls [id*="cryout-"] .customize-control-cryout-notice {
 	margin-top: 0;
 }
 
@@ -362,10 +362,10 @@
 
 .customize-control-sortable .sortable li.status-disabled {
 	opacity: 0.5;
-}
+} */
 
 /* RTL */
-.rtl #accordion-panel-cryoutspecial-about-theme > .accordion-section-title::before {
+/* .rtl #accordion-panel-cryoutspecial-about-theme > .accordion-section-title::before {
 	right: auto;
 	left: 10px;
 }
@@ -396,6 +396,6 @@
 .rtl .wp-full-overlay .cryout-expand-sidebar .collapse-sidebar-arrow::before { transform: rotate(0deg); }
 .rtl .wp-full-overlay.cryout-maximized .cryout-expand-sidebar  .collapse-sidebar-arrow::before  { transform: rotate(180deg); }
 .rtl #accordion-section-cryoutspecial-about-theme > .accordion-section-title::before, #accordion-panel-cryoutspecial-about-theme > .accordion-section-title::before {
-	right: auto; left: 40px; }
+	right: auto; left: 40px; } */
 
 /* FIN */

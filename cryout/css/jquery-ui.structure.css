@@ -11,7 +11,7 @@
 
 /* Layout helpers
 ----------------------------------*/
-.ui-helper-hidden {
+/* .ui-helper-hidden {
 	display: none;
 }
 .ui-helper-hidden-accessible {
@@ -44,7 +44,7 @@
 	clear: both;
 }
 .ui-helper-clearfix {
-	min-height: 0; /* support: IE7 */
+	min-height: 0; support: IE7
 }
 .ui-helper-zfix {
 	width: 100%;
@@ -53,12 +53,12 @@
 	left: 0;
 	position: absolute;
 	opacity: 0;
-	filter:Alpha(Opacity=0); /* support: IE8 */
+	filter:Alpha(Opacity=0); support: IE8
 }
 
 .ui-front {
 	z-index: 100;
-}
+} */
 
 
 /* Interaction Cues

@@ -4971,7 +4971,6 @@ div#content .main p {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
-    padding: 60px 0;
 }
 
 .archivedStatus{
@@ -5344,6 +5343,44 @@ a.homePagePost:hover{
 }
 /* END OF SUBMENUS */
 
+/*facet checkbox for projects*/
+.facetwp-facet{
+	margin-bottom: 0;
+}
+.facetwp-facet-project_status.facetwp-type-checkboxes {
+	display: inline-flex;
+	margin-left: 20%;
+}
+
+.facetwp-checkbox[data-value = live] {
+	border:5px solid var(--liveStatusColor);
+}
+.facetwp-checkbox[data-value = archived] {
+	border:5px solid var(--archivedStatusColor);
+}
+.facetwp-checkbox[data-value = intake] {
+	border:5px solid var(--intakeStatusColor);
+}
+
+.facetwp-checkbox {
+	padding: .3vw 0.5vw .3vw 0.5vw !important;
+	margin-right: 33%;
+	min-width: 6vw;
+	text-align: center;
+}
+
+.facetwp-counter{
+	display: none;
+}
+
+.facetwp-checkbox.checked {
+	background-image: none !important;
+}
+
+.facetwp-checkbox {
+	background: none !important;
+}
+/*End of facet checkbox*/
 
 /* style for links */
 

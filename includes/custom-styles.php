@@ -349,15 +349,6 @@ input[type]:hover, textarea:hover, select:hover,
 input[type]:focus, textarea:focus, select:focus
 											{ background: <?php echo esc_html( cryout_hexdiff( $septera_contentbackground, 15 ) ) ?>; }
 
-button, input[type="button"], input[type="submit"], input[type="reset"]
-											{ background-color: <?php echo esc_html( $septera_accent1 ) ?>;
-											  color: <?php echo esc_html( $septera_contentbackground ) ?>; }
-
-button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover
-											{ background-color: <?php echo esc_html( $septera_accent2 ) ?>; }
-
-hr											{ background-color: <?php echo esc_html(cryout_hexdiff($septera_contentbackground, 15 ) ) ?>; }
-
 /* gutenberg */
 .wp-block-image.alignwide {
 	margin-left: calc( ( <?php echo intval($septera_elementpadding * 1.50) ?>% + 2.5em ) * -1 );

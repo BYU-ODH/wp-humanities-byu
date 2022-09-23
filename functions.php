@@ -9,7 +9,7 @@
  */
 
 // theme identification and options management - do NOT edit unless you know what you are doing
-define ( "_CRYOUT_THEME_NAME", "septera" );
+define ( "_C<h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1>RYOUT_THEME_NAME", "septera" );
 define ( "_CRYOUT_THEME_VERSION", "1.5.0" );
 
 // prefixes for theme options and functions
@@ -424,16 +424,16 @@ function not_empty_date($date) {
 function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
     $status_code = "noStyleFound";
     if (not_empty_date($archive_status_date)) {
-        $status_code = "archivedStatus";
+        $status_code = "Archived";
     }
     elseif (not_empty_date($live_status_date)) {
-        $status_code = "liveStatus";
+        $status_code = "Live";
     }
     elseif (not_empty_date($intake_status_date)) {
-        $status_code = "intakeStatus";
+        $status_code = "Intake";
     }
     else {
-        $status_code = "unknownStatus";
+        $status_code = "Unknown";
     }
     return $status_code;
 }
@@ -452,5 +452,23 @@ function get_project_status($post_id) {
 
     return $status; 
 }
+
+    return $status;
+}
+
+function set_default_meta($post_id){
+
+    $current_field_value = get_post_meta($post_ID,'project_status',true);
+
+    $project_status = get_project_status($post_id);
+    $project_id = $post_ID;
+
+    if (!wp_is_post_revision($post_id)){
+            add_post_meta($post_id,'project_status',$project_status,true);
+    }
+    return $post_id;
+}
+
+add_action('wp_insert_post','set_default_meta');
 
 // FIN

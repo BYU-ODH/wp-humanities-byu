@@ -384,7 +384,7 @@ input[type="search"] {
 	font-size: initial;
 } */
 
-button,
+
 /* input[type="button"],
 input[type="submit"], */
 input[type="reset"] {
@@ -4799,12 +4799,11 @@ nav#humanities-menu {
 
 nav#humanities-menu li {
 	display: inline-block;
-	margin-top: 1rem;
+	margin-top: 1vh;
 	margin-left: 2rem;
-	margin-bottom: 1em;
+	margin-bottom: 1vh;
 	margin-right: 2rem;
 	border-bottom: 3px solid white;
-	border-bottom: 3px solid white; 
 	font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
 	font-weight: lighter;
 }
@@ -4959,7 +4958,9 @@ div#content .main p {
 
 /* Define status colors*/
 :root {
-
+	--liveStatusColor: #10A170;
+	--intakeStatusColor: #FFED74;
+	--archivedStatusColor: #8f8f8f;
 }
 
 /**********/
@@ -4970,7 +4971,16 @@ div#content .main p {
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
     grid-gap: 40px;
-    padding: 60px 0;
+}
+
+.archivedStatus{
+	border:5px solid var(--archivedStatusColor);
+}
+.liveStatus{
+	border:5px solid var(--liveStatusColor);
+}
+.intakeStatus{
+	border:5px solid var(--intakeStatusColor);
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -5333,6 +5343,44 @@ a.homePagePost:hover{
 }
 /* END OF SUBMENUS */
 
+/*facet checkbox for projects*/
+.facetwp-facet{
+	margin-bottom: 0;
+}
+.facetwp-facet-project_status.facetwp-type-checkboxes {
+	display: inline-flex;
+	margin-left: 20%;
+}
+
+.facetwp-checkbox[data-value = live] {
+	border:5px solid var(--liveStatusColor);
+}
+.facetwp-checkbox[data-value = archived] {
+	border:5px solid var(--archivedStatusColor);
+}
+.facetwp-checkbox[data-value = intake] {
+	border:5px solid var(--intakeStatusColor);
+}
+
+.facetwp-checkbox {
+	padding: .3vw 0.5vw .3vw 0.5vw !important;
+	margin-right: 33%;
+	min-width: 6vw;
+	text-align: center;
+}
+
+.facetwp-counter{
+	display: none;
+}
+
+.facetwp-checkbox.checked {
+	background-image: none !important;
+}
+
+.facetwp-checkbox {
+	background: none !important;
+}
+/*End of facet checkbox*/
 
 /* style for links */
 
@@ -5379,7 +5427,7 @@ h3.label.projects ~ li a {
 	border-width: 0px;
 } 
 
- .projectStatus {
+.projectStatus {
 	border-color: transparent;
 	border-width: 0px;
 } 
@@ -5410,6 +5458,21 @@ h3.label.projects ~ li a {
     background: #8f8f8f;
     display: inline-block;
 } 
+	h5.projectStatus {
+		border-color: transparent;
+		border-width: 0px;
+	}
+	
+	a.liveStatus {
+		border: 0px;
+	}
+	a.archivedStatus {
+		border: 0px;
+	}
+	a.intakeStatus {
+		border: 0px;
+	}
+
 /* Search Display Styles */
 .search-color {
 	color: black;

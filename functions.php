@@ -9,7 +9,7 @@
  */
 
 // theme identification and options management - do NOT edit unless you know what you are doing
-define ( "_C<h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1><h1> HIIII </h1>RYOUT_THEME_NAME", "septera" );
+define ( "_CRYOUT_THEME_NAME", "septera" );
 define ( "_CRYOUT_THEME_VERSION", "1.5.0" );
 
 // prefixes for theme options and functions
@@ -449,12 +449,9 @@ function get_project_status($post_id) {
     $archived_status = $mypod -> field('archived_status_date');
 
     $status = get_status_style($archived_status, $live_status, $intake_status);
-
     return $status; 
 }
 
-    return $status;
-}
 
 function set_default_meta($post_id){
 

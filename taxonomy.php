@@ -14,11 +14,10 @@
  * @package Septera
  *
  */
-
 get_header(); ?>
 
 <!--style to fix alignment of people-->
-<style>
+<style> 
 article{
 	position: relative;
 	width: 445px;
@@ -27,26 +26,26 @@ article{
 }
 </style>
 
-	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
+	<div id="container" class="<?php /* echo septera_get_layout_class(); */ ?>">
 		<main id="main" role="main" class="main">
-			<?php cryout_before_content_hook(); ?>
+			<?php /* cryout_before_content_hook(); */ ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header pad-container" <?php cryout_schema_microdata( 'element' ); ?>>
+				<header class="page-header pad-container" <?php /* cryout_schema_microdata( 'element' ); */ ?>>
 				<?php
 						// Load custom header if author
 						if (is_author()) {
 							get_template_part( 'content/author-bio' );
 						// Default for all archives
 						} else {
-							the_archive_title( '<h1 class="page-title" ' . cryout_schema_microdata('entry-title', 0) . '>', '</h1>' );
+							the_archive_title( '<h1 class="page-title" ' . /*cryout_schema_microdata('entry-title', 0) . */ '>', '</h1>' );
 							the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						}
 					?>
 				</header><!-- .page-header -->
 
-				<div id="content-masonry" class="content-masonry " <?php cryout_schema_microdata( 'blog' ); ?>>
+				<div id="content-masonry" class="content-masonry " <?php /*cryout_schema_microdata( 'blog' ); */?>>
 					<?php
                     while ( have_posts() ) : the_post();
                     /*
@@ -60,18 +59,18 @@ article{
 
 				</div><!--content-masonry-->
 				<!--not really nessessary-->
-				<?php septera_pagination();
+				<?php /* septera_pagination();*/
 
 			// If no content, include the "No posts found" template.
 			else :
 				get_template_part( 'content/content', 'notfound' );
 			endif;
 
-			cryout_after_content_hook(); ?>
+			/*cryout_after_content_hook(); */?>
 
 		</main><!-- #main -->
 
-		<?php septera_get_sidebar(); ?>
+		<?php /*septera_get_sidebar();*/ ?>
 	</div><!-- #container -->
 
 <?php get_footer(); ?>

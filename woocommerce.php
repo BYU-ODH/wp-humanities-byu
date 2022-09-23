@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div id="container" class="<?php echo septera_get_layout_class(); ?>">
+	<div id="container" class="<?php /*echo septera_get_layout_class(); */ ?>">
 
 		<main id="main" role="main" class="main">
 

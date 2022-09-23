@@ -8,6 +8,7 @@
 get_header();?>
 
 <div id="container" class="<?php echo septera_get_layout_class(); ?>">
+	<h1> HIIII </h1>
 	<main id="main" role="main" class="main">
 		<?php cryout_before_content_hook(); ?>
 

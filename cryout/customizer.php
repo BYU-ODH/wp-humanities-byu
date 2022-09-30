@@ -5,45 +5,6 @@
  * @package Cryout Framework
  */
 
-///////// SANITIZERS /////////
-// function cryout_customizer_sanitize_blank(){
-// 	// dummy function that does nothing, since the sanitized add_section
-// 	// calling it does not add any user-editable field
-// } // cryout_customizer_sanitize_blank()
-
-// function cryout_customizer_sanitize_number($input){
-// 	return ( is_numeric( $input ) ) ? $input : intval( $input );
-// } // cryout_customizer_sanitize_number()
-
-// function cryout_customizer_sanitize_checkbox($input){
-//     if ( intval( $input ) == 1 ) return 1;
-//     return 0;
-// } // cryout_customizer_sanitize_checkbox()
-
-// function cryout_customizer_sanitize_url($input){
-// 	return esc_url_raw( $input );
-// } // cryout_customizer_sanitize_url()
-
-// function cryout_customizer_sanitize_googlefont($input){
-// 	return preg_replace( '/\+/', ' ', wp_kses_post($input) );
-// } // cryout_customizer_sanitize_url()
-
-// function cryout_customizer_sanitize_color($input){
-// 	return sanitize_hex_color($input);
-// } // cryout_customizer_sanitize_color()
-
-// function cryout_customizer_sanitize_text($input){
-// 	// return wp_filter_nohtml_kses( $input );
-// 	return wp_kses_post( $input );
-// } // cryout_customizer_sanitize_text()
-
-// function cryout_customizer_sanitize_generic($input){
-// 	return wp_kses_post( $input );
-// } // cryout_customizer_sanitize_generic()
-
-// custom controls moved to cryout/controls.php in 0.8
-
-
 ////////// THE CUSTOMIZER CLASS /////////
 class Cryout_Customizer {
 

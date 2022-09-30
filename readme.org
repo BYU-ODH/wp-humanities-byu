@@ -1,6 +1,5 @@
-=============
-BYU Theme (Humanities) 
-Copyright 2021 Brigham Young University
+* BYU Theme (Humanities) 
+Copyright 2022-2099 Brigham Young University
 https://odh.byu.edu
 
 Author: BYU ODH
@@ -13,7 +12,12 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 Conforms to the BYU style guidelines (https://brand.byu.edu/web-toolkit/web/). 
 
-== License ==
+** Directory page
+The directory page is hosted as a JavaScript application, written in ClojureScript
+
+https://gitlab.com/BYU-ODH/odh-directory
+
+** License
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,7 +33,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 
 
-== Third Party Resources ==
+** Third Party Resources
 
 Based on the Septera WordPress Theme, which bundles the following third-party resources:
 
@@ -41,7 +45,7 @@ FitVids, Copyright Chris Coyier - http://css-tricks.com + Dave Rupert - http://d
 Licensed under the terms of the WTFPLlicense
 Source: http://fitvidsjs.com/
 
-== Bundled Fonts ==
+** Bundled Fonts
 
 BYU Fonts (provided by Rieser consultants at previous theme creation, 2015)
 
@@ -57,7 +61,7 @@ Feather icons, Copyright Cole Bemis
 Licensed under the terms of the MIT license
 Source: http://colebemis.com/feather/
 
-== Bundled Images ==
+** Bundled Images
 
 The following bundled images are released into the public domain under Creative Commons CC0:
 https://pixabay.com/en/street-sidewalk-vintage-old-1284362/

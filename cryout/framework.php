@@ -24,16 +24,8 @@ elseif ( version_compare( $GLOBALS['wp_version'], _CRYOUT_THEME_REQUIRED_WP, '<'
 
 // Load everything
 require_once(get_template_directory() . "/cryout/prototypes.php");
-require_once(get_template_directory() . "/cryout/controls.php");
 require_once(get_template_directory() . "/cryout/customizer.php");
-require_once(get_template_directory() . "/cryout/ajax.php");
-require_once(get_template_directory() . "/cryout/demo.php");
 
-if( is_admin() ) {
-	// Admin functionality
-	require_once(get_template_directory() . "/cryout/admin-functions.php");
-	require_once(get_template_directory() . "/cryout/tgmpa-class.php");
-}
 
 // Set up the Theme Customizer settings and controls
 // Needs to be included in both dashboard and frontend

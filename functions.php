@@ -183,7 +183,7 @@ function byuh_setup() {
         'has_archive'         => false, 
         'hierarchical'        => false,
         'menu_position'       => 20,
-        'supports'            => array('title', 'thumbnail', 'excerpt'),
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt'),
         'menu_icon'           => 'dashicons-businessman',
 
         // For the REST API v2

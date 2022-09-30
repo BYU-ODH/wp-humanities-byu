@@ -2,13 +2,13 @@
 Copyright 2022-2099 Brigham Young University
 https://odh.byu.edu
 
-Author: BYU ODH
-Requires at least: 4.5
-Tested up to: 5.2
-Stable tag: 1.5.0
-Requires PHP: 5.3
-License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl.html
+- Author :: BYU ODH
+- Requires at least :: 4.5
+- Tested up to :: 5.2
+- Stable tag :: 1.5.0
+- Requires PHP :: 5.3
+- License :: GPLv3
+- License URI :: http://www.gnu.org/licenses/gpl.html
 
 Conforms to the BYU style guidelines (https://brand.byu.edu/web-toolkit/web/). 
 
@@ -64,19 +64,19 @@ Source: http://colebemis.com/feather/
 ** Bundled Images
 
 The following bundled images are released into the public domain under Creative Commons CC0:
-https://pixabay.com/en/street-sidewalk-vintage-old-1284362/
-https://unsplash.com/photos/8WClaa1CmZ0
+- https://pixabay.com/en/street-sidewalk-vintage-old-1284362/
+- https://unsplash.com/photos/8WClaa1CmZ0
 
 Preview demo images:
-1.jpg - https://pixabay.com/en/sunset-dusk-last-light-lake-coast-192980/
-2.jpg - https://pixabay.com/en/city-walkway-street-boat-the-fog-2045453/
-3.jpg - https://pixabay.com/en/urban-people-crowd-citizens-438393/
-4.jpg - https://pixabay.com/en/adult-blur-book-daylight-education-1835799/
-5.jpg - https://pixabay.com/en/girl-hat-brunette-long-hair-people-926738/
-6.jpg - https://pixabay.com/en/nature-landscape-coast-beach-shore-1246613/
-7.jpg - https://pixabay.com/en/child-beautiful-model-little-cute-920131/
-8.jpg - https://pixabay.com/en/street-sidewalk-vintage-old-1284362/
-9.jpg - https://pixabay.com/en/taxi-cab-taxicab-taxi-cab-new-york-238478/
-10.jpg - https://pixabay.com/en/road-asphalt-space-sky-clouds-220058/
+- 1.jpg :: https://pixabay.com/en/sunset-dusk-last-light-lake-coast-192980/
+- 2.jpg :: https://pixabay.com/en/city-walkway-street-boat-the-fog-2045453/
+- 3.jpg :: https://pixabay.com/en/urban-people-crowd-citizens-438393/
+- 4.jpg :: https://pixabay.com/en/adult-blur-book-daylight-education-1835799/
+- 5.jpg :: https://pixabay.com/en/girl-hat-brunette-long-hair-people-926738/
+- 6.jpg :: https://pixabay.com/en/nature-landscape-coast-beach-shore-1246613/
+- 7.jpg :: https://pixabay.com/en/child-beautiful-model-little-cute-920131/
+- 8.jpg :: https://pixabay.com/en/street-sidewalk-vintage-old-1284362/
+- 9.jpg :: https://pixabay.com/en/taxi-cab-taxicab-taxi-cab-new-york-238478/
+- 10.jpg :: https://pixabay.com/en/road-asphalt-space-sky-clouds-220058/
 
 The rest of the bundled images are created by Cryout Creations and released with the theme under GPLv3.

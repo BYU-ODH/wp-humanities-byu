@@ -113,25 +113,26 @@ get_header(); ?>
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
 							$personnel = $mypod -> field('project_personnel.ID');
-							$Live = "Live";
-							$Intake = "Intake";
-							$Archived = "Archived";
 
 							foreach ($personnel as $person) {
 								$link = get_permalink($person);
-								if($link == $currentPageUrl && $status_css_class == $Live) {
+								$ODHProjectStatus_Live = "Live";
+								$ODHProjectStatus_Intake = "Intake";
+								$ODHProjectStatus_Archived = "Archived";
+								$ODHProjectStatus_Unknown = "Unknown";
+								if($link == $currentPageUrl && $status_css_class == $ODHProjectStatus_Live) {
 									$live_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$live_projects[] = $live_project; 
 								}
-								elseif($link == $currentPageUrl && $status_css_class == $Intake) {
+								elseif($link == $currentPageUrl && $status_css_class == $ODHProjectStatus_Intake) {
 									$intake_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$intake_projects[] = $intake_project; 
 								}
-								elseif($link == $currentPageUrl && $status_css_class == $Archived) {
+								elseif($link == $currentPageUrl && $status_css_class == $ODHProjectStatus_Archived) {
 									$archived_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$archived_projects[] = $archived_project;
 								}
-								elseif($link == $currentPageUrl && $status_css_class == "Unknown") {
+								elseif($link == $currentPageUrl && $status_css_class == $ODHProjectStatus_Unknown) {
 									$noStatus_project = '<li>' . '<a class="' . $status_css_class . '" href="' . $permalink . '">' . $mypod->display('post_title') . '</a>' . '</li>';
 									$noStatus_projects[] = $noStatus_project;
 								}

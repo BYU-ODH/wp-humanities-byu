@@ -5363,9 +5363,10 @@ a.homePagePost:hover{
 
 .facetwp-checkbox {
 	padding: .3vw 0.5vw .3vw 0.5vw !important;
-	margin-right: 33%;
-	min-width: 6vw;
+	margin-right: 80%;
+	min-width: 50%;
 	text-align: center;
+
 }
 
 .facetwp-counter{
@@ -5374,12 +5375,17 @@ a.homePagePost:hover{
 
 .facetwp-checkbox.checked {
 	background-image: none !important;
+	background-color: #002f5d !important;
+	color: white;
 }
 
 .facetwp-checkbox {
 	background: none !important;
 }
 /*End of facet checkbox*/
+.facetwp-checkbox[data-value="unknown"] {
+    display: none;
+}
 
 /* style for links */
 

@@ -258,7 +258,7 @@ function septera_get_sidebar() {
 
 	switch( $layout ) {
 		case '2cSl':
-			get_sidebar( 'left' );
+			('left' );
 		break;
 
 		case '2cSr':

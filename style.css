@@ -5347,7 +5347,10 @@ a.homePagePost:hover{
 	margin-bottom: 0;
 }
 .facetwp-facet-project_status.facetwp-type-checkboxes {
-	display: inline-flex;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(100ox, auto);
+	gap: 5px;
 	margin-left: 20%;
 }
 
@@ -5366,7 +5369,11 @@ a.homePagePost:hover{
 	margin-right: 80%;
 	min-width: 50%;
 	text-align: center;
+<<<<<<< HEAD
 
+=======
+	width: 82%;
+>>>>>>> cf4d5ee (update styling for the buttons)
 }
 
 .facetwp-counter{

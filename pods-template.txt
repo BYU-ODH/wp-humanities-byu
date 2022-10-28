@@ -132,8 +132,8 @@ Please edit when you make changes to any pod templates
 	[if live_status_date]
 		<div class="odhBoxSingleCard liveStatus">
 	[else]
-		[if intake_status_date]
-			<div class="odhBoxSingleCard intakeStatus">
+		[if development_status_date]
+			<div class="odhBoxSingleCard developmentStatus">
 		[else]
 			<div class="odhBoxSingleCard">
 		[/if]

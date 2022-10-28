@@ -421,7 +421,7 @@ function not_empty_date($date) {
     return !empty($date) && $date != '0000-00-00';
 }
 
-function get_status_style($archive_status_date, $live_status_date, $intake_status_date) {
+function get_status_style($archive_status_date, $live_status_date, $development_status_date) {
     $status_code = "noStyleFound";
     if (not_empty_date($archive_status_date)) {
         $status_code = "Archived";
@@ -429,8 +429,8 @@ function get_status_style($archive_status_date, $live_status_date, $intake_statu
     elseif (not_empty_date($live_status_date)) {
         $status_code = "Live";
     }
-    elseif (not_empty_date($intake_status_date)) {
-        $status_code = "Intake";
+    elseif (not_empty_date($development_status_date)) {
+        $status_code = "Development";
     }
     else {
         $status_code = "Unknown";
@@ -444,11 +444,11 @@ function get_project_status($post_id) {
 
     $mypod = pods('projects', $post_id);
 
-    $intake_status = $mypod -> field('intake_status_date');
+    $development_status = $mypod -> field('development_status_date');
     $live_status = $mypod -> field('live_status_date');
     $archived_status = $mypod -> field('archived_status_date');
 
-    $status = get_status_style($archived_status, $live_status, $intake_status);
+    $status = get_status_style($archived_status, $live_status, $development_status);
 
     
 

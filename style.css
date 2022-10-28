@@ -5395,6 +5395,7 @@ a.homePagePost:hover{
 
 .entry-content a:hover {
 	color: black;
+	text-decoration: underline;
 	font-weight: 400;
 }
 .text-content a {

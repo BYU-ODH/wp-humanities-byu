@@ -5398,6 +5398,11 @@ a.homePagePost:hover{
 	color:#0057b8;
 }
 
+.entry-content a:hover {
+	color: black;
+	text-decoration: underline;
+	font-weight: 400;
+}
 .text-content a {
 	text-decoration: none;
 	color:#0057b8;

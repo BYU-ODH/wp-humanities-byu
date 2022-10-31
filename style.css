@@ -5347,8 +5347,11 @@ a.homePagePost:hover{
 	margin-bottom: 0;
 }
 .facetwp-facet-project_status.facetwp-type-checkboxes {
-	display: inline-flex;
-	margin-left: 20%;
+	--auto-grid-min-size: 16rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+	grid-gap: 4vw;
+	margin-left: 5%;
 }
 
 .facetwp-checkbox[data-value = live] {
@@ -5367,6 +5370,7 @@ a.homePagePost:hover{
 	min-width: 50%;
 	text-align: center;
 
+	width: 82%;
 }
 
 .facetwp-counter{

@@ -4959,7 +4959,7 @@ div#content .main p {
 /* Define status colors*/
 :root {
 	--liveStatusColor: #10A170;
-	--intakeStatusColor: #FFED74;
+	--developmentStatusColor: #FFED74;
 	--archivedStatusColor: #8f8f8f;
 }
 
@@ -4979,8 +4979,8 @@ div#content .main p {
 .liveStatus{
 	border:5px solid var(--liveStatusColor);
 }
-.intakeStatus{
-	border:5px solid var(--intakeStatusColor);
+.developmentStatus{
+	border:5px solid var(--developmentStatusColor);
 }
 .odhBoxCards{
     /*column and row width/height to be set here*/
@@ -5360,8 +5360,8 @@ a.homePagePost:hover{
 .facetwp-checkbox[data-value = archived] {
 	border:5px solid var(--archivedStatusColor);
 }
-.facetwp-checkbox[data-value = intake] {
-	border:5px solid var(--intakeStatusColor);
+.facetwp-checkbox[data-value = development] {
+	border:5px solid var(--developmentStatusColor);
 }
 
 .facetwp-checkbox {
@@ -5455,7 +5455,7 @@ h3.label.projects ~ li a {
     display: inline-block;
 }
 
-.projectStatus.intakeStatus:after {
+.projectStatus.developmentStatus:after {
     content: "\A";
     width: 10px;
     height: 10px;
@@ -5483,7 +5483,7 @@ h3.label.projects ~ li a {
 	a.archivedStatus {
 		border: 0px;
 	}
-	a.intakeStatus {
+	a.developmentStatus {
 		border: 0px;
 	}
 

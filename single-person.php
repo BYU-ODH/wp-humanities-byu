@@ -20,7 +20,7 @@ get_header(); ?>
 					<h2><?php the_title(); ?></h2>
 
 					<?php if (get_field('status') == 'retired') { ?>
-					<p class="info address"><span><?php echo "Alumnus"; ?></span></p>
+					<p class="info address"><i class="icon byu-icon-graduation-cap"></i><span><?php echo "Alumnus"; ?></span></p>
 					<?php } ?>
 					
 

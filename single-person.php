@@ -19,6 +19,13 @@ get_header(); ?>
 							<?php $page_link = get_page_link(); ?>
 					<h2><?php the_title(); ?></h2>
 
+					<?php if (get_field('status') == 'retired') { ?>
+					<p class="info alumnus"><i class="icon byu-icon-graduation-cap"></i><span><?php echo "Alumnus"; ?></span></p>
+					<?php } ?>
+					
+
+					<?php if(get_field('status') != 'retired') { ?>
+						
 					<?php if (get_field('address')) { ?>
 					<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
 					<?php } ?>
@@ -26,7 +33,8 @@ get_header(); ?>
 					<?php if (get_field('phone')) { $f_phone = format_phone_num(get_field('phone')); ?>
 					
 					<p class="info phone"><i class="icon byu-icon-telephone"></i><span><a href="tel:+1<?php echo $f_phone;?>"><?php echo $f_phone; ?></a></span></p>
-					<?php } ?>
+					<?php } }?>
+					
 		
 					<?php if (get_field('email')) { ?>
 					<p class="info email"><i class="icon byu-icon-mail"></i><span><a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a></span></p>

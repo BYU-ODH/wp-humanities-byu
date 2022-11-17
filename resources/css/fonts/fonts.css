@@ -155,6 +155,7 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-right: 0.5em;
 }
 
 .byu-icon-search:before {

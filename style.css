@@ -5430,6 +5430,10 @@ a.homePagePost:hover{
     }
 }
 
+.info.alumnus {
+	font-weight: bolder;
+	color: red;
+}
 /*Styling for elementor text boxes*/
 .elementor-text-editor {
 	color: #000000;

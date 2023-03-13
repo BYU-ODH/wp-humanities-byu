@@ -5544,8 +5544,8 @@ a.pagePost:hover{
 	text-decoration: underline;
 }
 .searchImgContainer {
-display: inline;
-text-align: center;
+	display: inline;
+	text-align: center;
 }
 .icon-list{
 	display:inline;
@@ -5554,4 +5554,6 @@ text-align: center;
 .homePostText a {
 	color: #0062B8;
 }
+
+
 /* FIN! */

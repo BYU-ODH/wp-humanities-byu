@@ -468,6 +468,11 @@ function set_default_meta($post_id){
     return $post_id;
 }
 
+function admin_css() {
+    wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/resources/css/admin/admin-styles.css' );
+}
+add_action('admin_head', 'admin_css' );
+
 add_action('wp_insert_post','set_default_meta');
 
 // FIN

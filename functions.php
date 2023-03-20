@@ -354,13 +354,18 @@ function GetBlogAuthDirectoryLink($blogpostId)
  function person_type_display($post_id) {
     setup_postdata($post_id); 
     $post = get_post($post_id);
+    $post_type = get_post_type();
     ?>
     <article class="searchPostSingle">
         <picture class="searchImgContainer">
           <?php if ( has_post_thumbnail() ) {
             the_post_thumbnail('thumbnail', array('class' => 'postIMG'));
-          } else { ?>
+            echo(
+                "<p class='content-type'>".$post_type."</p>"
+            );
+          } else { echo("<p>".$post_type."</p>");?>
           <img class="postIMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>">
+          
           <?php } ?>
         </picture>
         <div class="homePostText">
@@ -377,7 +382,9 @@ function GetBlogAuthDirectoryLink($blogpostId)
 						<?php
 						echo rtrim( $all_terms, ', ' );
 						}
+                        
 					?>
+                    
         </div>
       </article>
  <?php } 
@@ -385,7 +392,8 @@ function GetBlogAuthDirectoryLink($blogpostId)
 
  function project_type_display($post_id) {
     setup_postdata($post_id); 
-    $post = get_post($post_id); ?>
+    $post = get_post($post_id); 
+    $post_type = get_post_type();?>
     <article class="searchPostSingle">
         <?php 
           $pods = pods( 'projects' );
@@ -394,7 +402,9 @@ function GetBlogAuthDirectoryLink($blogpostId)
           ?>
           <picture class="searchImgContainer">
           <?php $src = ($field['guid']);
-          echo "<img class='postIMG' src = $src >"; ?>
+          echo "<img class='postIMG' src = $src >"; 
+          echo( "<p class='content-type'>".$post_type."</p>");?>
+          
           </picture>
           <div class="homePostText">
             <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br>
@@ -410,7 +420,6 @@ function GetBlogAuthDirectoryLink($blogpostId)
         
       <?php $description = $pods ->field('project_description');
         echo wp_trim_words($description, 30, "...");?>
-        
         </div>
         </article>
 
@@ -474,5 +483,3 @@ function admin_css() {
 add_action('admin_head', 'admin_css' );
 
 add_action('wp_insert_post','set_default_meta');
-
-// FIN

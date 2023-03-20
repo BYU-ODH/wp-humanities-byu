@@ -5532,6 +5532,9 @@ h3.label.projects ~ li a {
 	font-size: 16px;
 }
 
+.searchPostSingle .content-type {
+	text-transform: capitalize;
+}
 .pagePost {
 	color: #0057b8;
 	text-decoration: none;
@@ -5554,6 +5557,4 @@ a.pagePost:hover{
 .homePostText a {
 	color: #0062B8;
 }
-
-
 /* FIN! */

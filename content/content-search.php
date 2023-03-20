@@ -25,7 +25,7 @@
         } else { ?>
         <img class="postIMG" src="wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php } 
-        echo( "<p>".$post_type."</p>");?>
+        echo( "<p class='content-type'>".$post_type."</p>");?>
         </picture>
         <div class="homePostText">
         <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -44,7 +44,7 @@
         } else { ?>
         <img class="postIMG" src="wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
         <?php 
-           echo( "<p>".$post_type."</p>");
+           echo( "<p class='content-type'>".$post_type."</p>");
           } 
         ?>
         </picture>

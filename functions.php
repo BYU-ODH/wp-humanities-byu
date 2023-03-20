@@ -361,7 +361,7 @@ function GetBlogAuthDirectoryLink($blogpostId)
           <?php if ( has_post_thumbnail() ) {
             the_post_thumbnail('thumbnail', array('class' => 'postIMG'));
             echo(
-                "<p>".$post_type."</p>"
+                "<p class='content-type'>".$post_type."</p>"
             );
           } else { echo("<p>".$post_type."</p>");?>
           <img class="postIMG" src="http://localhost/odh/wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>">
@@ -403,7 +403,7 @@ function GetBlogAuthDirectoryLink($blogpostId)
           <picture class="searchImgContainer">
           <?php $src = ($field['guid']);
           echo "<img class='postIMG' src = $src >"; 
-          echo( "<p>".$post_type."</p>");?>
+          echo( "<p class='content-type'>".$post_type."</p>");?>
           
           </picture>
           <div class="homePostText">

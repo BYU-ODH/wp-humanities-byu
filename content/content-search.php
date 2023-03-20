@@ -32,6 +32,25 @@
         <?php the_excerpt();?>
       </div>
     </article>
+
+    <?php break;
+    case "attachment":?>
+       <article class="searchPostSingle">
+        <picture class="searchImgContainer">
+        <?php if ( wp_attachment_is_image($post_id) ) { ?>
+          <img class="postIMG" src="<?php echo(wp_get_attachment_image_src($post_id, null, false)[0]);?>" alt="<?php the_title(); ?>" />
+        <?php } else { ?>
+        <img class="postIMG" src="wp-content/uploads/humanitiesLogo.png" alt="<?php the_title(); ?>" />
+        <?php } 
+        echo( "<p class='content-type'>".$post_type."</p>");?>
+        </picture>
+        <div class="homePostText">
+        <a class="pagePost" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php the_excerpt();?>
+      </div>
+    </article>
+    
+
     <?php break;
     default:
     

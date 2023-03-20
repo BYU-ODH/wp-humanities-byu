@@ -28,3 +28,8 @@
 .mce-ico.mce-i-byuh_button_cta:before {
   content: '\f344';
 }
+
+div#post-upload-info:after{
+	content: "Image size should be 4x3 dimensions (1200x800px , 800x600px, 1920x1080px)";
+	font-size: 13px;
+}

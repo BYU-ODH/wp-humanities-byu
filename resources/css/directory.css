@@ -1,220 +1,229 @@
 .filter-container {
-    margin-bottom: 2rem;
-    position: relative;
-    text-transform: uppercase;
-    display: inline-block;
-    min-width: 300px;
-    font-size: 1.0625rem;
-    vertical-align: top;
+  margin-bottom: 2rem;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 300px;
+  font-size: 1.0625rem;
+  vertical-align: top;
 }
 .statusfilter-container {
-    float: right;
+  float: right;
 }
-@media(max-width: 1260px){
-    .statusfilter-container {
-        float: none;
-    }
+body .status-box .status-item {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.5em;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+}
+@media (max-width: 1260px) {
+  .statusfilter-container {
+    float: none;
+  }
 }
 .statusfilter-container .statusfilter {
-    font-size: 125%;
-    cursor: pointer;
-    display: inline-block;
+  font-size: 125%;
+  cursor: pointer;
+  display: inline-block;
 }
 ul.directory-list.filterable {
-	display: grid;
-	position: relative;
-	grid-template-columns: repeat(3,minmax(1px,1fr));
-	grid-gap: 2.3rem 1rem;
-	padding: 3.5rem 8rem;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, minmax(1px, 1fr));
+  grid-gap: 2.3rem 1rem;
+  padding: 3.5rem 8rem;
 }
-@media(max-width:1250px) {
-    ul.directory-list.filterable {
-        display: grid;
-	position: relative;
-	grid-template-columns: repeat(2,minmax(1px,1fr));
-    }
+@media (max-width: 1250px) {
+  ul.directory-list.filterable {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, minmax(1px, 1fr));
+  }
 }
-@media(max-width:975px) {
-    ul.directory-list.filterable {
-        display: grid;
-	position: relative;
-	grid-template-columns: repeat(1,minmax(1px,.35fr));
-	grid-gap: 0.3rem 0.3rem;
-	padding:  3.5rem 1.5rem;
-    }
+@media (max-width: 975px) {
+  ul.directory-list.filterable {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(1, minmax(1px, 0.35fr));
+    grid-gap: 0.3rem 0.3rem;
+    padding: 3.5rem 1.5rem;
+  }
 }
 .statusfilter-container .current {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 @media all and (max-width: 599px) {
-    .filter-container {
-	display: block;
-	width: 100%;
-    }
-    .filter-container ul {
-	width: 100%;
-	position: absolute;
-	max-height: 80vh;
-    }
-    .statusfilter-container {
-        float: none;
-        padding-bottom: 1.5rem;
-    }
+  .filter-container {
+    display: block;
+    width: 100%;
+  }
+  .filter-container ul {
+    width: 100%;
+    position: absolute;
+    max-height: 80vh;
+  }
+  .statusfilter-container {
+    float: none;
+    padding-bottom: 1.5rem;
+  }
 }
 @media all and (max-width: 499px) {
-    .filter-container {
-	padding: 0 2.5%;
-    }
-    .filter-container ul {
-	left: 2.5%;
-    }
+  .filter-container {
+    padding: 0 2.5%;
+  }
+  .filter-container ul {
+    left: 2.5%;
+  }
 }
 .filter-container > span {
-    color: #86847d;
-    font-size: 1.0625rem;
-    margin-right: 0.5rem;
+  color: #86847d;
+  font-size: 1.0625rem;
+  margin-right: 0.5rem;
 }
 .filter-container .filter-label {
-    background: #8f8f8f;
-    width: auto;
-    min-width: 6.625rem;
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0.925rem 2.625rem 0.875rem 0.75rem;
-    position: relative;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    max-width: 18em;
+  background: #8f8f8f;
+  width: auto;
+  min-width: 6.625rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.925rem 2.625rem 0.875rem 0.75rem;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  max-width: 18em;
 }
 
 .filter-container .filter-label .icon {
-    position: absolute;
-    right: 1rem;
-    font-size: 1.0625rem;
-    top: 1.25em;
+  position: absolute;
+  right: 1rem;
+  font-size: 1.0625rem;
+  top: 1.25em;
 }
 .filter-container ul {
-    background: #8f8f8f;
-    max-width: 20rem;
-    color: white;
-    font-weight: bold;
-    position: absolute;
-    top: 3.5rem;
-    left: 0;
-    z-index: 2;
-    display: none;
+  background: #8f8f8f;
+  max-width: 20rem;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  z-index: 2;
+  display: none;
 }
 .directory .filter-container ul {
-    height: 32rem;
-    overflow: auto;
-    cursor: pointer;
+  height: 32rem;
+  overflow: auto;
+  cursor: pointer;
 }
 .filter-container ul li {
-    padding: 1rem 1.325rem;
+  padding: 1rem 1.325rem;
 }
 .filter-container ul li:hover {
-    background-color: #002f5d; /* byu nav blue */
+  background-color: #002f5d; /* byu nav blue */
 }
 .input-container {
-    display: inline-block;
-    position: relative;
-    padding: 0.8rem  0.8rem 0.7rem 2.625rem;
-    background: #8f8f8f;
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem 0.8rem 0.7rem 2.625rem;
+  background: #8f8f8f;
 }
 .input-container:before {
-    font-family: 'byu-icons';
-    content: "\f002";
-    color: white;
-    position: absolute;
-    top: 14px;
-    left: 17px;
+  font-family: "byu-icons";
+  content: "\f002";
+  color: white;
+  position: absolute;
+  top: 14px;
+  left: 17px;
 }
 .input-container input.search[type="text"] {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    height: 1.5rem;
-    background: #8f8f8f;
-    color: white;
-    margin: 0;
-    border: none;
-    outline: none;
-    font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
-    font-weight: lighter;
-    font-size: 1.0625rem;
-    display: inline-block;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  height: 1.5rem;
+  background: #8f8f8f;
+  color: white;
+  margin: 0;
+  border: none;
+  outline: none;
+  font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial,
+    sans-serif;
+  font-weight: lighter;
+  font-size: 1.0625rem;
+  display: inline-block;
 }
 .input-container input.search[type="text"]::-webkit-input-placeholder {
-    color: #fff;
-    text-transform: uppercase;
+  color: #fff;
+  text-transform: uppercase;
 }
 .input-container input.search[type="text"]:-moz-placeholder {
-    /* Firefox 18- */
-    color: #fff;
-    text-transform: uppercase;
+  /* Firefox 18- */
+  color: #fff;
+  text-transform: uppercase;
 }
 .input-container input.search[type="text"]::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #fff;
-    text-transform: uppercase;
+  /* Firefox 19+ */
+  color: #fff;
+  text-transform: uppercase;
 }
 .input-container input.search[type="text"]:-ms-input-placeholder {
-    color: #fff;
-    text-transform: uppercase;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .directory .input-container {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 @media all and (max-width: 599px) {
-    .directory .input-container {
-	display: block;
-	width: 100%;
-	margin-bottom: 2%;
-    }
+  .directory .input-container {
+    display: block;
+    width: 100%;
+    margin-bottom: 2%;
+  }
 }
 @media all and (max-width: 499px) {
-    .directory .input-container {
-	margin: 0 auto 3%;
-	width: 95%;
-    }
+  .directory .input-container {
+    margin: 0 auto 3%;
+    width: 95%;
+  }
 }
 .directory .input-container input[type="text"] {
-    display: inline-block;
-    width: 100%;
+  display: inline-block;
+  width: 100%;
 }
 @media all and (max-width: 599px) {
-    .directory .filter-container {
-	display: block;
-	width: 100%;
-    }
-    .directory .filter-container .filter-label {
-	display: block;
-	width: 100%;
-    }
-    .directory .filter-container ul {
-	width: 100%;
-    }
+  .directory .filter-container {
+    display: block;
+    width: 100%;
+  }
+  .directory .filter-container .filter-label {
+    display: block;
+    width: 100%;
+  }
+  .directory .filter-container ul {
+    width: 100%;
+  }
 }
 @media all and (max-width: 499px) {
-    .directory .filter-container {
-	padding: 0 2.5%;
-    }
-    .directory .filter-container ul {
-	left: 2.5%;
-    }
+  .directory .filter-container {
+    padding: 0 2.5%;
+  }
+  .directory .filter-container ul {
+    left: 2.5%;
+  }
 }
 .directory ul.directory-list li {
-    color: #8f8f8f;
-    display: table;
-    display: grid;
-    grid-template-columns: 6.5rem 11rem;
+  color: #8f8f8f;
+  display: table;
+  display: grid;
+  grid-template-columns: 6.5rem 11rem;
 }
 @media all and (max-width: 975px) {
-    .directory ul.directory-list li {
-	display: grid;
-    }
+  .directory ul.directory-list li {
+    display: grid;
+  }
 }
 .directory ul.directory-list li .image-container {
   width: 6.5em;
@@ -225,145 +234,149 @@ ul.directory-list.filterable {
 }
 
 @media all and (max-width: 975px) {
-    .directory ul.directory-list li .image-container {
-	display: inline-block;
-	height: 10rem;
+  .directory ul.directory-list li .image-container {
+    display: inline-block;
+    height: 10rem;
     width: 100%;
-    }
+  }
 }
 
 .directory ul.directory-list li .content .link.phone {
-    color: #0062B8;
+  color: #0062b8;
 }
 .directory ul.directory-list li .content .link.phone:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .directory ul.directory-list li .content .link.email {
-    color: #0062B8;
+  color: #0062b8;
 }
 .directory ul.directory-list li .content .link.email:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .directory-list .filterable-item .content h5 {
-	color: #333;
-	font-size: 1rem;
-    line-height: 1.23529412;
-    font-weight: 500;
-    margin: 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.23529412;
+  font-weight: 500;
+  margin: 0;
 }
 
 .directory ul.directory-list li .content {
-    display: table-cell;
-    padding: 0;
-    position: relative;
-    margin-left: .75em;
+  display: table-cell;
+  padding: 0;
+  position: relative;
+  margin-left: 0.75em;
 }
 @media all and (max-width: 699px) {
-    .directory ul.directory-list li {
-	padding: 1rem;
-    }
+  .directory ul.directory-list li {
+    padding: 1rem;
+  }
 }
 .directory ul.directory-list li .content h4 {
-    text-transform: none;
-    font-size: 1.625rem;
-    font-weight: bold;
-    margin: 0;
-    font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-size: 1.625rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: "HCo Ringside Narrow SSm", "Open Sans", Helvetica, Arial,
+    sans-serif;
 }
 
 .directory ul.directory-list li .content .link {
-    font-size: 1.0625rem;
-    color: #666;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    font-weight: 500;
+  font-size: 1.0625rem;
+  color: #666;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  font-weight: 500;
 }
 .directory ul.directory-list li .content .link:first-of-type {
-    padding-left: 0;
+  padding-left: 0;
 }
 .directory ul.directory-list li .content .link:last-of-type {
-    border-right: none;
+  border-right: none;
 }
 
 .directory ul.directory-list li .content .link .icon {
-    display: none;
+  display: none;
 }
 .directory ul.directory-list li .content .cta {
-    position: absolute;
-    right: 2rem;
-    top: 1.25rem;
+  position: absolute;
+  right: 2rem;
+  top: 1.25rem;
 }
 @media all and (max-width: 699px) {
-    .directory ul.directory-list li .content .cta {
-	position: static;
-	margin-top: 1.25rem;
-    }
+  .directory ul.directory-list li .content .cta {
+    position: static;
+    margin-top: 1.25rem;
+  }
 }
 .profile-content .text-content {
-	padding-left: 2em;
-    padding-top: 1em;
+  padding-left: 2em;
+  padding-top: 1em;
 }
 
-.person h1 a:hover, .person h2 a:hover, .person h3 a:hover, .person h4 a:hover {
-    color: #002e5d;    
-    /* TODO */
+.person h1 a:hover,
+.person h2 a:hover,
+.person h3 a:hover,
+.person h4 a:hover {
+  color: #002e5d;
+  /* TODO */
 }
 
 .image-container img.directory-portrait {
-	display: block;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* The theme sticks featured images here, but sometimes or always we don't want them */
 .single #header-image-main {
-    display: none;
+  display: none;
 }
 
 .single .image-container {
-    max-width: 25%;
-    display: inline-block;
-    padding-left: 1rem;
-    padding-right: 1rem; 
+  max-width: 25%;
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .single .profile-content img {
-	border-style: solid;
-	border-radius: 0.75em;
+  border-style: solid;
+  border-radius: 0.75em;
 }
 
 .single-person #content {
-    margin-top: 10rem;
+  margin-top: 10rem;
 }
 
 .single .content {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 70%;
-    padding-bottom: 2rem;
-
+  display: inline-block;
+  vertical-align: top;
+  max-width: 70%;
+  padding-bottom: 2rem;
 }
 
 .single .content ul {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
 .personal-info-box {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 /*link styling*/
 .research_areas_list a {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 ul.directory-list.filterable a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /*Sytle to add hover color text headings on ODH faculty directory*/
-a.article-inner, .directory-list:hover .filterable-item:hover h4:hover{
-	color: #666667;
+a.article-inner,
+.directory-list:hover .filterable-item:hover h4:hover {
+  color: #666667;
 }

@@ -485,7 +485,7 @@ function set_default_meta($post_id){
  */
 function odh_include_custom_post_types_in_search_results( $query ) {
     if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
-        $query->set( 'post_type', array( 'post', 'collaborator', 'home_card', 'projects', 'room' ) );
+        $query->set( 'post_type', array( 'post', 'person', 'collaborator', 'home_card', 'projects', 'room' ) );
     }
 }
 add_action( 'pre_get_posts', 'odh_include_custom_post_types_in_search_results' );

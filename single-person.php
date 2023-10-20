@@ -121,8 +121,8 @@ get_header(); ?>
 							$id = $mypod -> field('id');
 							$permalink = get_permalink($id);
 							$personnel = $mypod -> field('project_personnel.ID');
-
-							foreach ($personnel as $person) {
+							if(is_array($personnel)){
+								foreach ($personnel as $person) {
 								$link = get_permalink($person);
 								$ODHProjectStatus_Live = "Live";
 								$ODHProjectStatus_Intake = "Intake";
@@ -148,6 +148,8 @@ get_header(); ?>
 									continue;
 								}
 							}
+							}
+							
 						}
 						if (!empty($live_projects) || !empty($intake_projects) || !empty($archived_projects) || !empty($noStatus_projects)) {
 							echo "<div class='personal-info-box'><h3 class='label projects'>Projects</h3>";

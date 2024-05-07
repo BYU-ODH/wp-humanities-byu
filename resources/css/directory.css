@@ -1,3 +1,8 @@
+body .image-container img.directory-portrait {
+
+}
+
+
 .filter-container {
   margin-bottom: 2rem;
   position: relative;
@@ -28,13 +33,15 @@ body .status-box .status-item {
   cursor: pointer;
   display: inline-block;
 }
-ul.directory-list.filterable {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(3, minmax(1px, 1fr));
-  grid-gap: 2.3rem 1rem;
-  padding: 3.5rem 8rem;
-}
+
+  ul.directory-list.filterable {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, minmax(1px, 1fr));
+    grid-gap: 2.3rem 1rem; 
+    padding: 3.5rem 8rem;
+  }
+
 @media (max-width: 1250px) {
   ul.directory-list.filterable {
     display: grid;
@@ -226,8 +233,10 @@ ul.directory-list.filterable {
   }
 }
 .directory ul.directory-list li .image-container {
-  width: 6.5em;
-  height: 9.1em;
+  width: 18em;
+  height: 18em;
+  /* width: 6.5em;
+  height: 9.1em; */
   display: table-cell;
   list-style: none;
   vertical-align: top;
@@ -236,9 +245,17 @@ ul.directory-list.filterable {
 @media all and (max-width: 975px) {
   .directory ul.directory-list li .image-container {
     display: inline-block;
-    height: 10rem;
+    height: 18em;
     width: 100%;
   }
+}
+
+body .directory ul.directory-list li .image-container {
+  width: 18em;
+  height: 18em;
+  display: table-cell;
+  list-style: none;
+  vertical-align: top;
 }
 
 .directory ul.directory-list li .content .link.phone {
@@ -379,4 +396,17 @@ ul.directory-list.filterable a {
 a.article-inner,
 .directory-list:hover .filterable-item:hover h4:hover {
   color: #666667;
+}
+
+
+body .directory ul.directory-list li div.image-container {
+  height: 18em;
+  width: 18em;
+
+}
+
+body div.directory ul.directory-list li {
+  color: #8f8f8f;
+  display: grid;
+  grid-template-columns: 18rem 11rem;
 }

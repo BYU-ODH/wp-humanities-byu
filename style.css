@@ -5694,13 +5694,13 @@ a.pagePost:hover {
 }
 
 .dightButton {
-  background-color: #0062b4; /* Deep blue background */
-  color: white !important; /* White text */
-  text-decoration: none; /* No underline */
-  padding: 10px 20px; /* Top and bottom padding 10px, left and right padding 20px */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  background-color: #0062b4;
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
   display: inline-block;
   height: 3em;
 }
@@ -5711,6 +5711,13 @@ a.pagePost:hover {
 
 .centerButton br {
   display: none;
+}
+
+.dightMainContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
 }
 
 /* FIN! */

@@ -1,3 +1,4 @@
+
 .filter-container {
   margin-bottom: 2rem;
   position: relative;
@@ -7,9 +8,11 @@
   font-size: 1.0625rem;
   vertical-align: top;
 }
+
 .statusfilter-container {
   float: right;
 }
+
 body .status-box .status-item {
   display: inline-block;
   margin-right: 1em;
@@ -18,23 +21,27 @@ body .status-box .status-item {
   border-width: 2px;
   border-radius: 10px;
 }
+
 @media (max-width: 1260px) {
   .statusfilter-container {
     float: none;
   }
 }
+
 .statusfilter-container .statusfilter {
   font-size: 125%;
   cursor: pointer;
   display: inline-block;
 }
-ul.directory-list.filterable {
-  display: grid;
-  position: relative;
-  grid-template-columns: repeat(3, minmax(1px, 1fr));
-  grid-gap: 2.3rem 1rem;
-  padding: 3.5rem 8rem;
-}
+
+  ul.directory-list.filterable {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, minmax(1px, 1fr));
+    grid-gap: 2.3rem 1rem; 
+    padding: 3.5rem 8rem;
+  }
+
 @media (max-width: 1250px) {
   ul.directory-list.filterable {
     display: grid;
@@ -42,6 +49,7 @@ ul.directory-list.filterable {
     grid-template-columns: repeat(2, minmax(1px, 1fr));
   }
 }
+
 @media (max-width: 975px) {
   ul.directory-list.filterable {
     display: grid;
@@ -51,9 +59,11 @@ ul.directory-list.filterable {
     padding: 3.5rem 1.5rem;
   }
 }
+
 .statusfilter-container .current {
   text-decoration: underline;
 }
+
 @media all and (max-width: 599px) {
   .filter-container {
     display: block;
@@ -69,6 +79,7 @@ ul.directory-list.filterable {
     padding-bottom: 1.5rem;
   }
 }
+
 @media all and (max-width: 499px) {
   .filter-container {
     padding: 0 2.5%;
@@ -77,11 +88,13 @@ ul.directory-list.filterable {
     left: 2.5%;
   }
 }
+
 .filter-container > span {
   color: #86847d;
   font-size: 1.0625rem;
   margin-right: 0.5rem;
 }
+
 .filter-container .filter-label {
   background: #8f8f8f;
   width: auto;
@@ -102,6 +115,7 @@ ul.directory-list.filterable {
   font-size: 1.0625rem;
   top: 1.25em;
 }
+
 .filter-container ul {
   background: #8f8f8f;
   max-width: 20rem;
@@ -113,23 +127,28 @@ ul.directory-list.filterable {
   z-index: 2;
   display: none;
 }
+
 .directory .filter-container ul {
   height: 32rem;
   overflow: auto;
   cursor: pointer;
 }
+
 .filter-container ul li {
   padding: 1rem 1.325rem;
 }
+
 .filter-container ul li:hover {
   background-color: #002f5d; /* byu nav blue */
 }
+
 .input-container {
   display: inline-block;
   position: relative;
   padding: 0.8rem 0.8rem 0.7rem 2.625rem;
   background: #8f8f8f;
 }
+
 .input-container:before {
   font-family: "byu-icons";
   content: "\f002";
@@ -138,6 +157,7 @@ ul.directory-list.filterable {
   top: 14px;
   left: 17px;
 }
+
 .input-container input.search[type="text"] {
   appearance: none;
   -moz-appearance: none;
@@ -154,20 +174,24 @@ ul.directory-list.filterable {
   font-size: 1.0625rem;
   display: inline-block;
 }
+
 .input-container input.search[type="text"]::-webkit-input-placeholder {
   color: #fff;
   text-transform: uppercase;
 }
+
 .input-container input.search[type="text"]:-moz-placeholder {
   /* Firefox 18- */
   color: #fff;
   text-transform: uppercase;
 }
+
 .input-container input.search[type="text"]::-moz-placeholder {
   /* Firefox 19+ */
   color: #fff;
   text-transform: uppercase;
 }
+
 .input-container input.search[type="text"]:-ms-input-placeholder {
   color: #fff;
   text-transform: uppercase;
@@ -176,6 +200,7 @@ ul.directory-list.filterable {
 .directory .input-container {
   margin-right: 0.5rem;
 }
+
 @media all and (max-width: 599px) {
   .directory .input-container {
     display: block;
@@ -183,16 +208,19 @@ ul.directory-list.filterable {
     margin-bottom: 2%;
   }
 }
+
 @media all and (max-width: 499px) {
   .directory .input-container {
     margin: 0 auto 3%;
     width: 95%;
   }
 }
+
 .directory .input-container input[type="text"] {
   display: inline-block;
   width: 100%;
 }
+
 @media all and (max-width: 599px) {
   .directory .filter-container {
     display: block;
@@ -206,6 +234,7 @@ ul.directory-list.filterable {
     width: 100%;
   }
 }
+
 @media all and (max-width: 499px) {
   .directory .filter-container {
     padding: 0 2.5%;
@@ -214,20 +243,23 @@ ul.directory-list.filterable {
     left: 2.5%;
   }
 }
+
 .directory ul.directory-list li {
   color: #8f8f8f;
   display: table;
   display: grid;
   grid-template-columns: 6.5rem 11rem;
 }
+
 @media all and (max-width: 975px) {
   .directory ul.directory-list li {
     display: grid;
   }
 }
+
 .directory ul.directory-list li .image-container {
-  width: 6.5em;
-  height: 9.1em;
+  width: 18em;
+  height: 18em;
   display: table-cell;
   list-style: none;
   vertical-align: top;
@@ -236,23 +268,35 @@ ul.directory-list.filterable {
 @media all and (max-width: 975px) {
   .directory ul.directory-list li .image-container {
     display: inline-block;
-    height: 10rem;
+    height: 18em;
     width: 100%;
   }
+}
+
+body .directory ul.directory-list li .image-container {
+  width: 18em;
+  height: 18em;
+  display: table-cell;
+  list-style: none;
+  vertical-align: top;
 }
 
 .directory ul.directory-list li .content .link.phone {
   color: #0062b8;
 }
+
 .directory ul.directory-list li .content .link.phone:hover {
   text-decoration: underline;
 }
+
 .directory ul.directory-list li .content .link.email {
   color: #0062b8;
 }
+
 .directory ul.directory-list li .content .link.email:hover {
   text-decoration: underline;
 }
+
 .directory-list .filterable-item .content h5 {
   color: #333;
   font-size: 1rem;
@@ -267,11 +311,14 @@ ul.directory-list.filterable {
   position: relative;
   margin-left: 0.75em;
 }
+
 @media all and (max-width: 699px) {
   .directory ul.directory-list li {
     padding: 1rem;
   }
+
 }
+
 .directory ul.directory-list li .content h4 {
   text-transform: none;
   font-size: 1.625rem;
@@ -289,9 +336,11 @@ ul.directory-list.filterable {
   position: relative;
   font-weight: 500;
 }
+
 .directory ul.directory-list li .content .link:first-of-type {
   padding-left: 0;
 }
+
 .directory ul.directory-list li .content .link:last-of-type {
   border-right: none;
 }
@@ -299,17 +348,20 @@ ul.directory-list.filterable {
 .directory ul.directory-list li .content .link .icon {
   display: none;
 }
+
 .directory ul.directory-list li .content .cta {
   position: absolute;
   right: 2rem;
   top: 1.25rem;
 }
+
 @media all and (max-width: 699px) {
   .directory ul.directory-list li .content .cta {
     position: static;
     margin-top: 1.25rem;
   }
 }
+
 .profile-content .text-content {
   padding-left: 2em;
   padding-top: 1em;
@@ -329,6 +381,7 @@ ul.directory-list.filterable {
   width: 100%;
   object-fit: cover;
 }
+
 
 /* The theme sticks featured images here, but sometimes or always we don't want them */
 .single #header-image-main {
@@ -375,8 +428,20 @@ ul.directory-list.filterable a {
   text-decoration: none;
 }
 
+
 /*Sytle to add hover color text headings on ODH faculty directory*/
 a.article-inner,
 .directory-list:hover .filterable-item:hover h4:hover {
   color: #666667;
+}
+
+body .directory ul.directory-list li div.image-container {
+  height: 18em;
+  width: 18em;
+}
+
+body div.directory ul.directory-list li {
+  color: #8f8f8f;
+  display: grid;
+  grid-template-columns: 18rem 11rem;
 }

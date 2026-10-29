@@ -25,7 +25,14 @@ get_header(); ?>
 					
 
 					<?php if(get_field('status') != 'retired') { ?>
-						
+
+					<?php /** I added the following three lines to show the position on the profile page. 07/02/2024 **/?>
+
+					<?php if (get_field('position')) { ?>
+                                        <h4><?php the_field('position'); ?></h4>
+                                        <?php } ?>
+
+
 					<?php if (get_field('address')) { ?>
 					<p class="info address"><i class="icon byu-icon-location"></i><span><?php the_field('address'); ?></span></p>
 					<?php } ?>

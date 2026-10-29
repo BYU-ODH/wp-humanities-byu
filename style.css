@@ -5507,6 +5507,8 @@ a.homePagePost:hover {
   background: none !important;
 }
 /*End of facet checkbox*/
+
+
 .facetwp-checkbox[data-value="unknown"] {
   display: none;
 }
@@ -5681,4 +5683,18 @@ a.pagePost:hover {
 .homePostText a {
   color: #0062b8;
 }
+
+/************************
+ *** Web Support Page ***
+************************/
+.page-id-29543 .entry-content h2 {
+	font-size: 1.7rem;
+	margin-top: 3rem;
+}
+
+.page-id-29543 .entry-content h3 {
+	font-size: 1.2rem;
+	margin-top: 2.5rem;
+}
+
 /* FIN! */
